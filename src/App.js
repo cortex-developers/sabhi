@@ -1,6 +1,6 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles'; // Import from '@mui/material/styles' for Material-UI v5
-import { AppBar, Toolbar, Typography, Button, Container, Grid, TextField, Box } from '@mui/material';
+import {Typography, Button, Container, TextField, Box } from '@mui/material';
 
 import Logo from './sabhi-logo.svg'; // Replace 'sabhi-logo.png' with the actual path to your logo image
 

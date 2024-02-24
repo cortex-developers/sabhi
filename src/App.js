@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
 import { createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import Logo from './sabhi-logo.svg';
-import BiosPage from './BiosPage';
-
+import BioGallery from './BioGallery';
+import Contact from './Contact';
+import UnderConstructionPage from './UnderConstructionPage';
 const theme = createTheme({
   palette: {
     primary: {
@@ -30,16 +31,24 @@ function App() {
           <Toolbar style={{ justifyContent: 'space-between' }}>
             <Box display="flex" alignItems="center">
               <img src={Logo} alt="SABHI Logo" style={{ height: '50px', marginRight: '20px' }} />
-              <Typography variant="h6" component="div">
-                CORTEX FLEX
+              <Typography variant="h6" component="div" >
+                <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  CORTEX FLEX
+                </RouterLink>
               </Typography>
             </Box>
             <Box>
-              <Button color="inherit" component={RouterLink} to="/" sx={{ marginRight: '20px' }}>
-                Home
-              </Button>
               <Button color="inherit" component={RouterLink} to="/bios">
                 Meet Our Team
+              </Button>
+              <Button color="inherit" component={RouterLink} to="/story">
+                Our Story
+              </Button>
+              <Button color="inherit" component={RouterLink} to="/resources">
+                Resources
+              </Button>
+              <Button color="inherit" component={RouterLink} to="/contact">
+                Contact
               </Button>
             </Box>
           </Toolbar>
@@ -76,7 +85,10 @@ function App() {
               </Box>
             </Box>
           } />
-          <Route path="/bios" element={<BiosPage />} />
+          <Route path="/bios" element={<BioGallery />} />
+          <Route path="/story" element={<UnderConstructionPage />} />
+          <Route path="/resources" element={<UnderConstructionPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         {/* Footer */}
         <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>

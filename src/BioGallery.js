@@ -25,6 +25,29 @@ const bios = [
     fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.'
   },
   {
+    name: 'Maya Hakyal',
+    image: maya,
+    description: 'Tennis Player & Medical Student',
+    fullBio: `Maya Haykal, the eldest of eight siblings, embodies the ethos of "work hard, play hard". This
+    motto was ingrained in her upbringing, which fueled her academic pursuits and athletic
+    endeavors. Transitioning from dance to tennis after a teenage injury, Maya's passion for tennis
+    flourished, leading her to compete at the Division I level at SUNY Binghamton, where she
+    earned a Bachelor of Science in Biological Sciences and a minor in Anthropology. Her
+    commitment to research, showcased through her pivotal role as a research assistant on an
+    NIAAA R01 grant-funded project, extended her impact to promoting responsible alcohol
+    consumption among student-athletes. Pursuing her aspiration to become a physician, Maya
+    embarked on her medical education journey at SUNY Upstate Medical University, focusing on
+    Physical Medicine and Rehabilitation. Throughout medical school, she demonstrated leadership
+    in Sports Medicine and mentored young athletes through programs like Athlete to Athlete, while
+    also becoming a certified yoga instructor (RYT 200 hour) to champion accessibility through a
+    chair yoga program at Organic Yoga & Wellness studio. Maya's scholarly contributions,
+    particularly her systematic reviews on Vitamin A and Zinc supplementation, underscore her
+    commitment to pediatric health. With her adeptness in statistical analysis and holistic approach
+    to well-being, Maya's diverse background makes her an incredible asset to Cortex Flex Athlete
+    Alliance, showcasing her dedication to athletic mentorship, medical practice, and community
+    outreach.`
+  },
+  {
     name: 'Dylan Keusch',
     image: dylan,
     description: 'Rower, Policy Advocate, & EMT',
@@ -48,29 +71,7 @@ const bios = [
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
   },
-  {
-    name: 'Maya Hakyal',
-    image: maya,
-    description: 'Tennis Player & Medical Student',
-    fullBio: `Maya Haykal, the eldest of eight siblings, embodies the ethos of "work hard, play hard". This
-    motto was ingrained in her upbringing, which fueled her academic pursuits and athletic
-    endeavors. Transitioning from dance to tennis after a teenage injury, Maya's passion for tennis
-    flourished, leading her to compete at the Division I level at SUNY Binghamton, where she
-    earned a Bachelor of Science in Biological Sciences and a minor in Anthropology. Her
-    commitment to research, showcased through her pivotal role as a research assistant on an
-    NIAAA R01 grant-funded project, extended her impact to promoting responsible alcohol
-    consumption among student-athletes. Pursuing her aspiration to become a physician, Maya
-    embarked on her medical education journey at SUNY Upstate Medical University, focusing on
-    Physical Medicine and Rehabilitation. Throughout medical school, she demonstrated leadership
-    in Sports Medicine and mentored young athletes through programs like Athlete to Athlete, while
-    also becoming a certified yoga instructor (RYT 200 hour) to champion accessibility through a
-    chair yoga program at Organic Yoga & Wellness studio. Maya's scholarly contributions,
-    particularly her systematic reviews on Vitamin A and Zinc supplementation, underscore her
-    commitment to pediatric health. With her adeptness in statistical analysis and holistic approach
-    to well-being, Maya's diverse background makes her an incredible asset to Cortex Flex Athlete
-    Alliance, showcasing her dedication to athletic mentorship, medical practice, and community
-    outreach.`
-  },
+
   {
     name: 'Puneet Velidi',
     image: puneet,

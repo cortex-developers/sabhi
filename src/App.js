@@ -71,7 +71,7 @@ function App() {
                   Our Mission
                 </Typography>
                 <Typography variant="h6" component="p" sx={{ fontStyle: 'italic', fontSize: '1.25rem', maxWidth: '60%' }}>
-                  "Our mission is to empower student athletes with the knowledge and understanding of the profound impact sports can have on both their physical and mental well-being. Through psychoeducation and engaging in-person presentations, we aim to raise awareness of the complexities surrounding brain health in athletics. By fostering a culture of informed decision-making and proactive care, we strive to equip student athletes with the tools and resources they need to prioritize their brain health, both on and off the field."
+                  "Our mission is to translate complex scientific knowledge into comprehensible messages to which athletic communities will be receptive; and thus broadly creating better outcomes for athletes on gameday, in the classroom, and in life thereafter."
                 </Typography>
               </Box>
             </Box>

@@ -35,7 +35,7 @@ const theme = createTheme({
     },
 });
 
-function App() {
+function BiosPage() {
     return (
         <ThemeProvider theme={theme}>
             <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px', paddingBottom: '40px' }}>
@@ -132,4 +132,4 @@ function App() {
     );
 }
 
-export default App;
+export default BiosPage;

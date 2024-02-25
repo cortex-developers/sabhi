@@ -160,7 +160,7 @@ function BioGallery() {
               <Slider {...sliderSettings}>
                 {bio.images.map((image, idx) => (
                   <div key={idx}>
-                    <img src={image} alt={bio.name} style={{ width: '100%', height: '375px' }} />
+                    <img src={image} alt={bio.name} style={{ width: '100%', height: '100%' }} />
                   </div>
                 ))}
               </Slider>

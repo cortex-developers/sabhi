@@ -169,8 +169,8 @@ function BioGallery() {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '90%', // Adjusted width for better mobile view
-    maxWidth: 400, // Added maxWidth for responsiveness    
+    width: '85%', // Adjusted width for better mobile view
+    maxWidth: 375, // Added maxWidth for responsiveness    
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,

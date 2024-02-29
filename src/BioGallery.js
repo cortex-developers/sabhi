@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { createTheme, ThemeProvider, Grid, Card, CardContent, Typography, CardActions, Button, Modal, Box } from '@mui/material';
+import { createTheme, ThemeProvider, Grid, Card, CardContent, Typography, CardActions, Button, Modal, Box, IconButton } from '@mui/material';
+import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
 import Slider from 'react-slick'; // Import Slider
 import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
@@ -20,6 +21,11 @@ import puneet from './puneet.jpg'
 import puneet2 from './puneet2.jpg'
 import ellie from './ellie.jpg'
 import ellie2 from './ellie2.jpg'
+import matt from './matt.jpg'
+import chris from './chris.jpg'
+import chris2 from './chris2.jpg'
+import chris3 from './chris3.jpg'
+import chris4 from './chris4.jpg'
 
 const bios = [
   // Your bios data here
@@ -27,13 +33,19 @@ const bios = [
     name: 'Nate Roy',
     images: [nate, nate2],
     description: 'Football Player & PhD Candidate',
-    fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.'
+    fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
+    email: "nate@cortexflex.org",
+    linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
+    instagram: "https://www.instagram.com/nate.roy29/"
   },
   {
     name: 'Reza Ashrafi',
     images: [reza],
     description: 'Football Player & Neurobiology Researcher',
-    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.'
+    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
+    email: "reza@cortexflex.org",
+    linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
+    instagram: "https://www.instagram.com/reza_ashrafi26/"
   },
   {
     name: 'Maya Hakyal',
@@ -95,9 +107,22 @@ const bios = [
     name: 'Puneet Velidi',
     images: [puneet, puneet2],
     description: 'Software Engineer & Neuroscience Researcher',
-    fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.'
+    fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
+    email: "puneet@cortexflex.org",
+    linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212"
   },
-
+  {
+    name: 'Matt Shumway',
+    images: [matt],
+    description: 'Medical Student & Researcher',
+    fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
+  },
+  {
+    name: 'Chris Stoneman',
+    images: [chris, chris2, chris3, chris4],
+    description: 'Football Player & Journalist',
+    fullBio: 'Chris is a multifaceted individual who brings a great deal of experience across multiple domains to Cortex Flex Athlete Alliance. He is a student-athlete going into his final semester at Oberlin College, where he plays football as a Defensive Lineman at the Division 3 level and studies political science. Currently, Chris is on leave from Oberlin in order to pursue an internship in financial journalism in Luxembourg and will return to play a final season next fall and graduate in December 2024. A native of Metz, France with an extremely multicultural background, Chris is heavily involved in the development of American football across the globe. He currently works as a content manager, scout and podcast co-host for the Europe’s Elite organization, a social media presence that helps European football players get recruited to American colleges and universities. He is also an experienced coach, most recently taking on the role of defensive coordinator for the Saarland Hurricanes II team (in Saarbrucken, Germany) in 2024. Chris’s experience in football across the globe have granted him a valuable perspective on the world of sport and has motivated him to assist athletes everywhere in perfecting their craft. In joining the CFAA, Chris hopes to distribute the knowledge he has gained over the years and help athletes around the world to create better lives for themselves, both on the field and off.',
+  },
   // More bios...
 ];
 
@@ -144,7 +169,8 @@ function BioGallery() {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: '90%', // Adjusted width for better mobile view
+    maxWidth: 400, // Added maxWidth for responsiveness    
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -174,6 +200,9 @@ function BioGallery() {
               </CardContent>
               <CardActions>
                 <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+                {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+                  {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+                  {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
               </CardActions>
             </Card>
           </Grid>
@@ -200,3 +229,4 @@ function BioGallery() {
 }
 
 export default BioGallery;
+

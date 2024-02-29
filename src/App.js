@@ -32,10 +32,10 @@ function App() {
         <AppBar position="static">
           <Toolbar style={{ justifyContent: 'space-between' }}>
             <Box display="flex" alignItems="center">
-              <img src={LogoNoText} alt="SABHI Logo" style={{ height: '45px', marginRight: '20px' }} />
+              <img src={LogoNoText} alt="SABHI Logo" style={{ height: '35px', marginRight: '20px' }} />
               <Typography variant="h6" component="div" >
                 <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <img src={LogoText} alt="SABHI Logo" style={{ height: '30px', marginRight: '20px' }} />
+                  <img src={LogoText} alt="SABHI Logo" style={{ height: '20px', marginRight: '20px' }} />
                 </RouterLink>
               </Typography>
             </Box>
@@ -58,7 +58,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
-              <img src={Logo} alt="SABHI Logo" style={{ height: '400px', marginTop: '20px' }} />
+              <img src={Logo} alt="SABHI Logo" style={{ height: '300px', marginTop: '20px' }} />
               <Box sx={{
                 width: '100%',
                 display: 'flex',

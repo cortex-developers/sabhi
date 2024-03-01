@@ -32,10 +32,10 @@ function App() {
         <AppBar position="static">
           <Toolbar style={{ justifyContent: 'space-between' }}>
             <Box display="flex" alignItems="center">
-              <img src={LogoNoText} alt="SABHI Logo" style={{ height: '35px', marginRight: '20px' }} />
+              <img src={LogoNoText} alt="SABHI Logo" style={{ height: '30px', marginRight: '20px' }} />
               <Typography variant="h6" component="div" >
                 <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <img src={LogoText} alt="SABHI Logo" style={{ height: '20px', marginRight: '20px' }} />
+                  <img src={LogoText} alt="SABHI Logo" style={{ height: '18px', marginRight: '20px' }} />
                 </RouterLink>
               </Typography>
             </Box>
@@ -92,7 +92,7 @@ function App() {
                 <Typography variant="h4" component="p" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
                   Our Vision
                 </Typography>
-                <Typography variant="h6" component="p" sx={{ fontStyle: 'italic', fontSize: '1.25rem', maxWidth: '85%' }}>
+                <Typography variant="h6" component="p" sx={{ fontStyle: 'italic', fontSize: '0.75rem', maxWidth: '85%' }}>
                   "Our vision is to create a world where athletics and clinical science exist not as separate entities but as a symbiotically-linked cooperative partnership. We aim to create a powerful network of intermediaries who serve to educate and inspire coaches and athletes as well as to act as advocates before scientific and medical professionals in articulating the range of difficulties that athletes experience. We envision a future where athletes worldwide have full access to the range of evidence-based practices, and where scientists have an elevated understanding of how to help the athlete population. This will culminate in better health and performance outcomes inside and outside of athletics."
                 </Typography>
               </Box>

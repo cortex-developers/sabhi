@@ -32,10 +32,10 @@ function App() {
         <AppBar position="static">
           <Toolbar style={{ justifyContent: 'space-between' }}>
             <Box display="flex" alignItems="center">
-              <img src={LogoNoText} alt="SABHI Logo" style={{ height: '30px', marginRight: '20px' }} />
+              <img src={LogoNoText} alt="SABHI Logo" style={{ height: '25px', marginRight: '10px' }} />
               <Typography variant="h6" component="div" >
                 <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <img src={LogoText} alt="SABHI Logo" style={{ height: '18px', marginRight: '20px' }} />
+                  <img src={LogoText} alt="SABHI Logo" style={{ height: '15px', marginRight: '20px' }} />
                 </RouterLink>
               </Typography>
             </Box>

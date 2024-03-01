@@ -27,7 +27,7 @@ import chris from './chris.jpg'
 import chris2 from './chris2.jpg'
 import chris3 from './chris3.jpg'
 import chris4 from './chris4.jpg'
-
+import jess from './jess.jpg'
 const bios = [
   // Your bios data here
   {
@@ -123,6 +123,12 @@ const bios = [
     images: [chris, chris2, chris3, chris4],
     description: 'Football Player & Journalist',
     fullBio: 'Chris is a multifaceted individual who brings a great deal of experience across multiple domains to Cortex Flex Athlete Alliance. He is a student-athlete going into his final semester at Oberlin College, where he plays football as a Defensive Lineman at the Division 3 level and studies political science. Currently, Chris is on leave from Oberlin in order to pursue an internship in financial journalism in Luxembourg and will return to play a final season next fall and graduate in December 2024. A native of Metz, France with an extremely multicultural background, Chris is heavily involved in the development of American football across the globe. He currently works as a content manager, scout and podcast co-host for the Europe’s Elite organization, a social media presence that helps European football players get recruited to American colleges and universities. He is also an experienced coach, most recently taking on the role of defensive coordinator for the Saarland Hurricanes II team (in Saarbrucken, Germany) in 2024. Chris’s experience in football across the globe have granted him a valuable perspective on the world of sport and has motivated him to assist athletes everywhere in perfecting their craft. In joining the CFAA, Chris hopes to distribute the knowledge he has gained over the years and help athletes around the world to create better lives for themselves, both on the field and off.',
+  },
+  {
+    name: 'Jessalyn Pugh',
+    images: [jess],
+    description: 'Competitive Dancer & Health Sciences Student',
+    fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
   },
   // More bios...
 ];

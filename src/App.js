@@ -58,7 +58,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
-              <img src={Logo} alt="SABHI Logo" style={{ height: '250px', marginTop: '20px' }} />
+              <img src={Logo} alt="SABHI Logo" style={{ height: '200px', marginTop: '20px' }} />
               <Box sx={{
                 width: '100%',
                 display: 'flex',

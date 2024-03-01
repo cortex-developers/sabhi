@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createTheme, ThemeProvider, Grid, Card, CardContent, Typography, CardActions, Button, Modal, Box, IconButton } from '@mui/material';
 import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
+import CloseIcon from '@mui/icons-material/Close';
 import Slider from 'react-slick'; // Import Slider
 import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
@@ -201,8 +202,8 @@ function BioGallery() {
               <CardActions>
                 <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
                 {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
-                  {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
-                  {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+                {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+                {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
               </CardActions>
             </Card>
           </Grid>
@@ -216,6 +217,9 @@ function BioGallery() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <IconButton sx={{ position: 'absolute', top: 0, right: 0 }} onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {selectedBio.name}
           </Typography>

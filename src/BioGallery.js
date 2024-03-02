@@ -36,7 +36,7 @@ const bios = [
   // Your bios data here
   {
     name: 'Nate Roy',
-    images: [nate, nate2, nate3, nate4, nate5],
+    images: [nate, nate2, nate4, nate3, nate5],
     description: 'Football Player & PhD Candidate',
     fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
     email: "nate@cortexflex.org",
@@ -131,7 +131,7 @@ const bios = [
   {
     name: 'Jessalyn Pugh',
     images: [jess],
-    description: 'Competitive Dancer & Health Sciences Student',
+    description: 'Health Sciences Student',
     fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
   },
   // More bios...

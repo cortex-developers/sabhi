@@ -7,6 +7,10 @@ import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
 import nate from './nate.jpg'
 import nate2 from './nate2.jpg'
+import nate3 from './nate3.jpg'
+import nate4 from './nate4.jpg'
+import nate5 from './nate5.jpg'
+
 import reza from './reza.jpg'
 import dylan from './dylan.jpg'
 import dylan2 from './dylan2.jpg'
@@ -32,7 +36,7 @@ const bios = [
   // Your bios data here
   {
     name: 'Nate Roy',
-    images: [nate, nate2],
+    images: [nate, nate2, nate3, nate4, nate5],
     description: 'Football Player & PhD Candidate',
     fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
     email: "nate@cortexflex.org",

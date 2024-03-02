@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
-import { createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, Grid } from '@mui/material';
+import { createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container} from '@mui/material';
 import Logo from './sabhi-logo.svg';
 import LogoNoText from './sabhi-logo-no-text.svg';
 import LogoText from './sabhi-text.svg';

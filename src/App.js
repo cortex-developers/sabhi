@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
-import { createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container} from '@mui/material';
+import { createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Link } from '@mui/material';
+import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
 import Logo from './sabhi-logo.svg';
 import LogoNoText from './sabhi-logo-no-text.svg';
 import LogoText from './sabhi-text.svg';
@@ -96,6 +97,29 @@ function App() {
                   <Typography variant="h6" component="p" sx={{ fontStyle: 'italic', fontSize: '0.75rem', maxWidth: '85%' }}>
                     "Our vision is to create a world where athletics and clinical science exist not as separate entities but as a symbiotically-linked cooperative partnership. We aim to create a powerful network of intermediaries who serve to educate and inspire coaches and athletes as well as to act as advocates before scientific and medical professionals in articulating the range of difficulties that athletes experience. We envision a future where athletes worldwide have full access to the range of evidence-based practices, and where scientists have an elevated understanding of how to help the athlete population. This will culminate in better health and performance outcomes inside and outside of athletics."
                   </Typography>
+                </Box>
+              </Box>
+              {/* Connect with Us Section */}
+              <Box component="section" sx={{ bgcolor: 'background.paper', color: 'text.primary', py: 3, textAlign: 'center' }}>
+                <Typography variant="h6" gutterBottom>
+                  Connect with Us
+                </Typography>
+                <Box sx={{ '& > :not(style)': { m: 1 } }}>
+                  <Link href="https://www.linkedin.com/company/cortex-flex-athlete-alliance/about/" target="_blank" color="inherit">
+                    <IconButton>
+                      <LinkedIn fontSize="large" />
+                    </IconButton>
+                  </Link>
+                  <Link href="https://www.instagram.com/cortexflex" target="_blank" color="inherit">
+                    <IconButton>
+                      <Instagram fontSize="large" />
+                    </IconButton>
+                  </Link>
+                  <Link href="mailto:team@cortexflex.org" color="inherit">
+                    <IconButton>
+                      <Email fontSize="large" />
+                    </IconButton>
+                  </Link>
                 </Box>
               </Box>
               {/* Social Media Section 

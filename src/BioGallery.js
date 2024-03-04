@@ -33,7 +33,9 @@ import chris4 from './chris4.jpg'
 import jess from './jess.jpg'
 import addison from './addison.jpg'
 import addison2 from './addison2.jpg'
-
+import onome from './onome.jpg'
+import john from './john.jpg'
+import john2 from './john2.jpg'
 const bios = [
   // Your bios data here
   {
@@ -92,6 +94,12 @@ const bios = [
     fullBio: 'Olivia Ramil brings a wealth of experience to Cortex Flex Athlete Alliance as a former collegiate athlete, having competed in Division I Basketball for six years across prestigious institutions like Georgetown University, Binghamton University, St. Joseph’s University, and Samford University. Notably ranked by ESPN as the 16th best center in the 2016 Women’s Basketball class out of high school, Olivia balanced her athletic pursuits with scholarly passions, earning both a Bachelor of Science in Nursing and a Masters of Health Administration. In her transition from the court to professional roles, she has served as a Support Coordinator Intern with Samford University’s CAREs Team, Lead Project Manager and Recruiting Coordinator at SaveAround Fundraising, Athlete to Athlete Recruiter, PLAAY Mentor & Project Manager, and Registered School Nurse for Elementary and Middle Schools. As a member of the Cortex Flex Athlete Alliance, Olivia strives to equip and empower athletes, utilizing her varied expertise to nurture success, safety, and fulfillment in their careers and beyond.    '
   },
   {
+    name: 'Onome Kessington',
+    images: [onome],
+    description: 'Football Player & Business Leader',
+    fullBio: 'Onome Kessington is a Cornell University graduate completing his degree in Applied Economics and Management. Onome has an array of business experience from International Tax at world rebound beverage company Constellation Brands to Risk Management and Credit at First American Equipment Finance where they specialize in Equipment financing. Onome is a natural born entrepreneur that always looks at how he can add value to any room he is in.'
+  },
+  {
     name: 'DJ Hampton',
     images: [dj],
     description: 'Athletic Trainer & U.S Army Section Chief',
@@ -103,6 +111,7 @@ const bios = [
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
   },
+
   {
     name: 'Ellie Mccarron',
     images: [ellie, ellie2],
@@ -113,14 +122,6 @@ const bios = [
     At Boston University, Ellie has earned dean’s list honors while completing coursework in media relations, communications writing, advertising, and graphic design.`,
     linkedin: 'https://www.linkedin.com/in/elisabeth-mccarron-81580526a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagram: 'https://www.instagram.com/elliebelly17?igsh=NHZ6OTlrOGdweWZi&utm_source=qr'
-  },
-  {
-    name: 'Puneet Velidi',
-    images: [puneet, puneet2],
-    description: 'Software Engineer & Neuroscience Researcher',
-    fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
-    email: "puneet@cortexflex.org",
-    linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212"
   },
   {
     name: 'Matt Shumway',
@@ -147,6 +148,20 @@ const bios = [
     description: 'Soccer Player & Cognitive Science Student',
     fullBio: `Addison is a third year undergraduate at Cornell University, studying for a degree in Cognitive Science. Before transferring to Cornell, Addison played on the varsity women’s soccer team at a Penn State campus, on which she also served as the team captain. In addition to competing as a collegiate student athlete, Addison volunteered in Elderly Care homes, served as a student government representative, and participated in various clubs. Addison's path took a profound turn when a severe concussion sustained during soccer necessitated months of intensive physical therapy. This experience catalyzed her mission to advocate for better concussion awareness among student athletes. She firmly believes that no athlete should endure such challenges without proper scientific understanding of when to prioritize recovery. Driven by her own journey, Addison strives to pave a smoother path for others facing similar obstacles. She envisions a future where the lives of student athletes, both during their athletic careers and beyond, are enriched through heightened awareness and support systems.`,
     instagram: 'https://www.instagram.com/addi.goodman?igsh=MTV1N3pwcDY0bjZwaA%3D%3D&utm_source=qr'
+  },
+  {
+    name: 'John Marshall',
+    images: [john, john2],
+    description: 'Lacrosse Player & Business Student',
+    fullBio: `John is a senior at Boston University's Questrom School of Business, where he studies Business Analytics. His passion for business started young, leading him to launch his own sneaker reselling venture at the age of 13. This experience fueled his curiosity about how his favorite companies work and the business world as a whole. As a former D1 lacrosse player, John experienced firsthand the mental health challenges and head-related injuries common in competitive sports. From these experiences, he's passionate about joining the Cortex Flex team and using his experiences to educate and support younger athletes going through similar challenges. When not playing or studying, John enjoys going to concerts and is also a talented painter on the side.`
+  },
+  {
+    name: 'Puneet Velidi',
+    images: [puneet, puneet2],
+    description: 'Software Engineer & Neuroscience Researcher',
+    fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
+    email: "puneet@cortexflex.org",
+    linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212"
   },
   // More bios...
 ];
@@ -208,7 +223,7 @@ function BioGallery() {
     <ThemeProvider theme={theme}>
       <Grid container spacing={2} sx={{ padding: '20px', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {bios.map((bio, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid item xs={12} sm={6} md={2} key={index}>
             <Card>
               <Slider {...sliderSettings}>
                 {bio.images.map((image, idx) => (
@@ -221,7 +236,7 @@ function BioGallery() {
                 <Typography gutterBottom variant="h5" component="div">
                   {bio.name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
                   {bio.description}
                 </Typography>
               </CardContent>

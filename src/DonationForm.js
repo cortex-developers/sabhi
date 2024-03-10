@@ -76,7 +76,7 @@ const DonationForm = () => {
           </RadioGroup>
         </FormControl>
         <Button type="submit" variant="contained" color="primary">
-          Donate
+          Pledge
         </Button>
       </form>
 

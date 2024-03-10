@@ -8,6 +8,10 @@ import LogoText from './sabhi-text.svg';
 import BioGallery from './BioGallery';
 import Contact from './Contact';
 import UnderConstructionPage from './UnderConstructionPage';
+import BlogPosts from './BlogPosts';
+//import OurStory from './OurStory';
+//import ResourcesPage from './ResourcesPage'
+import DonationForm from './DonationForm';
 const theme = createTheme({
   palette: {
     primary: {
@@ -29,6 +33,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+      <Box display="flex" flexDirection="column" minHeight="100vh"> {/* Adjusted for flex layout */}
         {/* Enhanced Navigation Bar */}
         <AppBar position="static">
           <Toolbar style={{ justifyContent: 'space-between' }}>
@@ -50,8 +55,14 @@ function App() {
               <Button color="inherit" component={RouterLink} to="/resources">
                 Resources
               </Button>
+              <Button color="inherit" component={RouterLink} to="/blog">
+                Blog
+              </Button>
               <Button color="inherit" component={RouterLink} to="/contact">
                 Contact
+              </Button>
+              <Button color="inherit" component={RouterLink} to="/give">
+                Give
               </Button>
             </Box>
           </Toolbar>
@@ -144,6 +155,9 @@ function App() {
           <Route path="/story" element={<UnderConstructionPage />} />
           <Route path="/resources" element={<UnderConstructionPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<BlogPosts/>} />
+          <Route path="/give" element={<DonationForm/>} />
+
         </Routes>
         {/* Footer */}
         <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>
@@ -155,6 +169,7 @@ function App() {
               Empowering student athletes for a healthier tomorrow.
             </Typography>
           </Container>
+        </Box>
         </Box>
       </Router>
     </ThemeProvider>

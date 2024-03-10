@@ -17,6 +17,7 @@ import dylan3 from './dylan3.jpg'
 import dylan4 from './dylan4.jpg'
 import olivia from './olivia.jpg'
 import olivia2 from './olivia2.jpg'
+import jesus from './jesus.jpg'
 import dj from './dj.jpg'
 import kevin from './kevin.jpg'
 import maya from './maya.jpg'
@@ -36,6 +37,8 @@ import addison2 from './addison2.jpg'
 import onome from './onome.jpg'
 import john from './john.jpg'
 import john2 from './john2.jpg'
+import brendan from './brendan.jpg'
+import brendan2 from './brendan2.jpg'
 const bios = [
   // Your bios data here
   {
@@ -86,6 +89,14 @@ const bios = [
     fullBio: 'Dylan Keusch is a senior at Cornell University studying Industrial and Labor Relations with a minor in Health Policy. On campus, Dylan is a member of the Varsity Men’s Lightweight Rowing Team. Throughout his time at Cornell, he has worked on original research on the lack of adequate policy protections for children returning to school after brain injury. He is currently writing his honors senior thesis on the lack of education policy for concussion and how it may contribute to poor life outcomes for survivors. Off campus, he is an intern with the Department of Neurosurgery at Boston Children’s Hospital and is a published author and conference invitee on Moyamoya disease, a rare cerebrovascular disease. He also works on research in neuro-oncology, cerebral palsy, and other cerebrovascular diseases. In addition to his work at Children’s, he is also a Firefighter/EMT in Edgartown, Massachusetts. As a brain injury survivor himself, Dylan recognizes the urgent need for accessible information on the dangers of concussion for young student-athletes. He could not be more excited to work with CFAA!',
     linkedin: 'https://www.linkedin.com/in/dylan-keusch-081172144/',
     instagram: 'https://www.instagram.com/dylankeusch/'
+  },
+  {
+    name: 'Jesus Salazar',
+    images: [jesus],
+    description: 'Professional Soccer Player',
+    fullBio: 'Jesus Salazar is a professional soccer player in Asia who previously attended the University of Portland. In addition to becoming a student athlete, Jesus was a volunteer assistant coach at Sweetwater High School in San Diego, CA. During his time as a coach, Jesus played the role of a guidance counselor off the field as well, helping high school students learn the process of college admissions, networking with coaches or even applying for FAFSA. It was during this time as an assistant coach that Jesus began to shape an idea on what he felt he could deliver to athletes around the country. He decided he needed to be a bridge between these students and opportunity. Not only opportunity on the field, but the opportunity to develop a mentality which will help them grow mentally in a healthy manner. Jesus began working with more children, serving as a personal trainer and coach at college ID Camps, became an mentor at the Athlete to Athlete organization and now looks to leave his mark on Coretex Flex.',
+    linkedin: 'https://www.linkedin.com/in/jesus-salazar-aa204427a/',
+    instagram: 'https://www.instagram.com/chuyy.salazar/'
   },
   {
     name: 'Olivia Ramil',
@@ -153,7 +164,17 @@ const bios = [
     name: 'John Marshall',
     images: [john, john2],
     description: 'Lacrosse Player & Business Student',
+    linkedin: 'http://www.linkedin.com/in/john-marshallbu',
+    instagram: 'https://www.instagram.com/marshallj1125?igsh=MWJvbXdzOXNhNWg1cw%3D%3D&utm_source=qr',
     fullBio: `John is a senior at Boston University's Questrom School of Business, where he studies Business Analytics. His passion for business started young, leading him to launch his own sneaker reselling venture at the age of 13. This experience fueled his curiosity about how his favorite companies work and the business world as a whole. As a former D1 lacrosse player, John experienced firsthand the mental health challenges and head-related injuries common in competitive sports. From these experiences, he's passionate about joining the Cortex Flex team and using his experiences to educate and support younger athletes going through similar challenges. When not playing or studying, John enjoys going to concerts and is also a talented painter on the side.`
+  },
+  {
+    name: 'Brendan Wilcox',
+    images: [brendan, brendan2],
+    description: 'Lacrosse Player & Business Student',
+    linkedin: 'https://www.linkedin.com/in/brendanjwilcox/',
+    instagram: 'https://www.instagram.com/brendanwilcox_?igsh=MXUwbnQwNjBxZHQ4Mw%3D%3D&utm_source=qr',
+    fullBio: `Brendan is a Senior at Boston University’s Questrom School of Business, where he studies Finance. His interest in finance started in high school when he took a class called “Wall Street: Investing in Your Future,” which consisted of independently scrolling Yahoo Finance for 45 minutes daily. This experience fueled Brendan’s interest in the dynamic nature of financial markets and their vast opportunities. Having played lacrosse since he was 5, Brendan went on to play lacrosse at Boston University for 2.5 years. After dealing with a constant stream of injuries throughout his career that ultimately impacted his personal life and mental health, Brendan hopes to leverage these experiences and his love for sports to help the next generation of student-athletes. In his free time, Brendan loves to run, hike, ski, golf, work out, and cook. He also has 11 cats.`
   },
   {
     name: 'Puneet Velidi',
@@ -161,7 +182,8 @@ const bios = [
     description: 'Software Engineer & Neuroscience Researcher',
     fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
     email: "puneet@cortexflex.org",
-    linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212"
+    linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212",
+    instagram: 'https://www.instagram.com/puneetvelidi/'
   },
   // More bios...
 ];

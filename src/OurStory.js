@@ -43,7 +43,7 @@ const OurStory = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-          April 2024
+          April
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color="secondary">

@@ -9,6 +9,7 @@ import LogoText from './sabhi-text.svg';
 import BioGallery from './BioGallery';
 import Contact from './Contact';
 import UnderConstructionPage from './UnderConstructionPage';
+import CortexLearn from './learn.jpg';
 import BlogPosts from './BlogPosts';
 import './App.css'
 //import OurStory from './OurStory';
@@ -44,7 +45,7 @@ function App() {
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
         <List>
           <ListItem button component={RouterLink} to="/blog" >
-            <ListItemText primary="Cortex Learn" primaryTypographyProps={{ fontWeight: 'bold' }}/>
+            <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
           </ListItem>
           <ListItem button component={RouterLink} to="/bios">
             <ListItemText primary="Meet Our Team" />
@@ -114,7 +115,8 @@ function App() {
                       fontWeight: 'bold', // Increases font weight                //animation: 'undulateColor 2s infinite',
                       // You can adjust the colors and duration as needed
                     }}>
-                      Cortex Learn
+                                  <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+
                     </Button>
                     <Button color="inherit" component={RouterLink} to="/bios">
                       Meet Our Team

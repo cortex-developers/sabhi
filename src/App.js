@@ -46,11 +46,14 @@ function App() {
           <ListItem button component={RouterLink} to="/blog" >
             <ListItemText primary="Cortex Learn" primaryTypographyProps={{ fontWeight: 'bold' }}/>
           </ListItem>
-          <ListItem button component={RouterLink} to="/resources">
-            <ListItemText primary="Resources" />
+          <ListItem button component={RouterLink} to="/bios">
+            <ListItemText primary="Meet Our Team" />
           </ListItem>
           <ListItem button component={RouterLink} to="/story">
             <ListItemText primary="Our Story" />
+          </ListItem>
+          <ListItem button component={RouterLink} to="/resources">
+            <ListItemText primary="Resources" />
           </ListItem>
           <ListItem button component={RouterLink} to="/contact">
             <ListItemText primary="Contact" />
@@ -58,7 +61,6 @@ function App() {
           <ListItem button component={RouterLink} to="/give">
             <ListItemText primary="Give" />
           </ListItem>
-
           {/* Repeat for other links */}
         </List>
       </Box>

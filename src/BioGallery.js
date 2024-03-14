@@ -39,6 +39,10 @@ import john from './john.jpg'
 import john2 from './john2.jpg'
 import brendan from './brendan.jpg'
 import brendan2 from './brendan2.jpg'
+import bear from './bear.jpg'
+import bear2 from './bear.jpg'
+import kate1 from './kate1.jpg'
+import kate2 from './kate2.jpg'
 const bios = [
   // Your bios data here
   {
@@ -175,6 +179,23 @@ const bios = [
     linkedin: 'https://www.linkedin.com/in/brendanjwilcox/',
     instagram: 'https://www.instagram.com/brendanwilcox_?igsh=MXUwbnQwNjBxZHQ4Mw%3D%3D&utm_source=qr',
     fullBio: `Brendan is a Senior at Boston University’s Questrom School of Business, where he studies Finance. His interest in finance started in high school when he took a class called “Wall Street: Investing in Your Future,” which consisted of independently scrolling Yahoo Finance for 45 minutes daily. This experience fueled Brendan’s interest in the dynamic nature of financial markets and their vast opportunities. Having played lacrosse since he was 5, Brendan went on to play lacrosse at Boston University for 2.5 years. After dealing with a constant stream of injuries throughout his career that ultimately impacted his personal life and mental health, Brendan hopes to leverage these experiences and his love for sports to help the next generation of student-athletes. In his free time, Brendan loves to run, hike, ski, golf, work out, and cook. He also has 11 cats.`
+  },
+  {
+    name: 'Bear Brofft',
+    images: [bear, bear2],
+    description: 'Lacrosse Player & Business Student',
+    linkedin: 'https://www.linkedin.com/in/christian-brofft/',
+    instagram: 'https://www.instagram.com/bear23_/',
+    fullBio: `Bear Brofft is a Senior at Babson College, where he studies Business Analytics and Entrepreneurship. After his transfer from Boston University in 2022, Bear fell in love with the idea of fusing his business acumen with his passion for coding. Through his experiences at Babson, Bear has been able to connect his technical coding skills with his desire to see real world projects come to life. Outside of the classroom, Bear is an athlete on the Men’s Lacrosse Team at Babson, where he is currently in pursuit of another conference championship and deep run in the NCAA playoffs. Although his student-athlete experience has been far from perfect, he looks to utilize everything he has learned to assist the next generations of student-athletes. Outside of the office, Bear is passionate about hiking, fishing, golfing, running and coding.`
+  },
+  {
+    name: 'Katelyn Sylvester',
+    images: [kate1, kate2],
+    description: 'Clinical Research Coordinator',
+    linkedin: 'http://www.linkedin.com/in/katelyn-sylvester',
+    instagram: 'https://www.instagram.com/katelynmsylvester?igsh=ODloang0MXQzNzJs&utm_source=qr',
+    fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
+    `
   },
   {
     name: 'Puneet Velidi',

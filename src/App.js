@@ -111,10 +111,7 @@ function App() {
               ) : (
                 <>
                   <Box display="flex" style={{ marginLeft: '20px' }}> {/* Adjust marginLeft to control spacing */}
-                    <Button color="inherit" component={RouterLink} to="/blog" sx={{
-                      fontWeight: 'bold', // Increases font weight                //animation: 'undulateColor 2s infinite',
-                      // You can adjust the colors and duration as needed
-                    }}>
+                    <Button color="inherit" component={RouterLink} to="/blog">
                                   <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
 
                     </Button>

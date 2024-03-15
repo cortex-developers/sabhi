@@ -43,6 +43,8 @@ import bear from './bear.jpg'
 import bear2 from './bear.jpg'
 import kate1 from './kate1.jpg'
 import kate2 from './kate2.jpg'
+import katy from './katy.jpg'
+import katy2 from './katy2.jpg'
 const bios = [
   // Your bios data here
   {
@@ -197,6 +199,14 @@ const bios = [
     fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
     `
   },
+  {
+    name: 'Kaitlyn Holly',
+    images: [katy, katy2],
+    description: 'Softball Player & Biochemistry Student',
+    linkedin: 'http://www.linkedin.com/in/kaitlynholly',
+    instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
+    fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
+    With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`},    
   {
     name: 'Puneet Velidi',
     images: [puneet, puneet2],

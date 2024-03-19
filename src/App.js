@@ -3,15 +3,29 @@ import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'reac
 import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
-import Logo from './sabhi-logo.svg';
+//import Logo from './sabhi-logo.svg';
+import Slideshow from './Slideshow';
+import Community from './Community';
+//import Article from './Article';
 import LogoNoText from './sabhi-logo-no-text.svg';
 import LogoText from './sabhi-text.svg';
 import BioGallery from './BioGallery';
 import Contact from './Contact';
-import UnderConstructionPage from './UnderConstructionPage';
+//import UnderConstructionPage from './UnderConstructionPage';
 import CortexLearn from './learn.jpg';
+import CortexCommunity from './cortexcomm.png';
+
 import BlogPosts from './BlogPosts';
 import './App.css'
+import athlete from './athlete.jpg'
+import scientist from './scientist.jpg'
+import creatives from './creatives.jpg'
+import doctor from './doctor.jpg'
+import business from './business.jpg'
+import nateathlete from './nateathleteshot.JPEG'
+import dylanathlete from './dylanathleteshot.JPG'
+import katyathlete from './katyathleteshot.jpg'
+import brendanathlete from './brendanathleteshot.jpg'
 //import OurStory from './OurStory';
 import ResourcesPage from './ResourcesPage'
 import DonationForm from './DonationForm';
@@ -39,13 +53,18 @@ function App() {
   const handleDrawerToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-
   const drawer = (
     <ThemeProvider theme={theme}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
         <List>
+        <ListItem button component={RouterLink} to="/">
+            <ListItemText primary="Home" />
+          </ListItem>
           <ListItem button component={RouterLink} to="/blog" >
             <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+          </ListItem>
+          <ListItem button component={RouterLink} to="/community" >
+            <img src={CortexCommunity} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
           </ListItem>
           <ListItem button component={RouterLink} to="/bios">
             <ListItemText primary="Meet Our Team" />
@@ -111,11 +130,21 @@ function App() {
               ) : (
                 <>
                   <Box display="flex" style={{ marginLeft: '20px' }}> {/* Adjust marginLeft to control spacing */}
+                    <Button color="inherit" component={RouterLink} to="/">
+                      Home
+                    </Button>
                     <Button color="inherit" component={RouterLink} to="/blog" sx={{
                       fontWeight: 'bold', // Increases font weight                //animation: 'undulateColor 2s infinite',
                       // You can adjust the colors and duration as needed
                     }}>
-                                  <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+                      <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+
+                    </Button>
+                    <Button color="inherit" component={RouterLink} to="/community" sx={{
+                      fontWeight: 'bold', // Increases font weight                //animation: 'undulateColor 2s infinite',
+                      // You can adjust the colors and duration as needed
+                    }}>
+                      <img src={CortexCommunity} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
 
                     </Button>
                     <Button color="inherit" component={RouterLink} to="/bios">
@@ -142,8 +171,8 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
+                <Slideshow fontSize = '2rem' images={[athlete, scientist, doctor,creatives, business]} texts = {["  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE."]} showArrows = {false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
-                  <img src={Logo} alt="SABHI Logo" style={{ height: '200px', marginTop: '20px' }} />
                   <Box sx={{
                     width: '100%',
                     display: 'flex',
@@ -208,12 +237,14 @@ function App() {
               </div>
             } />
             <Route path="/bios" element={<BioGallery />} />
-            <Route path="/story" element={<UnderConstructionPage />} />
+            <Route path="/story" element={<Slideshow textColor='white' textSize='1rem' images={[nateathlete, dylanathlete, katyathlete, brendanathlete]} texts = {["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.","As a brain injury survivor, researcher, and Division 1 athlete, I believe that science and evidence-based guidelines can maximize the brain health and wellness of student-athletes across the country. It is time to give student-athletes the tools they need and deserve to maximize their performance on the field, in the classroom, and in life.","As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.", "As a former student-athlete who sustained multiple season-ending injuries throughout my career, I have gained a strong understanding of how deeply intertwined sports and sports injuries are with mental health. With that, I hope to do everything in my power to help our team deliver science-backed advice and information so that the next generation of student-athletes is well-equipped to handle the mental and emotional challenges that come with playing sports at a high level."]} enableTypingEffect = {false}></Slideshow>} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<BlogPosts />} />
             <Route path="/give" element={<DonationForm />} />
+            <Route path="/community" element={<Community/>} />
 
+            {/*<Route path="/blog/:articleSlug" element={<Article />} />*/}
           </Routes>
           {/* Footer */}
           <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>

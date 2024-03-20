@@ -54,12 +54,14 @@ const BlogPosts = () => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: '70%', // Adjusted width for better mobile view
+    maxWidth: 375, // Added maxWidth for responsiveness 
+    maxHeight: 500,   
     bgcolor: 'background.paper',
+    border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    maxHeight: '90vh',
-    overflow: 'auto',
+    overflowY: 'auto'
   };
 
   return (
@@ -119,7 +121,7 @@ const BlogPosts = () => {
           Show Introduction
         </Typography> */}
       </Box>
-      <Box sx={{ width: '100%', maxWidth: 768, mx: 'auto', mt: 4, px: 2 }}>
+      <Box sx={{ width: '80%', maxWidth: 768, mx: 'auto', mt: 4, px: 2 }}>
         {posts.map((post) => (
           <Box key={post.sys.id} sx={{ mb: 5 }}>
             {post.fields.titleImageUrl && (

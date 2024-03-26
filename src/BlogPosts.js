@@ -5,7 +5,6 @@ import CloseIcon from '@mui/icons-material/Close'; // For closing/minimizing the
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import InfoIcon from '@mui/icons-material/Info'; // Import the Info icon
-import remarkSubSuper from 'remark-sub-super';
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -150,9 +149,7 @@ const BlogPosts = () => {
               {post.isExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
             </IconButton>
             {post.isExpanded && (
-              <ReactMarkdown
-              remarkPlugins={[remarkSubSuper]}
-              >{post.fields.body}</ReactMarkdown>
+              <ReactMarkdown>{post.fields.body}</ReactMarkdown>
             )}
           </Box>
         ))}

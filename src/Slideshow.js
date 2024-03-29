@@ -35,9 +35,10 @@ const Slideshow = ({
     showArrows = true,
     textSize = '2rem', // Default text size
     textColor = 'white', // Default text color
-    textHighlightColor="black",
+    textHighlightColor="black", // Text highlight color
     textFont = 'Kosugi Maru, sans-serif', // Default text font
-  }) => {
+    slideDuration = 3000, // Default slide duration as a prop
+}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const displayedText = useTypingEffect(texts[currentIndex], 50, enableTypingEffect);
@@ -66,10 +67,10 @@ const Slideshow = ({
             setTimeout(() => {
                 goToNext();
             }, 200);
-        }, 3000);
+        }, slideDuration); // Use the slideDuration prop here
 
         return () => clearInterval(timer);
-    }, [goToNext]);
+    }, [goToNext, slideDuration]);
 
     useEffect(() => {
         if (isTransitioning) {

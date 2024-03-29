@@ -14,7 +14,7 @@ import Contact from './Contact';
 //import UnderConstructionPage from './UnderConstructionPage';
 import CortexLearn from './learn.jpg';
 import CortexCommunity from './cortexcomm.png';
-
+import Partners from './Partners'
 import BlogPosts from './BlogPosts';
 import './App.css'
 import athlete from './athlete.jpg'
@@ -27,6 +27,7 @@ import dylanathlete from './dylanathleteshot.JPG'
 import katyathlete from './katyathleteshot.jpg'
 import brendanathlete from './brendanathleteshot.jpg'
 import oliviathlete from './oliviaathleteshot.png'
+import jesusathlete from './jesusaction.jpeg'
 //import OurStory from './OurStory';
 import ResourcesPage from './ResourcesPage'
 import DonationForm from './DonationForm';
@@ -75,6 +76,9 @@ function App() {
           </ListItem>
           <ListItem button component={RouterLink} to="/resources">
             <ListItemText primary="Resources" />
+          </ListItem>
+          <ListItem button component={RouterLink} to="/partners">
+            <ListItemText primary="Our Partners" />
           </ListItem>
           <ListItem button component={RouterLink} to="/contact">
             <ListItemText primary="Contact" />
@@ -157,6 +161,9 @@ function App() {
                     <Button color="inherit" component={RouterLink} to="/resources">
                       Resources
                     </Button>
+                    <Button color="inherit" component={RouterLink} to="/partners">
+                      Our Partners
+                    </Button>
                     <Button color="inherit" component={RouterLink} to="/contact">
                       Contact
                     </Button>
@@ -238,13 +245,18 @@ function App() {
               </div>
             } />
             <Route path="/bios" element={<BioGallery />} />
-            <Route path="/story" element={<Slideshow textColor='white' textSize='1rem' images={[nateathlete, dylanathlete, katyathlete, brendanathlete, oliviathlete ]} texts = {["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.","As a brain injury survivor, researcher, and Division 1 athlete, I believe that science and evidence-based guidelines can maximize the brain health and wellness of student-athletes across the country. It is time to give student-athletes the tools they need and deserve to maximize their performance on the field, in the classroom, and in life.","As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.", "As a former student-athlete who sustained multiple season-ending injuries throughout my career, I have gained a strong understanding of how deeply intertwined sports and sports injuries are with mental health. With that, I hope to do everything in my power to help our team deliver science-backed advice and information so that the next generation of student-athletes is well-equipped to handle the mental and emotional challenges that come with playing sports at a high level.", "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come."]} enableTypingEffect = {false}></Slideshow>} />
+            <Route path="/story" element={<Slideshow slideDuration = {15000} textColor='white' textSize='1rem' images={[nateathlete, dylanathlete, katyathlete, brendanathlete, oliviathlete, jesusathlete ]} texts = {["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
+            "As a brain injury survivor, researcher, and Division 1 athlete, I believe that science and evidence-based guidelines can maximize the brain health and wellness of student-athletes across the country. It is time to give student-athletes the tools they need and deserve to maximize their performance on the field, in the classroom, and in life.",
+            "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.", "As a former student-athlete who sustained multiple season-ending injuries throughout my career, I have gained a strong understanding of how deeply intertwined sports and sports injuries are with mental health. With that, I hope to do everything in my power to help our team deliver science-backed advice and information so that the next generation of student-athletes is well-equipped to handle the mental and emotional challenges that come with playing sports at a high level.", 
+            "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.", 
+            `The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.`
+            ]} enableTypingEffect = {false}></Slideshow>} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<BlogPosts />} />
             <Route path="/give" element={<DonationForm />} />
             <Route path="/community" element={<Community/>} />
-
+            <Route path="/partners" element={<Partners/>} />
             {/*<Route path="/blog/:articleSlug" element={<Article />} />*/}
           </Routes>
           {/* Footer */}

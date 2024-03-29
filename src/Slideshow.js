@@ -35,6 +35,7 @@ const Slideshow = ({
     showArrows = true,
     textSize = '2rem', // Default text size
     textColor = 'white', // Default text color
+    textHighlightColor="black",
     textFont = 'Kosugi Maru, sans-serif', // Default text font
   }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -106,6 +107,7 @@ const Slideshow = ({
                             left: '50%',
                             transform: 'translate(-50%, -50%)',
                             color: textColor,
+                            backgroundColor: textHighlightColor,
                             textAlign: 'center',
                             fontSize: textSize,
                             fontWeight: 'bold',

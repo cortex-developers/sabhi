@@ -31,6 +31,7 @@ import jesusathlete from './jesusaction.jpeg'
 //import OurStory from './OurStory';
 import ResourcesPage from './ResourcesPage'
 import DonationForm from './DonationForm';
+import Disclaimer from './Disclaimer'
 const theme = createTheme({
   palette: {
     primary: {
@@ -257,6 +258,7 @@ function App() {
             <Route path="/give" element={<DonationForm />} />
             <Route path="/community" element={<Community/>} />
             <Route path="/partners" element={<Partners/>} />
+            <Route path="/disclaimer" element={<Disclaimer/>} />
             {/*<Route path="/blog/:articleSlug" element={<Article />} />*/}
           </Routes>
           {/* Footer */}
@@ -268,6 +270,7 @@ function App() {
               <Typography variant="body2">
                 Empowering student athletes for a healthier tomorrow.
               </Typography>
+              <a href='/disclaimer' style={{ color: 'inherit', textDecoration: 'underline' }}>Disclaimer</a>
             </Container>
           </Box>
         </Box>

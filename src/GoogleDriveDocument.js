@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GoogleDriveDocument = () => {
-  const iframeSrc = "https://drive.google.com/file/d/1i-RT9Qgk8Z1osV2wNSWEDgc7kKbvq5tZ/preview"; // Replace YOUR_EMBED_LINK_HERE with your embed link
+  const iframeSrc = "https://drive.google.com/file/d/1VEHYyZW4_ibdAUuAtqRZOLC8Aizfi0sF/preview"; // Replace YOUR_EMBED_LINK_HERE with your embed link
   return (
     <div style={{ overflow: 'hidden', paddingBottom: '56.25%', position: 'relative', height: 500 }}>
       <iframe

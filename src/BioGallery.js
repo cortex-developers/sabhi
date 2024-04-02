@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slider from 'react-slick'; // Import Slider
 import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
+import natek from './natek.jpg'
 import nate from './nate.jpg'
 import nate2 from './nate2.jpg'
 import nate3 from './nate3.jpg'
@@ -207,7 +208,14 @@ const bios = [
     instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
     fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
     With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`},    
-  {
+    {
+      name: 'Nate Killeen',
+      images: [natek],
+      description: 'Cross Country Athlete & Business Student',
+      fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
+      linkedin: "https://www.linkedin.com/in/natekilleen/",
+    },
+    {
     name: 'Puneet Velidi',
     images: [puneet, puneet2],
     description: 'Software Engineer & Neuroscience Researcher',

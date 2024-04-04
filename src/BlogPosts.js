@@ -5,13 +5,41 @@ import CloseIcon from '@mui/icons-material/Close'; // For closing/minimizing the
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import InfoIcon from '@mui/icons-material/Info'; // Import the Info icon
+import ShareIcon from '@mui/icons-material/Share';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
   const [open, setOpen] = useState(true); // State to control the modal open state
-
+  const [snackbarOpen, setSnackbarOpen] = useState(false); // Snackbar visibility
+  const [snackbarMessage, setSnackbarMessage] = useState(''); // Message to display
+  const slugify = (text) =>
+    text
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')     // Replace spaces with -
+      .replace(/[^\w-]+/g, '')  // Remove all non-word chars except dash
+      .replace(/--+/g, '-');    // Replace multiple - with single -
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setSnackbarMessage('Link copied to clipboard!');
+      setSnackbarOpen(true); // Show the snackbar
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+      setSnackbarMessage('Failed to copy link.');
+      setSnackbarOpen(true);
+    }
+  };
+  const handleShareClick = (title) => {
+    const slug = slugify(title);
+    const url = `${window.location.origin}/blog#${encodeURIComponent(slug)}`;
+    copyToClipboard(url); // This now sets the snackbar message and visibility
+  };
   useEffect(() => {
     async function fetchPosts() {
       const spaceId = 'y10zqmp53ure';
@@ -37,6 +65,23 @@ const BlogPosts = () => {
     }
     fetchPosts();
   }, []);
+  useEffect(() => {
+    const navigateToPostByTitle = () => {
+      const hash = window.location.hash.replace('#', '');
+      const slug = decodeURIComponent(hash); // Decode the URI component
+      const postElement = document.getElementById(slug);
+      if (postElement) {
+        postElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    if (posts.length > 0) {
+      navigateToPostByTitle();
+    }
+
+    window.addEventListener('hashchange', navigateToPostByTitle, false);
+    return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
+  }, [posts])
 
   const toggleExpand = (id) => {
     setPosts(posts.map(post => {
@@ -56,7 +101,7 @@ const BlogPosts = () => {
     transform: 'translate(-50%, -50%)',
     width: '70%', // Adjusted width for better mobile view
     maxWidth: 375, // Added maxWidth for responsiveness 
-    maxHeight: 500,   
+    maxHeight: 500,
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -107,7 +152,7 @@ const BlogPosts = () => {
       </Modal>
 
       <Box sx={{ display: 'flex', justifyContent: 'left', marginLeft: "25px", mt: 2 }}>
-      <IconButton onClick={() => setOpen(true)} aria-label="show introduction" color="primary" size="small">
+        <IconButton onClick={() => setOpen(true)} aria-label="show introduction" color="primary" size="small">
           <InfoIcon />
         </IconButton>
         {/*<Typography
@@ -123,7 +168,7 @@ const BlogPosts = () => {
       </Box>
       <Box sx={{ width: '80%', maxWidth: 768, mx: 'auto', mt: 4, px: 2 }}>
         {posts.map((post) => (
-          <Box key={post.sys.id} sx={{ mb: 5 }}>
+          <Box key={post.sys.id} id={slugify(post.fields.title)} sx={{ mb: 5 }}>
             {post.fields.titleImageUrl && (
               <img
                 src={post.fields.titleImageUrl}
@@ -143,6 +188,9 @@ const BlogPosts = () => {
             <Typography variant="subtitle1" color="textSecondary" sx={{ mb: 2 }}>
               Published on: {new Date(post.fields.publishedOn).toLocaleDateString()} by {post.fields.authors.join(', ')}
             </Typography>
+            <IconButton onClick={() => handleShareClick(post.fields.title)} aria-label="share">
+              <ShareIcon />
+            </IconButton>
             <Typography gutterBottom></Typography>
             <Typography variant="body1">{post.fields.lede}</Typography>
             <IconButton onClick={() => toggleExpand(post.sys.id)} sx={{ p: 0 }}>
@@ -154,6 +202,11 @@ const BlogPosts = () => {
           </Box>
         ))}
       </Box>
+      <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={() => setSnackbarOpen(false)}>
+        <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: '100%' }}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

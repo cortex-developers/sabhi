@@ -82,7 +82,28 @@ const BlogPosts = () => {
     window.addEventListener('hashchange', navigateToPostByTitle, false);
     return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
   }, [posts])
-
+  useEffect(() => {
+    const handleHashChange = () => {
+      // Automatically close the modal if there's a hash in the URL
+      if (window.location.hash) {
+        setOpen(false);
+      } else {
+        // Optionally open it if there's no hash, depending on your UX needs
+        setOpen(true);
+      }
+    };
+  
+    // Call when the component mounts
+    handleHashChange();
+  
+    // Listen for hash changes to adjust modal visibility accordingly
+    window.addEventListener('hashchange', handleHashChange);
+  
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []); 
   const toggleExpand = (id) => {
     setPosts(posts.map(post => {
       if (post.sys.id === id) {

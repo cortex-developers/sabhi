@@ -1,9 +1,11 @@
 import React from 'react';
 import { Grid, Box, Typography } from '@mui/material';
 import clf from './clf.png'
+import cpfb from './cpfb.png'
 // Sample data for partner logos
 const partners = [
   { name: 'Concussion Legacy Foundation', logo: clf },
+  { name: 'Community Partnership Funding Board', logo: cpfb },
 
   // Add more partners as needed
 ];
@@ -20,8 +22,9 @@ const Partners = () => {
             <Box
               component="img"
               sx={{
-                height: 100,
+                maxHeight: '70%',
                 width: 'auto',
+                height: 'auto',
                 maxWidth: '100%',
                 display: 'block',
                 marginLeft: 'auto',

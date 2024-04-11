@@ -36,10 +36,10 @@ import jess from './jess.jpg'
 import addison from './addison.jpg'
 import addison2 from './addison2.jpg'
 import onome from './onome.jpg'
-import john from './john.jpg'
-import john2 from './john2.jpg'
-import brendan from './brendan.jpg'
-import brendan2 from './brendan2.jpg'
+//import john from './john.jpg'
+//import john2 from './john2.jpg'
+//import brendan from './brendan.jpg'
+//import brendan2 from './brendan2.jpg'
 import bear from './bear.jpg'
 import bear2 from './bear2.jpg'
 import kate1 from './kate1.jpg'
@@ -166,22 +166,6 @@ const bios = [
     description: 'Soccer Player & Cognitive Science Student',
     fullBio: `Addison is a third year undergraduate at Cornell University, studying for a degree in Cognitive Science. Before transferring to Cornell, Addison played on the varsity women’s soccer team at a Penn State campus, on which she also served as the team captain. In addition to competing as a collegiate student athlete, Addison volunteered in Elderly Care homes, served as a student government representative, and participated in various clubs. Addison's path took a profound turn when a severe concussion sustained during soccer necessitated months of intensive physical therapy. This experience catalyzed her mission to advocate for better concussion awareness among student athletes. She firmly believes that no athlete should endure such challenges without proper scientific understanding of when to prioritize recovery. Driven by her own journey, Addison strives to pave a smoother path for others facing similar obstacles. She envisions a future where the lives of student athletes, both during their athletic careers and beyond, are enriched through heightened awareness and support systems.`,
     instagram: 'https://www.instagram.com/addi.goodman?igsh=MTV1N3pwcDY0bjZwaA%3D%3D&utm_source=qr'
-  },
-  {
-    name: 'John Marshall',
-    images: [john, john2],
-    description: 'Lacrosse Player & Business Student',
-    linkedin: 'http://www.linkedin.com/in/john-marshallbu',
-    instagram: 'https://www.instagram.com/marshallj1125?igsh=MWJvbXdzOXNhNWg1cw%3D%3D&utm_source=qr',
-    fullBio: `John is a senior at Boston University's Questrom School of Business, where he studies Business Analytics. His passion for business started young, leading him to launch his own sneaker reselling venture at the age of 13. This experience fueled his curiosity about how his favorite companies work and the business world as a whole. As a former D1 lacrosse player, John experienced firsthand the mental health challenges and head-related injuries common in competitive sports. From these experiences, he's passionate about joining the Cortex Flex team and using his experiences to educate and support younger athletes going through similar challenges. When not playing or studying, John enjoys going to concerts and is also a talented painter on the side.`
-  },
-  {
-    name: 'Brendan Wilcox',
-    images: [brendan, brendan2],
-    description: 'Lacrosse Player & Business Student',
-    linkedin: 'https://www.linkedin.com/in/brendanjwilcox/',
-    instagram: 'https://www.instagram.com/brendanwilcox_?igsh=MXUwbnQwNjBxZHQ4Mw%3D%3D&utm_source=qr',
-    fullBio: `Brendan is a Senior at Boston University’s Questrom School of Business, where he studies Finance. His interest in finance started in high school when he took a class called “Wall Street: Investing in Your Future,” which consisted of independently scrolling Yahoo Finance for 45 minutes daily. This experience fueled Brendan’s interest in the dynamic nature of financial markets and their vast opportunities. Having played lacrosse since he was 5, Brendan went on to play lacrosse at Boston University for 2.5 years. After dealing with a constant stream of injuries throughout his career that ultimately impacted his personal life and mental health, Brendan hopes to leverage these experiences and his love for sports to help the next generation of student-athletes. In his free time, Brendan loves to run, hike, ski, golf, work out, and cook. He also has 11 cats.`
   },
   {
     name: 'Bear Brofft',

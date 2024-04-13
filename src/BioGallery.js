@@ -40,36 +40,37 @@ import onome from './onome.jpg'
 //import john2 from './john2.jpg'
 //import brendan from './brendan.jpg'
 //import brendan2 from './brendan2.jpg'
-import bear from './bear.jpg'
-import bear2 from './bear2.jpg'
+//import bear from './bear.jpg'
+//import bear2 from './bear2.jpg'
 import kate1 from './kate1.jpg'
 import kate2 from './kate2.jpg'
 import katy from './katy.jpg'
 import katy2 from './katy2.jpg'
+import lisa from './lisa.jpeg'
+import lisa2 from './lisa2.jpeg'
+import brooke from './brooke.jpg'
+import brooke2 from './brooke2.jpg'
+import chineme from './chineme.jpg'
+
+
 const bios = [
   // Your bios data here
   {
-    name: 'Nate Roy',
-    images: [nate, nate2, nate4, nate3, nate5],
-    description: 'Football Player & PhD Candidate',
-    fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
-    email: "nate@cortexflex.org",
-    linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
-    instagram: "https://www.instagram.com/nate.roy29/"
+    name: 'Kevin Wisniewski',
+    images: [kevin],
+    description: 'Medical Student & Non-profit Leader',
+    fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
   },
   {
-    name: 'Reza Ashrafi',
-    images: [reza],
-    description: 'Football Player & Neurobiology Researcher',
-    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
-    email: "reza@cortexflex.org",
-    linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
-    instagram: "https://www.instagram.com/reza_ashrafi26/"
+    name: 'Matt Shumway',
+    images: [matt],
+    description: 'Medical Student & Researcher',
+    fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
   },
   {
     name: 'Maya Hakyal',
     images: [maya, maya2],
-    description: 'Tennis Player & Medical Student',
+    description: 'Tennis Player & Medical Doctor',
     fullBio: `Maya Haykal, the eldest of eight siblings, embodies the ethos of "work hard, play hard". This
     motto was ingrained in her upbringing, which fueled her academic pursuits and athletic
     endeavors. Transitioning from dance to tennis after a teenage injury, Maya's passion for tennis
@@ -88,6 +89,31 @@ const bios = [
     to well-being, Maya's diverse background makes her an incredible asset to Cortex Flex Athlete
     Alliance, showcasing her dedication to athletic mentorship, medical practice, and community
     outreach.`
+  },
+  {
+    name: 'Brooke Miller',
+    images: [brooke, brooke2],
+    description: 'Soccer Player & Health Student',
+    fullBio: `Brooke Miller is a current Division 1 soccer at the University of Portland, striving to have a positive impact on young athletes within their sport and their overall health. While growing up in San Diego, Brooke's love for sports and helping others ignited at a young age. She found her calling in advocating for underprivileged youth in sports through her work with the non-profit organization Matters Athletic. There, she supported and mentored disadvantaged children, using sports as a tool for empowerment and social change. Brooke's commitment extended beyond advocacy as she spent time personally training kids one-on-one, receiving her U.S. Soccer grassroots coaching license, and then coaching at her colleges ID camps. In addition to her athletic pursuits, she is currently pursuing a degree in Integrative Health and Wellness at the University of Portland, with a minor in Business Administration. This academic pursuit aligns with her holistic approach to health and well-being, blending her passion for sports with her desire to promote overall wellness in larger populations and communities. Outside of her academic and athletic commitments, she is working to develop a business that aims to promote holistic health practices for athletes and young adults. With a vision to play professional soccer, become a certified health coach, and a certified holistic nutritionist, Brooke aspires to empower individuals to optimize their physical and mental well-being, unlocking their full potential both on and off the field.`,
+    instagram: "https://www.instagram.com/brookeeemiller/",
+  },
+  {
+    name: 'Reza Ashrafi',
+    images: [reza],
+    description: 'Football Player & Neurobiology Researcher',
+    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
+    email: "reza@cortexflex.org",
+    linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
+    instagram: "https://www.instagram.com/reza_ashrafi26/"
+  },
+  {
+    name: 'Nate Roy',
+    images: [nate, nate2, nate4, nate3, nate5],
+    description: 'Football Player & PhD Candidate',
+    fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
+    email: "nate@cortexflex.org",
+    linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
+    instagram: "https://www.instagram.com/nate.roy29/"
   },
   {
     name: 'Dylan Keusch',
@@ -123,12 +149,6 @@ const bios = [
     description: 'Athletic Trainer & U.S Army Section Chief',
     fullBio: "DJ Hampton, an ISSA Certified Performance Enhancement Trainer, is the dynamic force behind BoyGuru Fitness. With a passion for cultivating excellence in student athletes, DJ's dual training methods in the physical and cognitive realms sets him apart. Currently Serving as a U.S. Army, combat arms Field Artillery Howitzer Section Chief, he effortlessly applies agile decision-making and creative problem-solving skills honed through tactical situations while also fostering a deliberate and process management mindset garnered through a certification in Program Management and a Green Belt in Six Sigma Methodology. Despite his recent foray into business, DJ's leadership, training, speaking, content creation, and marketing skills converge seamlessly. His mission extends beyond sports, aiming to transform individuals into forces of nature both in their sport and in the sport of life. DJ's diverse skill set positions him as a valuable asset to the Cortex Flex Athlete Alliance, making him a trusted ally for those seeking mastery of self and unparalleled performance enhancement."
   },
-  {
-    name: 'Kevin Wisniewski',
-    images: [kevin],
-    description: 'Medical Student & Non-profit Leader',
-    fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
-  },
 
   {
     name: 'Ellie Mccarron',
@@ -140,12 +160,6 @@ const bios = [
     At Boston University, Ellie has earned dean’s list honors while completing coursework in media relations, communications writing, advertising, and graphic design.`,
     linkedin: 'https://www.linkedin.com/in/elisabeth-mccarron-81580526a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagram: 'https://www.instagram.com/elliebelly17?igsh=NHZ6OTlrOGdweWZi&utm_source=qr'
-  },
-  {
-    name: 'Matt Shumway',
-    images: [matt],
-    description: 'Medical Student & Researcher',
-    fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
   },
   {
     name: 'Chris Stoneman',
@@ -166,14 +180,6 @@ const bios = [
     description: 'Soccer Player & Cognitive Science Student',
     fullBio: `Addison is a third year undergraduate at Cornell University, studying for a degree in Cognitive Science. Before transferring to Cornell, Addison played on the varsity women’s soccer team at a Penn State campus, on which she also served as the team captain. In addition to competing as a collegiate student athlete, Addison volunteered in Elderly Care homes, served as a student government representative, and participated in various clubs. Addison's path took a profound turn when a severe concussion sustained during soccer necessitated months of intensive physical therapy. This experience catalyzed her mission to advocate for better concussion awareness among student athletes. She firmly believes that no athlete should endure such challenges without proper scientific understanding of when to prioritize recovery. Driven by her own journey, Addison strives to pave a smoother path for others facing similar obstacles. She envisions a future where the lives of student athletes, both during their athletic careers and beyond, are enriched through heightened awareness and support systems.`,
     instagram: 'https://www.instagram.com/addi.goodman?igsh=MTV1N3pwcDY0bjZwaA%3D%3D&utm_source=qr'
-  },
-  {
-    name: 'Bear Brofft',
-    images: [bear, bear2],
-    description: 'Lacrosse Player & Business Student',
-    linkedin: 'https://www.linkedin.com/in/christian-brofft/',
-    instagram: 'https://www.instagram.com/bear23_/',
-    fullBio: `Bear Brofft is a Senior at Babson College, where he studies Business Analytics and Entrepreneurship. After his transfer from Boston University in 2022, Bear fell in love with the idea of fusing his business acumen with his passion for coding. Through his experiences at Babson, Bear has been able to connect his technical coding skills with his desire to see real world projects come to life. Outside of the classroom, Bear is an athlete on the Men’s Lacrosse Team at Babson, where he is currently in pursuit of another conference championship and deep run in the NCAA playoffs. Although his student-athlete experience has been far from perfect, he looks to utilize everything he has learned to assist the next generations of student-athletes. Outside of the office, Bear is passionate about hiking, fishing, golfing, running and coding.`
   },
   {
     name: 'Katelyn Sylvester',
@@ -198,6 +204,18 @@ const bios = [
       description: 'Cross Country Athlete & Business Student',
       fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
       linkedin: "https://www.linkedin.com/in/natekilleen/",
+    },
+    {
+      name: 'Chineme Ewenike',
+      images: [chineme],
+      description: 'EMT & Research Assistant',
+      fullBio: 'Chineme is an EMT and a junior at Cornell University double majoring in Biological Sciences and Psychology. On campus, Chineme is an undergraduate research assistant in the Feschotte lab studying the role of genetic piRNA clusters in silencing retroelements in Zebrafish. As a member of CortexFlex, Chineme is excited to help with making scientific research communication more open and accessible to athletes!',
+    },
+    {
+      name: 'Lisa Liff',
+      images: [lisa, lisa2],
+      description: 'EMT & Clinical Care Tech',
+      fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',
     },
     {
     name: 'Puneet Velidi',

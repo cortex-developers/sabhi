@@ -5,7 +5,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slider from 'react-slick'; // Import Slider
 import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
-import natek from './natek.jpg'
+import natek from './natek.jpeg'
+import natek2 from './natek2.jpeg'
 import nate from './nate.jpg'
 import nate2 from './nate2.jpg'
 import nate3 from './nate3.jpg'
@@ -56,6 +57,25 @@ import chineme from './chineme.jpg'
 const bios = [
   // Your bios data here
   {
+    name: 'Nate Roy',
+    images: [nate, nate2, nate4, nate3, nate5],
+    description: 'Football Player & PhD Candidate',
+    fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
+    email: "nate@cortexflex.org",
+    linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
+    instagram: "https://www.instagram.com/nate.roy29/"
+  },
+  {
+    name: 'Reza Ashrafi',
+    images: [reza],
+    description: 'Football Player & Neurobiology Researcher',
+    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
+    email: "reza@cortexflex.org",
+    linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
+    instagram: "https://www.instagram.com/reza_ashrafi26/"
+  },
+
+  {
     name: 'Kevin Wisniewski',
     images: [kevin],
     description: 'Medical Student & Non-profit Leader',
@@ -96,24 +116,6 @@ const bios = [
     description: 'Soccer Player & Health Student',
     fullBio: `Brooke Miller is a current Division 1 soccer at the University of Portland, striving to have a positive impact on young athletes within their sport and their overall health. While growing up in San Diego, Brooke's love for sports and helping others ignited at a young age. She found her calling in advocating for underprivileged youth in sports through her work with the non-profit organization Matters Athletic. There, she supported and mentored disadvantaged children, using sports as a tool for empowerment and social change. Brooke's commitment extended beyond advocacy as she spent time personally training kids one-on-one, receiving her U.S. Soccer grassroots coaching license, and then coaching at her colleges ID camps. In addition to her athletic pursuits, she is currently pursuing a degree in Integrative Health and Wellness at the University of Portland, with a minor in Business Administration. This academic pursuit aligns with her holistic approach to health and well-being, blending her passion for sports with her desire to promote overall wellness in larger populations and communities. Outside of her academic and athletic commitments, she is working to develop a business that aims to promote holistic health practices for athletes and young adults. With a vision to play professional soccer, become a certified health coach, and a certified holistic nutritionist, Brooke aspires to empower individuals to optimize their physical and mental well-being, unlocking their full potential both on and off the field.`,
     instagram: "https://www.instagram.com/brookeeemiller/",
-  },
-  {
-    name: 'Reza Ashrafi',
-    images: [reza],
-    description: 'Football Player & Neurobiology Researcher',
-    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
-    email: "reza@cortexflex.org",
-    linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
-    instagram: "https://www.instagram.com/reza_ashrafi26/"
-  },
-  {
-    name: 'Nate Roy',
-    images: [nate, nate2, nate4, nate3, nate5],
-    description: 'Football Player & PhD Candidate',
-    fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
-    email: "nate@cortexflex.org",
-    linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
-    instagram: "https://www.instagram.com/nate.roy29/"
   },
   {
     name: 'Dylan Keusch',
@@ -200,7 +202,7 @@ const bios = [
     With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`},    
     {
       name: 'Nate Killeen',
-      images: [natek],
+      images: [natek, natek2],
       description: 'Cross Country Athlete & Business Student',
       fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
       linkedin: "https://www.linkedin.com/in/natekilleen/",

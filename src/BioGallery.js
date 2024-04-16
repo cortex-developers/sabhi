@@ -52,7 +52,7 @@ import lisa2 from './lisa2.jpeg'
 import brooke from './brooke.jpg'
 import brooke2 from './brooke2.jpg'
 import chineme from './chineme.jpg'
-
+import kanella from './kanella.jpg'
 
 const bios = [
   // Your bios data here
@@ -218,6 +218,16 @@ const bios = [
       images: [lisa, lisa2],
       description: 'EMT & Clinical Care Tech',
       fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',
+    },
+    {
+      name: 'Kanella Basilion',
+      images: [kanella],
+      description: 'Cross Country Athlete & Business Student',
+      fullBio: `Kanella is thrilled to be at the intersection of society and science here at Cortex Flex. She received her bachelor’s degree from McGill University in May 2023, where she majored in psychology and minored in French and behavioral science. She has a research background in pediatric ADHD at the Cleveland Clinic’s ADHD Summer Treatment Program, and cardiovascular psychophysiology through McGill University. Currently, she works in neurology research at Massachusetts General Hospital’s Frontotemporal Disorders Unit.
+
+      Kanella is interested in all things health, nutrition, and quality of life, and hopes to pursue higher education in health psychology in the future. To Kanella, an informed society is foundational to creating well-being oriented spectators, athletes, and policymakers of the athletic world and beyond. She is excited to be able to bring a psychological lens to the scientific advocacy work of this organization, and to assist with the distribution of comprehensible learning resources to budding athletes throughout the United States.
+      `,
+      linkedin: "https://www.linkedin.com/in/kanella-basilion-bb67ab1b2/",
     },
     {
     name: 'Puneet Velidi',

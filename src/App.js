@@ -18,10 +18,15 @@ import Partners from './Partners'
 import BlogPosts from './BlogPosts';
 import './App.css'
 import athlete from './athlete.jpg'
+import athletef from './athletef.jpg'
 import scientist from './scientist.jpg'
+import scientistf from './scientistf.jpg'
 import creatives from './creatives.jpg'
+import creativesf from './creativesf.jpg'
 import doctor from './doctor.jpg'
+import doctorf from './doctorf.jpg'
 import business from './business.jpg'
+import businessf from './businessf.jpg'
 import nateathlete from './nateathleteshot.JPEG'
 import dylanathlete from './dylanathleteshot.JPG'
 import katyathlete from './katyathleteshot.jpg'
@@ -180,7 +185,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow fontSize = '2rem' images={[athlete, scientist, doctor,creatives, business]} texts = {["  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE."]} showArrows = {false}></Slideshow>
+                <Slideshow fontSize = '2rem' images={[athletef, scientistf, doctorf, creativesf, businessf, athlete, scientist, doctor,creatives, business]} texts = {["  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE.","  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE."]} showArrows = {false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',
@@ -196,7 +201,7 @@ function App() {
                       Our Mission
                     </Typography>
                     <Typography variant="h6" component="p" sx={{ fontStyle: 'italic', fontSize: '1.25rem', maxWidth: '85%' }}>
-                      "Our mission is to translate complex scientific knowledge into comprehensible messages to which athletic communities will be receptive; and thus broadly creating better outcomes for athletes on gameday, in the classroom, and in life thereafter."
+                      "Our mission is to translate complex scientific knowledge into comprehensible messages to which athletic communities will be receptive and thus to broadly create better outcomes for athletes on gameday, in the classroom, and in life thereafter."
                     </Typography>
                   </Box>
                   <Button variant="contained" color="primary" size="large" href="https://forms.gle/H1oHFAffVSKHwqdQA">

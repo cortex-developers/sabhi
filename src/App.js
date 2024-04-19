@@ -185,7 +185,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow fontSize = '2rem' images={[athletef, scientistf, doctorf, creativesf, businessf, athlete, scientist, doctor,creatives, business]} texts = {["  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE.","  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE."]} showArrows = {false}></Slideshow>
+                <Slideshow fontSize = '2rem' images={[athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf,creatives, businessf]} texts = {["  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE.","  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE."]} showArrows = {false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',

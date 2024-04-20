@@ -59,7 +59,7 @@ const bios = [
   {
     name: 'Nate Roy',
     images: [nate, nate2, nate4, nate3, nate5],
-    description: 'Football Player & PhD Candidate',
+    description: 'D1 Football Player & PhD Student',
     fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
     email: "nate@cortexflex.org",
     linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
@@ -90,7 +90,7 @@ const bios = [
   {
     name: 'Maya Hakyal',
     images: [maya, maya2],
-    description: 'Tennis Player & Medical Doctor',
+    description: 'Former D1 Tennis Player & Medical Doctor',
     fullBio: `Maya Haykal, the eldest of eight siblings, embodies the ethos of "work hard, play hard". This
     motto was ingrained in her upbringing, which fueled her academic pursuits and athletic
     endeavors. Transitioning from dance to tennis after a teenage injury, Maya's passion for tennis
@@ -113,7 +113,7 @@ const bios = [
   {
     name: 'Brooke Miller',
     images: [brooke, brooke2],
-    description: 'Soccer Player & Health Student',
+    description: 'D1 Soccer Player & Health Student',
     fullBio: `Brooke Miller is a current Division 1 soccer at the University of Portland, striving to have a positive impact on young athletes within their sport and their overall health. While growing up in San Diego, Brooke's love for sports and helping others ignited at a young age. She found her calling in advocating for underprivileged youth in sports through her work with the non-profit organization Matters Athletic. There, she supported and mentored disadvantaged children, using sports as a tool for empowerment and social change. Brooke's commitment extended beyond advocacy as she spent time personally training kids one-on-one, receiving her U.S. Soccer grassroots coaching license, and then coaching at her colleges ID camps. In addition to her athletic pursuits, she is currently pursuing a degree in Integrative Health and Wellness at the University of Portland, with a minor in Business Administration. This academic pursuit aligns with her holistic approach to health and well-being, blending her passion for sports with her desire to promote overall wellness in larger populations and communities. Outside of her academic and athletic commitments, she is working to develop a business that aims to promote holistic health practices for athletes and young adults. With a vision to play professional soccer, become a certified health coach, and a certified holistic nutritionist, Brooke aspires to empower individuals to optimize their physical and mental well-being, unlocking their full potential both on and off the field.`,
     instagram: "https://www.instagram.com/brookeeemiller/",
   },
@@ -136,13 +136,13 @@ const bios = [
   {
     name: 'Olivia Ramil',
     images: [olivia, olivia2],
-    description: 'Basketball Player & Non-profit Leader',
+    description: 'Former D1 Basketball Player & Non-profit Leader',
     fullBio: 'Olivia Ramil brings a wealth of experience to Cortex Flex Athlete Alliance as a former collegiate athlete, having competed in Division I Basketball for six years across prestigious institutions like Georgetown University, Binghamton University, St. Joseph’s University, and Samford University. Notably ranked by ESPN as the 16th best center in the 2016 Women’s Basketball class out of high school, Olivia balanced her athletic pursuits with scholarly passions, earning both a Bachelor of Science in Nursing and a Masters of Health Administration. In her transition from the court to professional roles, she has served as a Support Coordinator Intern with Samford University’s CAREs Team, Lead Project Manager and Recruiting Coordinator at SaveAround Fundraising, Athlete to Athlete Recruiter, PLAAY Mentor & Project Manager, and Registered School Nurse for Elementary and Middle Schools. As a member of the Cortex Flex Athlete Alliance, Olivia strives to equip and empower athletes, utilizing her varied expertise to nurture success, safety, and fulfillment in their careers and beyond.    '
   },
   {
     name: 'Onome Kessington',
     images: [onome],
-    description: 'Football Player & Business Leader',
+    description: 'Former D1 Football Player & Business Leader',
     fullBio: 'Onome Kessington is a Cornell University graduate completing his degree in Applied Economics and Management. Onome has an array of business experience from International Tax at world rebound beverage company Constellation Brands to Risk Management and Credit at First American Equipment Finance where they specialize in Equipment financing. Onome is a natural born entrepreneur that always looks at how he can add value to any room he is in.'
   },
   {
@@ -179,7 +179,7 @@ const bios = [
   {
     name: 'Addison Goodman',
     images: [addison, addison2],
-    description: 'Soccer Player & Cognitive Science Student',
+    description: 'Cognitive Science Student',
     fullBio: `Addison is a third year undergraduate at Cornell University, studying for a degree in Cognitive Science. Before transferring to Cornell, Addison played on the varsity women’s soccer team at a Penn State campus, on which she also served as the team captain. In addition to competing as a collegiate student athlete, Addison volunteered in Elderly Care homes, served as a student government representative, and participated in various clubs. Addison's path took a profound turn when a severe concussion sustained during soccer necessitated months of intensive physical therapy. This experience catalyzed her mission to advocate for better concussion awareness among student athletes. She firmly believes that no athlete should endure such challenges without proper scientific understanding of when to prioritize recovery. Driven by her own journey, Addison strives to pave a smoother path for others facing similar obstacles. She envisions a future where the lives of student athletes, both during their athletic careers and beyond, are enriched through heightened awareness and support systems.`,
     instagram: 'https://www.instagram.com/addi.goodman?igsh=MTV1N3pwcDY0bjZwaA%3D%3D&utm_source=qr'
   },
@@ -195,7 +195,7 @@ const bios = [
   {
     name: 'Kaitlyn Holly',
     images: [katy, katy2],
-    description: 'Softball Player & Biochemistry Student',
+    description: 'D1 Softball Player & Biochemistry Student',
     linkedin: 'http://www.linkedin.com/in/kaitlynholly',
     instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
     fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
@@ -203,7 +203,7 @@ const bios = [
     {
       name: 'Nate Killeen',
       images: [natek, natek2],
-      description: 'Cross Country Athlete & Business Student',
+      description: 'D1 Cross Country Athlete & Business Student',
       fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
       linkedin: "https://www.linkedin.com/in/natekilleen/",
     },
@@ -222,7 +222,7 @@ const bios = [
     {
       name: 'Kanella Basilion',
       images: [kanella],
-      description: 'Cross Country Athlete & Business Student',
+      description: 'Business Student',
       fullBio: `Kanella is thrilled to be at the intersection of society and science here at Cortex Flex. She received her bachelor’s degree from McGill University in May 2023, where she majored in psychology and minored in French and behavioral science. She has a research background in pediatric ADHD at the Cleveland Clinic’s ADHD Summer Treatment Program, and cardiovascular psychophysiology through McGill University. Currently, she works in neurology research at Massachusetts General Hospital’s Frontotemporal Disorders Unit.
 
       Kanella is interested in all things health, nutrition, and quality of life, and hopes to pursue higher education in health psychology in the future. To Kanella, an informed society is foundational to creating well-being oriented spectators, athletes, and policymakers of the athletic world and beyond. She is excited to be able to bring a psychological lens to the scientific advocacy work of this organization, and to assist with the distribution of comprehensible learning resources to budding athletes throughout the United States.

@@ -222,7 +222,7 @@ const bios = [
     {
       name: 'Kanella Basilion',
       images: [kanella],
-      description: 'Business Student',
+      description: 'Clinical Research Coordinator',
       fullBio: `Kanella is thrilled to be at the intersection of society and science here at Cortex Flex. She received her bachelor’s degree from McGill University in May 2023, where she majored in psychology and minored in French and behavioral science. She has a research background in pediatric ADHD at the Cleveland Clinic’s ADHD Summer Treatment Program, and cardiovascular psychophysiology through McGill University. Currently, she works in neurology research at Massachusetts General Hospital’s Frontotemporal Disorders Unit.
 
       Kanella is interested in all things health, nutrition, and quality of life, and hopes to pursue higher education in health psychology in the future. To Kanella, an informed society is foundational to creating well-being oriented spectators, athletes, and policymakers of the athletic world and beyond. She is excited to be able to bring a psychological lens to the scientific advocacy work of this organization, and to assist with the distribution of comprehensible learning resources to budding athletes throughout the United States.

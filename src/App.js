@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
-import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText, Grid} from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
 //import Logo from './sabhi-logo.svg';
+
 import Slideshow from './Slideshow';
 import Community from './Community';
 //import Article from './Article';
@@ -36,7 +37,16 @@ import jesusathlete from './jesusaction.jpeg'
 //import OurStory from './OurStory';
 import ResourcesPage from './ResourcesPage'
 import DonationForm from './DonationForm';
+import ApplicationForm from './ApplicationForm'
 import Disclaimer from './Disclaimer'
+import MailChimpForm from './MailChimpForm';
+
+import graphic1 from './graphic1.png'
+import graphic2 from './graphic2.png'
+import graphic3 from './graphic3.png'
+import { styled } from '@mui/material/styles';
+
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -54,10 +64,22 @@ const theme = createTheme({
   },
 });
 
+const Img = styled('img')({
+  margin: 'auto',
+  display: 'block',
+  maxWidth: '100%',
+  maxHeight: '100%',
+});
+
 function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const images = [
+    graphic1,
+    graphic2,
+    graphic3,
+    // Add more image paths as needed
+  ];
   const handleDrawerToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -65,7 +87,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
         <List>
-        <ListItem button component={RouterLink} to="/">
+          <ListItem button component={RouterLink} to="/">
             <ListItemText primary="Home" />
           </ListItem>
           <ListItem button component={RouterLink} to="/blog" >
@@ -77,6 +99,9 @@ function App() {
           <ListItem button component={RouterLink} to="/bios">
             <ListItemText primary="Meet Our Team" />
           </ListItem>
+          <ListItem button component={RouterLink} to="/join">
+            <ListItemText primary="Join Our Team!" />
+          </ListItem>
           <ListItem button component={RouterLink} to="/story">
             <ListItemText primary="Our Story" />
           </ListItem>
@@ -86,9 +111,9 @@ function App() {
           <ListItem button component={RouterLink} to="/partners">
             <ListItemText primary="Our Partners" />
           </ListItem>
-          <ListItem button component={RouterLink} to="/contact">
+          {/*           <ListItem button component={RouterLink} to="/contact">
             <ListItemText primary="Contact" />
-          </ListItem>
+          </ListItem> */}
           <ListItem button component={RouterLink} to="/give">
             <ListItemText primary="Give" />
           </ListItem>
@@ -161,6 +186,9 @@ function App() {
                     <Button color="inherit" component={RouterLink} to="/bios">
                       Meet Our Team
                     </Button>
+                    <Button color="inherit" component={RouterLink} to="/join">
+                      Join Our Team!
+                    </Button>
                     <Button color="inherit" component={RouterLink} to="/story">
                       Our Story
                     </Button>
@@ -170,9 +198,9 @@ function App() {
                     <Button color="inherit" component={RouterLink} to="/partners">
                       Our Partners
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/contact">
+                    {/*                     <Button color="inherit" component={RouterLink} to="/contact">
                       Contact
-                    </Button>
+                    </Button> */}
                     <Button color="inherit" component={RouterLink} to="/give">
                       Give
                     </Button>
@@ -185,7 +213,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow fontSize = '2rem' images={[athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf,creatives, businessf]} texts = {["  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE.","  ATHLETES."," SCIENTISTS."," DOCTORS."," CREATIVES."," BUSINESSPEOPLE."]} showArrows = {false}></Slideshow>
+                <Slideshow fontSize='2rem' images={[athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE.", "  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',
@@ -197,34 +225,76 @@ function App() {
                     marginTop: '40px',
                     marginBottom: '40px',
                   }}>
-                    <Typography variant="h4" component="p" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
+                    <Grid container spacing={2}>
+                      {images.map((image, index) => (
+                        <Grid item xs={12} sm={12} md={12} key={index}>
+                          <Img alt={`Image ${index + 1}`} src={image} />
+                        </Grid>
+                      ))}
+                    </Grid>
+                  </Box>
+                  <Card
+                    sx={{
+                      width: '50%', // Sets the width of the Card to 50% of the screen
+                      marginTop: '50px',
+                      color: 'white',
+                      fontWeight: 'bold',
+                      marginBottom: '20px',
+                      backgroundColor: 'black',
+                      padding: '10px',
+                    }}
+                  >
+                    <Typography
+                      variant="h4"
+                      component="p"
+                    >
                       Our Mission
                     </Typography>
-                    <Typography variant="h6" component="p" sx={{ fontStyle: 'italic', fontSize: '1.25rem', maxWidth: '85%' }}>
+                    <Typography
+                      variant="h6"
+                      component="p"
+                    >
                       "Our mission is to translate complex scientific knowledge into comprehensible messages to which athletic communities will be receptive and thus to broadly create better outcomes for athletes on gameday, in the classroom, and in life thereafter."
                     </Typography>
-                  </Box>
-                  <Button variant="contained" color="primary" size="large" href="https://forms.gle/H1oHFAffVSKHwqdQA">
-                    Join Us
-                  </Button>
-                  <Box sx={{
-                    width: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    marginTop: '40px',
-                    marginBottom: '40px',
-                  }}>
-                    <Typography variant="h4" component="p" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
+                  </Card>
+
+                  <Card
+                    sx={{
+                      width: '50%', // Ensures that this Card also has a width of 50% of the screen
+                      marginTop: '50px',
+                      color: 'white',
+                      fontWeight: 'bold',
+                      marginBottom: '20px',
+                      backgroundColor: 'black',
+                      padding: '10px',
+                    }}
+                  >
+                    <Typography
+                      variant="h4"
+                      component="p"
+                      sx={{
+                        fontWeight: 'bold',
+                        marginBottom: '20px'
+                      }}
+                    >
                       Our Vision
                     </Typography>
-                    <Typography variant="h6" component="p" sx={{ fontStyle: 'italic', fontSize: '0.75rem', maxWidth: '85%' }}>
+                    <Typography
+                      variant="h6"
+                      component="p"
+                      sx={{
+                        fontStyle: 'italic',
+                        fontSize: '0.75rem',
+                        maxWidth: '85%'
+                      }}
+                    >
                       "Our vision is to create a world where athletics and clinical science exist not as separate entities but as a symbiotically-linked cooperative partnership. We aim to create a powerful network of intermediaries who serve to educate and inspire coaches and athletes as well as to act as advocates before scientific and medical professionals in articulating the range of difficulties that athletes experience. We envision a future where athletes worldwide have full access to the range of evidence-based practices, and where scientists have an elevated understanding of how to help the athlete population. This will culminate in better health and performance outcomes inside and outside of athletics."
                     </Typography>
-                  </Box>
+                  </Card>
+                  <MailChimpForm/>
                 </Box>
+
+
                 {/* Connect with Us Section */}
                 <Box component="section" sx={{ bgcolor: 'background.paper', color: 'text.primary', py: 3, textAlign: 'center' }}>
                   <Typography variant="h6" gutterBottom>
@@ -252,28 +322,29 @@ function App() {
             } />
             <Route path="/bios" element={<BioGallery />} />
             <Route path="/story" element={
-            isMobile ?
-            (<Slideshow slideDuration = {15000} textColor='white' textSize='0.5rem' images={[nateathlete, dylanathlete, katyathlete, oliviathlete, jesusathlete ]} texts = {["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
-            "As a brain injury survivor, researcher, and Division 1 athlete, I believe that science and evidence-based guidelines can maximize the brain health and wellness of student-athletes across the country. It is time to give student-athletes the tools they need and deserve to maximize their performance on the field, in the classroom, and in life.",
-            "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
-            "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.", 
-            `The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.`
-            ]} enableTypingEffect = {false}></Slideshow>):(<Slideshow slideDuration = {15000} textColor='white' textSize='1rem' images={[nateathlete, dylanathlete, katyathlete, oliviathlete, jesusathlete ]} texts = {["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
-            "As a brain injury survivor, researcher, and Division 1 athlete, I believe that science and evidence-based guidelines can maximize the brain health and wellness of student-athletes across the country. It is time to give student-athletes the tools they need and deserve to maximize their performance on the field, in the classroom, and in life.",
-            "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.", 
-            "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.", 
-            `The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.`
-            ]} enableTypingEffect = {false}></Slideshow>)
-            
-            
+              isMobile ?
+                (<Slideshow slideDuration={15000} textColor='white' textSize='0.5rem' images={[nateathlete, dylanathlete, katyathlete, oliviathlete, jesusathlete]} texts={["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
+                  "As a brain injury survivor, researcher, and Division 1 athlete, I believe that science and evidence-based guidelines can maximize the brain health and wellness of student-athletes across the country. It is time to give student-athletes the tools they need and deserve to maximize their performance on the field, in the classroom, and in life.",
+                  "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
+                  "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.",
+                  `The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.`
+                ]} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={15000} textColor='white' textSize='1rem' images={[nateathlete, dylanathlete, katyathlete, oliviathlete, jesusathlete]} texts={["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
+                  "As a brain injury survivor, researcher, and Division 1 athlete, I believe that science and evidence-based guidelines can maximize the brain health and wellness of student-athletes across the country. It is time to give student-athletes the tools they need and deserve to maximize their performance on the field, in the classroom, and in life.",
+                  "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
+                  "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.",
+                  `The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.`
+                ]} enableTypingEffect={false}></Slideshow>)
+
+
             } />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<BlogPosts />} />
             <Route path="/give" element={<DonationForm />} />
-            <Route path="/community" element={<Community/>} />
-            <Route path="/partners" element={<Partners/>} />
-            <Route path="/disclaimer" element={<Disclaimer/>} />
+            <Route path="/join" element={<ApplicationForm />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
             {/*<Route path="/blog/:articleSlug" element={<Article />} />*/}
           </Routes>
           {/* Footer */}

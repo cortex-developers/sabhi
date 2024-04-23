@@ -5,6 +5,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slider from 'react-slick'; // Import Slider
 import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
+import hamza from './hamza.jpg'
+import sophia from './sophia.jpg'
+import sophia2 from './sophia2.jpg'
 import natek from './natek.jpeg'
 import natek2 from './natek2.jpeg'
 import nate from './nate.jpg'
@@ -51,7 +54,6 @@ import lisa from './lisa.jpeg'
 import lisa2 from './lisa2.jpeg'
 import brooke from './brooke.jpg'
 import brooke2 from './brooke2.jpg'
-import chineme from './chineme.jpg'
 import kanella from './kanella.jpg'
 
 const bios = [
@@ -88,9 +90,9 @@ const bios = [
     fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
   },
   {
-    name: 'Maya Hakyal',
+    name: 'Maya Hakyal, M.D',
     images: [maya, maya2],
-    description: 'Former D1 Tennis Player & Medical Doctor',
+    description: 'Medical Doctor & Former D1 Tennis Player',
     fullBio: `Maya Haykal, the eldest of eight siblings, embodies the ethos of "work hard, play hard". This
     motto was ingrained in her upbringing, which fueled her academic pursuits and athletic
     endeavors. Transitioning from dance to tennis after a teenage injury, Maya's passion for tennis
@@ -118,12 +120,10 @@ const bios = [
     instagram: "https://www.instagram.com/brookeeemiller/",
   },
   {
-    name: 'Dylan Keusch',
-    images: [dylan, dylan2, dylan3, dylan4],
-    description: 'Rower, Policy Advocate, & EMT',
-    fullBio: 'Dylan Keusch is a senior at Cornell University studying Industrial and Labor Relations with a minor in Health Policy. On campus, Dylan is a member of the Varsity Men’s Lightweight Rowing Team. Throughout his time at Cornell, he has worked on original research on the lack of adequate policy protections for children returning to school after brain injury. He is currently writing his honors senior thesis on the lack of education policy for concussion and how it may contribute to poor life outcomes for survivors. Off campus, he is an intern with the Department of Neurosurgery at Boston Children’s Hospital and is a published author and conference invitee on Moyamoya disease, a rare cerebrovascular disease. He also works on research in neuro-oncology, cerebral palsy, and other cerebrovascular diseases. In addition to his work at Children’s, he is also a Firefighter/EMT in Edgartown, Massachusetts. As a brain injury survivor himself, Dylan recognizes the urgent need for accessible information on the dangers of concussion for young student-athletes. He could not be more excited to work with CFAA!',
-    linkedin: 'https://www.linkedin.com/in/dylan-keusch-081172144/',
-    instagram: 'https://www.instagram.com/dylankeusch/'
+    name: 'Hamza Shahab, M.D',
+    images: [hamza],
+    description: 'Medical Doctor & Research Fellow',
+    fullBio: 'Hamza is an MD, located in Boston and originally from Pakistan. He is completing a Research Fellowship at Massachusetts General Hospital, Harvard Medical School, in Neuropsychiatry and Neuromodulation. Following this, he will be starting his Adult Psychiatry Residency at Icahn School of Medicine at Mount Sinai, Elmhurst Hospital, NYC. Hamza’s first love was soccer and while he stopped playing following multiple concussions in High School, he is hoping to combine his love for sports with expertise in the field of medicine to help young athletes deal better with adversaries. His current research focus is on neuromodulation techniques for psychiatric disorders. Particularly the translation of low-risk neuromodulation techniques into prevention strategies for mental health pathologies in the youth. He is excited to advance the science portion of Cortex Flex.',
   },
   {
     name: 'Jesus Salazar',
@@ -136,8 +136,23 @@ const bios = [
   {
     name: 'Olivia Ramil',
     images: [olivia, olivia2],
-    description: 'Former D1 Basketball Player & Non-profit Leader',
+    description: ' Non-profit Leader & Former D1 Basketball Player ',
     fullBio: 'Olivia Ramil brings a wealth of experience to Cortex Flex Athlete Alliance as a former collegiate athlete, having competed in Division I Basketball for six years across prestigious institutions like Georgetown University, Binghamton University, St. Joseph’s University, and Samford University. Notably ranked by ESPN as the 16th best center in the 2016 Women’s Basketball class out of high school, Olivia balanced her athletic pursuits with scholarly passions, earning both a Bachelor of Science in Nursing and a Masters of Health Administration. In her transition from the court to professional roles, she has served as a Support Coordinator Intern with Samford University’s CAREs Team, Lead Project Manager and Recruiting Coordinator at SaveAround Fundraising, Athlete to Athlete Recruiter, PLAAY Mentor & Project Manager, and Registered School Nurse for Elementary and Middle Schools. As a member of the Cortex Flex Athlete Alliance, Olivia strives to equip and empower athletes, utilizing her varied expertise to nurture success, safety, and fulfillment in their careers and beyond.    '
+  },
+  {
+    name: 'Kaitlyn Holly',
+    images: [katy, katy2],
+    description: 'D1 Softball Player & Biochemistry Student',
+    linkedin: 'http://www.linkedin.com/in/kaitlynholly',
+    instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
+    fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
+    With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`
+  },    
+  {
+    name: 'Sophia Calabrese',
+    images: [sophia, sophia2],
+    description: 'Rower & Exercise Science Graduate',
+    fullBio: `Sophia graduated from the University of Texas at Austin in May 2023, where she earned her bachelor’s degree in exercise science as well as a pre-health certificate with a focus in physical therapy. She was also a member of UT’s division 1 rowing team where she helped the team win two national championships and a top-5 placement over her four years there. Currently, she lives and trains in Vermont with the Green Racing Project and has her sights set on representing the US at the LA Olympics in 2028.Outside of rowing, Sophia has a deep interest in kinesiology, biomechanics, and human physiology. She has applied principles she’s studied to her own training and reaped many benefits. Sophia is excited and passionate about bringing this knowledge to athletes and empowering them to make educated decisions about their own training.`,
   },
   {
     name: 'Onome Kessington',
@@ -151,7 +166,14 @@ const bios = [
     description: 'Performance Enhancement Trainer & U.S Army Section Chief',
     fullBio: "DJ Hampton, an ISSA Certified Performance Enhancement Trainer, is the dynamic force behind BoyGuru Fitness. With a passion for cultivating excellence in student athletes, DJ's dual training methods in the physical and cognitive realms sets him apart. Currently Serving as a U.S. Army, combat arms Field Artillery Howitzer Section Chief, he effortlessly applies agile decision-making and creative problem-solving skills honed through tactical situations while also fostering a deliberate and process management mindset garnered through a certification in Program Management and a Green Belt in Six Sigma Methodology. Despite his recent foray into business, DJ's leadership, training, speaking, content creation, and marketing skills converge seamlessly. His mission extends beyond sports, aiming to transform individuals into forces of nature both in their sport and in the sport of life. DJ's diverse skill set positions him as a valuable asset to the Cortex Flex Athlete Alliance, making him a trusted ally for those seeking mastery of self and unparalleled performance enhancement."
   },
-
+  {
+    name: 'Dylan Keusch',
+    images: [dylan, dylan2, dylan3, dylan4],
+    description: 'Rower, Policy Advocate, & EMT',
+    fullBio: 'Dylan Keusch is a senior at Cornell University studying Industrial and Labor Relations with a minor in Health Policy. On campus, Dylan is a member of the Varsity Men’s Lightweight Rowing Team. Throughout his time at Cornell, he has worked on original research on the lack of adequate policy protections for children returning to school after brain injury. He is currently writing his honors senior thesis on the lack of education policy for concussion and how it may contribute to poor life outcomes for survivors. Off campus, he is an intern with the Department of Neurosurgery at Boston Children’s Hospital and is a published author and conference invitee on Moyamoya disease, a rare cerebrovascular disease. He also works on research in neuro-oncology, cerebral palsy, and other cerebrovascular diseases. In addition to his work at Children’s, he is also a Firefighter/EMT in Edgartown, Massachusetts. As a brain injury survivor himself, Dylan recognizes the urgent need for accessible information on the dangers of concussion for young student-athletes. He could not be more excited to work with CFAA!',
+    linkedin: 'https://www.linkedin.com/in/dylan-keusch-081172144/',
+    instagram: 'https://www.instagram.com/dylankeusch/'
+  },
   {
     name: 'Ellie Mccarron',
     images: [ellie, ellie2],
@@ -192,26 +214,12 @@ const bios = [
     fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
     `
   },
-  {
-    name: 'Kaitlyn Holly',
-    images: [katy, katy2],
-    description: 'D1 Softball Player & Biochemistry Student',
-    linkedin: 'http://www.linkedin.com/in/kaitlynholly',
-    instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
-    fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
-    With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`},    
     {
       name: 'Nate Killeen',
       images: [natek, natek2],
       description: 'D1 Cross Country Athlete & Business Student',
       fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
       linkedin: "https://www.linkedin.com/in/natekilleen/",
-    },
-    {
-      name: 'Chineme Ewenike',
-      images: [chineme],
-      description: 'EMT & Research Assistant',
-      fullBio: 'Chineme is an EMT and a junior at Cornell University double majoring in Biological Sciences and Psychology. On campus, Chineme is an undergraduate research assistant in the Feschotte lab studying the role of genetic piRNA clusters in silencing retroelements in Zebrafish. As a member of CortexFlex, Chineme is excited to help with making scientific research communication more open and accessible to athletes!',
     },
     {
       name: 'Lisa Liff',

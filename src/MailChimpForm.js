@@ -28,7 +28,22 @@ function MailchimpForm() {
     <div id="mc_embed_signup">
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
       <style>
-        {`#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}`}
+        {`
+          #mc_embed_signup {
+            background: #fff; 
+            clear: left; 
+            font: 14px Helvetica, Arial, sans-serif; 
+            width: 100%; 
+            max-width: 600px; 
+            margin: 0 auto;
+          }
+          @media (max-width: 480px) {
+            #mc_embed_signup {
+              font-size: 12px;
+              padding: 0 10px;
+            }
+          }
+        `}
       </style>
       <form action="https://cortexflex.us18.list-manage.com/subscribe/post?u=2d8ae6e7c725015ed250cb949&amp;id=5267b99614&amp;f_id=001b1ce1f0" 
             method="post" 

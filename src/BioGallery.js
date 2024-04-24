@@ -16,10 +16,6 @@ import nate3 from './nate3.jpg'
 import nate4 from './nate4.jpg'
 import nate5 from './nate5.jpg'
 import reza from './reza.jpg'
-import dylan from './dylan.jpg'
-import dylan2 from './dylan2.jpg'
-import dylan3 from './dylan3.jpg'
-import dylan4 from './dylan4.jpg'
 import olivia from './olivia.jpg'
 import olivia2 from './olivia2.jpg'
 import jesus from './jesus.jpg'
@@ -40,12 +36,6 @@ import jess from './jess.jpg'
 import addison from './addison.jpg'
 import addison2 from './addison2.jpg'
 import onome from './onome.jpg'
-//import john from './john.jpg'
-//import john2 from './john2.jpg'
-//import brendan from './brendan.jpg'
-//import brendan2 from './brendan2.jpg'
-//import bear from './bear.jpg'
-//import bear2 from './bear2.jpg'
 import kate1 from './kate1.jpg'
 import kate2 from './kate2.jpg'
 import katy from './katy.jpg'
@@ -55,6 +45,10 @@ import lisa2 from './lisa2.jpeg'
 import brooke from './brooke.jpg'
 import brooke2 from './brooke2.jpg'
 import kanella from './kanella.jpg'
+
+import joe from './joe.jpg'
+import joe2 from './joe2.jpg'
+import hemant from './hemant.jpg'
 
 const bios = [
   // Your bios data here
@@ -167,14 +161,6 @@ const bios = [
     fullBio: "DJ Hampton, an ISSA Certified Performance Enhancement Trainer, is the dynamic force behind BoyGuru Fitness. With a passion for cultivating excellence in student athletes, DJ's dual training methods in the physical and cognitive realms sets him apart. Currently Serving as a U.S. Army, combat arms Field Artillery Howitzer Section Chief, he effortlessly applies agile decision-making and creative problem-solving skills honed through tactical situations while also fostering a deliberate and process management mindset garnered through a certification in Program Management and a Green Belt in Six Sigma Methodology. Despite his recent foray into business, DJ's leadership, training, speaking, content creation, and marketing skills converge seamlessly. His mission extends beyond sports, aiming to transform individuals into forces of nature both in their sport and in the sport of life. DJ's diverse skill set positions him as a valuable asset to the Cortex Flex Athlete Alliance, making him a trusted ally for those seeking mastery of self and unparalleled performance enhancement."
   },
   {
-    name: 'Dylan Keusch',
-    images: [dylan, dylan2, dylan3, dylan4],
-    description: 'Rower, Policy Advocate, & EMT',
-    fullBio: 'Dylan Keusch is a senior at Cornell University studying Industrial and Labor Relations with a minor in Health Policy. On campus, Dylan is a member of the Varsity Men’s Lightweight Rowing Team. Throughout his time at Cornell, he has worked on original research on the lack of adequate policy protections for children returning to school after brain injury. He is currently writing his honors senior thesis on the lack of education policy for concussion and how it may contribute to poor life outcomes for survivors. Off campus, he is an intern with the Department of Neurosurgery at Boston Children’s Hospital and is a published author and conference invitee on Moyamoya disease, a rare cerebrovascular disease. He also works on research in neuro-oncology, cerebral palsy, and other cerebrovascular diseases. In addition to his work at Children’s, he is also a Firefighter/EMT in Edgartown, Massachusetts. As a brain injury survivor himself, Dylan recognizes the urgent need for accessible information on the dangers of concussion for young student-athletes. He could not be more excited to work with CFAA!',
-    linkedin: 'https://www.linkedin.com/in/dylan-keusch-081172144/',
-    instagram: 'https://www.instagram.com/dylankeusch/'
-  },
-  {
     name: 'Ellie Mccarron',
     images: [ellie, ellie2],
     description: 'Graphic Designer',
@@ -199,6 +185,14 @@ const bios = [
     fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
   },
   {
+    name: 'Joe Curtis',
+    images: [joe, joe2],
+    description: 'D1 Wrestler & Financial Economics Student',
+    fullBio: 'Joe Curtis is a freshman at Columbia University where he is currently a freshman on the wrestling team and is studying Financial Economics.  He grew up in San Diego where he has been wrestling since he was 10.  After graduating high school in 2020, Joe served a 2-year LDS mission in the Republic of Congo.  He loves wrestling and finding the optimal way that he can train to have the best results.  He hopes to leverage the many places he’s lived (Japan, China, Republic of Congo, San Diego, NYC) to help people from all parts of the world to bridge the gap from Athletics to Medicine.  When Joe isn’t wrestling or studying , he enjoys lifting weights, going to the beach, listening to music, and finding good eats.',
+    linkedin: "https://www.linkedin.com/in/joseph-curtis-103124300/",
+    instagram: 'https://www.instagram.com/joe.curtis234/'
+  },
+  {
     name: 'Addison Goodman',
     images: [addison, addison2],
     description: 'Cognitive Science Student',
@@ -219,6 +213,13 @@ const bios = [
       images: [natek, natek2],
       description: 'D1 Cross Country Athlete & Business Student',
       fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
+      linkedin: "https://www.linkedin.com/in/natekilleen/",
+    },
+    {
+      name: 'Hemant Velidi',
+      images: [hemant],
+      description: 'Business Student',
+      fullBio: 'My name is Hemant Velidi, and I am from the Northern Virginia area. I have been a soccer athlete from the age of three up until my senior year of high school. Currently, I study finance at IU Kelley and hope to work in investment management and healthcare consulting. I was first introduced to Cortex Flex by my older brother, who is a director. After learning more about the mission, I realized how much I wish I had this as a younger athlete. I have always loved sports, and I always love spending time outside.',
       linkedin: "https://www.linkedin.com/in/natekilleen/",
     },
     {

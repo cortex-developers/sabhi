@@ -33,6 +33,11 @@ import katyathlete from './katyathleteshot.jpg'
 //import brendanathlete from './brendanathleteshot.jpg'
 import oliviathlete from './oliviaathleteshot.png'
 import jesusathlete from './jesusaction.jpeg'
+import brookeathlete from './brookeathlete.jpg'
+import joeathlete from './joeathlete.jpg'
+import sophiaathlete from './sophiaathlete.jpg'
+import mayaathlete from './mayaathlete.jpg'
+
 //import OurStory from './OurStory';
 import ResourcesPage from './ResourcesPage'
 import DonationForm from './DonationForm';
@@ -45,6 +50,19 @@ import graphic2 from './graphic2.png'
 import graphic3 from './graphic3.png'
 import { styled } from '@mui/material/styles';
 
+const shots=[
+  nateathlete, katyathlete, oliviathlete, jesusathlete, mayaathlete, brookeathlete, joeathlete, sophiaathlete]
+
+const texts = [
+"In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
+"As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
+"Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.",
+"The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.",
+`Drawing from my experience as a Division I tennis player and navigating numerous injuries, I’ve come to understand the immense value of a solid support system, but it was during my medical school journey that I recognized the gap between the medical knowledge a physician has and the practical understanding from the patient’s point of view. As I pursue training during residency in the Physical Medicine and Rehabilitation field, I am dedicated to fostering growth within the Cortex Flex community to help create a space where young athletes can access the insights and guidance they need to fill their potential both on and off the court.`,
+`As a current Division I soccer player and Integrative Health and Wellness major, I’ve gained a unique perspective to the intersection of sports and holistic well-being. My passion for both soccer and health has driven me to explore ways to optimize performance and promote overall wellness for young athletes and athletes in general. I am deeply interested in joining forces with Cortex Flex to highlight the significance of health in sports and beyond. Through our collaboration, my goal is to grow my experiences and education to advocate for comprehensive health initiatives within the athletic community.`,
+`As a wrestler at the D1 level, I’ve been through times where I’ve had to “tough it out” whether mentally or physically countless times because that’s what you’re taught to do.  I’ve learned that while mental and physical toughness are imperative to excel, it’s more important to back your trainings by science to improve results and protect your long-term safety.  I’m excited to assist Cortex Flex in being that bridge between Science and Athletics!`,
+`Living as both a Division 1 athlete and a student of sport science showed me the possibilities that merging these two disciplines can have. My training and well-being benefited immensely from the first-hand knowledge I gained from my degree in exercise science. I want to bring this experience to others through Cortex Flex because I believe it has the power to change lives.`
+] 
 
 const theme = createTheme({
   palette: {
@@ -324,15 +342,7 @@ function App() {
             <Route path="/bios" element={<BioGallery />} />
             <Route path="/story" element={
               isMobile ?
-                (<Slideshow slideDuration={15000} textColor='white' textSize='0.5rem' images={[nateathlete, katyathlete, oliviathlete, jesusathlete]} texts={["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
-                  "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
-                  "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.",
-                  `The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.`
-                ]} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={15000} textColor='white' textSize='1rem' images={[nateathlete, katyathlete, oliviathlete, jesusathlete]} texts={["In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
-                  "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
-                  "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.",
-                  `The journey to becoming a Division 1 / Professional athlete is one full of many challenges, over half of them being mental, leading to there being many times throughout the past years I allowed my success as an athlete define what I felt I was worthy of as a human being. My specific role in Cortex Flex will give me a platform to teach young athletes about the ability to care for themselves and create a healthier mindset.`
-                ]} enableTypingEffect={false}></Slideshow>)
+                (<Slideshow slideDuration={15000} textColor='white' textSize='0.5rem' images= {shots} texts={texts} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={15000} textColor='white' textSize='1rem' images={shots} texts={texts} enableTypingEffect={false}></Slideshow>)
 
 
             } />

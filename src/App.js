@@ -30,14 +30,23 @@ import business from './business.jpg'
 import businessf from './businessf.jpg'
 import nateathlete from './nateathleteshot.JPEG'
 import katyathlete from './katyathleteshot.jpg'
+import katyathletedesktop from './katyathleteshotdesktop.jpg'
+
 //import brendanathlete from './brendanathleteshot.jpg'
 import oliviathlete from './oliviaathleteshot.png'
+import oliviathletemobile from './oliviaathleteshotmobile.jpeg'
 import jesusathlete from './jesusaction.jpeg'
 import brookeathlete from './brookeathlete.jpg'
 import joeathlete from './joeathlete.jpg'
+import joeathletemobile from './joeathletemobile.jpg'
+
 import sophiaathlete from './sophiaathlete.jpg'
 import mayaathlete from './mayaathlete.jpg'
 
+
+import natekathlete from './natekathlete.jpg'
+import onomeathlete from './onomeathlete.jpg'
+import addisonathlete from './addisonathlete.jpg'
 //import OurStory from './OurStory';
 import ResourcesPage from './ResourcesPage'
 import DonationForm from './DonationForm';
@@ -51,8 +60,31 @@ import graphic3 from './graphic3.png'
 import { styled } from '@mui/material/styles';
 
 const shots=[
-  nateathlete, katyathlete, oliviathlete, jesusathlete, mayaathlete, brookeathlete, joeathlete, sophiaathlete]
-
+  nateathlete, 
+  katyathlete, 
+  oliviathletemobile, 
+  jesusathlete, 
+  mayaathlete, 
+  brookeathlete, 
+  joeathletemobile, 
+  sophiaathlete,
+  natekathlete,
+  onomeathlete,
+  addisonathlete
+  ]
+  const shots2=[
+    nateathlete, 
+    katyathletedesktop, 
+    oliviathlete, 
+    jesusathlete, 
+    mayaathlete, 
+    brookeathlete, 
+    joeathlete, 
+    sophiaathlete,
+    natekathlete,
+    onomeathlete,
+    addisonathlete
+    ]
 const texts = [
 "In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
 "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
@@ -61,7 +93,10 @@ const texts = [
 `Drawing from my experience as a Division I tennis player and navigating numerous injuries, I’ve come to understand the immense value of a solid support system, but it was during my medical school journey that I recognized the gap between the medical knowledge a physician has and the practical understanding from the patient’s point of view. As I pursue training during residency in the Physical Medicine and Rehabilitation field, I am dedicated to fostering growth within the Cortex Flex community to help create a space where young athletes can access the insights and guidance they need to fill their potential both on and off the court.`,
 `As a current Division I soccer player and Integrative Health and Wellness major, I’ve gained a unique perspective to the intersection of sports and holistic well-being. My passion for both soccer and health has driven me to explore ways to optimize performance and promote overall wellness for young athletes and athletes in general. I am deeply interested in joining forces with Cortex Flex to highlight the significance of health in sports and beyond. Through our collaboration, my goal is to grow my experiences and education to advocate for comprehensive health initiatives within the athletic community.`,
 `As a wrestler at the D1 level, I’ve been through times where I’ve had to “tough it out” whether mentally or physically countless times because that’s what you’re taught to do.  I’ve learned that while mental and physical toughness are imperative to excel, it’s more important to back your trainings by science to improve results and protect your long-term safety.  I’m excited to assist Cortex Flex in being that bridge between Science and Athletics!`,
-`Living as both a Division 1 athlete and a student of sport science showed me the possibilities that merging these two disciplines can have. My training and well-being benefited immensely from the first-hand knowledge I gained from my degree in exercise science. I want to bring this experience to others through Cortex Flex because I believe it has the power to change lives.`
+`Living as both a Division 1 athlete and a student of sport science showed me the possibilities that merging these two disciplines can have. My training and well-being benefited immensely from the first-hand knowledge I gained from my degree in exercise science. I want to bring this experience to others through Cortex Flex because I believe it has the power to change lives.`,
+`As a Division 1 athlete I have gone through my shares of injuries and recognize the lack of continuity between medical research and athletes. I believe in Cortex Flex having the ability to make an impact and bridge the gap between the two sides, and I hope to be able to help athletes handle their injuries better both mentally and physically.`,
+`As a former Division 1 athlete I went through a pretty tough injury my senior year. No one talks about all the hard work you put in and how it can all end on one play or one lift. Cortex Flex now gives you a platform to talk to other athletes about what you’re going through mentally and physically. I wish I had a group like this when I was going through what I was going through.`,
+`My athletic experience leading up to and in college exposed me to issues that no one should have to face. Now, I want to share practical knowledge that could have made a world of difference for me – and countless other student-athletes. By bridging the gap between science, athletics, and academics, we can prevent a lot of pain and frustration. While I can't rewind the clock, I'm passionate about empowering future athletes to thrive.`
 ] 
 
 const theme = createTheme({
@@ -342,7 +377,7 @@ function App() {
             <Route path="/bios" element={<BioGallery />} />
             <Route path="/story" element={
               isMobile ?
-                (<Slideshow slideDuration={15000} textColor='white' textSize='0.5rem' images= {shots} texts={texts} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={15000} textColor='white' textSize='1rem' images={shots} texts={texts} enableTypingEffect={false}></Slideshow>)
+                (<Slideshow slideDuration={15000} textColor='white' textSize='0.5rem' images= {shots} texts={texts} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={15000} textColor='white' textSize='1rem' images={shots2} texts={texts} enableTypingEffect={false}></Slideshow>)
 
 
             } />
@@ -354,7 +389,6 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
-            {/*<Route path="/blog/:articleSlug" element={<Article />} />*/}
           </Routes>
           {/* Footer */}
           <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>

@@ -83,8 +83,8 @@ const Slideshow = ({
     return (
         <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
             {showArrows && (
-                <IconButton onClick={goToPrevious} style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2 }} aria-label="Previous image">
-                    <ArrowBackIosNewIcon />
+                <IconButton onClick={goToPrevious} style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, color:"white" }} aria-label="Previous image">
+                    <ArrowBackIosNewIcon fontSize = "large"/>
                 </IconButton>
             )}
             {images.map((image, index) => (
@@ -122,8 +122,8 @@ const Slideshow = ({
                 </div>
             ))}
             {showArrows && (
-                <IconButton onClick={goToNext} style={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2 }} aria-label="Next image">
-                    <ArrowForwardIosIcon />
+                <IconButton onClick={goToNext} style={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, color: "white" }} aria-label="Next image">
+                    <ArrowForwardIosIcon  fontSize = "large"/>
                 </IconButton>
             )}
         </div>

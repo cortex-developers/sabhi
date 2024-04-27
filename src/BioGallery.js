@@ -5,6 +5,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slider from 'react-slick'; // Import Slider
 import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effect for loading images
 import hamza from './hamza.jpg'
 import sophia from './sophia.jpg'
 import sophia2 from './sophia2.jpg'
@@ -141,7 +144,7 @@ const bios = [
     instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
     fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
     With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`
-  },    
+  },
   {
     name: 'Sophia Calabrese',
     images: [sophia, sophia2],
@@ -208,37 +211,37 @@ const bios = [
     fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
     `
   },
-    {
-      name: 'Nate Killeen',
-      images: [natek, natek2],
-      description: 'D1 Cross Country Athlete & Business Student',
-      fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
-      linkedin: "https://www.linkedin.com/in/natekilleen/",
-    },
-    {
-      name: 'Hemant Velidi',
-      images: [hemant],
-      description: 'Business Student',
-      fullBio: 'My name is Hemant Velidi, and I am from the Northern Virginia area. I have been a soccer athlete from the age of three up until my senior year of high school. Currently, I study finance at IU Kelley and hope to work in investment management and healthcare consulting. I was first introduced to Cortex Flex by my older brother, who is a director. After learning more about the mission, I realized how much I wish I had this as a younger athlete. I have always loved sports, and I always love spending time outside.',
-      linkedin: "https://www.linkedin.com/in/natekilleen/",
-    },
-    {
-      name: 'Lisa Liff',
-      images: [lisa, lisa2],
-      description: 'EMT & Clinical Care Tech',
-      fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',
-    },
-    {
-      name: 'Kanella Basilion',
-      images: [kanella],
-      description: 'Clinical Research Coordinator',
-      fullBio: `Kanella is thrilled to be at the intersection of society and science here at Cortex Flex. She received her bachelor’s degree from McGill University in May 2023, where she majored in psychology and minored in French and behavioral science. She has a research background in pediatric ADHD at the Cleveland Clinic’s ADHD Summer Treatment Program, and cardiovascular psychophysiology through McGill University. Currently, she works in neurology research at Massachusetts General Hospital’s Frontotemporal Disorders Unit.
+  {
+    name: 'Nate Killeen',
+    images: [natek, natek2],
+    description: 'D1 Cross Country Athlete & Business Student',
+    fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
+    linkedin: "https://www.linkedin.com/in/natekilleen/",
+  },
+  {
+    name: 'Hemant Velidi',
+    images: [hemant],
+    description: 'Business Student',
+    fullBio: 'My name is Hemant Velidi, and I am from the Northern Virginia area. I have been a soccer athlete from the age of three up until my senior year of high school. Currently, I study finance at IU Kelley and hope to work in investment management and healthcare consulting. I was first introduced to Cortex Flex by my older brother, who is a director. After learning more about the mission, I realized how much I wish I had this as a younger athlete. I have always loved sports, and I always love spending time outside.',
+    linkedin: "https://www.linkedin.com/in/natekilleen/",
+  },
+  {
+    name: 'Lisa Liff',
+    images: [lisa, lisa2],
+    description: 'EMT & Clinical Care Tech',
+    fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',
+  },
+  {
+    name: 'Kanella Basilion',
+    images: [kanella],
+    description: 'Clinical Research Coordinator',
+    fullBio: `Kanella is thrilled to be at the intersection of society and science here at Cortex Flex. She received her bachelor’s degree from McGill University in May 2023, where she majored in psychology and minored in French and behavioral science. She has a research background in pediatric ADHD at the Cleveland Clinic’s ADHD Summer Treatment Program, and cardiovascular psychophysiology through McGill University. Currently, she works in neurology research at Massachusetts General Hospital’s Frontotemporal Disorders Unit.
 
       Kanella is interested in all things health, nutrition, and quality of life, and hopes to pursue higher education in health psychology in the future. To Kanella, an informed society is foundational to creating well-being oriented spectators, athletes, and policymakers of the athletic world and beyond. She is excited to be able to bring a psychological lens to the scientific advocacy work of this organization, and to assist with the distribution of comprehensible learning resources to budding athletes throughout the United States.
       `,
-      linkedin: "https://www.linkedin.com/in/kanella-basilion-bb67ab1b2/",
-    },
-    {
+    linkedin: "https://www.linkedin.com/in/kanella-basilion-bb67ab1b2/",
+  },
+  {
     name: 'Puneet Velidi',
     images: [puneet, puneet2],
     description: 'Software Engineer & Neuroscience Researcher',
@@ -295,7 +298,7 @@ function BioGallery() {
     transform: 'translate(-50%, -50%)',
     width: '85%', // Adjusted width for better mobile view
     maxWidth: 375, // Added maxWidth for responsiveness 
-    maxHeight: 500,   
+    maxHeight: 500,
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -312,7 +315,12 @@ function BioGallery() {
               <Slider {...sliderSettings}>
                 {bio.images.map((image, idx) => (
                   <div key={idx}>
-                    <img src={image} alt={bio.name} style={{ width: '100%', height: '100%' }} />
+                    <LazyLoadImage
+                      alt={bio.name}
+                      style={{ width: '100%', height: '100%' }}
+                      src={image} // Use your own image URL here
+                      effect="blur" // Optional: see other effects on documentation
+                    />
                   </div>
                 ))}
               </Slider>

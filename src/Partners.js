@@ -2,10 +2,13 @@ import React from 'react';
 import { Grid, Box, Typography } from '@mui/material';
 import clf from './clf.png'
 import cpfb from './cpfb.png'
+import ucsf from './ucsf.png'
+
 // Sample data for partner logos
 const partners = [
   { name: 'Concussion Legacy Foundation', logo: clf },
   { name: 'Community Partnership Funding Board', logo: cpfb },
+  { name: 'UCSF Sports Medicine Center', logo: ucsf },
 
   // Add more partners as needed
 ];

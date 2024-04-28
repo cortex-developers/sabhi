@@ -8,10 +8,7 @@ import InfoIcon from '@mui/icons-material/Info'; // Import the Info icon
 import ShareIcon from '@mui/icons-material/Share';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
-import ReactGA from 'react-ga';
-
-ReactGA.initialize('G-HXLKWG3PW7');
-ReactGA.pageview(window.location.pathname + window.location.search);
+import ReactGA4 from 'react-ga4';
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -44,6 +41,9 @@ const BlogPosts = () => {
     const url = `${window.location.origin}/blog#${encodeURIComponent(slug)}`;
     copyToClipboard(url); // This now sets the snackbar message and visibility
   };
+  useEffect(() => {
+    ReactGA4.initialize('G-HXLKWG3PW7');
+  }, []);
   useEffect(() => {
     async function fetchPosts() {
       const spaceId = 'y10zqmp53ure';
@@ -96,34 +96,36 @@ const BlogPosts = () => {
         setOpen(true);
       }
     };
-  
+
     // Call when the component mounts
     handleHashChange();
-  
+
     // Listen for hash changes to adjust modal visibility accordingly
     window.addEventListener('hashchange', handleHashChange);
-  
+
     // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
-  }, []); 
+  }, []);
   const toggleExpand = (id) => {
 
     setPosts(posts.map(post => {
       if (post.sys.id === id) {
         post.isExpanded = !post.isExpanded;
-
-        if (post.isExpanded === true){
-          ReactGA.event({
-            category: 'Articles',
-            action: post.fields.title
+        if (post.isExpanded) {
+          ReactGA4.event({
+            category: 'Articles', // Optional for GA4
+            action: 'expand_article',
+            label: post.fields.title, // Optional for GA4
+            value: 1, // Optional
           });
         }
       }
       return post;
     }));
   };
+  
   const handleClose = () => setOpen(false); // Function to close/minimize the modal
 
   // Modal style

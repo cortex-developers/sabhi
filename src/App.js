@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
 import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText, Grid } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
@@ -57,6 +57,34 @@ import graphic1 from './graphic1.png'
 import graphic2 from './graphic2.png'
 import graphic3 from './graphic3.png'
 import { styled } from '@mui/material/styles';
+
+import ReactGA4 from 'react-ga4';
+
+const useGA4PageTracking = () => {
+  useEffect(() => {
+    ReactGA4.initialize('G-HXLKWG3PW7');
+    // Track the initial page load
+    ReactGA4.send({ hitType: 'pageview', page_path: window.location.pathname + window.location.search });
+  }, []);
+
+  useEffect(() => {
+    const trackPage = () => {
+      ReactGA4.send({ hitType: 'pageview', page_path: window.location.pathname + window.location.search });
+    };
+
+    // Listen for changes in the route
+    window.addEventListener('popstate', trackPage);
+    window.addEventListener('pushState', trackPage);
+    window.addEventListener('replaceState', trackPage);
+
+    return () => {
+      window.removeEventListener('popstate', trackPage);
+      window.removeEventListener('pushState', trackPage);
+      window.removeEventListener('replaceState', trackPage);
+    };
+  }, []);
+};
+
 
 const shots=[
   nateathlete, 
@@ -125,6 +153,7 @@ const Img = styled('img')({
 });
 
 function App() {
+  useGA4PageTracking();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const images = [

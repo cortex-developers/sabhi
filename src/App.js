@@ -4,7 +4,6 @@ import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typog
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
 //import Logo from './sabhi-logo.svg';
-
 import Slideshow from './Slideshow';
 import Community from './Community';
 //import Article from './Article';
@@ -98,6 +97,8 @@ const texts = [
 `As a former Division 1 athlete I went through a pretty tough injury my senior year. No one talks about all the hard work you put in and how it can all end on one play or one lift. Cortex Flex now gives you a platform to talk to other athletes about what you’re going through mentally and physically. I wish I had a group like this when I was going through what I was going through.`,
 `My athletic experience leading up to and in college exposed me to issues that no one should have to face. Now, I want to share practical knowledge that could have made a world of difference for me – and countless other student-athletes. By bridging the gap between science, athletics, and academics, we can prevent a lot of pain and frustration. While I can't rewind the clock, I'm passionate about empowering future athletes to thrive.`
 ] 
+
+
 
 const theme = createTheme({
   palette: {

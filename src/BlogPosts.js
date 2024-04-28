@@ -8,6 +8,10 @@ import InfoIcon from '@mui/icons-material/Info'; // Import the Info icon
 import ShareIcon from '@mui/icons-material/Share';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-73Y162G4YK');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -105,9 +109,16 @@ const BlogPosts = () => {
     };
   }, []); 
   const toggleExpand = (id) => {
+
     setPosts(posts.map(post => {
       if (post.sys.id === id) {
         post.isExpanded = !post.isExpanded;
+      }
+      if (post.isExpanded === true){
+        ReactGA.event({
+          category: 'Articles',
+          action: post.fields.title
+        });
       }
       return post;
     }));

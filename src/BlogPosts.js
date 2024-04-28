@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Modal, Typography, Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
+import { Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close'; // For closing/minimizing the modal
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -125,7 +125,7 @@ const BlogPosts = () => {
       return post;
     }));
   };
-  
+
   const handleClose = () => setOpen(false); // Function to close/minimize the modal
 
   // Modal style
@@ -221,7 +221,15 @@ const BlogPosts = () => {
               {post.fields.title}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary" sx={{ mb: 2 }}>
-              Published on: {new Date(post.fields.publishedOn).toLocaleDateString()} by {post.fields.authors.join(', ')}
+              Published on: {new Date(post.fields.publishedOn).toLocaleDateString()} by
+              {post.fields.authors.map((author, index) => (
+                <span key={slugify(author)}>
+                  {index > 0 && ", "} {/* Add a comma before names except the first one */}
+                  <Link href={`/bios#${slugify(author)}`} style={{ textDecoration: 'none' }}>
+                    {author}
+                  </Link>
+                </span>
+              ))}
             </Typography>
             <IconButton onClick={() => handleShareClick(post.fields.title)} aria-label="share">
               <ShareIcon />

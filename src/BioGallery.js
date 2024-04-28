@@ -44,7 +44,7 @@ import kate2 from './kate2.jpg'
 import katy from './katy.jpg'
 import katy2 from './katy2.jpg'
 import lisa from './lisa.jpeg'
-import lisa2 from './lisa2.jpeg'
+//import lisa2 from './lisa2.jpeg'
 import brooke from './brooke.jpg'
 import brooke2 from './brooke2.jpg'
 import kanella from './kanella.jpg'
@@ -52,6 +52,8 @@ import kanella from './kanella.jpg'
 import joe from './joe.jpg'
 import joe2 from './joe2.jpg'
 import hemant from './hemant.jpg'
+
+import memo from './memo.png'
 
 const slugify = (text) =>
   text
@@ -82,15 +84,8 @@ const bios = [
     fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
     email: "reza@cortexflex.org",
     linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
-    instagram: "https://www.instagram.com/reza_ashrafi26/"
-  },
-
-  {
-    name: 'Kevin Wisniewski',
-    slug: slugify('Kevin Wisniewski'),
-    images: [kevin],
-    description: 'Medical Student & Non-profit Leader',
-    fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
+    instagram: "https://www.instagram.com/reza_ashrafi26/",
+    bod: true
   },
   {
     name: 'Matt Shumway',
@@ -124,12 +119,12 @@ const bios = [
     outreach.`
   },
   {
-    name: 'Brooke Miller',
-    slug: slugify('Brooke Miller'),
-    images: [brooke, brooke2],
-    description: 'D1 Soccer Player & Health Student',
-    fullBio: `Brooke Miller is a current Division 1 soccer at the University of Portland, striving to have a positive impact on young athletes within their sport and their overall health. While growing up in San Diego, Brooke's love for sports and helping others ignited at a young age. She found her calling in advocating for underprivileged youth in sports through her work with the non-profit organization Matters Athletic. There, she supported and mentored disadvantaged children, using sports as a tool for empowerment and social change. Brooke's commitment extended beyond advocacy as she spent time personally training kids one-on-one, receiving her U.S. Soccer grassroots coaching license, and then coaching at her colleges ID camps. In addition to her athletic pursuits, she is currently pursuing a degree in Integrative Health and Wellness at the University of Portland, with a minor in Business Administration. This academic pursuit aligns with her holistic approach to health and well-being, blending her passion for sports with her desire to promote overall wellness in larger populations and communities. Outside of her academic and athletic commitments, she is working to develop a business that aims to promote holistic health practices for athletes and young adults. With a vision to play professional soccer, become a certified health coach, and a certified holistic nutritionist, Brooke aspires to empower individuals to optimize their physical and mental well-being, unlocking their full potential both on and off the field.`,
-    instagram: "https://www.instagram.com/brookeeemiller/",
+    name: 'Memo Garibay, M.D',
+    slug: slugify('Memo Garibay'),
+    images: [memo],
+    description: 'Medical Doctor & Research Fellow',
+    fullBio: `Guillermo Gonzalez Garibay is a Research Fellow in the Division of Neuropsychiatry and Neuromodulation at Massachusetts General Hospital and Harvard Medical School. He is currently pursuing his medical studies at Universidad Anahuac in Mexico City. As part of his medical training, Guillermo has successfully completed certified diplomas from the Mexican Institute of Neurology and Neurosurgery, specializing in Functional Neuroanatomy and Neuroscience, Maturation, Injury and Plasticity of the Nervous System, and Sleep Medicine. He is presently engaged in research in the field of photobiomodulation under the supervision of Dr.
+    Cassano, with a keen interest in contributing to translational research aimed at gaining a deeper understanding of neuronal networks and the role of photobiomodulation in modifying the outcomes of patients with traumatic brain injury, stroke, and other neurological conditions.`,
   },
   {
     name: 'Hamza Shahab, M.D',
@@ -138,6 +133,22 @@ const bios = [
     description: 'Medical Doctor & Research Fellow',
     fullBio: 'Hamza is an MD, located in Boston and originally from Pakistan. He is completing a Research Fellowship at Massachusetts General Hospital, Harvard Medical School, in Neuropsychiatry and Neuromodulation. Following this, he will be starting his Adult Psychiatry Residency at Icahn School of Medicine at Mount Sinai, Elmhurst Hospital, NYC. Hamza’s first love was soccer and while he stopped playing following multiple concussions in High School, he is hoping to combine his love for sports with expertise in the field of medicine to help young athletes deal better with adversaries. His current research focus is on neuromodulation techniques for psychiatric disorders. Particularly the translation of low-risk neuromodulation techniques into prevention strategies for mental health pathologies in the youth. He is excited to advance the science portion of Cortex Flex.',
   },
+  {
+    name: 'Kevin Wisniewski',
+    slug: slugify('Kevin Wisniewski'),
+    images: [kevin],
+    description: 'Medical Student & Non-profit Leader',
+    fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
+  },
+  {
+    name: 'Brooke Miller',
+    slug: slugify('Brooke Miller'),
+    images: [brooke, brooke2],
+    description: 'D1 Soccer Player & Health Student',
+    fullBio: `Brooke Miller is a current Division 1 soccer at the University of Portland, striving to have a positive impact on young athletes within their sport and their overall health. While growing up in San Diego, Brooke's love for sports and helping others ignited at a young age. She found her calling in advocating for underprivileged youth in sports through her work with the non-profit organization Matters Athletic. There, she supported and mentored disadvantaged children, using sports as a tool for empowerment and social change. Brooke's commitment extended beyond advocacy as she spent time personally training kids one-on-one, receiving her U.S. Soccer grassroots coaching license, and then coaching at her colleges ID camps. In addition to her athletic pursuits, she is currently pursuing a degree in Integrative Health and Wellness at the University of Portland, with a minor in Business Administration. This academic pursuit aligns with her holistic approach to health and well-being, blending her passion for sports with her desire to promote overall wellness in larger populations and communities. Outside of her academic and athletic commitments, she is working to develop a business that aims to promote holistic health practices for athletes and young adults. With a vision to play professional soccer, become a certified health coach, and a certified holistic nutritionist, Brooke aspires to empower individuals to optimize their physical and mental well-being, unlocking their full potential both on and off the field.`,
+    instagram: "https://www.instagram.com/brookeeemiller/",
+  },
+
   {
     name: 'Jesus Salazar',
     slug: slugify('Jesus Salazar'),
@@ -148,23 +159,6 @@ const bios = [
     instagram: 'https://www.instagram.com/chuyy.salazar/'
   },
   {
-    name: 'Olivia Ramil',
-    slug: slugify('Olivia Ramil'),
-    images: [olivia, olivia2],
-    description: ' Non-profit Leader & Former D1 Basketball Player ',
-    fullBio: 'Olivia Ramil brings a wealth of experience to Cortex Flex Athlete Alliance as a former collegiate athlete, having competed in Division I Basketball for six years across prestigious institutions like Georgetown University, Binghamton University, St. Joseph’s University, and Samford University. Notably ranked by ESPN as the 16th best center in the 2016 Women’s Basketball class out of high school, Olivia balanced her athletic pursuits with scholarly passions, earning both a Bachelor of Science in Nursing and a Masters of Health Administration. In her transition from the court to professional roles, she has served as a Support Coordinator Intern with Samford University’s CAREs Team, Lead Project Manager and Recruiting Coordinator at SaveAround Fundraising, Athlete to Athlete Recruiter, PLAAY Mentor & Project Manager, and Registered School Nurse for Elementary and Middle Schools. As a member of the Cortex Flex Athlete Alliance, Olivia strives to equip and empower athletes, utilizing her varied expertise to nurture success, safety, and fulfillment in their careers and beyond.    '
-  },
-  {
-    name: 'Kaitlyn Holly',
-    slug: slugify('Katy Holly'),
-    images: [katy, katy2],
-    description: 'D1 Softball Player & Biochemistry Student',
-    linkedin: 'http://www.linkedin.com/in/kaitlynholly',
-    instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
-    fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
-    With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`
-  },
-  {
     name: 'Sophia Calabrese',
     slug: slugify('Sophie Calabrese'),
     images: [sophia, sophia2],
@@ -172,11 +166,61 @@ const bios = [
     fullBio: `Sophia graduated from the University of Texas at Austin in May 2023, where she earned her bachelor’s degree in exercise science as well as a pre-health certificate with a focus in physical therapy. She was also a member of UT’s division 1 rowing team where she helped the team win two national championships and a top-5 placement over her four years there. Currently, she lives and trains in Vermont with the Green Racing Project and has her sights set on representing the US at the LA Olympics in 2028.Outside of rowing, Sophia has a deep interest in kinesiology, biomechanics, and human physiology. She has applied principles she’s studied to her own training and reaped many benefits. Sophia is excited and passionate about bringing this knowledge to athletes and empowering them to make educated decisions about their own training.`,
   },
   {
+    name: 'Kaitlyn Holly',
+    slug: slugify('Katy Holly'),
+    images: [katy2, katy],
+    description: 'D1 Softball Player & Biochemistry Student',
+    linkedin: 'http://www.linkedin.com/in/kaitlynholly',
+    instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
+    fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
+    With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`
+  },
+  {
+    name: 'Nate Killeen',
+    slug: slugify('Nate Killeen'),
+    images: [natek, natek2],
+    description: 'D1 Cross Country Athlete & Business Student',
+    fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
+    linkedin: "https://www.linkedin.com/in/natekilleen/",
+  },
+  {
+    name: 'Joe Curtis',
+    slug: slugify('Joe Curtis'),
+    images: [joe2, joe],
+    description: 'D1 Wrestler & Financial Economics Student',
+    fullBio: 'Joe Curtis is a freshman at Columbia University where he is currently a freshman on the wrestling team and is studying Financial Economics.  He grew up in San Diego where he has been wrestling since he was 10.  After graduating high school in 2020, Joe served a 2-year LDS mission in the Republic of Congo.  He loves wrestling and finding the optimal way that he can train to have the best results.  He hopes to leverage the many places he’s lived (Japan, China, Republic of Congo, San Diego, NYC) to help people from all parts of the world to bridge the gap from Athletics to Medicine.  When Joe isn’t wrestling or studying , he enjoys lifting weights, going to the beach, listening to music, and finding good eats.',
+    linkedin: "https://www.linkedin.com/in/joseph-curtis-103124300/",
+    instagram: 'https://www.instagram.com/joe.curtis234/'
+  },
+  {
+    name: 'Addison Goodman',
+    slug: slugify('Addison Goodman'),
+    images: [addison2, addison],
+    description: 'Cognitive Science Student',
+    fullBio: `Addison is a third year undergraduate at Cornell University, studying for a degree in Cognitive Science. Before transferring to Cornell, Addison played on the varsity women’s soccer team at a Penn State campus, on which she also served as the team captain. In addition to competing as a collegiate student athlete, Addison volunteered in Elderly Care homes, served as a student government representative, and participated in various clubs. Addison's path took a profound turn when a severe concussion sustained during soccer necessitated months of intensive physical therapy. This experience catalyzed her mission to advocate for better concussion awareness among student athletes. She firmly believes that no athlete should endure such challenges without proper scientific understanding of when to prioritize recovery. Driven by her own journey, Addison strives to pave a smoother path for others facing similar obstacles. She envisions a future where the lives of student athletes, both during their athletic careers and beyond, are enriched through heightened awareness and support systems.`,
+    instagram: 'https://www.instagram.com/addi.goodman?igsh=MTV1N3pwcDY0bjZwaA%3D%3D&utm_source=qr'
+  },
+  {
+    name: 'Chris Stoneman',
+    slug: slugify('Chris Stoneman'),
+    images: [chris2, chris, chris3, chris4],
+    description: 'Football Player & Journalist',
+    fullBio: 'Chris is a multifaceted individual who brings a great deal of experience across multiple domains to Cortex Flex Athlete Alliance. He is a student-athlete going into his final semester at Oberlin College, where he plays football as a Defensive Lineman at the Division 3 level and studies political science. Currently, Chris is on leave from Oberlin in order to pursue an internship in financial journalism in Luxembourg and will return to play a final season next fall and graduate in December 2024. A native of Metz, France with an extremely multicultural background, Chris is heavily involved in the development of American football across the globe. He currently works as a content manager, scout and podcast co-host for the Europe’s Elite organization, a social media presence that helps European football players get recruited to American colleges and universities. He is also an experienced coach, most recently taking on the role of defensive coordinator for the Saarland Hurricanes II team (in Saarbrucken, Germany) in 2024. Chris’s experience in football across the globe have granted him a valuable perspective on the world of sport and has motivated him to assist athletes everywhere in perfecting their craft. In joining the CFAA, Chris hopes to distribute the knowledge he has gained over the years and help athletes around the world to create better lives for themselves, both on the field and off.',
+    instagram: 'https://www.linkedin.com/in/chris-stoneman-6303571a2/'
+  },
+  {
     name: 'Onome Kessington',
     slug: slugify('Onome Kessington'),
     images: [onome],
     description: 'Former D1 Football Player & Business Leader',
     fullBio: 'Onome Kessington is a Cornell University graduate completing his degree in Applied Economics and Management. Onome has an array of business experience from International Tax at world rebound beverage company Constellation Brands to Risk Management and Credit at First American Equipment Finance where they specialize in Equipment financing. Onome is a natural born entrepreneur that always looks at how he can add value to any room he is in.'
+  },
+  {
+    name: 'Olivia Ramil',
+    slug: slugify('Olivia Ramil'),
+    images: [olivia2, olivia],
+    description: ' Non-profit Leader & Former D1 Basketball Player ',
+    fullBio: 'Olivia Ramil brings a wealth of experience to Cortex Flex Athlete Alliance as a former collegiate athlete, having competed in Division I Basketball for six years across prestigious institutions like Georgetown University, Binghamton University, St. Joseph’s University, and Samford University. Notably ranked by ESPN as the 16th best center in the 2016 Women’s Basketball class out of high school, Olivia balanced her athletic pursuits with scholarly passions, earning both a Bachelor of Science in Nursing and a Masters of Health Administration. In her transition from the court to professional roles, she has served as a Support Coordinator Intern with Samford University’s CAREs Team, Lead Project Manager and Recruiting Coordinator at SaveAround Fundraising, Athlete to Athlete Recruiter, PLAAY Mentor & Project Manager, and Registered School Nurse for Elementary and Middle Schools. As a member of the Cortex Flex Athlete Alliance, Olivia strives to equip and empower athletes, utilizing her varied expertise to nurture success, safety, and fulfillment in their careers and beyond.    '
   },
   {
     name: 'DJ Hampton',
@@ -197,38 +241,10 @@ const bios = [
     linkedin: 'https://www.linkedin.com/in/elisabeth-mccarron-81580526a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagram: 'https://www.instagram.com/elliebelly17?igsh=NHZ6OTlrOGdweWZi&utm_source=qr'
   },
-  {
-    name: 'Chris Stoneman',
-    slug: slugify('Chris Stoneman'),
-    images: [chris, chris2, chris3, chris4],
-    description: 'Football Player & Journalist',
-    fullBio: 'Chris is a multifaceted individual who brings a great deal of experience across multiple domains to Cortex Flex Athlete Alliance. He is a student-athlete going into his final semester at Oberlin College, where he plays football as a Defensive Lineman at the Division 3 level and studies political science. Currently, Chris is on leave from Oberlin in order to pursue an internship in financial journalism in Luxembourg and will return to play a final season next fall and graduate in December 2024. A native of Metz, France with an extremely multicultural background, Chris is heavily involved in the development of American football across the globe. He currently works as a content manager, scout and podcast co-host for the Europe’s Elite organization, a social media presence that helps European football players get recruited to American colleges and universities. He is also an experienced coach, most recently taking on the role of defensive coordinator for the Saarland Hurricanes II team (in Saarbrucken, Germany) in 2024. Chris’s experience in football across the globe have granted him a valuable perspective on the world of sport and has motivated him to assist athletes everywhere in perfecting their craft. In joining the CFAA, Chris hopes to distribute the knowledge he has gained over the years and help athletes around the world to create better lives for themselves, both on the field and off.',
-    instagram: 'https://www.linkedin.com/in/chris-stoneman-6303571a2/'
-  },
-  {
-    name: 'Jessalyn Pugh',
-    slug: slugify('Jessalyn Pugh'),
-    images: [jess],
-    description: 'Health Sciences Student',
-    fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
-  },
-  {
-    name: 'Joe Curtis',
-    slug: slugify('Joe Curtis'),
-    images: [joe, joe2],
-    description: 'D1 Wrestler & Financial Economics Student',
-    fullBio: 'Joe Curtis is a freshman at Columbia University where he is currently a freshman on the wrestling team and is studying Financial Economics.  He grew up in San Diego where he has been wrestling since he was 10.  After graduating high school in 2020, Joe served a 2-year LDS mission in the Republic of Congo.  He loves wrestling and finding the optimal way that he can train to have the best results.  He hopes to leverage the many places he’s lived (Japan, China, Republic of Congo, San Diego, NYC) to help people from all parts of the world to bridge the gap from Athletics to Medicine.  When Joe isn’t wrestling or studying , he enjoys lifting weights, going to the beach, listening to music, and finding good eats.',
-    linkedin: "https://www.linkedin.com/in/joseph-curtis-103124300/",
-    instagram: 'https://www.instagram.com/joe.curtis234/'
-  },
-  {
-    name: 'Addison Goodman',
-    slug: slugify('Addison Goodman'),
-    images: [addison, addison2],
-    description: 'Cognitive Science Student',
-    fullBio: `Addison is a third year undergraduate at Cornell University, studying for a degree in Cognitive Science. Before transferring to Cornell, Addison played on the varsity women’s soccer team at a Penn State campus, on which she also served as the team captain. In addition to competing as a collegiate student athlete, Addison volunteered in Elderly Care homes, served as a student government representative, and participated in various clubs. Addison's path took a profound turn when a severe concussion sustained during soccer necessitated months of intensive physical therapy. This experience catalyzed her mission to advocate for better concussion awareness among student athletes. She firmly believes that no athlete should endure such challenges without proper scientific understanding of when to prioritize recovery. Driven by her own journey, Addison strives to pave a smoother path for others facing similar obstacles. She envisions a future where the lives of student athletes, both during their athletic careers and beyond, are enriched through heightened awareness and support systems.`,
-    instagram: 'https://www.instagram.com/addi.goodman?igsh=MTV1N3pwcDY0bjZwaA%3D%3D&utm_source=qr'
-  },
+
+
+
+
   {
     name: 'Katelyn Sylvester',
     slug: slugify('Katelyn Sylvester'),
@@ -237,28 +253,15 @@ const bios = [
     linkedin: 'http://www.linkedin.com/in/katelyn-sylvester',
     instagram: 'https://www.instagram.com/katelynmsylvester?igsh=ODloang0MXQzNzJs&utm_source=qr',
     fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
-    `
+    `,
+    bod: true
   },
-  {
-    name: 'Nate Killeen',
-    slug: slugify('Nate Killeen'),
-    images: [natek, natek2],
-    description: 'D1 Cross Country Athlete & Business Student',
-    fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
-    linkedin: "https://www.linkedin.com/in/natekilleen/",
-  },
-  {
-    name: 'Hemant Velidi',
-    slug: slugify('Hemant Velidi'),
-    images: [hemant],
-    description: 'Business Student',
-    fullBio: 'My name is Hemant Velidi, and I am from the Northern Virginia area. I have been a soccer athlete from the age of three up until my senior year of high school. Currently, I study finance at IU Kelley and hope to work in investment management and healthcare consulting. I was first introduced to Cortex Flex by my older brother, who is a director. After learning more about the mission, I realized how much I wish I had this as a younger athlete. I have always loved sports, and I always love spending time outside.',
-    linkedin: "https://www.linkedin.com/in/natekilleen/",
-  },
+ 
+
   {
     name: 'Lisa Liff',
     slug: slugify('Lisa Liff'),
-    images: [lisa, lisa2],
+    images: [lisa],
     description: 'EMT & Clinical Care Tech',
     fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',
   },
@@ -274,17 +277,35 @@ const bios = [
     linkedin: "https://www.linkedin.com/in/kanella-basilion-bb67ab1b2/",
   },
   {
+    name: 'Hemant Velidi',
+    slug: slugify('Hemant Velidi'),
+    images: [hemant],
+    description: 'Business Student',
+    fullBio: 'My name is Hemant Velidi, and I am from the Northern Virginia area. I have been a soccer athlete from the age of three up until my senior year of high school. Currently, I study finance at IU Kelley and hope to work in investment management and healthcare consulting. I was first introduced to Cortex Flex by my older brother, who is a director. After learning more about the mission, I realized how much I wish I had this as a younger athlete. I have always loved sports, and I always love spending time outside.',
+    linkedin: "https://www.linkedin.com/in/natekilleen/",
+  },
+  {
+    name: 'Jessalyn Pugh',
+    slug: slugify('Jessalyn Pugh'),
+    images: [jess],
+    description: 'Health Sciences Student',
+    fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
+  },
+  {
     name: 'Puneet Velidi',
     slug: slugify('Puneet Velidi'),
     images: [puneet, puneet2],
-    description: 'Software Engineer & Neuroscience Researcher',
+    description: 'Software Engineer',
     fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
     email: "puneet@cortexflex.org",
     linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212",
-    instagram: 'https://www.instagram.com/puneetvelidi/'
+    instagram: 'https://www.instagram.com/puneetvelidi/',
+    bod: true
   },
   // More bios...
 ];
+
+
 
 const theme = createTheme({
   palette: {
@@ -385,10 +406,13 @@ function BioGallery() {
     overflowY: 'auto'
   };
 
+  const boardMembers = bios.filter(bio => bio.bod);
+  const members = bios.filter(bio => !bio.bod);
+
   return (
     <ThemeProvider theme={theme}>
-      <Grid container spacing={2} sx={{ padding: '20px', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
-        {bios.map((bio, index) => (
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {members.map((bio, index) => (
           <Grid item xs={12} sm={6} md={2} key={index}>
             <Card>
               <Slider {...sliderSettings}>
@@ -421,7 +445,42 @@ function BioGallery() {
           </Grid>
         ))}
       </Grid>
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center'}} gutterBottom>Board of Directors</Typography>
 
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {boardMembers.map((bio, index) => (
+          <Grid item xs={12} sm={6} md={2} key={index}>
+            <Card>
+              <Slider {...sliderSettings}>
+                {bio.images.map((image, idx) => (
+                  <div key={idx}>
+                    <LazyLoadImage
+                      alt={bio.name}
+                      style={{ width: '100%', height: '100%' }}
+                      src={image} // Use your own image URL here
+                      effect="blur" // Optional: see other effects on documentation
+                    />
+                  </div>
+                ))}
+              </Slider>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {bio.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
+                  {bio.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+                {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+                {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+                {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
       <Modal
         open={open}
         onClose={handleClose}
@@ -439,11 +498,11 @@ function BioGallery() {
             <Slider {...sliderSettings}>
               {selectedBio.images.map((image, idx) => (
                 <div key={idx}>
-                    <LazyLoadImage
-                      alt={selectedBio.name}
-                      style={{ width: '100%', height: '100%' }}
-                      src={image} // Use your own image URL here
-                    />                
+                  <LazyLoadImage
+                    alt={selectedBio.name}
+                    style={{ width: '100%', height: '100%' }}
+                    src={image} // Use your own image URL here
+                  />
                 </div>
               ))}
             </Slider>

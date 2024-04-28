@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Box, Grid} from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import React from 'react';
+import { Box } from '@mui/system';
+import Iframe from 'react-iframe'
 
 const ResourcesPage = () => {
-  const [resources, setResources] = useState([]);
+/*   const [resources, setResources] = useState([]);
 
   useEffect(() => {
     async function fetchResources() {
@@ -30,10 +30,20 @@ const ResourcesPage = () => {
     }
 
     fetchResources();
-  }, []);
+  }, []); */
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 768, mx: 'auto', mt: 4 }}>
+    <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Iframe
+        url="https://v2-embednotion.com/46963e783c71455e9064ad3f9a45e896"
+        width="100%"
+        height="100%"
+        display="initial"
+        position="relative"
+        allowFullScreen
+      />
+    </Box>
+/*     <Box sx={{ width: '100%', maxWidth: 768, mx: 'auto', mt: 4 }}>
       {resources.map((resource) => (
         <Accordion key={resource.sys.id} sx={{ mb: 2 }}>
           <AccordionSummary
@@ -80,7 +90,7 @@ const ResourcesPage = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-    </Box>
+    </Box> */
   );
 };
 

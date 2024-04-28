@@ -14,6 +14,8 @@ import Contact from './Contact';
 //import UnderConstructionPage from './UnderConstructionPage';
 import CortexLearn from './learn.jpg';
 import CortexCommunity from './cortexcomm.png';
+import CortexWiki from './cortexwiki.png';
+
 import Partners from './Partners'
 import BlogPosts from './BlogPosts';
 import './App.css'
@@ -179,6 +181,9 @@ function App() {
           <ListItem button component={RouterLink} to="/community" >
             <img src={CortexCommunity} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
           </ListItem>
+          <ListItem button component={RouterLink} to="/resources">
+            <img src={CortexWiki} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+          </ListItem>
           <ListItem button component={RouterLink} to="/bios">
             <ListItemText primary="Meet Our Team" />
           </ListItem>
@@ -187,9 +192,6 @@ function App() {
           </ListItem>
           <ListItem button component={RouterLink} to="/story">
             <ListItemText primary="Our Story" />
-          </ListItem>
-          <ListItem button component={RouterLink} to="/resources">
-            <ListItemText primary="Resources" />
           </ListItem>
           <ListItem button component={RouterLink} to="/partners">
             <ListItemText primary="Our Partners" />
@@ -266,6 +268,9 @@ function App() {
                       <img src={CortexCommunity} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
 
                     </Button>
+                    <Button color="inherit" component={RouterLink} to="/resources">
+                      <img src={CortexWiki} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+                    </Button>
                     <Button color="inherit" component={RouterLink} to="/bios">
                       Meet Our Team
                     </Button>
@@ -275,9 +280,7 @@ function App() {
                     <Button color="inherit" component={RouterLink} to="/story">
                       Our Story
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/resources">
-                      Resources
-                    </Button>
+
                     <Button color="inherit" component={RouterLink} to="/partners">
                       Our Partners
                     </Button>

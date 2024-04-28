@@ -113,12 +113,13 @@ const BlogPosts = () => {
     setPosts(posts.map(post => {
       if (post.sys.id === id) {
         post.isExpanded = !post.isExpanded;
-      }
-      if (post.isExpanded === true){
-        ReactGA.event({
-          category: 'Articles',
-          action: post.fields.title
-        });
+
+        if (post.isExpanded === true){
+          ReactGA.event({
+            category: 'Articles',
+            action: post.fields.title
+          });
+        }
       }
       return post;
     }));

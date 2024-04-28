@@ -10,7 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('G-73Y162G4YK');
+ReactGA.initialize('G-HXLKWG3PW7');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const BlogPosts = () => {

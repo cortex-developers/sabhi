@@ -53,6 +53,7 @@ import joe from './joe.jpg'
 import joe2 from './joe2.jpg'
 import hemant from './hemant.jpg'
 
+
 import memo from './memo.png'
 
 const slugify = (text) =>

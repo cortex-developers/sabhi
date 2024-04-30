@@ -52,7 +52,8 @@ import kanella from './kanella.jpg'
 import joe from './joe.jpg'
 import joe2 from './joe2.jpg'
 import hemant from './hemant.jpg'
-
+import rachel from './rachel.jpeg'
+import rachel2 from './rachel2.jpeg'
 
 import memo from './memo.png'
 
@@ -194,6 +195,16 @@ const bios = [
     instagram: 'https://www.instagram.com/joe.curtis234/'
   },
   {
+    name: 'Rachel Zun',
+    slug: slugify('Rachel Zun'),
+    images: [rachel2, rachel],
+    description: 'D1 Gymnast & Human Development Student',
+    fullBio: `Rachel is a Division 1 gymnastics student-athlete at Cornell University. She will receive her Bachelor of Science in Human Development with a minor in Biology and a pre-health concentration in May of 2024. Rachel is EMT certified and planning to work as a medical assistant before applying to medical school. 
+    During her time at Cornell, Rachel was the president of the Student Athlete Advisory Committee. Within this role she served as one of only two student representatives on the Cornell Student Athlete Mental Health Committee, helping to create the new Wellness Ambassador Program at Cornell. She also created the Bench for a Cause Fundraiser that raised $5000 for the newly created Cornell Student Athlete Mental Health Fund to support student athlete mental health through awareness, training, and education. She established partnerships with local and national mental health organizations like Morgan’s Message and The Sophie Fund. Rachel is using the success of the event to lobby the administration to improve mental health resources for student athletes. Rachel has seen firsthand how intertwined sports and mental health are and hopes to use her own experiences to better the next generation of athletes.`,
+    linkedin: "https://www.linkedin.com/in/rachel-zun-1426981b9/",
+    instagram: 'https://www.instagram.com/rach.zun/',
+  },
+  {
     name: 'Addison Goodman',
     slug: slugify('Addison Goodman'),
     images: [addison2, addison],
@@ -303,6 +314,7 @@ const bios = [
     instagram: 'https://www.instagram.com/puneetvelidi/',
     bod: true
   },
+
   // More bios...
 ];
 

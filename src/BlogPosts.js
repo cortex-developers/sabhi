@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link } from '@mui/material';
+import { Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close'; // For closing/minimizing the modal
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -10,10 +10,15 @@ import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import ReactGA4 from 'react-ga4';
 
+
+
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
+  const [tags, setTags] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [selectedTags, setSelectedTags] = useState([]);
   const [open, setOpen] = useState(true); // State to control the modal open state
   const [snackbarOpen, setSnackbarOpen] = useState(false); // Snackbar visibility
   const [snackbarMessage, setSnackbarMessage] = useState(''); // Message to display
@@ -44,31 +49,7 @@ const BlogPosts = () => {
   useEffect(() => {
     ReactGA4.initialize('G-HXLKWG3PW7');
   }, []);
-  useEffect(() => {
-    async function fetchPosts() {
-      const spaceId = 'y10zqmp53ure';
-      const accessToken = 'nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4';
-      const environmentId = 'master'; // or your custom environment ID
-      const contentTypeId = 'blogPost';
-      const includeLevel = 2;
 
-      const response = await fetch(
-        `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&content_type=${contentTypeId}&include=${includeLevel}`
-      );
-      const data = await response.json();
-
-      const postsWithImageUrls = data.items.map((post) => {
-        if (post.fields.titleImage && data.includes.Asset) {
-          const imageAsset = data.includes.Asset.find(asset => asset.sys.id === post.fields.titleImage.sys.id);
-          post.fields.titleImageUrl = imageAsset ? imageAsset.fields.file.url : null;
-        }
-        return post;
-      });
-
-      setPosts(postsWithImageUrls);
-    }
-    fetchPosts();
-  }, []);
   useEffect(() => {
     const navigateToPostByTitle = () => {
       const hash = window.location.hash.replace('#', '');
@@ -86,6 +67,7 @@ const BlogPosts = () => {
     window.addEventListener('hashchange', navigateToPostByTitle, false);
     return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
   }, [posts])
+
   useEffect(() => {
     const handleHashChange = () => {
       // Automatically close the modal if there's a hash in the URL
@@ -124,6 +106,53 @@ const BlogPosts = () => {
       }
       return post;
     }));
+  };
+
+  useEffect(() => {
+    if (selectedTags.length === 0) {
+      setFilteredPosts(posts);  // No filter applied, show all posts
+    } else {
+      const filtered = posts.filter(post =>
+        post.metadata.tags && post.metadata.tags.some(tag => selectedTags.includes(tag.sys.id))
+      );
+      setFilteredPosts(filtered);  // Update the state to show filtered posts
+    }
+  }, [selectedTags, posts]);
+
+  useEffect(() => {
+    ReactGA4.initialize('G-HXLKWG3PW7');
+    const fetchData = async () => {
+      try {
+        const postsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&content_type=blogPost&include=2`);
+        const postsData = await postsResponse.json();
+        const fetchedPosts = postsData.items.map(post => {
+          const imageUrl = postsData.includes.Asset.find(asset => asset.sys.id === post.fields.titleImage.sys.id)?.fields.file.url;
+          return { ...post, fields: { ...post.fields, titleImageUrl: imageUrl } };
+        });
+        setPosts(fetchedPosts);
+        setFilteredPosts(fetchedPosts);
+
+        const tagsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/tags?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4`);
+        const tagsData = await tagsResponse.json();
+        setTags(tagsData.items.map(tag => ({ id: tag.sys.id, name: tag.name })));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (selectedTags.length === 0) {
+      setFilteredPosts(posts);
+    } else {
+      const filtered = posts.filter(post => post.metadata.tags.some(tag => selectedTags.includes(tag.sys.id)));
+      setFilteredPosts(filtered);
+    }
+  }, [selectedTags, posts]);
+
+  const handleTagChange = (event, values) => {
+    setSelectedTags(values.map(v => v.id));
   };
 
   const handleClose = () => setOpen(false); // Function to close/minimize the modal
@@ -201,8 +230,19 @@ const BlogPosts = () => {
           Show Introduction
         </Typography> */}
       </Box>
+      <Box sx={{ display: 'flex', justifyContent: 'center', p: 2, width: 'auto' }}>
+        <Autocomplete
+          multiple
+          id="tags-filter"
+          options={tags}  // Assuming tags is an array of objects like [{ id: 'tag1', name: 'Tag 1' }, ...]
+          getOptionLabel={(option) => option.name}  // Specifies how to get the string label for each option
+          onChange={handleTagChange}  // Handle changes
+          renderInput={(params) => <TextField {...params} label="Filter by tags" placeholder="Tags" sx={{minWidth: '250px' }}/>}
+          value={tags.filter(tag => selectedTags.includes(tag.id))}  // Controls the current value based on selected tags
+        />
+      </Box>
       <Box sx={{ width: '80%', maxWidth: 768, mx: 'auto', mt: 4, px: 2 }}>
-        {posts.map((post) => (
+        {filteredPosts.map((post) => (
           <Box key={post.sys.id} id={slugify(post.fields.title)} sx={{ mb: 5 }}>
             {post.fields.titleImageUrl && (
               <img

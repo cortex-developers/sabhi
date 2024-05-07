@@ -61,6 +61,7 @@ import graphic3 from './graphic3.png'
 import { styled } from '@mui/material/styles';
 
 import ReactGA4 from 'react-ga4';
+import SearchComponent from './SearchComponent';
 /* import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, connectSearchBox, connectHits } from 'react-instantsearch-dom';
 import { TextField, CardContent} from '@mui/material';
@@ -298,10 +299,12 @@ function App() {
                   >
                     {drawer}
                   </Drawer>
+                  <SearchComponent/>
                 </>
               ) : (
                 <>
                   <Box display="flex" style={{ marginLeft: '20px' }}> {/* Adjust marginLeft to control spacing */}
+                    <SearchComponent/>
                     <Button color="inherit" component={RouterLink} to="/">
                       Home
                     </Button>

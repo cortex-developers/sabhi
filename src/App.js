@@ -462,7 +462,7 @@ function App() {
             <Route path="/bios" element={<BioGallery />} />
             <Route path="/story" element={
               isMobile ?
-                (<Slideshow slideDuration={15000} textColor='white' textSize='0.5rem' images= {shots} texts={texts} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={15000} textColor='white' textSize='1rem' images={shots2} texts={texts} enableTypingEffect={false}></Slideshow>)
+                (<Slideshow slideDuration={18000} textColor='white' textSize='0.5rem' images= {shots} texts={texts} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={18000} textColor='white' textSize='1rem' images={shots2} texts={texts} enableTypingEffect={false}></Slideshow>)
 
 
             } />

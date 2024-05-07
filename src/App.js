@@ -43,7 +43,7 @@ import joeathletemobile from './joeathletemobile.jpg'
 
 import sophiaathlete from './sophiaathlete.jpg'
 import mayaathlete from './mayaathlete.jpg'
-
+import cc2 from './cc2.jpg'
 
 import natekathlete from './natekathlete.jpg'
 import onomeathlete from './onomeathlete.jpg'
@@ -350,7 +350,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow fontSize='2rem' images={[athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE.", "  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
+                <Slideshow fontSize='2rem' images={[cc2, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  A 501C(3) HEALTH EDUCATION NONPROFIT.","  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE.", "  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',
@@ -479,10 +479,10 @@ function App() {
           <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>
             <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography variant="body1">
-                © {new Date().getFullYear()} CORTEX FLEX ATHLETE ALLIANCE
+                © {new Date().getFullYear()} CORTEX FLEX ATHLETE ALLIANCE INC., A 501c(3) Nonprofit, Incorporated in Massachusetts
               </Typography>
               <Typography variant="body2">
-                Empowering student athletes for a healthier tomorrow.
+                SPORTS X SCIENCE
               </Typography>
               <a href='/disclaimer' style={{ color: 'inherit', textDecoration: 'underline' }}>Disclaimer</a>
             </Container>

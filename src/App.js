@@ -353,7 +353,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow fontSize='2rem' images={[cc2, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  A 501C(3) HEALTH EDUCATION NONPROFIT.","  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE.", "  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
+                <Slideshow fontSize='2rem' images={[cc2, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  A 501(c)(3) HEALTH EDUCATION NONPROFIT.","  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE.", "  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',
@@ -365,6 +365,8 @@ function App() {
                     marginTop: '40px',
                     marginBottom: '40px',
                   }}>
+                                      <MailChimpForm/>
+
                     <Grid container spacing={2}>
                       {images.map((image, index) => (
                         <Grid item xs={12} sm={12} md={12} key={index}>
@@ -433,7 +435,6 @@ function App() {
 
                   </Card>
 
-                  <MailChimpForm/>
                 </Box>
 
 
@@ -482,7 +483,7 @@ function App() {
           <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>
             <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography variant="body1">
-                © {new Date().getFullYear()} CORTEX FLEX ATHLETE ALLIANCE INC., A 501c(3) Nonprofit, Incorporated in Massachusetts
+                © {new Date().getFullYear()} CORTEX FLEX ATHLETE ALLIANCE INC., A 501(c)(3) Nonprofit, Incorporated in Massachusetts
               </Typography>
               <Typography variant="body2">
                 SPORTS X SCIENCE

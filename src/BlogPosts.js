@@ -96,20 +96,24 @@ const BlogPosts = () => {
   }, []);
 
   useEffect(() => {
-    const navigateToPostByTitle = () => {
+    const navigateToPostByTitle = async () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash) {
-        const postImageElement = document.getElementById(`image-${hash}`);  // Target the image container
-        if (postImageElement) {
-          postImageElement.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
+      const slug = decodeURIComponent(hash);
+      const postElement = document.getElementById(slug);
+      if (postElement) {
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 500ms to ensure images are loaded
+        postElement.scrollIntoView({ behavior: 'smooth' });
       }
     };
   
-    if (!isLoading) {
+    // Add event listener and call immediately if hash is present
+    if (posts.length > 0 && window.location.hash) {
       navigateToPostByTitle();
     }
-  }, [isLoading, posts]); 
+  
+    window.addEventListener('hashchange', navigateToPostByTitle, false);
+    return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
+  }, [posts]);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -150,6 +154,7 @@ const BlogPosts = () => {
       return post;
     }));
   };
+
 
   useEffect(() => {
     if (selectedTags.length === 0) {

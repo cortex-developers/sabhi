@@ -53,20 +53,21 @@ const BlogPosts = () => {
   useEffect(() => {
     const navigateToPostByTitle = () => {
       const hash = window.location.hash.replace('#', '');
-      const slug = decodeURIComponent(hash); // Decode the URI component
+      const slug = decodeURIComponent(hash);
       const postElement = document.getElementById(slug);
       if (postElement) {
         postElement.scrollIntoView({ behavior: 'smooth' });
       }
     };
-
-    if (posts.length > 0) {
+  
+    // Trigger navigation explicitly on posts change if there's a hash
+    if (posts.length > 0 && window.location.hash) {
       navigateToPostByTitle();
     }
-
+  
     window.addEventListener('hashchange', navigateToPostByTitle, false);
     return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
-  }, [posts])
+  }, [posts]); 
 
   useEffect(() => {
     const handleHashChange = () => {

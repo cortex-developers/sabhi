@@ -78,7 +78,27 @@ const BlogPosts = () => {
   useEffect(() => {
     ReactGA4.initialize('G-HXLKWG3PW7');
   }, []);
+  useEffect(() => {
+    // Function to remove specific query parameters
+    const cleanUpUrl = () => {
+      const url = new URL(window.location.href);
+      const params = url.searchParams;
 
+      // List of parameter names to remove
+      const removeParams = ['utm_source', 'utm_medium', 'utm_campaign', 'mc_cid', 'mc_eid'];
+
+      // Remove unwanted parameters
+      removeParams.forEach(param => params.delete(param));
+
+      // Build the new URL without the unwanted parameters
+      const newUrl = `${url.origin}${url.pathname}${params.toString() ? `?${params}` : ''}${url.hash}`;
+
+      // Replace the URL in the history without reloading the page
+      window.history.replaceState({}, '', newUrl);
+    };
+
+    cleanUpUrl();
+  }, []);
   useEffect(() => {
     const navigateToPostByTitle = () => {
       const hash = window.location.hash.replace('#', '');

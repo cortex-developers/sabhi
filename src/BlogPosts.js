@@ -100,7 +100,7 @@ const BlogPosts = () => {
   useEffect(() => {
     const navigateToPostByTitle = () => {
       const hash = window.location.hash.replace('#', '');
-      const slug = decodeURIComponent(hash);
+      const slug = decodeURIComponent(hash); // Decode the URI component
       const postElement = document.getElementById(slug);
       if (postElement) {
         const imageElement = postElement.querySelector('img'); // Get the img element within the post container
@@ -111,15 +111,14 @@ const BlogPosts = () => {
         }
       }
     };
-  
-    // Trigger navigation explicitly on posts change if there's a hash
-    if (posts.length > 0 && window.location.hash) {
+
+    if (posts.length > 0) {
       navigateToPostByTitle();
     }
-  
+
     window.addEventListener('hashchange', navigateToPostByTitle, false);
     return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
-  }, [posts]); 
+  }, [posts])
 
   useEffect(() => {
     const handleHashChange = () => {

@@ -56,6 +56,7 @@ import rachel from './rachel.jpeg'
 import rachel2 from './rachel2.jpeg'
 
 import memo from './memo.png'
+import memo2 from './memo2.png'
 
 const slugify = (text) =>
   text
@@ -121,12 +122,11 @@ const bios = [
     outreach.`
   },
   {
-    name: 'Memo Garibay, M.D',
+    name: 'Guillermo Gonzalez Garibay',
     slug: slugify('Memo Garibay'),
-    images: [memo],
+    images: [memo2,memo],
     description: 'Medical Doctor & Research Fellow',
-    fullBio: `Guillermo Gonzalez Garibay is a Research Fellow in the Division of Neuropsychiatry and Neuromodulation at Massachusetts General Hospital and Harvard Medical School. He is currently pursuing his medical studies at Universidad Anahuac in Mexico City. As part of his medical training, Guillermo has successfully completed certified diplomas from the Mexican Institute of Neurology and Neurosurgery, specializing in Functional Neuroanatomy and Neuroscience, Maturation, Injury and Plasticity of the Nervous System, and Sleep Medicine. He is presently engaged in research in the field of photobiomodulation under the supervision of Dr.
-    Cassano, with a keen interest in contributing to translational research aimed at gaining a deeper understanding of neuronal networks and the role of photobiomodulation in modifying the outcomes of patients with traumatic brain injury, stroke, and other neurological conditions.`,
+    fullBio: `Description: Guillermo is an MD based in Mexico City. He completed a Research Fellowship at Massachusetts General Hospital, Harvard Medical School, focusing on Neuropsychiatry and Neuromodulation. Following this, he embarked on a Research Fellowship at the National Institute of Neurology and Neurosurgery in Mexico City. Currently, he is pursuing a medical residency in Neurosurgery. Guillermo's passion for swimming led him to aspire to blend his love for sports with his medical expertise to aid young athletes in overcoming challenges more effectively. His ongoing research interests include neuromodulation techniques, epilepsy, ischemic stroke, and neuroanatomy. He is eager to contribute to advancing the scientific aspect of Cortex Flex.`,
   },
   {
     name: 'Hamza Shahab, M.D',

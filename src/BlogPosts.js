@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import {
-  Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField, CircularProgress, Card
+  Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField, CircularProgress
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';

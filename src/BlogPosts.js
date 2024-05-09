@@ -11,7 +11,36 @@ import Alert from '@mui/material/Alert';
 import ReactGA4 from 'react-ga4';
 
 
+const ImageSkeleton = ({ aspectRatio = '56.25%' }) => {
+  return (
+    <div style={{
+      backgroundColor: '#eee',
+      width: '100%',
+      paddingTop: aspectRatio, // Default to 16:9 aspect ratio
+    }}></div>
+  );
+};
 
+const LoadableImage = ({ src, alt, style }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <>
+      {!loaded && <ImageSkeleton />}
+      <img
+        src={src}
+        alt={alt}
+        style={{
+          ...style,
+          width: '100%',
+          display: loaded ? 'block' : 'none' // Only display image after it's loaded
+        }}
+        onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)} // Handle loading error by hiding skeleton
+      />
+    </>
+  );
+};
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
   const theme = useTheme();
@@ -56,7 +85,7 @@ const BlogPosts = () => {
       const slug = decodeURIComponent(hash);
       const postElement = document.getElementById(slug);
       if (postElement) {
-        postElement.scrollIntoView({ behavior: 'smooth' });
+        postElement.scrollIntoView({ behavior: 'auto' });
       }
     };
   
@@ -246,7 +275,7 @@ const BlogPosts = () => {
         {filteredPosts.map((post) => (
           <Box key={post.sys.id} id={slugify(post.fields.title)} sx={{ mb: 5 }}>
             {post.fields.titleImageUrl && (
-              <img
+              <LoadableImage
                 src={post.fields.titleImageUrl}
                 alt={post.fields.title}
                 style={{ width: '100%', height: 'auto', borderRadius: matches ? '8px' : '0', marginTop: '20px', cursor: 'pointer' }}

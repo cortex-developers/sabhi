@@ -62,57 +62,7 @@ import { styled } from '@mui/material/styles';
 
 import ReactGA4 from 'react-ga4';
 import SearchComponent from './SearchComponent';
-/* import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, connectSearchBox, connectHits } from 'react-instantsearch-dom';
-import { TextField, CardContent} from '@mui/material';
 
-const searchClient = algoliasearch('YourApplicationID', 'YourSearchOnlyApiKey');
-
-const SearchBox = ({ currentRefinement, refine }) => (
-  <TextField
-    fullWidth
-    variant="outlined"
-    placeholder="Search..."
-    value={currentRefinement}
-    onChange={event => refine(event.currentTarget.value)}
-    margin="normal"
-    style={{ margin: 8 }}
-  />
-);
-
-const CustomSearchBox = connectSearchBox(SearchBox);
-
-// Custom Hits
-const Hits = ({ hits }) => (
-  <Box style={{ margin: '0 auto', maxWidth: 960 }}>
-    {hits.map(hit => (
-      <Card key={hit.objectID} style={{ marginBottom: 10 }}>
-        <CardContent>
-          <Typography variant="h6" component="div">
-            {hit.title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {hit.content.substring(0, 100)}... 
-          </Typography>
-          <Link href={hit.url} target="_blank" rel="noopener noreferrer" color="primary">
-            Read more
-          </Link>
-        </CardContent>
-      </Card>
-    ))}
-  </Box>
-);
-
-const CustomHits = connectHits(Hits);
-
-function SearchComponent() {
-  return (
-    <InstantSearch searchClient={searchClient} indexName="your_index_name">
-      <CustomSearchBox />
-      <CustomHits />
-    </InstantSearch>
-  );
-} */
 
 const useGA4PageTracking = () => {
   useEffect(() => {

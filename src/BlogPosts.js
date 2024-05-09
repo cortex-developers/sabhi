@@ -1,92 +1,82 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close'; // For closing/minimizing the modal
+import {
+  Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField, CircularProgress
+} from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import InfoIcon from '@mui/icons-material/Info'; // Import the Info icon
+import InfoIcon from '@mui/icons-material/Info';
 import ShareIcon from '@mui/icons-material/Share';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import ReactGA4 from 'react-ga4';
 
-
 const ImageSkeleton = ({ aspectRatio = '56.25%' }) => {
-  return (
-    <div style={{
-      backgroundColor: '#eee',
-      width: '100%',
-      paddingTop: aspectRatio, // Default to 16:9 aspect ratio
-    }}></div>
-  );
+  return <div style={{ backgroundColor: '#eee', width: '100%', paddingTop: aspectRatio }}></div>;
 };
 
 const LoadableImage = ({ src, alt, style }) => {
   const [loaded, setLoaded] = useState(false);
-
   return (
     <>
       {!loaded && <ImageSkeleton />}
       <img
         src={src}
         alt={alt}
-        style={{
-          ...style,
-          width: '100%',
-          display: loaded ? 'block' : 'none' // Only display image after it's loaded
-        }}
+        style={{ ...style, width: '100%', display: loaded ? 'block' : 'none' }}
         onLoad={() => setLoaded(true)}
-        onError={() => setLoaded(true)} // Handle loading error by hiding skeleton
+        onError={() => setLoaded(true)}
       />
     </>
   );
 };
+
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // State to track loading
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
   const [tags, setTags] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
-  const [open, setOpen] = useState(true); // State to control the modal open state
-  const [snackbarOpen, setSnackbarOpen] = useState(false); // Snackbar visibility
-  const [snackbarMessage, setSnackbarMessage] = useState(''); // Message to display
-  const slugify = (text) =>
-    text
-      .toString()
-      .toLowerCase()
-      .trim()
-      .replace(/\s+/g, '-')     // Replace spaces with -
-      .replace(/[^\w-]+/g, '')  // Remove all non-word chars except dash
-      .replace(/--+/g, '-');    // Replace multiple - with single -
+  const [open, setOpen] = useState(true);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+
+  const slugify = (text) => text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-');
+
   const copyToClipboard = async (text) => {
     try {
       await navigator.clipboard.writeText(text);
       setSnackbarMessage('Link copied to clipboard!');
-      setSnackbarOpen(true); // Show the snackbar
+      setSnackbarOpen(true);
     } catch (err) {
       console.error('Failed to copy: ', err);
       setSnackbarMessage('Failed to copy link.');
       setSnackbarOpen(true);
     }
   };
+
   const handleShareClick = (title) => {
     const slug = slugify(title);
     const url = `${window.location.origin}/blog#${encodeURIComponent(slug)}`;
-    copyToClipboard(url); // This now sets the snackbar message and visibility
+    copyToClipboard(url);
   };
+
   useEffect(() => {
     ReactGA4.initialize('G-HXLKWG3PW7');
     const fetchData = async () => {
       try {
         const postsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&content_type=blogPost&include=2`);
         const postsData = await postsResponse.json();
-        const fetchedPosts = postsData.items.map(post => {
-          const imageUrl = postsData.includes.Asset.find(asset => asset.sys.id === post.fields.titleImage.sys.id)?.fields.file.url;
-          return { ...post, fields: { ...post.fields, titleImageUrl: imageUrl } };
-        });
+        const fetchedPosts = postsData.items.map(post => ({
+          ...post,
+          fields: { ...post.fields, titleImageUrl: postsData.includes.Asset.find(asset => asset.sys.id === post.fields.titleImage.sys.id)?.fields.file.url }
+        }));
         setPosts(fetchedPosts);
         setFilteredPosts(fetchedPosts);
+        setIsLoading(false); // Data is loaded
 
         const tagsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/tags?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4`);
         const tagsData = await tagsResponse.json();
@@ -97,28 +87,22 @@ const BlogPosts = () => {
     };
     fetchData();
   }, []);
+
   useEffect(() => {
     const navigateToPostByTitle = () => {
       const hash = window.location.hash.replace('#', '');
-      const slug = decodeURIComponent(hash); // Decode the URI component
-      const postElement = document.getElementById(slug);
-      if (postElement) {
-        const imageElement = postElement.querySelector('img'); // Get the img element within the post container
-        if (imageElement) {
-          imageElement.scrollIntoView({ behavior: 'auto', block: 'start' });
-        } else {
-          postElement.scrollIntoView({ behavior: 'auto', block: 'start' }); // Fallback to scrolling the container into view
+      if (hash) {
+        const postElement = document.getElementById(hash);
+        if (postElement) {
+          postElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
     };
 
-    if (posts.length > 0) {
+    if (!isLoading) {
       navigateToPostByTitle();
     }
-
-    window.addEventListener('hashchange', navigateToPostByTitle, false);
-    return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
-  }, [posts])
+  }, [isLoading, posts]);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -187,7 +171,9 @@ const BlogPosts = () => {
   };
 
   const handleClose = () => setOpen(false); // Function to close/minimize the modal
-
+  if (isLoading) {
+    return <CircularProgress />;
+  }
   // Modal style
   const style = {
     position: 'absolute',

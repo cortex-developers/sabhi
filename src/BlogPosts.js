@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import {
-  Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField, CircularProgress
+  Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField, CircularProgress, Card
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -16,15 +16,22 @@ const ImageSkeleton = ({ aspectRatio = '56.25%' }) => {
   return <div style={{ backgroundColor: '#eee', width: '100%', paddingTop: aspectRatio }}></div>;
 };
 
-const LoadableImage = ({ src, alt, style }) => {
+const LoadableImage = ({ src, alt, style, height = '300px' }) => {
   const [loaded, setLoaded] = useState(false);
+  const enhancedStyle = {
+    ...style,
+    width: '100%',
+    height: height, // Set the image height
+    objectFit: 'cover', // Ensures the image covers the area without distortion
+    display: loaded ? 'block' : 'none'
+  };
   return (
     <>
       {!loaded && <ImageSkeleton />}
       <img
         src={src}
         alt={alt}
-        style={{ ...style, width: '100%', display: loaded ? 'block' : 'none' }}
+        style={enhancedStyle}
         onLoad={() => setLoaded(true)}
         onError={() => setLoaded(true)}
       />
@@ -265,7 +272,8 @@ const BlogPosts = () => {
               <LoadableImage
                 src={post.fields.titleImageUrl}
                 alt={post.fields.title}
-                style={{ width: '100%', height: 'auto', borderRadius: matches ? '8px' : '0', marginTop: '20px', cursor: 'pointer' }}
+                height="500px"
+                style={{ borderRadius: matches ? '8px' : '0', marginTop: '20px', cursor: 'pointer' }}
                 onClick={() => toggleExpand(post.sys.id)} // Make image clickable to expand/collapse post body
               />
             )}

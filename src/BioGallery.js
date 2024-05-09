@@ -98,8 +98,8 @@ const bios = [
     fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
   },
   {
-    name: 'Maya Hakyal, M.D',
-    slug: slugify('Maya Hakyal'),
+    name: 'Maya Haykal, M.D',
+    slug: slugify('Maya Haykal'),
     images: [maya, maya2],
     description: 'Medical Doctor & Former D1 Tennis Player',
     fullBio: `Maya Haykal, the eldest of eight siblings, embodies the ethos of "work hard, play hard". This

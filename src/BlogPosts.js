@@ -99,17 +99,17 @@ const BlogPosts = () => {
     const navigateToPostByTitle = () => {
       const hash = window.location.hash.replace('#', '');
       if (hash) {
-        const postElement = document.getElementById(hash);
-        if (postElement) {
-          postElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const postImageElement = document.getElementById(`image-${hash}`);  // Target the image container
+        if (postImageElement) {
+          postImageElement.scrollIntoView({ behavior: 'auto', block: 'start' });
         }
       }
     };
-
+  
     if (!isLoading) {
       navigateToPostByTitle();
     }
-  }, [isLoading, posts]);
+  }, [isLoading, posts]); 
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -150,19 +150,6 @@ const BlogPosts = () => {
       return post;
     }));
   };
-
-  useEffect(() => {
-    if (selectedTags.length === 0) {
-      setFilteredPosts(posts);  // No filter applied, show all posts
-    } else {
-      const filtered = posts.filter(post =>
-        post.metadata.tags && post.metadata.tags.some(tag => selectedTags.includes(tag.sys.id))
-      );
-      setFilteredPosts(filtered);  // Update the state to show filtered posts
-    }
-  }, [selectedTags, posts]);
-
-
 
   useEffect(() => {
     if (selectedTags.length === 0) {
@@ -273,6 +260,7 @@ const BlogPosts = () => {
                 src={post.fields.titleImageUrl}
                 alt={post.fields.title}
                 height="500px"
+                id={`image-${slugify(post.fields.title)}`}
                 style={{ borderRadius: matches ? '8px' : '0', marginTop: '20px', cursor: 'pointer' }}
                 onClick={() => toggleExpand(post.sys.id)} // Make image clickable to expand/collapse post body
               />

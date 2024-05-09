@@ -85,7 +85,12 @@ const BlogPosts = () => {
       const slug = decodeURIComponent(hash);
       const postElement = document.getElementById(slug);
       if (postElement) {
-        postElement.scrollIntoView({ behavior: 'auto' });
+        const imageElement = postElement.querySelector('img'); // Get the img element within the post container
+        if (imageElement) {
+          imageElement.scrollIntoView({ behavior: 'auto', block: 'start' });
+        } else {
+          postElement.scrollIntoView({ behavior: 'auto', block: 'start' }); // Fallback to scrolling the container into view
+        }
       }
     };
   

@@ -77,6 +77,25 @@ const BlogPosts = () => {
   };
   useEffect(() => {
     ReactGA4.initialize('G-HXLKWG3PW7');
+    const fetchData = async () => {
+      try {
+        const postsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&content_type=blogPost&include=2`);
+        const postsData = await postsResponse.json();
+        const fetchedPosts = postsData.items.map(post => {
+          const imageUrl = postsData.includes.Asset.find(asset => asset.sys.id === post.fields.titleImage.sys.id)?.fields.file.url;
+          return { ...post, fields: { ...post.fields, titleImageUrl: imageUrl } };
+        });
+        setPosts(fetchedPosts);
+        setFilteredPosts(fetchedPosts);
+
+        const tagsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/tags?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4`);
+        const tagsData = await tagsResponse.json();
+        setTags(tagsData.items.map(tag => ({ id: tag.sys.id, name: tag.name })));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
   }, []);
   useEffect(() => {
     const navigateToPostByTitle = () => {
@@ -153,28 +172,7 @@ const BlogPosts = () => {
     }
   }, [selectedTags, posts]);
 
-  useEffect(() => {
-    ReactGA4.initialize('G-HXLKWG3PW7');
-    const fetchData = async () => {
-      try {
-        const postsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&content_type=blogPost&include=2`);
-        const postsData = await postsResponse.json();
-        const fetchedPosts = postsData.items.map(post => {
-          const imageUrl = postsData.includes.Asset.find(asset => asset.sys.id === post.fields.titleImage.sys.id)?.fields.file.url;
-          return { ...post, fields: { ...post.fields, titleImageUrl: imageUrl } };
-        });
-        setPosts(fetchedPosts);
-        setFilteredPosts(fetchedPosts);
 
-        const tagsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/tags?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4`);
-        const tagsData = await tagsResponse.json();
-        setTags(tagsData.items.map(tag => ({ id: tag.sys.id, name: tag.name })));
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
 
   useEffect(() => {
     if (selectedTags.length === 0) {

@@ -122,7 +122,7 @@ const bios = [
     outreach.`
   },
   {
-    name: 'Guillermo Gonzalez Garibay',
+    name: 'Guillermo Gonzalez Garibay, M.D',
     slug: slugify('Memo Garibay'),
     images: [memo2,memo],
     description: 'Medical Doctor & Research Fellow',

@@ -124,7 +124,7 @@ const bios = [
   {
     name: 'Guillermo Gonzalez Garibay, M.D',
     slug: slugify('Memo Garibay'),
-    images: [memo2,memo],
+    images: [memo,memo2],
     description: 'Medical Doctor & Research Fellow',
     fullBio: `Description: Guillermo is an MD based in Mexico City. He completed a Research Fellowship at Massachusetts General Hospital, Harvard Medical School, focusing on Neuropsychiatry and Neuromodulation. Following this, he embarked on a Research Fellowship at the National Institute of Neurology and Neurosurgery in Mexico City. Currently, he is pursuing a medical residency in Neurosurgery. Guillermo's passion for swimming led him to aspire to blend his love for sports with his medical expertise to aid young athletes in overcoming challenges more effectively. His ongoing research interests include neuromodulation techniques, epilepsy, ischemic stroke, and neuroanatomy. He is eager to contribute to advancing the scientific aspect of Cortex Flex.`,
   },

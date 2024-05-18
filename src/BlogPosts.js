@@ -18,7 +18,10 @@ const PageWithComments = ({ uniqueId }) => {
   useEffect(() => {
     // This ensures each iframe gets a unique URL and thus a unique comment section
     const removeCommentBox = commentBox('5660438020751360-proj', {
-      createBoxUrl: () => `${window.location.origin}/${uniqueId}`
+      createBoxUrl: () => `${window.location.origin}/${uniqueId}`,
+      onCommentCount(count) {
+        // use the count however you wish.
+    }
     });
 
     return () => removeCommentBox();

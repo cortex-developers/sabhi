@@ -11,6 +11,22 @@ import ShareIcon from '@mui/icons-material/Share';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import ReactGA4 from 'react-ga4';
+import commentBox from 'commentbox.io';
+import './BlogPosts.css';
+
+const PageWithComments = ({ uniqueId }) => {
+  useEffect(() => {
+    // This ensures each iframe gets a unique URL and thus a unique comment section
+    const removeCommentBox = commentBox('5660438020751360-proj', {
+      createBoxUrl: () => `${window.location.origin}/${uniqueId}`
+    });
+
+    return () => removeCommentBox();
+  }, [uniqueId]);
+
+  // Ensure the div itself also has the unique ID
+  return <div id={uniqueId} className="commentbox"/>;
+};
 
 const ImageSkeleton = ({ aspectRatio = '56.25%' }) => {
   return <div style={{ backgroundColor: '#eee', width: '100%', paddingTop: aspectRatio }}></div>;
@@ -298,7 +314,10 @@ const BlogPosts = () => {
               {post.isExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
             </IconButton>
             {post.isExpanded && (
+              <div>
               <ReactMarkdown>{post.fields.body}</ReactMarkdown>
+              <PageWithComments uniqueId = {post.sys.id}/>
+              </div>
             )}
           </Box>
         ))}

@@ -114,25 +114,36 @@ const BlogPosts = () => {
     fetchData();
   }, []);
 
+  const [initialNavigationDone, setInitialNavigationDone] = useState(false);
+
   useEffect(() => {
     const navigateToPostByTitle = async () => {
       const hash = window.location.hash.replace('#', '');
+      if (!hash) return;  // If there is no hash, exit the function early
+
       const slug = decodeURIComponent(hash);
       const postElement = document.getElementById(slug);
-      if (postElement) {
-        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 500ms to ensure images are loaded
+      if (postElement && !initialNavigationDone) {
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait to ensure images are loaded
         postElement.scrollIntoView({ behavior: 'smooth' });
+        setInitialNavigationDone(true);  // Set the flag as done
       }
     };
-  
-    // Add event listener and call immediately if hash is present
-    if (posts.length > 0 && window.location.hash) {
+
+    // Call immediately if hash is present on component mount
+    if (window.location.hash) {
       navigateToPostByTitle();
     }
-  
-    window.addEventListener('hashchange', navigateToPostByTitle, false);
-    return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
-  }, [posts]);
+
+    const handleHashChange = () => {
+      if (!initialNavigationDone) { // Only navigate if initial navigation hasn't been done
+        navigateToPostByTitle();
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange, false);
+    return () => window.removeEventListener('hashchange', handleHashChange, false);
+  }, [posts, initialNavigationDone]);
 
   useEffect(() => {
     const handleHashChange = () => {

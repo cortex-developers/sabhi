@@ -11,6 +11,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effec
 import hamza from './hamza.jpg'
 import sophia from './sophia.jpg'
 import sophia2 from './sophia2.jpg'
+import sophias from './sophias.jpeg'
+import sophias2 from './sophias2.jpg'
 import natek from './natek.jpeg'
 import natek2 from './natek2.jpeg'
 import nate from './nate.jpg'
@@ -205,6 +207,13 @@ const bios = [
     instagram: 'https://www.instagram.com/rach.zun/',
   },
   {
+    name: 'Sophia Simenz',
+    slug: slugify('Sophia Simenz'),
+    images: [sophias, sophias2],
+    description: 'D1 Rower & Neuroscience Student ',
+    fullBio: `Sophia Simenz is a rising sophomore at Columbia University where she competes on the division one women's rowing team and is studying neuroscience on the pre medicine track. Sophia has always been interested in medicine and athletics and how society can better integrate the two to create healthier and happier athletes in both the short term and long term. She hopes to use the skills she is learning to become a doctor and to help coach younger athletes. Sophia is from Milwaukee, Wisconsin and grew up a multi-sport athlete, and she loves spending time outside, trying new restaurants, traveling, and spending time with family and friends. She is super excited to work with CFAA to better the health and lives of all athletes, past, present, and future!`,
+  },
+  {
     name: 'Addison Goodman',
     slug: slugify('Addison Goodman'),
     images: [addison2, addison],
@@ -253,10 +262,6 @@ const bios = [
     linkedin: 'https://www.linkedin.com/in/elisabeth-mccarron-81580526a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagram: 'https://www.instagram.com/elliebelly17?igsh=NHZ6OTlrOGdweWZi&utm_source=qr'
   },
-
-
-
-
   {
     name: 'Katelyn Sylvester',
     slug: slugify('Katelyn Sylvester'),

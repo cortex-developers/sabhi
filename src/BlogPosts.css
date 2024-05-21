@@ -1,6 +1,7 @@
 .commentbox iframe {
   width: 100%;  /* Ensures the iframe takes the full width of its container */
-  height: 75vh; /* 75% of the viewport height, adjust based on your design needs */
+  min-height: 75vh; /* 75% of the viewport height, adjust based on your design needs */
+  max-height: 10000px;
   border: none; /* Optional: removes the border around the iframe */
-  overflow: scroll
+  overflow-y: auto
 }

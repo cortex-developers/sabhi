@@ -11,6 +11,25 @@ import ShareIcon from '@mui/icons-material/Share';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import ReactGA4 from 'react-ga4';
+import commentBox from 'commentbox.io';
+import './BlogPosts.css';
+
+const PageWithComments = ({ uniqueId }) => {
+  useEffect(() => {
+    // This ensures each iframe gets a unique URL and thus a unique comment section
+    const removeCommentBox = commentBox('5660438020751360-proj', {
+      createBoxUrl: () => `${window.location.origin}/${uniqueId}`,
+      onCommentCount(count) {
+        // use the count however you wish.
+    }
+    });
+
+    return () => removeCommentBox();
+  }, [uniqueId]);
+
+  // Ensure the div itself also has the unique ID
+  return <div id={uniqueId} className="commentbox"/>;
+};
 
 const ImageSkeleton = ({ aspectRatio = '56.25%' }) => {
   return <div style={{ backgroundColor: '#eee', width: '100%', paddingTop: aspectRatio }}></div>;
@@ -95,25 +114,36 @@ const BlogPosts = () => {
     fetchData();
   }, []);
 
+  const [initialNavigationDone, setInitialNavigationDone] = useState(false);
+
   useEffect(() => {
     const navigateToPostByTitle = async () => {
       const hash = window.location.hash.replace('#', '');
+      if (!hash) return;  // If there is no hash, exit the function early
+
       const slug = decodeURIComponent(hash);
       const postElement = document.getElementById(slug);
-      if (postElement) {
-        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 500ms to ensure images are loaded
+      if (postElement && !initialNavigationDone) {
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait to ensure images are loaded
         postElement.scrollIntoView({ behavior: 'smooth' });
+        setInitialNavigationDone(true);  // Set the flag as done
       }
     };
-  
-    // Add event listener and call immediately if hash is present
-    if (posts.length > 0 && window.location.hash) {
+
+    // Call immediately if hash is present on component mount
+    if (window.location.hash) {
       navigateToPostByTitle();
     }
-  
-    window.addEventListener('hashchange', navigateToPostByTitle, false);
-    return () => window.removeEventListener('hashchange', navigateToPostByTitle, false);
-  }, [posts]);
+
+    const handleHashChange = () => {
+      if (!initialNavigationDone) { // Only navigate if initial navigation hasn't been done
+        navigateToPostByTitle();
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange, false);
+    return () => window.removeEventListener('hashchange', handleHashChange, false);
+  }, [posts, initialNavigationDone]);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -298,7 +328,10 @@ const BlogPosts = () => {
               {post.isExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
             </IconButton>
             {post.isExpanded && (
+              <div>
               <ReactMarkdown>{post.fields.body}</ReactMarkdown>
+              <PageWithComments uniqueId = {post.sys.id}/>
+              </div>
             )}
           </Box>
         ))}

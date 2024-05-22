@@ -60,6 +60,8 @@ import rachel2 from './rachel2.jpeg'
 import memo from './memo.png'
 import memo2 from './memo2.png'
 
+import zahra from './zahra.jpg'
+
 const slugify = (text) =>
   text
     .toString()
@@ -98,6 +100,13 @@ const bios = [
     images: [matt],
     description: 'Medical Student & Researcher',
     fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
+  },
+  {name: 'Zahra Ronizi',
+  slug: slugify('Zahra Ronizi'),
+  images: [zahra],
+   fullbio: `Zahra is an incoming first-year at Harvard University, where she will be pursuing a joint-concentration in biomedical engineering and human developmental & regenerative biology with a secondary in astrophysics. She holds a black belt in Goju-Ryu Karate and has been competing and ttraining since the age of four. She currently teaches as a sensei at Satori Martial Arts School, passing on her passion and experience in martial arts to beginner and novice students each week. Zahra is a former NASA intern on the Mars Rover Resource Utilization Team through the SEES Program. She also works as an analog astronaut, performing medical and astrobiological research across the world on simulated missions to Mars. Some of her most memorable experiences were serving as the crew biologist on a mission in Spain and as a mission specialist on an expedition in northern Iceland.  In the future, Zahra aspires to become a cardiologist and aerospace medicine physician. Throughout Zahra’s experiences in martial arts and the space medicine community, the need to build a connection between scientists and athletes became crystal clear. She was drawn to CFAA’s mission to build that bridge in the athletic community and foster meaningful progress in the lives of student-athletes.`,
+   instagram:"https://www.instagram.com/themarsgal/",
+   linkedin:'https://www.linkedin.com/in/zahra-ronizi-b310a51b2'
   },
   {
     name: 'Maya Haykal, M.D',

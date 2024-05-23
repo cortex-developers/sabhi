@@ -33,10 +33,7 @@ import puneet2 from './puneet2.jpg'
 import ellie from './ellie.jpg'
 import ellie2 from './ellie2.jpg'
 import matt from './matt.jpg'
-import chris from './chris.jpg'
-import chris2 from './chris2.jpg'
-import chris3 from './chris3.jpg'
-import chris4 from './chris4.jpg'
+
 import jess from './jess.jpg'
 import addison from './addison.jpg'
 import addison2 from './addison2.jpg'
@@ -100,13 +97,6 @@ const bios = [
     images: [matt],
     description: 'Medical Student & Researcher',
     fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
-  },
-  {name: 'Zahra Ronizi',
-  slug: slugify('Zahra Ronizi'),
-  images: [zahra],
-   fullbio: `Zahra is an incoming first-year at Harvard University, where she will be pursuing a joint-concentration in biomedical engineering and human developmental & regenerative biology with a secondary in astrophysics. She holds a black belt in Goju-Ryu Karate and has been competing and ttraining since the age of four. She currently teaches as a sensei at Satori Martial Arts School, passing on her passion and experience in martial arts to beginner and novice students each week. Zahra is a former NASA intern on the Mars Rover Resource Utilization Team through the SEES Program. She also works as an analog astronaut, performing medical and astrobiological research across the world on simulated missions to Mars. Some of her most memorable experiences were serving as the crew biologist on a mission in Spain and as a mission specialist on an expedition in northern Iceland.  In the future, Zahra aspires to become a cardiologist and aerospace medicine physician. Throughout Zahra’s experiences in martial arts and the space medicine community, the need to build a connection between scientists and athletes became crystal clear. She was drawn to CFAA’s mission to build that bridge in the athletic community and foster meaningful progress in the lives of student-athletes.`,
-   instagram:"https://www.instagram.com/themarsgal/",
-   linkedin:'https://www.linkedin.com/in/zahra-ronizi-b310a51b2'
   },
   {
     name: 'Maya Haykal, M.D',
@@ -231,14 +221,6 @@ const bios = [
     instagram: 'https://www.instagram.com/addi.goodman?igsh=MTV1N3pwcDY0bjZwaA%3D%3D&utm_source=qr'
   },
   {
-    name: 'Chris Stoneman',
-    slug: slugify('Chris Stoneman'),
-    images: [chris2, chris, chris3, chris4],
-    description: 'Football Player & Journalist',
-    fullBio: 'Chris is a multifaceted individual who brings a great deal of experience across multiple domains to Cortex Flex Athlete Alliance. He is a student-athlete going into his final semester at Oberlin College, where he plays football as a Defensive Lineman at the Division 3 level and studies political science. Currently, Chris is on leave from Oberlin in order to pursue an internship in financial journalism in Luxembourg and will return to play a final season next fall and graduate in December 2024. A native of Metz, France with an extremely multicultural background, Chris is heavily involved in the development of American football across the globe. He currently works as a content manager, scout and podcast co-host for the Europe’s Elite organization, a social media presence that helps European football players get recruited to American colleges and universities. He is also an experienced coach, most recently taking on the role of defensive coordinator for the Saarland Hurricanes II team (in Saarbrucken, Germany) in 2024. Chris’s experience in football across the globe have granted him a valuable perspective on the world of sport and has motivated him to assist athletes everywhere in perfecting their craft. In joining the CFAA, Chris hopes to distribute the knowledge he has gained over the years and help athletes around the world to create better lives for themselves, both on the field and off.',
-    instagram: 'https://www.linkedin.com/in/chris-stoneman-6303571a2/'
-  },
-  {
     name: 'Onome Kessington',
     slug: slugify('Onome Kessington'),
     images: [onome],
@@ -252,24 +234,20 @@ const bios = [
     description: ' Non-profit Leader & Former D1 Basketball Player ',
     fullBio: 'Olivia Ramil brings a wealth of experience to Cortex Flex Athlete Alliance as a former collegiate athlete, having competed in Division I Basketball for six years across prestigious institutions like Georgetown University, Binghamton University, St. Joseph’s University, and Samford University. Notably ranked by ESPN as the 16th best center in the 2016 Women’s Basketball class out of high school, Olivia balanced her athletic pursuits with scholarly passions, earning both a Bachelor of Science in Nursing and a Masters of Health Administration. In her transition from the court to professional roles, she has served as a Support Coordinator Intern with Samford University’s CAREs Team, Lead Project Manager and Recruiting Coordinator at SaveAround Fundraising, Athlete to Athlete Recruiter, PLAAY Mentor & Project Manager, and Registered School Nurse for Elementary and Middle Schools. As a member of the Cortex Flex Athlete Alliance, Olivia strives to equip and empower athletes, utilizing her varied expertise to nurture success, safety, and fulfillment in their careers and beyond.    '
   },
+  {name: 'Zahra Ronizi',
+  slug: slugify('Zahra Ronizi'),
+  images: [zahra],
+  description: 'Karateka & Pre-medical Student',
+   fullbio: `Zahra is an incoming first-year at Harvard University, where she will be pursuing a joint-concentration in biomedical engineering and human developmental & regenerative biology with a secondary in astrophysics. She holds a black belt in Goju-Ryu Karate and has been competing and ttraining since the age of four. She currently teaches as a sensei at Satori Martial Arts School, passing on her passion and experience in martial arts to beginner and novice students each week. Zahra is a former NASA intern on the Mars Rover Resource Utilization Team through the SEES Program. She also works as an analog astronaut, performing medical and astrobiological research across the world on simulated missions to Mars. Some of her most memorable experiences were serving as the crew biologist on a mission in Spain and as a mission specialist on an expedition in northern Iceland.  In the future, Zahra aspires to become a cardiologist and aerospace medicine physician. Throughout Zahra’s experiences in martial arts and the space medicine community, the need to build a connection between scientists and athletes became crystal clear. She was drawn to CFAA’s mission to build that bridge in the athletic community and foster meaningful progress in the lives of student-athletes.`,
+   instagram:"https://www.instagram.com/themarsgal/",
+   linkedin:'https://www.linkedin.com/in/zahra-ronizi-b310a51b2'
+  },
   {
     name: 'DJ Hampton',
     slug: slugify('DJ Hampton'),
     images: [dj],
     description: 'Performance Enhancement Trainer & U.S Army Section Chief',
     fullBio: "DJ Hampton, an ISSA Certified Performance Enhancement Trainer, is the dynamic force behind BoyGuru Fitness. With a passion for cultivating excellence in student athletes, DJ's dual training methods in the physical and cognitive realms sets him apart. Currently Serving as a U.S. Army, combat arms Field Artillery Howitzer Section Chief, he effortlessly applies agile decision-making and creative problem-solving skills honed through tactical situations while also fostering a deliberate and process management mindset garnered through a certification in Program Management and a Green Belt in Six Sigma Methodology. Despite his recent foray into business, DJ's leadership, training, speaking, content creation, and marketing skills converge seamlessly. His mission extends beyond sports, aiming to transform individuals into forces of nature both in their sport and in the sport of life. DJ's diverse skill set positions him as a valuable asset to the Cortex Flex Athlete Alliance, making him a trusted ally for those seeking mastery of self and unparalleled performance enhancement."
-  },
-  {
-    name: 'Ellie Mccarron',
-    slug: slugify('Ellie Mccarron'),
-    images: [ellie, ellie2],
-    description: 'Graphic Designer',
-    fullBio: `An inspired creative excited by the intersection of graphic design, visual art, and advertising, Ellie McCarron has built a portfolio of technical skills, and experiences that position her for success as an emerging Art Director. The Boston University junior has completed intensive creative coursework, as well as an industry internship in Boston for a major non-profit. 
-    Ellie was the digital marketing intern for Big Brothers Big Sisters of Eastern Massachusetts, where she contributed fresh strategies as well as new mediums of digital marketing. She helped develop BBBSEM’s presence online across platforms, such as Instagram, Facebook, TikTok, X, and LinkedIn. She learned how to use much of the Adobe Suite in a professional setting.
-    She is currently a part of Boston University’s AdLab, the largest student-run advertising agency in the country. She is an Art Director for Under Armour, and has contributed unique, memorable content for them. She is a graphic designer for The BU BUZZ, a student-run lifestyle magazine. Ellie also participated in Boston University’s PRoBono, and provided exclusive graphics for a local non-profit’s social media page. She also has several years of customer service experience under her belt.   							
-    At Boston University, Ellie has earned dean’s list honors while completing coursework in media relations, communications writing, advertising, and graphic design.`,
-    linkedin: 'https://www.linkedin.com/in/elisabeth-mccarron-81580526a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    instagram: 'https://www.instagram.com/elliebelly17?igsh=NHZ6OTlrOGdweWZi&utm_source=qr'
   },
   {
     name: 'Katelyn Sylvester',
@@ -282,8 +260,6 @@ const bios = [
     `,
     bod: true
   },
- 
-
   {
     name: 'Lisa Liff',
     slug: slugify('Lisa Liff'),
@@ -297,9 +273,7 @@ const bios = [
     images: [kanella],
     description: 'Clinical Research Coordinator',
     fullBio: `Kanella is thrilled to be at the intersection of society and science here at Cortex Flex. She received her bachelor’s degree from McGill University in May 2023, where she majored in psychology and minored in French and behavioral science. She has a research background in pediatric ADHD at the Cleveland Clinic’s ADHD Summer Treatment Program, and cardiovascular psychophysiology through McGill University. Currently, she works in neurology research at Massachusetts General Hospital’s Frontotemporal Disorders Unit.
-
-      Kanella is interested in all things health, nutrition, and quality of life, and hopes to pursue higher education in health psychology in the future. To Kanella, an informed society is foundational to creating well-being oriented spectators, athletes, and policymakers of the athletic world and beyond. She is excited to be able to bring a psychological lens to the scientific advocacy work of this organization, and to assist with the distribution of comprehensible learning resources to budding athletes throughout the United States.
-      `,
+      Kanella is interested in all things health, nutrition, and quality of life, and hopes to pursue higher education in health psychology in the future. To Kanella, an informed society is foundational to creating well-being oriented spectators, athletes, and policymakers of the athletic world and beyond. She is excited to be able to bring a psychological lens to the scientific advocacy work of this organization, and to assist with the distribution of comprehensible learning resources to budding athletes throughout the United States.`,
     linkedin: "https://www.linkedin.com/in/kanella-basilion-bb67ab1b2/",
   },
   {
@@ -316,6 +290,18 @@ const bios = [
     images: [jess],
     description: 'Health Sciences Student',
     fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
+  },
+  {
+    name: 'Ellie Mccarron',
+    slug: slugify('Ellie Mccarron'),
+    images: [ellie, ellie2],
+    description: 'Graphic Designer',
+    fullBio: `An inspired creative excited by the intersection of graphic design, visual art, and advertising, Ellie McCarron has built a portfolio of technical skills, and experiences that position her for success as an emerging Art Director. The Boston University junior has completed intensive creative coursework, as well as an industry internship in Boston for a major non-profit. 
+    Ellie was the digital marketing intern for Big Brothers Big Sisters of Eastern Massachusetts, where she contributed fresh strategies as well as new mediums of digital marketing. She helped develop BBBSEM’s presence online across platforms, such as Instagram, Facebook, TikTok, X, and LinkedIn. She learned how to use much of the Adobe Suite in a professional setting.
+    She is currently a part of Boston University’s AdLab, the largest student-run advertising agency in the country. She is an Art Director for Under Armour, and has contributed unique, memorable content for them. She is a graphic designer for The BU BUZZ, a student-run lifestyle magazine. Ellie also participated in Boston University’s PRoBono, and provided exclusive graphics for a local non-profit’s social media page. She also has several years of customer service experience under her belt.   							
+    At Boston University, Ellie has earned dean’s list honors while completing coursework in media relations, communications writing, advertising, and graphic design.`,
+    linkedin: 'https://www.linkedin.com/in/elisabeth-mccarron-81580526a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    instagram: 'https://www.instagram.com/elliebelly17?igsh=NHZ6OTlrOGdweWZi&utm_source=qr'
   },
   {
     name: 'Puneet Velidi',

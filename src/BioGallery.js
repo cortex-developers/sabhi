@@ -5,7 +5,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slider from 'react-slick'; // Import Slider
 import "slick-carousel/slick/slick.css"; // Import slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSSimport nate from './nate.jpg'
-
+import ashlyn from './ashlyn.JPG'
+import ashlyn2 from './ashlyn2.jpg'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effect for loading images
 import hamza from './hamza.jpg'
@@ -211,6 +212,13 @@ const bios = [
     images: [sophias, sophias2],
     description: 'D1 Rower & Neuroscience Student ',
     fullBio: `Sophia Simenz is a rising sophomore at Columbia University where she competes on the division one women's rowing team and is studying neuroscience on the pre medicine track. Sophia has always been interested in medicine and athletics and how society can better integrate the two to create healthier and happier athletes in both the short term and long term. She hopes to use the skills she is learning to become a doctor and to help coach younger athletes. Sophia is from Milwaukee, Wisconsin and grew up a multi-sport athlete, and she loves spending time outside, trying new restaurants, traveling, and spending time with family and friends. She is super excited to work with CFAA to better the health and lives of all athletes, past, present, and future!`,
+  },
+  {
+    name: 'Ashlyn Kane',
+    slug: slugify('Ashlyn Kane'),
+    images: [ashlyn, ashlyn2],
+    description: 'D1 Soccer Player & Exercise Science Graduate Student',
+    fullBio: `Hey everyone, my name is Ashlyn Kane. As a Division 1 soccer player at Mississippi State, it's not just about winning; it's about pushing myself to be the best player and teammate I can be. Off the field, I'm equally passionate about the science of sports performance. That's why I'm pursuing a Master's degree in Exercise Science here at Mississippi State. I'm diving deep into topics like human physiology, biomechanics, and sports nutrition, because understanding the science behind the game is key to maximizing performance. But I'm not just studying for myself—I'm also super excited to be involved with Cortex Flex, a nonprofit organization dedicated to advancing sports science research and education. Through Cortex Flex, I get to collaborate with top experts, conduct groundbreaking research, and develop innovative training techniques, and work with athletes to help them reach their fullest potential. Whether I'm on the field, in the lab, or out in the community with Cortex Flex, I'm always striving to push the boundaries of what's possible in sports science. I'm on a mission to make a real difference in the world of athletics, and can’t wait to help do that with Cortex Flex!`,
   },
   {
     name: 'Addison Goodman',

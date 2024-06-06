@@ -11,6 +11,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effect for loading images
 import hamza from './hamza.jpg'
 import sophia from './sophia.jpg'
+import vivek from './vivek.jpg'
 import sophia2 from './sophia2.jpg'
 import sophias from './sophias.jpeg'
 import sophias2 from './sophias2.jpg'
@@ -143,6 +144,13 @@ const bios = [
     images: [kevin],
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
+  },
+  {
+    name: 'Vivek Khatri',
+    slug: slugify('Vivek Khatri'),
+    images: [vivek],
+    description: 'Dental Student',
+    fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
   },
   {
     name: 'Brooke Miller',

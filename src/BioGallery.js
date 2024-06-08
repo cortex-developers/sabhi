@@ -9,6 +9,7 @@ import ashlyn from './ashlyn.JPG'
 import ashlyn2 from './ashlyn2.jpg'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effect for loading images
+import ella from './ella.png'
 import hamza from './hamza.jpg'
 import sophia from './sophia.jpg'
 import vivek from './vivek.jpg'
@@ -227,6 +228,13 @@ const bios = [
     images: [ashlyn, ashlyn2],
     description: 'D1 Soccer Player & Exercise Science Graduate Student',
     fullBio: `Hey everyone, my name is Ashlyn Kane. As a Division 1 soccer player at Mississippi State, it's not just about winning; it's about pushing myself to be the best player and teammate I can be. Off the field, I'm equally passionate about the science of sports performance. That's why I'm pursuing a Master's degree in Exercise Science here at Mississippi State. I'm diving deep into topics like human physiology, biomechanics, and sports nutrition, because understanding the science behind the game is key to maximizing performance. But I'm not just studying for myself—I'm also super excited to be involved with Cortex Flex, a nonprofit organization dedicated to advancing sports science research and education. Through Cortex Flex, I get to collaborate with top experts, conduct groundbreaking research, and develop innovative training techniques, and work with athletes to help them reach their fullest potential. Whether I'm on the field, in the lab, or out in the community with Cortex Flex, I'm always striving to push the boundaries of what's possible in sports science. I'm on a mission to make a real difference in the world of athletics, and can’t wait to help do that with Cortex Flex!`,
+  },
+  {
+    name: 'Ella Stroehmann',
+    slug: slugify('Ella Stroehmann'),
+    images: [ella],
+    description: 'D1 Volleyball Player % Pre-medical Student',
+    fullBio: 'Ella Stroehmann is a current Division I volleyball player who has a passion for connecting with younger athletes. She attends UNC Asheville, majoring in Health and Wellness Promotion, focusing on Pre-Med studies. She hopes to pursue a career in oncology or palliative care. Throughout her volleyball career she has received multiple all conference awards, won multiple conference championships, and participated in many matches at the national level. During her college recruiting journey she wishes that she had other older athletes that she could talk to who had been through the same thing- this is where her passion for helping younger athletes grew from. Another passion that Ella has is advocating for athlete’s mental health surrounding identity outside of sport as well as injury. She has been through many injuries and surgeries and wants to be for others the outlet she wishes she had during those times. Ella has always had a passion for helping people. During her time in high school, she completed internships at her local fire department- working with the EMTs and Paramedics in the ambulance. She also volunteered at her local hospital, doing patient rounds and developing relationships with people in hospice/ post surgery care. She is excited about empowering athletes in their journeys to their dreams, and can’t wait to see the impact that she has.'
   },
   {
     name: 'Addison Goodman',

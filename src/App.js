@@ -15,7 +15,7 @@ import Contact from './Contact';
 import CortexLearn from './learn.jpg';
 import CortexCommunity from './cortexcomm.png';
 import CortexWiki from './cortexwiki.png';
-
+import huddle from './huddle.jpeg'
 import Partners from './Partners'
 import BlogPosts from './BlogPosts';
 import './App.css'
@@ -338,7 +338,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow fontSize='2rem' images={[cc2, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  A 501(c)(3) HEALTH EDUCATION NONPROFIT.", "  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE.", "  ATHLETES.", " SCIENTISTS.", " DOCTORS.", " CREATIVES.", " BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
+                <Slideshow slideDuration = {5000} fontSize='2rem' images={[huddle, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  Educating teens worldwide about mental and physical health through the lens of athletic performance.", "  OUR TEAM IS: PRO/D1 ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE.", "  OUR TEAM IS: ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',
@@ -381,7 +381,7 @@ function App() {
                       variant="h6"
                       component="p"
                     >
-                      "Our mission is to translate complex scientific knowledge into comprehensible messages to which athletic communities will be receptive and thus to broadly create better outcomes for athletes on gameday, in the classroom, and in life thereafter."
+                      "Our mission is to build population self-sufficiency in mental and physical health by teaching teens about health science through the lens of sports performance."
                     </Typography>
                   </Card>
 
@@ -415,7 +415,7 @@ function App() {
                         maxWidth: '85%'
                       }}
                     >
-                      "Our vision is to create a world where athletics and clinical science exist not as separate entities but as a symbiotically-linked cooperative partnership. We aim to create a powerful network of intermediaries who serve to educate and inspire coaches and athletes as well as to act as advocates before scientific and medical professionals in articulating the range of difficulties that athletes experience. We envision a future where athletes worldwide have full access to the range of evidence-based practices, and where scientists have an elevated understanding of how to help the athlete population. This will culminate in better health and performance outcomes inside and outside of athletics."
+                      "Our vision is to create a world where habits backed by health science are culturally-instilled and socially-rewarded among society. We aim to join empirically-supported guidance of healthcare professionals with the impactful platform of top-level athletes to influence widespread application of health-promoting behaviors. We envision a future where improved health outcomes are realized inside and outside of athletics and where health science is made interesting, actionable, and accessible for all."
                     </Typography>
 
                   </Card>

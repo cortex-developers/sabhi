@@ -3,7 +3,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import IconButton from '@mui/material/IconButton';
 
-const useTypingEffect = (text, typingSpeed = 150, enableEffect = true) => {
+const useTypingEffect = (text, typingSpeed = 225, enableEffect = true) => {
     const [displayedText, setDisplayedText] = useState(enableEffect ? '' : text);
 
     useEffect(() => {

@@ -151,7 +151,7 @@ const bios = [
     slug: slugify('Vivek Khatri'),
     images: [vivek],
     description: 'Dental Student',
-    fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
+    fullBio: 'Vivek is a D2 at Columbia University College of Dental Medicine. He is passionate about advocating for dental health in athletes which is an often underrated part of athlete health.',
   },
   {
     name: 'Brooke Miller',

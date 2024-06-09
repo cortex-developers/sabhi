@@ -35,19 +35,19 @@ const Slideshow = ({
     showArrows = true,
     textSize = '2rem', // Default text size
     textColor = 'white', // Default text color
-    textHighlightColor="black", // Text highlight color
+    textHighlightColor = 'black', // Text highlight color
     textFont = 'Kosugi Maru, sans-serif', // Default text font
     slideDuration = 3000, // Default slide duration as a prop
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const displayedText = useTypingEffect(texts[currentIndex], 50, enableTypingEffect);
+    const typingSpeed = 50; // Typing speed used in useTypingEffect
+    const displayedText = useTypingEffect(texts[currentIndex], typingSpeed, enableTypingEffect);
 
     const goToPrevious = useCallback(() => {
         setIsTransitioning(true);
         setTimeout(() => {
-            const isFirstImage = currentIndex === 0;
-            const newIndex = isFirstImage ? images.length - 1 : currentIndex - 1;
+            const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
             setCurrentIndex(newIndex);
         }, 200);
     }, [currentIndex, images.length]);
@@ -55,22 +55,21 @@ const Slideshow = ({
     const goToNext = useCallback(() => {
         setIsTransitioning(true);
         setTimeout(() => {
-            const isLastImage = currentIndex === images.length - 1;
-            const newIndex = isLastImage ? 0 : currentIndex + 1;
+            const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
             setCurrentIndex(newIndex);
         }, 200);
     }, [currentIndex, images.length]);
 
     useEffect(() => {
+        const textLength = texts[currentIndex].length;
+        const typingDuration = typingSpeed * textLength;
         const timer = setInterval(() => {
             setIsTransitioning(true);
-            setTimeout(() => {
-                goToNext();
-            }, 200);
-        }, slideDuration); // Use the slideDuration prop here
+            setTimeout(goToNext, 200);
+        }, enableTypingEffect ? typingDuration : slideDuration); // Use dynamic slide duration
 
         return () => clearInterval(timer);
-    }, [goToNext, slideDuration]);
+    }, [goToNext, slideDuration, enableTypingEffect, texts, currentIndex]);
 
     useEffect(() => {
         if (isTransitioning) {
@@ -83,12 +82,19 @@ const Slideshow = ({
     return (
         <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
             {showArrows && (
-                <IconButton onClick={goToPrevious} style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, color:"white" }} aria-label="Previous image">
-                    <ArrowBackIosNewIcon fontSize = "large"/>
+                <IconButton
+                    onClick={goToPrevious}
+                    style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, color: 'white' }}
+                    aria-label="Previous image"
+                >
+                    <ArrowBackIosNewIcon fontSize="large" />
                 </IconButton>
             )}
             {images.map((image, index) => (
-                <div key={index} style={{ position: 'relative', display: currentIndex === index ? 'block' : 'none', width: '100%', height: '100%' }}>
+                <div
+                    key={index}
+                    style={{ position: 'relative', display: currentIndex === index ? 'block' : 'none', width: '100%', height: '100%' }}
+                >
                     <img
                         src={image}
                         alt={`Slide ${index}`}
@@ -98,32 +104,38 @@ const Slideshow = ({
                             objectFit: 'cover',
                             position: 'absolute',
                             filter: isTransitioning ? 'blur(8px)' : 'blur(0px)',
-                            transition: 'filter 0.6s ease'
+                            transition: 'filter 0.6s ease',
                         }}
                     />
                     {currentIndex === index && (
-                        <div style={{
-                            position: 'absolute',
-                            top: '50%',
-                            left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            color: textColor,
-                            backgroundColor: textHighlightColor,
-                            textAlign: 'center',
-                            fontSize: textSize,
-                            fontWeight: 'bold',
-                            zIndex: 1,
-                            whiteSpace: 'pre-wrap',
-                            fontFamily: textFont,
-                        }}>                            
-                        {displayedText}
+                        <div
+                            style={{
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                transform: 'translate(-50%, -50%)',
+                                color: textColor,
+                                backgroundColor: textHighlightColor,
+                                textAlign: 'center',
+                                fontSize: textSize,
+                                fontWeight: 'bold',
+                                zIndex: 1,
+                                whiteSpace: 'pre-wrap',
+                                fontFamily: textFont,
+                            }}
+                        >
+                            {displayedText}
                         </div>
                     )}
                 </div>
             ))}
             {showArrows && (
-                <IconButton onClick={goToNext} style={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, color: "white" }} aria-label="Next image">
-                    <ArrowForwardIosIcon  fontSize = "large"/>
+                <IconButton
+                    onClick={goToNext}
+                    style={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 2, color: 'white' }}
+                    aria-label="Next image"
+                >
+                    <ArrowForwardIosIcon fontSize="large" />
                 </IconButton>
             )}
         </div>

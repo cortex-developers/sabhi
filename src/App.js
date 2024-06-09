@@ -43,7 +43,7 @@ import joeathletemobile from './joeathletemobile.jpg'
 
 import sophiaathlete from './sophiaathlete.jpg'
 import mayaathlete from './mayaathlete.jpg'
-import cc2 from './cc2.jpg'
+//import cc2 from './cc2.jpg'
 
 import natekathlete from './natekathlete.jpg'
 import onomeathlete from './onomeathlete.jpg'

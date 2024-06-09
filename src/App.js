@@ -58,6 +58,8 @@ import MailChimpForm from './MailChimpForm';
 import graphic1 from './graphic1.png'
 import graphic2 from './graphic2.png'
 import graphic3 from './graphic3.png'
+import graphic4 from './graphic4.png'
+
 import { styled } from '@mui/material/styles';
 
 import ReactGA4 from 'react-ga4';
@@ -186,6 +188,7 @@ function App() {
     graphic1,
     graphic2,
     graphic3,
+    graphic4
     // Add more image paths as needed
   ];
   const handleDrawerToggle = () => {

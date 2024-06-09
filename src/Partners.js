@@ -3,12 +3,21 @@ import { Grid, Box, Typography } from '@mui/material';
 import clf from './clf.png'
 import cpfb from './cpfb.png'
 import ucsf from './ucsf.png'
-
+import ppn from './ppn.png'
+import lmnt from './lmnt.png'
+import cse from './cse.png'
+import sssd from './sssd.png'
+import d1fuel from './d1fuel.png'
 // Sample data for partner logos
 const partners = [
   { name: 'Concussion Legacy Foundation', logo: clf },
   { name: 'Community Partnership Funding Board', logo: cpfb },
   { name: 'UCSF Sports Medicine Center', logo: ucsf },
+  { name: 'Potential Power Nutrition', logo: ppn },
+  { name: 'LMNT', logo: lmnt },
+  { name: 'Clean Simple Eats', logo: cse },
+  { name: 'South Side High School', logo: sssd },
+  { name: 'D1 Fuel', logo: d1fuel },
 
   // Add more partners as needed
 ];

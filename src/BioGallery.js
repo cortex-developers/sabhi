@@ -36,7 +36,7 @@ import puneet2 from './puneet2.jpg'
 import ellie from './ellie.jpg'
 import ellie2 from './ellie2.jpg'
 import matt from './matt.jpg'
-
+import tyler from './tyler.jpg'
 import jess from './jess.jpg'
 import addison from './addison.jpg'
 import addison2 from './addison2.jpg'
@@ -145,6 +145,13 @@ const bios = [
     images: [kevin],
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
+  },
+  {
+    name: 'Tyler Thiele',
+    slug: slugify('Tyler Thiele'),
+    images: [tyler],
+    description: 'Doctor of Physical Therapy & Former Decathlete',
+    fullBio: `Tyler has been practicing as a Doctor of Physical Therapy since 2018, mainly working in underserved, rural areas as a traveling therapist. He believes everyone working to be the healthiest version of themselves is an athlete, and has practiced with athletes of all ages from beginner to professional throughout his career. Prior to becoming a physical therapist, Tyler was a decathlete and pole vaulter for Ithaca College. Now, Tyler has a special interest in working with endurance athletes and golfers in his private practice and seeks to empower athletes across the spectrum on injury risk reduction, safe return to sport after injury and safe and effective training principles.`
   },
   {
     name: 'Vivek Khatri',

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
-import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText, Grid, Modal, Fade } from '@mui/material';
+import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText, Grid } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
-import { LinkedIn, Instagram, Email, Close as CloseIcon } from '@mui/icons-material'; // Import icons
+import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
 //import Logo from './sabhi-logo.svg';
 import Slideshow from './Slideshow';
 import Community from './Community';
@@ -194,20 +194,6 @@ function App() {
   const handleDrawerToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-
-  const [modalOpen, setModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (!localStorage.getItem('modalShown')) {
-      setModalOpen(true);
-      localStorage.setItem('modalShown', 'true');
-    }
-  }, []);
-
-  const handleModalClose = () => {
-    setModalOpen(false);
-  };
-
   const drawer = (
     <ThemeProvider theme={theme}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -480,62 +466,6 @@ function App() {
             </Container>
           </Box>
         </Box>
-        <Modal
-          aria-labelledby="modal-title"
-          aria-describedby="modal-description"
-          open={modalOpen}
-          onClose={handleModalClose}
-          closeAfterTransition
-        >
-          <Fade in={modalOpen}>
-            <Box
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '75%',
-                bgcolor: 'background.paper',
-                boxShadow: 24,
-                p: 4,
-                borderRadius: 1,
-                outline: 'none',
-                maxHeight: '80vh', // Set maximum height
-                overflowY: 'auto', // Enable vertical scrolling
-              }}
-            >
-              <IconButton
-                aria-label="close"
-                onClick={handleModalClose}
-                sx={{
-                  position: 'absolute',
-                  right: 8,
-                  top: 8,
-                  color: (theme) => theme.palette.grey[500],
-                }}
-              >
-                <CloseIcon />
-              </IconButton>
-              <Typography id="modal-title" variant="h6" component="h2">
-                Welcome to Cortex Flex!
-              </Typography>
-              <Box sx={{ mt: 2 }}>
-                <iframe
-                  width="100%"
-                  height="500"
-                  src="https://www.youtube.com/embed/k_L-mPBtVfU?si=8kH675HkNxPpGP4l"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </Box>
-              <Typography id="modal-description" sx={{ mt: 2 }}>
-                We are excited to have you here! We want to tell you about an exciting project that we have been working on for the past couple of months. Cortex Community is our groundbreaking, free youth athlete training and mentorship program led by doctors, pro/D1 athletes, and Ivy League graduates. Our aim is to help our athletes reach the next level of performance, become educated in health science, and ultimately become advocates for evidence-based and scientific practices in their athletic communities.
-              </Typography>
-            </Box>
-          </Fade>
-        </Modal>
-
       </Router>
     </ThemeProvider>
   );

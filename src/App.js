@@ -370,7 +370,7 @@ function App() {
                       variant="h6"
                       component="p"
                     >
-                      "Our mission is to build population self-sufficiency in mental and physical health by teaching teens about health science through the lens of sports performance."
+                      "Our mission is to build population self-sufficiency in mental and physical health by teaching teens about health science through the lens of athletic performance."
                     </Typography>
                   </Card>
 

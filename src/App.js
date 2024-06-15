@@ -32,7 +32,9 @@ import businessf from './businessf.jpg'
 import nateathlete from './nateathleteshot.JPEG'
 import katyathlete from './katyathleteshot.jpg'
 import katyathletedesktop from './katyathleteshotdesktop.jpg'
-
+import ellaathlete from './ellaathlete.png'
+import ellaathletedesktop from './ellathletedesktop.png'
+import sophiasathlete from './sophiasathlete.jpeg'
 //import brendanathlete from './brendanathleteshot.jpg'
 import oliviathlete from './oliviaathleteshot.png'
 import oliviathletemobile from './oliviaathleteshotmobile.jpeg'
@@ -103,7 +105,9 @@ const shots = [
   sophiaathlete,
   natekathlete,
   onomeathlete,
-  addisonathlete
+  addisonathlete,
+  ellaathlete,
+  sophiasathlete
 ]
 const shots2 = [
   nateathlete,
@@ -116,7 +120,9 @@ const shots2 = [
   sophiaathlete,
   natekathlete,
   onomeathlete,
-  addisonathlete
+  addisonathlete,
+  ellaathletedesktop,
+  sophiasathlete
 ]
 const texts = [
   "In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
@@ -129,7 +135,9 @@ const texts = [
   `Living as both a Division 1 athlete and a student of sport science showed me the possibilities that merging these two disciplines can have. My training and well-being benefited immensely from the first-hand knowledge I gained from my degree in exercise science. I want to bring this experience to others through Cortex Flex because I believe it has the power to change lives.`,
   `As a Division 1 athlete I have gone through my shares of injuries and recognize the lack of continuity between medical research and athletes. I believe in Cortex Flex having the ability to make an impact and bridge the gap between the two sides, and I hope to be able to help athletes handle their injuries better both mentally and physically.`,
   `As a former Division 1 athlete I went through a pretty tough injury my senior year. No one talks about all the hard work you put in and how it can all end on one play or one lift. Cortex Flex now gives you a platform to talk to other athletes about what you’re going through mentally and physically. I wish I had a group like this when I was going through what I was going through.`,
-  `My athletic experience leading up to and in college exposed me to issues that no one should have to face. Now, I want to share practical knowledge that could have made a world of difference for me – and countless other student-athletes. By bridging the gap between science, athletics, and academics, we can prevent a lot of pain and frustration. While I can't rewind the clock, I'm passionate about empowering future athletes to thrive.`
+  `My athletic experience leading up to and in college exposed me to issues that no one should have to face. Now, I want to share practical knowledge that could have made a world of difference for me – and countless other student-athletes. By bridging the gap between science, athletics, and academics, we can prevent a lot of pain and frustration. While I can't rewind the clock, I'm passionate about empowering future athletes to thrive.`,
+  `As a current Division l volleyball player majoring in health and wellness promotion, I know the importance of balance in all potential aspects of athlete life- ranging from nutrition, time management, recruiting, injury, and athlete’s mental health. My biggest passion is injury and the under-discussed aspect of mental recovery throughout and after the injury process- I am very excited to bring this to Cortex Flex and be a part of what I wish I had access to during my many injuries and their rehabilitation processes.`,
+  `Growing up I was always super interested in the human body and medical field, and was also always in numerous sports year round. Once, I began competing at the Division 1 level for rowing, I truly realized how intertwined these two areas are, and the substantial room for growth in combining sports and medicine. As a result, I joined Cortex to help propel the development of these areas, and to hopefully help other athletes to become the happiest and healthiest they can be.`
 ]
 
 

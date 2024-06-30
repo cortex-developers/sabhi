@@ -78,7 +78,7 @@ const bios = [
     name: 'Nate Roy',
     slug: slugify('Nate Roy'),
     images: [nate, nate2, nate4, nate3, nate5],
-    description: 'McGill Football Player & MD/PhD Student',
+    description: 'D1 Football Player & MD/PhD Student',
     fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
     email: "nate@cortexflex.org",
     linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",

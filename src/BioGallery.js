@@ -13,6 +13,7 @@ import ella from './ella.png'
 import hamza from './hamza.jpg'
 import sophia from './sophia.jpg'
 import vivek from './vivek.jpg'
+import haneyya from './haneyya.jpg'
 import sophia2 from './sophia2.jpg'
 import sophias from './sophias.jpeg'
 import sophias2 from './sophias2.jpg'
@@ -77,11 +78,14 @@ const bios = [
     name: 'Nate Roy',
     slug: slugify('Nate Roy'),
     images: [nate, nate2, nate4, nate3, nate5],
-    description: 'D1 Football Player & PhD Student',
+    description: 'McGill Football Player & MD/PhD Student',
     fullBio: 'Nate is an incoming doctoral student-athlete, studying for a PhD in adolescent psychiatry while playing varsity football at McGill University. He previously played Division 1 football in the Ivy League and published original research on concussions as an undergraduate at Cornell University. He currently works as a clinical research coordinator within Harvard’s Division of Neuropsychiatry and Neuromodulation. In the past, Nate has volunteered as a high school track and field coach and worked as a youth athlete mentor and personal trainer. Within these experiences, it has stood out to him that even though scientific knowledge can be profoundly helpful in athletic endeavors, there is an astonishing lack of application of scientific findings in the realm of athletics. His desire to distribute science in a palatable, engaging, and applicable manner to youth student-athletes led to the development of the CFAA with which his hope is to create better outcomes for student-athletes in uniform, in the classroom, and in life thereafter.',
     email: "nate@cortexflex.org",
     linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
-    instagram: "https://www.instagram.com/nate.roy29/"
+    instagram: "https://www.instagram.com/nate.roy29/",
+    position: "Chief Executive Officer",
+    leader: true,
+    bod: true
   },
   {
     name: 'Reza Ashrafi',
@@ -89,9 +93,10 @@ const bios = [
     images: [reza],
     description: 'Football Player & Neurobiology Researcher',
     fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
-    email: "reza@cortexflex.org",
     linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
     instagram: "https://www.instagram.com/reza_ashrafi26/",
+    position: "Project Lead & Producer",
+    project: ["media", "grow"],
     bod: true
   },
   {
@@ -100,6 +105,8 @@ const bios = [
     images: [matt],
     description: 'Medical Student & Researcher',
     fullBio: `Matt is a medical student with a strong passion for sports medicine, in particular the detailed training and advocacy for athlete safety. He spent two years during his undergraduate education studying & conducting research alongside a globally recognized developmental psychologist in Charlottesville, Virginia, in addition to conducting and presenting his own research project amongst the world's top scientists at the prestigious National Institutes of Health in Bethesda, Maryland. Matt played football and lacrosse for most of his childhood years, trained in MMA, and has even competed in multiple long distance running events. With his first-hand experiences in contact sports, medical research, and clinical training, his résumé aligns perfectly with the goals of CFAA. Matt is looking forward to advancing the field of CTE research and advocacy, while making sports safer and more enjoyable for the athletes involved.`,
+    position: "Chief Operating Officer",
+    leader: true
   },
   {
     name: 'Maya Haykal, M.D',
@@ -123,7 +130,8 @@ const bios = [
     commitment to pediatric health. With her adeptness in statistical analysis and holistic approach
     to well-being, Maya's diverse background makes her an incredible asset to Cortex Flex Athlete
     Alliance, showcasing her dedication to athletic mentorship, medical practice, and community
-    outreach.`
+    outreach.`,
+    medicaladvisor: true
   },
   {
     name: 'Guillermo Gonzalez Garibay, M.D',
@@ -131,6 +139,7 @@ const bios = [
     images: [memo,memo2],
     description: 'Medical Doctor & Research Fellow',
     fullBio: `Description: Guillermo is an MD based in Mexico City. He completed a Research Fellowship at Massachusetts General Hospital, Harvard Medical School, focusing on Neuropsychiatry and Neuromodulation. Following this, he embarked on a Research Fellowship at the National Institute of Neurology and Neurosurgery in Mexico City. Currently, he is pursuing a medical residency in Neurosurgery. Guillermo's passion for swimming led him to aspire to blend his love for sports with his medical expertise to aid young athletes in overcoming challenges more effectively. His ongoing research interests include neuromodulation techniques, epilepsy, ischemic stroke, and neuroanatomy. He is eager to contribute to advancing the scientific aspect of Cortex Flex.`,
+    medicaladvisor: true
   },
   {
     name: 'Hamza Shahab, M.D',
@@ -138,19 +147,24 @@ const bios = [
     images: [hamza],
     description: 'Medical Doctor & Research Fellow',
     fullBio: 'Hamza is an MD, located in Boston and originally from Pakistan. He is completing a Research Fellowship at Massachusetts General Hospital, Harvard Medical School, in Neuropsychiatry and Neuromodulation. Following this, he will be starting his Adult Psychiatry Residency at Icahn School of Medicine at Mount Sinai, Elmhurst Hospital, NYC. Hamza’s first love was soccer and while he stopped playing following multiple concussions in High School, he is hoping to combine his love for sports with expertise in the field of medicine to help young athletes deal better with adversaries. His current research focus is on neuromodulation techniques for psychiatric disorders. Particularly the translation of low-risk neuromodulation techniques into prevention strategies for mental health pathologies in the youth. He is excited to advance the science portion of Cortex Flex.',
+    medicaladvisor: true
   },
   {
     name: 'Kevin Wisniewski',
     slug: slugify('Kevin Wisniewski'),
     images: [kevin],
     description: 'Medical Student & Non-profit Leader',
-    fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.'
+    fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.',
+    project: ["research", "grow"],
+    position: "Researcher",
   },
   {
     name: 'Tyler Thiele',
     slug: slugify('Tyler Thiele'),
     images: [tyler],
     description: 'Doctor of Physical Therapy & Former Decathlete',
+    project: ["research"],
+    position: "Researcher",
     fullBio: `Tyler has been practicing as a Doctor of Physical Therapy since 2018, mainly working in underserved, rural areas as a traveling therapist. He believes everyone working to be the healthiest version of themselves is an athlete, and has practiced with athletes of all ages from beginner to professional throughout his career. Prior to becoming a physical therapist, Tyler was a decathlete and pole vaulter for Ithaca College. Now, Tyler has a special interest in working with endurance athletes and golfers in his private practice and seeks to empower athletes across the spectrum on injury risk reduction, safe return to sport after injury and safe and effective training principles.`
   },
   {
@@ -158,6 +172,8 @@ const bios = [
     slug: slugify('Vivek Khatri'),
     images: [vivek],
     description: 'Dental Student',
+    project: ["research"],
+    position: "Researcher",
     fullBio: 'Vivek is a D2 at Columbia University College of Dental Medicine. He is passionate about advocating for dental health in athletes which is an often underrated part of athlete health.',
   },
   {
@@ -165,6 +181,8 @@ const bios = [
     slug: slugify('Brooke Miller'),
     images: [brooke, brooke2],
     description: 'D1 Soccer Player & Health Student',
+    project: ["community"],
+    position: "Community Mentor",
     fullBio: `Brooke Miller is a current Division 1 soccer at the University of Portland, striving to have a positive impact on young athletes within their sport and their overall health. While growing up in San Diego, Brooke's love for sports and helping others ignited at a young age. She found her calling in advocating for underprivileged youth in sports through her work with the non-profit organization Matters Athletic. There, she supported and mentored disadvantaged children, using sports as a tool for empowerment and social change. Brooke's commitment extended beyond advocacy as she spent time personally training kids one-on-one, receiving her U.S. Soccer grassroots coaching license, and then coaching at her colleges ID camps. In addition to her athletic pursuits, she is currently pursuing a degree in Integrative Health and Wellness at the University of Portland, with a minor in Business Administration. This academic pursuit aligns with her holistic approach to health and well-being, blending her passion for sports with her desire to promote overall wellness in larger populations and communities. Outside of her academic and athletic commitments, she is working to develop a business that aims to promote holistic health practices for athletes and young adults. With a vision to play professional soccer, become a certified health coach, and a certified holistic nutritionist, Brooke aspires to empower individuals to optimize their physical and mental well-being, unlocking their full potential both on and off the field.`,
     instagram: "https://www.instagram.com/brookeeemiller/",
   },
@@ -174,6 +192,8 @@ const bios = [
     slug: slugify('Jesus Salazar'),
     images: [jesus],
     description: 'Professional Soccer Player',
+    project: ["community"],
+    position: "Community Mentor",
     fullBio: 'Jesus Salazar is a professional soccer player in Asia who previously attended the University of Portland. In addition to becoming a student athlete, Jesus was a volunteer assistant coach at Sweetwater High School in San Diego, CA. During his time as a coach, Jesus played the role of a guidance counselor off the field as well, helping high school students learn the process of college admissions, networking with coaches or even applying for FAFSA. It was during this time as an assistant coach that Jesus began to shape an idea on what he felt he could deliver to athletes around the country. He decided he needed to be a bridge between these students and opportunity. Not only opportunity on the field, but the opportunity to develop a mentality which will help them grow mentally in a healthy manner. Jesus began working with more children, serving as a personal trainer and coach at college ID Camps, became an mentor at the Athlete to Athlete organization and now looks to leave his mark on Coretex Flex.',
     linkedin: 'https://www.linkedin.com/in/jesus-salazar-aa204427a/',
     instagram: 'https://www.instagram.com/chuyy.salazar/'
@@ -182,16 +202,20 @@ const bios = [
     name: 'Sophia Calabrese',
     slug: slugify('Sophie Calabrese'),
     images: [sophia, sophia2],
-    description: 'Rower & Exercise Science Graduate',
+    project: ["community"],
+    position: "Community Mentor",
+    description: 'National-level Rower & Exercise Science Graduate',
     fullBio: `Sophia graduated from the University of Texas at Austin in May 2023, where she earned her bachelor’s degree in exercise science as well as a pre-health certificate with a focus in physical therapy. She was also a member of UT’s division 1 rowing team where she helped the team win two national championships and a top-5 placement over her four years there. Currently, she lives and trains in Vermont with the Green Racing Project and has her sights set on representing the US at the LA Olympics in 2028.Outside of rowing, Sophia has a deep interest in kinesiology, biomechanics, and human physiology. She has applied principles she’s studied to her own training and reaped many benefits. Sophia is excited and passionate about bringing this knowledge to athletes and empowering them to make educated decisions about their own training.`,
   },
   {
     name: 'Kaitlyn Holly',
     slug: slugify('Katy Holly'),
     images: [katy2, katy],
-    description: 'D1 Softball Player & Biochemistry Student',
+    description: 'Clinical Research Coordinator & Former D1 Softball Player',
     linkedin: 'http://www.linkedin.com/in/kaitlynholly',
     instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
+    project: ["media", "research"],
+    position: "Researcher & Podcast Host",
     fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
     With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`
   },
@@ -210,7 +234,9 @@ const bios = [
     description: 'D1 Wrestler & Financial Economics Student',
     fullBio: 'Joe Curtis is a freshman at Columbia University where he is currently a freshman on the wrestling team and is studying Financial Economics.  He grew up in San Diego where he has been wrestling since he was 10.  After graduating high school in 2020, Joe served a 2-year LDS mission in the Republic of Congo.  He loves wrestling and finding the optimal way that he can train to have the best results.  He hopes to leverage the many places he’s lived (Japan, China, Republic of Congo, San Diego, NYC) to help people from all parts of the world to bridge the gap from Athletics to Medicine.  When Joe isn’t wrestling or studying , he enjoys lifting weights, going to the beach, listening to music, and finding good eats.',
     linkedin: "https://www.linkedin.com/in/joseph-curtis-103124300/",
-    instagram: 'https://www.instagram.com/joe.curtis234/'
+    instagram: 'https://www.instagram.com/joe.curtis234/',
+    position: "Community Mentor",
+    project: ["community"]
   },
   {
     name: 'Rachel Zun',
@@ -221,6 +247,8 @@ const bios = [
     During her time at Cornell, Rachel was the president of the Student Athlete Advisory Committee. Within this role she served as one of only two student representatives on the Cornell Student Athlete Mental Health Committee, helping to create the new Wellness Ambassador Program at Cornell. She also created the Bench for a Cause Fundraiser that raised $5000 for the newly created Cornell Student Athlete Mental Health Fund to support student athlete mental health through awareness, training, and education. She established partnerships with local and national mental health organizations like Morgan’s Message and The Sophie Fund. Rachel is using the success of the event to lobby the administration to improve mental health resources for student athletes. Rachel has seen firsthand how intertwined sports and mental health are and hopes to use her own experiences to better the next generation of athletes.`,
     linkedin: "https://www.linkedin.com/in/rachel-zun-1426981b9/",
     instagram: 'https://www.instagram.com/rach.zun/',
+    project: ["community"],
+    position: "Community Mentor",
   },
   {
     name: 'Sophia Simenz',
@@ -228,11 +256,15 @@ const bios = [
     images: [sophias, sophias2],
     description: 'D1 Rower & Neuroscience Student ',
     fullBio: `Sophia Simenz is a rising sophomore at Columbia University where she competes on the division one women's rowing team and is studying neuroscience on the pre medicine track. Sophia has always been interested in medicine and athletics and how society can better integrate the two to create healthier and happier athletes in both the short term and long term. She hopes to use the skills she is learning to become a doctor and to help coach younger athletes. Sophia is from Milwaukee, Wisconsin and grew up a multi-sport athlete, and she loves spending time outside, trying new restaurants, traveling, and spending time with family and friends. She is super excited to work with CFAA to better the health and lives of all athletes, past, present, and future!`,
+    project: ["community"],
+    position: "Community Mentor",
   },
   {
     name: 'Ashlyn Kane',
     slug: slugify('Ashlyn Kane'),
     images: [ashlyn, ashlyn2],
+    project: "grow",
+    position: "Community Mentor",
     description: 'D1 Soccer Player & Exercise Science Graduate Student',
     fullBio: `Hey everyone, my name is Ashlyn Kane. As a Division 1 soccer player at Mississippi State, it's not just about winning; it's about pushing myself to be the best player and teammate I can be. Off the field, I'm equally passionate about the science of sports performance. That's why I'm pursuing a Master's degree in Exercise Science here at Mississippi State. I'm diving deep into topics like human physiology, biomechanics, and sports nutrition, because understanding the science behind the game is key to maximizing performance. But I'm not just studying for myself—I'm also super excited to be involved with Cortex Flex, a nonprofit organization dedicated to advancing sports science research and education. Through Cortex Flex, I get to collaborate with top experts, conduct groundbreaking research, and develop innovative training techniques, and work with athletes to help them reach their fullest potential. Whether I'm on the field, in the lab, or out in the community with Cortex Flex, I'm always striving to push the boundaries of what's possible in sports science. I'm on a mission to make a real difference in the world of athletics, and can’t wait to help do that with Cortex Flex!`,
   },
@@ -241,7 +273,9 @@ const bios = [
     slug: slugify('Ella Stroehmann'),
     images: [ella],
     description: 'D1 Volleyball Player % Pre-medical Student',
-    fullBio: 'Ella Stroehmann is a current Division I volleyball player who has a passion for connecting with younger athletes. She attends UNC Asheville, majoring in Health and Wellness Promotion, focusing on Pre-Med studies. She hopes to pursue a career in oncology or palliative care. Throughout her volleyball career she has received multiple all conference awards, won multiple conference championships, and participated in many matches at the national level. During her college recruiting journey she wishes that she had other older athletes that she could talk to who had been through the same thing- this is where her passion for helping younger athletes grew from. Another passion that Ella has is advocating for athlete’s mental health surrounding identity outside of sport as well as injury. She has been through many injuries and surgeries and wants to be for others the outlet she wishes she had during those times. Ella has always had a passion for helping people. During her time in high school, she completed internships at her local fire department- working with the EMTs and Paramedics in the ambulance. She also volunteered at her local hospital, doing patient rounds and developing relationships with people in hospice/ post surgery care. She is excited about empowering athletes in their journeys to their dreams, and can’t wait to see the impact that she has.'
+    fullBio: 'Ella Stroehmann is a current Division I volleyball player who has a passion for connecting with younger athletes. She attends UNC Asheville, majoring in Health and Wellness Promotion, focusing on Pre-Med studies. She hopes to pursue a career in oncology or palliative care. Throughout her volleyball career she has received multiple all conference awards, won multiple conference championships, and participated in many matches at the national level. During her college recruiting journey she wishes that she had other older athletes that she could talk to who had been through the same thing- this is where her passion for helping younger athletes grew from. Another passion that Ella has is advocating for athlete’s mental health surrounding identity outside of sport as well as injury. She has been through many injuries and surgeries and wants to be for others the outlet she wishes she had during those times. Ella has always had a passion for helping people. During her time in high school, she completed internships at her local fire department- working with the EMTs and Paramedics in the ambulance. She also volunteered at her local hospital, doing patient rounds and developing relationships with people in hospice/ post surgery care. She is excited about empowering athletes in their journeys to their dreams, and can’t wait to see the impact that she has.',
+    project: ["community"],
+    position: "Community Mentor",
   },
   {
     name: 'Addison Goodman',
@@ -255,7 +289,9 @@ const bios = [
     name: 'Onome Kessington',
     slug: slugify('Onome Kessington'),
     images: [onome],
-    description: 'Former D1 Football Player & Business Leader',
+    project: ["community"],
+    position: "Community Mentor",
+    description: 'Area Manager & Former D1 Football Player',
     fullBio: 'Onome Kessington is a Cornell University graduate completing his degree in Applied Economics and Management. Onome has an array of business experience from International Tax at world rebound beverage company Constellation Brands to Risk Management and Credit at First American Equipment Finance where they specialize in Equipment financing. Onome is a natural born entrepreneur that always looks at how he can add value to any room he is in.'
   },
   {
@@ -271,7 +307,10 @@ const bios = [
   description: 'Karateka & Pre-medical Student',
    fullbio: `Zahra is an incoming first-year at Harvard University, where she will be pursuing a joint-concentration in biomedical engineering and human developmental & regenerative biology with a secondary in astrophysics. She holds a black belt in Goju-Ryu Karate and has been competing and ttraining since the age of four. She currently teaches as a sensei at Satori Martial Arts School, passing on her passion and experience in martial arts to beginner and novice students each week. Zahra is a former NASA intern on the Mars Rover Resource Utilization Team through the SEES Program. She also works as an analog astronaut, performing medical and astrobiological research across the world on simulated missions to Mars. Some of her most memorable experiences were serving as the crew biologist on a mission in Spain and as a mission specialist on an expedition in northern Iceland.  In the future, Zahra aspires to become a cardiologist and aerospace medicine physician. Throughout Zahra’s experiences in martial arts and the space medicine community, the need to build a connection between scientists and athletes became crystal clear. She was drawn to CFAA’s mission to build that bridge in the athletic community and foster meaningful progress in the lives of student-athletes.`,
    instagram:"https://www.instagram.com/themarsgal/",
-   linkedin:'https://www.linkedin.com/in/zahra-ronizi-b310a51b2'
+   linkedin:'https://www.linkedin.com/in/zahra-ronizi-b310a51b2',
+   position: "Chief Communication Officer",
+   project: ["media"],
+   leader: true,
   },
   {
     name: 'DJ Hampton',
@@ -289,6 +328,8 @@ const bios = [
     instagram: 'https://www.instagram.com/katelynmsylvester?igsh=ODloang0MXQzNzJs&utm_source=qr',
     fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
     `,
+    project: ["research"],
+    position: "Researcher",
     bod: true
   },
   {
@@ -306,19 +347,24 @@ const bios = [
     fullBio: `Kanella is thrilled to be at the intersection of society and science here at Cortex Flex. She received her bachelor’s degree from McGill University in May 2023, where she majored in psychology and minored in French and behavioral science. She has a research background in pediatric ADHD at the Cleveland Clinic’s ADHD Summer Treatment Program, and cardiovascular psychophysiology through McGill University. Currently, she works in neurology research at Massachusetts General Hospital’s Frontotemporal Disorders Unit.
       Kanella is interested in all things health, nutrition, and quality of life, and hopes to pursue higher education in health psychology in the future. To Kanella, an informed society is foundational to creating well-being oriented spectators, athletes, and policymakers of the athletic world and beyond. She is excited to be able to bring a psychological lens to the scientific advocacy work of this organization, and to assist with the distribution of comprehensible learning resources to budding athletes throughout the United States.`,
     linkedin: "https://www.linkedin.com/in/kanella-basilion-bb67ab1b2/",
+    project: ["research", "community"],
+    position: "Researcher & Community Coordinator",
   },
   {
     name: 'Hemant Velidi',
     slug: slugify('Hemant Velidi'),
     images: [hemant],
+    project: ["grow"],
+    position: ["Business Analyst"],
     description: 'Business Student',
     fullBio: 'My name is Hemant Velidi, and I am from the Northern Virginia area. I have been a soccer athlete from the age of three up until my senior year of high school. Currently, I study finance at IU Kelley and hope to work in investment management and healthcare consulting. I was first introduced to Cortex Flex by my older brother, who is a director. After learning more about the mission, I realized how much I wish I had this as a younger athlete. I have always loved sports, and I always love spending time outside.',
-    linkedin: "https://www.linkedin.com/in/natekilleen/",
   },
   {
     name: 'Jessalyn Pugh',
     slug: slugify('Jessalyn Pugh'),
     images: [jess],
+    project: ["community", "research"],
+    position: "Researcher & Community Coordinator",
     description: 'Health Sciences Student',
     fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
   },
@@ -338,14 +384,32 @@ const bios = [
     name: 'Puneet Velidi',
     slug: slugify('Puneet Velidi'),
     images: [puneet, puneet2],
-    description: 'Software Engineer',
-    fullBio: 'Puneet is currently a software engineer at Walmart Global Tech where he builds web applications. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
+    description: 'Software Engineer & Neuroscience Researcher',
+    fullBio: 'Puneet was a software engineer at Walmart Global Tech where he builds web applications and now is research intern @ MGH/Harvard Medical School. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
     email: "puneet@cortexflex.org",
     linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212",
     instagram: 'https://www.instagram.com/puneetvelidi/',
+    position: "Chief Technology Officer & Chief Research Officer",
+    project: ["research"],
+    leader: true,
     bod: true
   },
+  {
+    name: 'Haneyya Siddiqui',
+    slug: slugify('Haneyya Siddiqui'),
+    images: [haneyya],
+    description: 'National-level Throwball Player ',
+    fullBio: `Haneyya is a highschool student who just completed her ALevels. She is also a hybrid athlete who plays basketball, throwball and table tennis. In her free time, she runs obstacle course marathons or makes jewelry. 
 
+She wants to study engineering in the future and hopes to use a MechE degree along with basketball to show the impact of sport in lives. Whether she ends up being a coach, a basketball camp host, or just a motorsport engineer, she wants to use sport to create impact because she believes sports can build relationships, memories, and opportunities that can help you be set for life.
+
+Being a student athlete gave her a chance to practice skills that include leadership, having been a team captain since 6th grade. As she will be transitioning to a college phase soon, she wants to continue playing sports - while advocating for sports science and research.
+
+As a current Voice In Sport Intern(!) and a part of the CF Team, she wants to use her skills in media and tech to advance the applications of research in sport science, and make sure Cortex Flex’s aim is pushed to all targeted audiences, including future and current athletes!
+`,
+    position: "Developer",
+    project: ["media"]
+  },
   // More bios...
 ];
 
@@ -451,13 +515,135 @@ function BioGallery() {
   };
 
   const boardMembers = bios.filter(bio => bio.bod);
-  const members = bios.filter(bio => !bio.bod);
+  const mas = bios.filter(bio => bio.medicaladvisor);
+  const leadership = bios.filter(bio => bio.leader);
+  const communitymembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("community"));
+  const researchmembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("research"));
+  const mediamembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("media"));
+  const growmembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("grow"));
 
   return (
     <ThemeProvider theme={theme}>
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Leadership</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
-        {members.map((bio, index) => (
-          <Grid item xs={12} sm={6} md={2} key={index}>
+        {leadership.map((bio, index) => (
+         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Card>
+           <Slider {...sliderSettings}>
+             {bio.images.map((image, idx) => (
+               <div key={idx}>
+                 <LazyLoadImage
+                   alt={bio.name}
+                   style={{ width: '100%', height: '100%' }}
+                   src={image}
+                   effect="blur"
+                 />
+               </div>
+             ))}
+           </Slider>
+           <CardContent>
+             <Typography gutterBottom variant="h5" component="div">
+               {bio.name}
+             </Typography>
+             <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
+             <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
+               {bio.description}
+             </Typography>
+           </CardContent>
+           <CardActions>
+             <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+             {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+             {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+             {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+           </CardActions>
+         </Card>
+       </Grid>
+        ))}
+      </Grid>
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Medical Advisors</Typography>
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {mas.map((bio, index) => (
+         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Card>
+           <Slider {...sliderSettings}>
+             {bio.images.map((image, idx) => (
+               <div key={idx}>
+                 <LazyLoadImage
+                   alt={bio.name}
+                   style={{ width: '100%', height: '100%' }}
+                   src={image}
+                   effect="blur"
+                 />
+               </div>
+             ))}
+           </Slider>
+           <CardContent>
+             <Typography gutterBottom variant="h5" component="div">
+               {bio.name}
+             </Typography>
+             <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
+             <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
+               {bio.description}
+             </Typography>
+           </CardContent>
+           <CardActions>
+             <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+             {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+             {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+             {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+           </CardActions>
+         </Card>
+       </Grid>
+        ))}
+      </Grid>
+
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Community</Typography>
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {communitymembers.map((bio, index) => (
+         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Card>
+           <Slider {...sliderSettings}>
+             {bio.images.map((image, idx) => (
+               <div key={idx}>
+                 <LazyLoadImage
+                   alt={bio.name}
+                   style={{ width: '100%', height: '100%' }}
+                   src={image}
+                   effect="blur"
+                 />
+               </div>
+             ))}
+           </Slider>
+           <CardContent>
+             <Typography gutterBottom variant="h5" component="div">
+               {bio.name}
+             </Typography>
+             <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
+             <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
+               {bio.description}
+             </Typography>
+           </CardContent>
+           <CardActions>
+             <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+             {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+             {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+             {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+           </CardActions>
+         </Card>
+       </Grid>
+        ))}
+      </Grid>
+
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Research</Typography>
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {researchmembers.map((bio, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
             <Card>
               <Slider {...sliderSettings}>
                 {bio.images.map((image, idx) => (
@@ -465,8 +651,8 @@ function BioGallery() {
                     <LazyLoadImage
                       alt={bio.name}
                       style={{ width: '100%', height: '100%' }}
-                      src={image} // Use your own image URL here
-                      effect="blur" // Optional: see other effects on documentation
+                      src={image}
+                      effect="blur"
                     />
                   </div>
                 ))}
@@ -475,6 +661,9 @@ function BioGallery() {
                 <Typography gutterBottom variant="h5" component="div">
                   {bio.name}
                 </Typography>
+                <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
                 <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
                   {bio.description}
                 </Typography>
@@ -489,11 +678,86 @@ function BioGallery() {
           </Grid>
         ))}
       </Grid>
-      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center'}} gutterBottom>Board of Directors</Typography>
-
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif'}} gutterBottom>Cortex Media</Typography>
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {mediamembers.map((bio, index) => (
+         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Card>
+           <Slider {...sliderSettings}>
+             {bio.images.map((image, idx) => (
+               <div key={idx}>
+                 <LazyLoadImage
+                   alt={bio.name}
+                   style={{ width: '100%', height: '100%' }}
+                   src={image}
+                   effect="blur"
+                 />
+               </div>
+             ))}
+           </Slider>
+           <CardContent>
+             <Typography gutterBottom variant="h5" component="div">
+               {bio.name}
+             </Typography>
+             <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
+             <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
+               {bio.description}
+             </Typography>
+           </CardContent>
+           <CardActions>
+             <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+             {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+             {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+             {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+           </CardActions>
+         </Card>
+       </Grid>
+        ))}
+      </Grid>
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif'}} gutterBottom>Cortex Grow</Typography>
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {growmembers.map((bio, index) => (
+         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Card>
+           <Slider {...sliderSettings}>
+             {bio.images.map((image, idx) => (
+               <div key={idx}>
+                 <LazyLoadImage
+                   alt={bio.name}
+                   style={{ width: '100%', height: '100%' }}
+                   src={image}
+                   effect="blur"
+                 />
+               </div>
+             ))}
+           </Slider>
+           <CardContent>
+             <Typography gutterBottom variant="h5" component="div">
+               {bio.name}
+             </Typography>
+             <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
+             <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
+               {bio.description}
+             </Typography>
+           </CardContent>
+           <CardActions>
+             <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+             {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+             {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+             {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+           </CardActions>
+         </Card>
+       </Grid>
+        ))}
+      </Grid>
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Board of Directors</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {boardMembers.map((bio, index) => (
-          <Grid item xs={12} sm={6} md={2} key={index}>
+          <Grid item xs={12} sm={6} md={3} key={index}>
             <Card>
               <Slider {...sliderSettings}>
                 {bio.images.map((image, idx) => (
@@ -501,8 +765,8 @@ function BioGallery() {
                     <LazyLoadImage
                       alt={bio.name}
                       style={{ width: '100%', height: '100%' }}
-                      src={image} // Use your own image URL here
-                      effect="blur" // Optional: see other effects on documentation
+                      src={image}
+                      effect="blur"
                     />
                   </div>
                 ))}
@@ -511,6 +775,9 @@ function BioGallery() {
                 <Typography gutterBottom variant="h5" component="div">
                   {bio.name}
                 </Typography>
+                <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
                 <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
                   {bio.description}
                 </Typography>

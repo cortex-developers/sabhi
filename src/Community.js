@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {Box, CssBaseline, Toolbar, Typography, Container, Grid, Fade } from '@mui/material';
+import {Box, CssBaseline, Typography, Container, Grid, Fade } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import styled, { keyframes } from 'styled-components';
 import { useInView } from 'react-intersection-observer';
@@ -129,21 +129,19 @@ const App = (props) => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <GlobalStyle />
-      <Toolbar />
       <ContainerStyled>
-        <VideoContainer>
-          <Iframe
+        <Section>
+          <Fade in timeout={2000} sx = {{paddingBottom: "50px"}}>
+            <Typography variant="h2">Why join Cortex Community?</Typography>
+          </Fade>
+          <VideoContainer >
+          <Iframe 
             src="https://www.youtube.com/embed/k_L-mPBtVfU?si=uTzb0W6GWnoh5X5E"
             title="YouTube video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></Iframe>
         </VideoContainer>
-
-        <Section>
-          <Fade in timeout={2000}>
-            <Typography variant="h2">Why join Cortex Community?</Typography>
-          </Fade>
           <Benefit index={0}>
             <strong>Learn from the Best:</strong> Engage with a diverse network of professionals — from NCAA Division 1 athletes to medical doctors and PhDs. Our team is here to share their invaluable insights and experiences, helping you excel in sports, academics, and life.
           </Benefit>

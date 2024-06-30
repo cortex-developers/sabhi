@@ -95,7 +95,7 @@ const bios = [
     fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
     linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
     instagram: "https://www.instagram.com/reza_ashrafi26/",
-    position: "Project Lead & Producer",
+    position: "Project Lead & Podcast Producer",
     project: ["media", "grow"],
     bod: true
   },
@@ -155,8 +155,7 @@ const bios = [
     images: [kevin],
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.',
-    project: ["research", "grow"],
-    position: "Researcher",
+    medicaladvisor: true
   },
   {
     name: 'Tyler Thiele',
@@ -263,9 +262,10 @@ const bios = [
     name: 'Ashlyn Kane',
     slug: slugify('Ashlyn Kane'),
     images: [ashlyn, ashlyn2],
-    project: "grow",
-    position: "Community Mentor",
+    project: ["grow"],
+    position: "Chief Financial Officer",
     description: 'D1 Soccer Player & Exercise Science Graduate Student',
+    leader: true,
     fullBio: `Hey everyone, my name is Ashlyn Kane. As a Division 1 soccer player at Mississippi State, it's not just about winning; it's about pushing myself to be the best player and teammate I can be. Off the field, I'm equally passionate about the science of sports performance. That's why I'm pursuing a Master's degree in Exercise Science here at Mississippi State. I'm diving deep into topics like human physiology, biomechanics, and sports nutrition, because understanding the science behind the game is key to maximizing performance. But I'm not just studying for myself—I'm also super excited to be involved with Cortex Flex, a nonprofit organization dedicated to advancing sports science research and education. Through Cortex Flex, I get to collaborate with top experts, conduct groundbreaking research, and develop innovative training techniques, and work with athletes to help them reach their fullest potential. Whether I'm on the field, in the lab, or out in the community with Cortex Flex, I'm always striving to push the boundaries of what's possible in sports science. I'm on a mission to make a real difference in the world of athletics, and can’t wait to help do that with Cortex Flex!`,
   },
   {
@@ -291,7 +291,7 @@ const bios = [
     images: [onome],
     project: ["community"],
     position: "Community Mentor",
-    description: 'Area Manager & Former D1 Football Player',
+    description: 'Business Owner & Former D1 Football Player',
     fullBio: 'Onome Kessington is a Cornell University graduate completing his degree in Applied Economics and Management. Onome has an array of business experience from International Tax at world rebound beverage company Constellation Brands to Risk Management and Credit at First American Equipment Finance where they specialize in Equipment financing. Onome is a natural born entrepreneur that always looks at how he can add value to any room he is in.'
   },
   {
@@ -304,7 +304,7 @@ const bios = [
   {name: 'Zahra Ronizi',
   slug: slugify('Zahra Ronizi'),
   images: [zahra],
-  description: 'Karateka & Pre-medical Student',
+  description: 'Karateka & Astrobiology Researcher',
    fullbio: `Zahra is an incoming first-year at Harvard University, where she will be pursuing a joint-concentration in biomedical engineering and human developmental & regenerative biology with a secondary in astrophysics. She holds a black belt in Goju-Ryu Karate and has been competing and ttraining since the age of four. She currently teaches as a sensei at Satori Martial Arts School, passing on her passion and experience in martial arts to beginner and novice students each week. Zahra is a former NASA intern on the Mars Rover Resource Utilization Team through the SEES Program. She also works as an analog astronaut, performing medical and astrobiological research across the world on simulated missions to Mars. Some of her most memorable experiences were serving as the crew biologist on a mission in Spain and as a mission specialist on an expedition in northern Iceland.  In the future, Zahra aspires to become a cardiologist and aerospace medicine physician. Throughout Zahra’s experiences in martial arts and the space medicine community, the need to build a connection between scientists and athletes became crystal clear. She was drawn to CFAA’s mission to build that bridge in the athletic community and foster meaningful progress in the lives of student-athletes.`,
    instagram:"https://www.instagram.com/themarsgal/",
    linkedin:'https://www.linkedin.com/in/zahra-ronizi-b310a51b2',
@@ -336,7 +336,9 @@ const bios = [
     name: 'Lisa Liff',
     slug: slugify('Lisa Liff'),
     images: [lisa],
-    description: 'EMT & Clinical Care Tech',
+    project: ["media", "research"],
+    position: "Researcher",
+    description: 'Medical Student',
     fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',
   },
   {
@@ -389,7 +391,7 @@ const bios = [
     email: "puneet@cortexflex.org",
     linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212",
     instagram: 'https://www.instagram.com/puneetvelidi/',
-    position: "Chief Technology Officer & Chief Research Officer",
+    position: "Chief Technology Officer",
     project: ["research"],
     leader: true,
     bod: true

@@ -356,8 +356,8 @@ const bios = [
     name: 'Hemant Velidi',
     slug: slugify('Hemant Velidi'),
     images: [hemant],
-    project: ["grow"],
-    position: ["Business Analyst"],
+    project: ["community"],
+    position: ["Community Coordinator"],
     description: 'Business Student',
     fullBio: 'My name is Hemant Velidi, and I am from the Northern Virginia area. I have been a soccer athlete from the age of three up until my senior year of high school. Currently, I study finance at IU Kelley and hope to work in investment management and healthcare consulting. I was first introduced to Cortex Flex by my older brother, who is a director. After learning more about the mission, I realized how much I wish I had this as a younger athlete. I have always loved sports, and I always love spending time outside.',
   },
@@ -529,7 +529,7 @@ function BioGallery() {
       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Leadership</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {leadership.map((bio, index) => (
-         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Grid item xs={12} sm={6} md={2} key={index}>
          <Card>
            <Slider {...sliderSettings}>
              {bio.images.map((image, idx) => (
@@ -567,7 +567,7 @@ function BioGallery() {
       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Medical Advisors</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {mas.map((bio, index) => (
-         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Grid item xs={12} sm={6} md={2} key={index}>
          <Card>
            <Slider {...sliderSettings}>
              {bio.images.map((image, idx) => (
@@ -606,7 +606,7 @@ function BioGallery() {
       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Community</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {communitymembers.map((bio, index) => (
-         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Grid item xs={12} sm={6} md={2} key={index}>
          <Card>
            <Slider {...sliderSettings}>
              {bio.images.map((image, idx) => (
@@ -645,7 +645,7 @@ function BioGallery() {
       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Research</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {researchmembers.map((bio, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid item xs={12} sm={6} md={2} key={index}>
             <Card>
               <Slider {...sliderSettings}>
                 {bio.images.map((image, idx) => (
@@ -683,45 +683,7 @@ function BioGallery() {
       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif'}} gutterBottom>Cortex Media</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {mediamembers.map((bio, index) => (
-         <Grid item xs={12} sm={6} md={3} key={index}>
-         <Card>
-           <Slider {...sliderSettings}>
-             {bio.images.map((image, idx) => (
-               <div key={idx}>
-                 <LazyLoadImage
-                   alt={bio.name}
-                   style={{ width: '100%', height: '100%' }}
-                   src={image}
-                   effect="blur"
-                 />
-               </div>
-             ))}
-           </Slider>
-           <CardContent>
-             <Typography gutterBottom variant="h5" component="div">
-               {bio.name}
-             </Typography>
-             <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
-                {bio.position}
-              </Typography>
-             <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
-               {bio.description}
-             </Typography>
-           </CardContent>
-           <CardActions>
-             <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
-             {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
-             {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
-             {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
-           </CardActions>
-         </Card>
-       </Grid>
-        ))}
-      </Grid>
-      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif'}} gutterBottom>Cortex Grow</Typography>
-      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
-        {growmembers.map((bio, index) => (
-         <Grid item xs={12} sm={6} md={3} key={index}>
+         <Grid item xs={12} sm={6} md={2} key={index}>
          <Card>
            <Slider {...sliderSettings}>
              {bio.images.map((image, idx) => (
@@ -759,7 +721,7 @@ function BioGallery() {
       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Board of Directors</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {boardMembers.map((bio, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid item xs={12} sm={6} md={2} key={index}>
             <Card>
               <Slider {...sliderSettings}>
                 {bio.images.map((image, idx) => (

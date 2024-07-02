@@ -522,7 +522,7 @@ function BioGallery() {
   const communitymembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("community"));
   const researchmembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("research"));
   const mediamembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("media"));
-  const growmembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("grow"));
+  //const growmembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("grow"));
 
   return (
     <ThemeProvider theme={theme}>

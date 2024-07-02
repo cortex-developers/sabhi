@@ -13,6 +13,7 @@ import ella from './ella.png'
 import hamza from './hamza.jpg'
 import sophia from './sophia.jpg'
 import vivek from './vivek.jpg'
+import ashlyn3 from './ashlyn3.png'
 import haneyya from './haneyya.jpg'
 import sophia2 from './sophia2.jpg'
 import sophias from './sophias.jpeg'
@@ -261,7 +262,7 @@ const bios = [
   {
     name: 'Ashlyn Kane',
     slug: slugify('Ashlyn Kane'),
-    images: [ashlyn, ashlyn2],
+    images: [ashlyn3, ashlyn, ashlyn2],
     project: ["grow"],
     position: "Chief Financial Officer",
     description: 'D1 Soccer Player & Exercise Science Graduate Student',

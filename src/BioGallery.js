@@ -151,21 +151,20 @@ const bios = [
     medicaladvisor: true
   },
   {
+    name: 'Tyler Thiele',
+    slug: slugify('Tyler Thiele'),
+    images: [tyler],
+    description: 'Doctor of Physical Therapy & Former Decathlete',
+    medicaladvisor: true,
+    fullBio: `Tyler has been practicing as a Doctor of Physical Therapy since 2018, mainly working in underserved, rural areas as a traveling therapist. He believes everyone working to be the healthiest version of themselves is an athlete, and has practiced with athletes of all ages from beginner to professional throughout his career. Prior to becoming a physical therapist, Tyler was a decathlete and pole vaulter for Ithaca College. Now, Tyler has a special interest in working with endurance athletes and golfers in his private practice and seeks to empower athletes across the spectrum on injury risk reduction, safe return to sport after injury and safe and effective training principles.`
+  },
+  {
     name: 'Kevin Wisniewski',
     slug: slugify('Kevin Wisniewski'),
     images: [kevin],
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.',
     medicaladvisor: true
-  },
-  {
-    name: 'Tyler Thiele',
-    slug: slugify('Tyler Thiele'),
-    images: [tyler],
-    description: 'Doctor of Physical Therapy & Former Decathlete',
-    project: ["research"],
-    position: "Researcher",
-    fullBio: `Tyler has been practicing as a Doctor of Physical Therapy since 2018, mainly working in underserved, rural areas as a traveling therapist. He believes everyone working to be the healthiest version of themselves is an athlete, and has practiced with athletes of all ages from beginner to professional throughout his career. Prior to becoming a physical therapist, Tyler was a decathlete and pole vaulter for Ithaca College. Now, Tyler has a special interest in working with endurance athletes and golfers in his private practice and seeks to empower athletes across the spectrum on injury risk reduction, safe return to sport after injury and safe and effective training principles.`
   },
   {
     name: 'Vivek Khatri',
@@ -366,8 +365,8 @@ const bios = [
     name: 'Jessalyn Pugh',
     slug: slugify('Jessalyn Pugh'),
     images: [jess],
-    project: ["community", "research"],
-    position: "Researcher & Community Coordinator",
+    project: ["community"],
+    position: "Community Coordinator",
     description: 'Health Sciences Student',
     fullBio: 'Jessalyn is a third-year student at the University of Cincinnati, where she is pursuing a Health Sciences degree with a focus in Minority Health. Her academic journey reflects her commitment to a career in healthcare as she prepares to apply to medical school this coming summer and work towards a career in Emergency Medicine. Beyond the classroom, Jessalyn is a Certified Phlebotomist and works as a Patient Care Assistant on a cardiac step-down and telemetry floor at a branch hospital of Cleveland Clinic. As a former competitive dancer, Jessalyn recognizes the necessity for improved training techniques and heightened emphasis on injury prevention within the realm of athletics. Driven by a deep-rooted commitment to promoting wellness, Jessalyn is passionate about utilizing research and education to mitigate athlete injuries. She aims to contribute to a world where individuals can lead happy and healthy lives, both on and off the field. This commitment underscores her belief in the transformative power of healthcare and education to positively impact communities.',
   },

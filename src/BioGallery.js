@@ -151,7 +151,7 @@ const bios = [
     medicaladvisor: true
   },
   {
-    name: 'Tyler Thiele',
+    name: 'Tyler Thiele, DPT',
     slug: slugify('Tyler Thiele'),
     images: [tyler],
     description: 'Doctor of Physical Therapy & Former Decathlete',

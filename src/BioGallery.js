@@ -132,7 +132,8 @@ const bios = [
     to well-being, Maya's diverse background makes her an incredible asset to Cortex Flex Athlete
     Alliance, showcasing her dedication to athletic mentorship, medical practice, and community
     outreach.`,
-    medicaladvisor: true
+    medicaladvisor: true,
+    bod: true
   },
   {
     name: 'Guillermo Gonzalez Garibay, M.D',
@@ -394,7 +395,6 @@ const bios = [
     position: "Chief Technology Officer",
     project: ["research"],
     leader: true,
-    bod: true
   },
   {
     name: 'Haneyya Siddiqui',

@@ -109,7 +109,7 @@ const bios = [
     leader: true
   },
   {
-    name: 'Maya Haykal, M.D',
+    name: 'Maya Haykal, MD',
     slug: slugify('Maya Haykal'),
     images: [maya, maya2],
     description: 'Medical Doctor & Former D1 Tennis Player',
@@ -135,7 +135,7 @@ const bios = [
     bod: true
   },
   {
-    name: 'Guillermo Gonzalez Garibay, M.D',
+    name: 'Guillermo Gonzalez Garibay, MD',
     slug: slugify('Memo Garibay'),
     images: [memo,memo2],
     description: 'Medical Doctor & Research Fellow',
@@ -143,7 +143,7 @@ const bios = [
     medicaladvisor: true
   },
   {
-    name: 'Hamza Shahab, M.D',
+    name: 'Hamza Shahab, MD',
     slug: slugify('Hamza Shahab'),
     images: [hamza],
     description: 'Medical Doctor & Research Fellow',

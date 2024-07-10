@@ -11,6 +11,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effect for loading images
 import ella from './ella.png'
 import hamza from './hamza.jpg'
+import sanjay from './sanjay.jpeg'
 import sophia from './sophia.jpg'
 import vivek from './vivek.jpg'
 import ashlyn3 from './ashlyn3.png'
@@ -294,6 +295,15 @@ const bios = [
     position: "Community Mentor",
     description: 'Business Owner & Former D1 Football Player',
     fullBio: 'Onome Kessington is a Cornell University graduate completing his degree in Applied Economics and Management. Onome has an array of business experience from International Tax at world rebound beverage company Constellation Brands to Risk Management and Credit at First American Equipment Finance where they specialize in Equipment financing. Onome is a natural born entrepreneur that always looks at how he can add value to any room he is in.'
+  },
+  {
+    name: 'Sanjay Kumar',
+    slug: slugify('Sanjay Kumar'),
+    images: [sanjay],
+    description: 'Photographer & Neuroscience Student',
+    fullBio: `Sanjay Kumar is an undergraduate student at Rutgers University, New Brunswick, born and raised in New Jersey. For the past two years, he has been immersed in sports photography, working as a freelance photographer for teams such as Columbia Wrestling, PFL, MLS, UCLA Softball, and Team USA Wrestling. Sanjay enjoys meeting new people, connecting with athletes, and embracing life's full potential. He plans to study neuroscience with the aim of making significant contributions to the field. With a love for learning and creating, Sanjay hopes to help the media and research efforts of Cortex Flex to help push the core mission. `,
+    project: ["media", "research"],
+    position: "Media Manager & Researcher",
   },
   {
     name: 'Olivia Ramil',

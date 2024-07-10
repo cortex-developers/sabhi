@@ -96,9 +96,8 @@ const bios = [
     fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
     linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
     instagram: "https://www.instagram.com/reza_ashrafi26/",
-    position: "Project Lead & Podcast Producer",
-    project: ["media", "grow"],
-    bod: true
+    position: "Researcher",
+    project: ["research"],
   },
   {
     name: 'Matt Shumway',
@@ -215,7 +214,7 @@ const bios = [
     linkedin: 'http://www.linkedin.com/in/kaitlynholly',
     instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
     project: ["media", "research"],
-    position: "Researcher & Podcast Host",
+    position: "Podcast Host",
     fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
     With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`
   },
@@ -230,13 +229,14 @@ const bios = [
   {
     name: 'Joe Curtis',
     slug: slugify('Joe Curtis'),
-    images: [joe2, joe],
+    images: [joe, joe2],
     description: 'D1 Wrestler & Financial Economics Student',
     fullBio: 'Joe Curtis is a freshman at Columbia University where he is currently a freshman on the wrestling team and is studying Financial Economics.  He grew up in San Diego where he has been wrestling since he was 10.  After graduating high school in 2020, Joe served a 2-year LDS mission in the Republic of Congo.  He loves wrestling and finding the optimal way that he can train to have the best results.  He hopes to leverage the many places he’s lived (Japan, China, Republic of Congo, San Diego, NYC) to help people from all parts of the world to bridge the gap from Athletics to Medicine.  When Joe isn’t wrestling or studying , he enjoys lifting weights, going to the beach, listening to music, and finding good eats.',
     linkedin: "https://www.linkedin.com/in/joseph-curtis-103124300/",
     instagram: 'https://www.instagram.com/joe.curtis234/',
-    position: "Community Mentor",
-    project: ["community"]
+    position: "Chief Leadership Officer",
+    project: ["community"],
+    leader: true
   },
   {
     name: 'Rachel Zun',
@@ -337,7 +337,7 @@ const bios = [
     name: 'Lisa Liff',
     slug: slugify('Lisa Liff'),
     images: [lisa],
-    project: ["media", "research"],
+    project: ["research"],
     position: "Researcher",
     description: 'Medical Student',
     fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',

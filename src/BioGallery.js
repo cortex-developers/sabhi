@@ -97,8 +97,8 @@ const bios = [
     fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
     linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
     instagram: "https://www.instagram.com/reza_ashrafi26/",
-    position: "Researcher",
-    project: ["research"],
+    position: "Project Lead & Researcher",
+    project: ["research", "media"],
   },
   {
     name: 'Matt Shumway',
@@ -214,7 +214,7 @@ const bios = [
     description: 'Clinical Research Coordinator & Former D1 Softball Player',
     linkedin: 'http://www.linkedin.com/in/kaitlynholly',
     instagram: 'https://www.instagram.com/katyyholly?igsh=eGZibHNnNTZjNw%3D%3D&utm_source=qr',
-    project: ["media", "research"],
+    project: ["media"],
     position: "Podcast Host",
     fullBio: `Kaitlyn is a Division 1 softball student-athlete at Manhattan College. She will receive her Bachelor of Science in Biochemistry with a pre-health concentration in May of 2024. With hopes of becoming an orthopedic surgeon, she plans to work in clinical research after graduation before applying to medical school in 2025. 
     With a passion for mental health advocacy, Kaitlyn founded a club at Manhattan College, Mental Health at MC, that aims to provide the student body with access to mental health resources. In just one year, she initiated the formation of weekly student-athlete support groups. With CFAA, Kaitlyn hopes to merge her passion for athletics and science to provide easily digestible information for athletes to improve their mental health. Kaitlyn has seen firsthand, the impact that nurturing her mental health has had on her athletic performance, and hopes to pay it forward to athletes of all levels.`

@@ -10,6 +10,7 @@ import ashlyn2 from './ashlyn2.jpg'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effect for loading images
 import ella from './ella.png'
+import mya from './mya.jpg'
 import hamza from './hamza.jpg'
 import sanjay from './sanjay.jpeg'
 import sophia from './sophia.jpg'
@@ -226,6 +227,23 @@ const bios = [
     description: 'D1 Cross Country Athlete & Business Student',
     fullBio: 'Nate is Freshman on the XC/T&F team at Indiana University and 800M Indiana State Champion 2023',
     linkedin: "https://www.linkedin.com/in/natekilleen/",
+  },
+  {
+    name: 'Mya Murray',
+    slug: slugify('Mya Murray'),
+    images: [mya],
+    description: 'D1 Basketball Player & Health Administration Graduate Student',
+    fullBio: `Mya is a 2024 graduate from Brown University with a bachelor's degree in Biology. Before Brown, she
+was a local basketball star from Uniontown, PA that totaled over 1,300 points and 1,000 rebounds in her
+high school career. She played for the AAU program Western PA Bruins during her four years in high
+school, as well as a varsity athlete in volleyball and track. Since graduating from Brown, she is
+completing her final year of collegiate eligibility at Robert Morris University and pursuing a master’s
+degree in Health Administration. Outside of sports, Mya has volunteered at her hometown hospital’s
+emergency department which solidified her decision to pursue a career in healthcare. As a lifelong athlete,
+she understands the importance of taking care of one’s body to achieve the best physical and mental
+results, on and off the court.`,
+    project: ["community"],
+    position: "Community Mentor"
   },
   {
     name: 'Joe Curtis',

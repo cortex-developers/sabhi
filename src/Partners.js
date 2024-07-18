@@ -8,6 +8,9 @@ import lmnt from './lmnt.png'
 import cse from './cse.png'
 import sssd from './sssd.png'
 import d1fuel from './d1fuel.png'
+import coco from './coco.png'
+import orgain from './orgain.jpg'
+import barebells from './barebells.png'
 // Sample data for partner logos
 const partners = [
   { name: 'Concussion Legacy Foundation', logo: clf },
@@ -18,6 +21,9 @@ const partners = [
   { name: 'Clean Simple Eats', logo: cse },
   { name: 'South Side High School', logo: sssd },
   { name: 'D1 Fuel', logo: d1fuel },
+  { name: 'Barebells', logo: barebells },
+  { name: 'Computational Connectomics Lab', logo: coco },
+  { name: 'Orgain', logo: orgain },
 
   // Add more partners as needed
 ];

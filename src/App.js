@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'reac
 import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText, Grid } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
+import applogo from './1024.png'
+import downloadapp from './downloadapp.png'
 //import Logo from './sabhi-logo.svg';
 import Slideshow from './Slideshow';
 import Community from './Community';
@@ -335,7 +337,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow slideDuration = {5000} fontSize='2rem' images={[huddle, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  Educating teens worldwide about mental and physical health through the lens of athletic performance.", "  OUR TEAM IS: PRO/D1 ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE.", "  OUR TEAM IS: ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
+                <Slideshow slideDuration = {5000} fontSize='2rem' images={[downloadapp, huddle, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  Download our app and apply to join our community! A new model for community engagement.","  Educating teens worldwide about mental and physical health through the lens of athletic performance.", "  OUR TEAM IS: PRO/D1 ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE.", "  OUR TEAM IS: ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',
@@ -418,7 +420,46 @@ function App() {
                   </Card>
 
                 </Box>
-
+                <Button
+      variant="contained"
+      color="primary"
+      href={"https://apps.apple.com/us/app/cortex-chat/id6504697082"}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px',
+        backgroundColor: '#fff',
+        borderRadius: '15px',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+        width: '50%',
+        height: '10%',
+        margin: '0 auto',
+        marginTop: '50px',
+        textTransform: 'none',
+        '&:hover': {
+          backgroundColor: '#f5f5f5'
+        }
+      }}
+    >
+      <img 
+        src={applogo} 
+        alt="App Store Icon" 
+        style={{
+          width: '60px',
+          height: '60px',
+          marginRight: '20px'
+        }}
+      />
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+        <Typography variant="body1" sx={{ fontSize: '20px', fontWeight: 'bold', color: 'black' }}>
+          Cortex Chat
+        </Typography>
+        <Typography variant="body2" sx={{ fontSize: '16px', color: '#007aff' }}>
+          Download on the App Store
+        </Typography>
+      </Box>
+    </Button>
 
                 {/* Connect with Us Section */}
                 <Box component="section" sx={{ bgcolor: 'background.paper', color: 'text.primary', py: 3, textAlign: 'center' }}>

@@ -11,6 +11,9 @@ import d1fuel from './d1fuel.png'
 import coco from './coco.png'
 import orgain from './orgain.jpg'
 import barebells from './barebells.png'
+import kodiak from './kodiak.png'
+import loriginale from './loriginale.png'
+import coke from './coke.png'
 // Sample data for partner logos
 const partners = [
   { name: 'Concussion Legacy Foundation', logo: clf },
@@ -18,12 +21,15 @@ const partners = [
   { name: 'UCSF Sports Medicine Center', logo: ucsf },
   { name: 'Potential Power Nutrition', logo: ppn },
   { name: 'LMNT', logo: lmnt },
+  { name: 'loriginale', logo: loriginale },
+  { name: 'Coke', logo: coke },
   { name: 'Clean Simple Eats', logo: cse },
   { name: 'South Side High School', logo: sssd },
   { name: 'D1 Fuel', logo: d1fuel },
   { name: 'Barebells', logo: barebells },
   { name: 'Computational Connectomics Lab', logo: coco },
   { name: 'Orgain', logo: orgain },
+  { name: 'Kodiak', logo: kodiak },
 
   // Add more partners as needed
 ];

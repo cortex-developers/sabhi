@@ -9,9 +9,9 @@ import downloadapp from './downloadapp.png'
 import downloadappmobile from './cortexchatmobile.png'
 
 import bridge from './cortexonboarding.jpg'
-import clinic from './clinic.jpg'
-import partners from './partners.png'
-import partnersmobile from './partnersmobile.png'
+//import clinic from './clinic.jpg'
+//import partners from './partners.png'
+//import partnersmobile from './partnersmobile.png'
 import week1 from './week1.png'
 import week1mobile from './week1mobile.png'
 
@@ -66,12 +66,10 @@ const ParallaxSection = ({ mobileImageUrl, desktopImageUrl, text }) => {
 const App = (props) => {
   return (
     <div>
-            <ParallaxSection mobileImageUrl = {bridge} desktopImageUrl={bridge} text={"Learn from the Best: Engage with a diverse network of professionals — from NCAA Division 1 athletes to medical doctors and PhDs. Our team is here to share their invaluable insights and experiences, helping you excel in sports, academics, and life."}/>
-            <ParallaxSection mobileImageUrl = {communitymeeting} desktopImageUrl={communitymeeting} text={"Connect and Grow: Participate in weekly interactive Zoom calls featuring prominent speakers from various fields, including sports, medicine, and leadership. Engage daily with D1/Pro athletes and doctors through the Cortex Learn blog posts, which are part of our comprehensive curriculum."}/>
-            <ParallaxSection mobileImageUrl = {week1mobile} desktopImageUrl={week1} text={"Access Exclusive Resources: Take advantage of our tailored workshops, cutting-edge research, and educational tools dedicated to athlete health. Stay ahead of the game by utilizing the latest scientific findings and health management techniques."}/>
-            <ParallaxSection mobileImageUrl = {infosessionmobile} desktopImageUrl={infosession} text={"Make a Difference: By joining Cortex Flex, not only do you enhance your personal brand and visibility, but you also contribute to a larger cause. Help us spread crucial health awareness and positively impact your community and peers."}/>
-            <ParallaxSection mobileImageUrl = {clinic} desktopImageUrl={clinic} text={"Enjoy Unique Opportunities: Look forward to in-person events like summer camps and special seminars that are just around the corner. Plus, as part of our commitment to accessibility, all these benefits come at no cost to you — thanks to our generous donors."}/>
-            <ParallaxSection mobileImageUrl = {partnersmobile} desktopImageUrl={partners} text={"What We Offer: Science-based performance training, academic/SAT tutoring, college recruitment/admissions coaching, weekly Zoom calls with leaders in sports, medicine, and business, NIL sponsorships through partner brands, and incentive packages with products from our partners."}/>
+            <ParallaxSection mobileImageUrl = {bridge} desktopImageUrl={bridge} text={"Learn elite performance strategies from top athletes, doctors, scientists, and professionals"}/>
+            <ParallaxSection mobileImageUrl = {communitymeeting} desktopImageUrl={communitymeeting} text={"Connect with our mentors through DAILY zoom strategy sessions on training, nutrition, recruitment, mindset, and academics"}/>
+            <ParallaxSection mobileImageUrl = {week1mobile} desktopImageUrl={week1} text={"Participate in cutting-edge workshops, clinics, and combines on health & performance"}/>
+            <ParallaxSection mobileImageUrl = {infosessionmobile} desktopImageUrl={infosession} text={"Build your brand as a sponsored athlete and receive supplements and training merch monthly."}/>
             <ParallaxSection mobileImageUrl = {downloadappmobile} desktopImageUrl={downloadapp} text={"Get started today by downloading the app!"}/>
 
 {/*       <CssBaseline />

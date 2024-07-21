@@ -4,7 +4,7 @@ import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typog
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
 import applogo from './1024.png'
-import downloadapp from './downloadapp.png'
+//import downloadapp from './downloadapp.png'
 //import Logo from './sabhi-logo.svg';
 import Slideshow from './Slideshow';
 import Community from './Community';
@@ -337,7 +337,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <div>
-                <Slideshow slideDuration = {5000} fontSize='2rem' images={[downloadapp, huddle, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  Download our app and apply to join our community! A new model for community engagement.","  Educating teens worldwide about mental and physical health through the lens of athletic performance.", "  OUR TEAM IS: PRO/D1 ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE.", "  OUR TEAM IS: ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
+                <Slideshow slideDuration = {5000} fontSize='2rem' images={[huddle, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  Educating teens worldwide about mental and physical health through the lens of athletic performance.", "  OUR TEAM IS: PRO/D1 ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE.", "  OUR TEAM IS: ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
                 <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                   <Box sx={{
                     width: '100%',

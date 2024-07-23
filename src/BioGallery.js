@@ -60,7 +60,7 @@ import joe2 from './joe2.jpg'
 import hemant from './hemant.jpg'
 import rachel from './rachel.jpeg'
 import rachel2 from './rachel2.jpeg'
-
+import anusri from './anusri.jpg'
 import memo from './memo.png'
 import memo2 from './memo2.png'
 
@@ -159,6 +159,19 @@ const bios = [
     description: 'Doctor of Physical Therapy & Former Decathlete',
     medicaladvisor: true,
     fullBio: `Tyler has been practicing as a Doctor of Physical Therapy since 2018, mainly working in underserved, rural areas as a traveling therapist. He believes everyone working to be the healthiest version of themselves is an athlete, and has practiced with athletes of all ages from beginner to professional throughout his career. Prior to becoming a physical therapist, Tyler was a decathlete and pole vaulter for Ithaca College. Now, Tyler has a special interest in working with endurance athletes and golfers in his private practice and seeks to empower athletes across the spectrum on injury risk reduction, safe return to sport after injury and safe and effective training principles.`
+  },
+  {
+    name: 'Anusri Pakhare',
+    slug: slugify('Anusri Pakhare'),
+    images: [anusri],
+    description: 'Medical Doctor',
+    fullBio: `I am Anusri Pakhare, an international medical graduate from Shandong first medical
+university. I am an applicant for this year’s Match cycle. I am a strong advocate for Children
+and Adolescents physical and mental well being. I am grateful to be a part of community
+that fosters highly accredited research oriented reforms to medical sciences. I will do my
+due diligence to contribute as much as I can.`,
+medicaladvisor: true
+
   },
   {
     name: 'Kevin Wisniewski',
@@ -445,6 +458,7 @@ As a current Voice In Sport Intern(!) and a part of the CF Team, she wants to us
     position: "Developer",
     project: ["media"]
   },
+
   // More bios...
 ];
 

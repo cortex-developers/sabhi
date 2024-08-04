@@ -14,14 +14,16 @@ import barebells from './barebells.png'
 import kodiak from './kodiak.png'
 import loriginale from './loriginale.png'
 import coke from './coke.png'
+import nordlogos from './logoscoaching.jpg'
 // Sample data for partner logos
 const partners = [
   { name: 'Concussion Legacy Foundation', logo: clf },
   { name: 'Community Partnership Funding Board', logo: cpfb },
   { name: 'UCSF Sports Medicine Center', logo: ucsf },
   { name: 'Potential Power Nutrition', logo: ppn },
-  { name: 'LMNT', logo: lmnt },
   { name: 'loriginale', logo: loriginale },
+  { name: 'nordlogos', logo: nordlogos },
+  { name: 'LMNT', logo: lmnt },
   { name: 'Coke', logo: coke },
   { name: 'Clean Simple Eats', logo: cse },
   { name: 'South Side High School', logo: sssd },
@@ -30,7 +32,6 @@ const partners = [
   { name: 'Computational Connectomics Lab', logo: coco },
   { name: 'Orgain', logo: orgain },
   { name: 'Kodiak', logo: kodiak },
-
   // Add more partners as needed
 ];
 

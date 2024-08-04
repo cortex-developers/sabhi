@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
-import { useMediaQuery, createTheme, ThemeProvider, AppBar, Card, Toolbar, Typography, Button, Box, Container, IconButton, Link, Drawer, List, ListItem, ListItemText, Grid } from '@mui/material';
+import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText} from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
-import { LinkedIn, Instagram, Email } from '@mui/icons-material'; // Import icons
-import applogo from './1024.png'
 //import downloadapp from './downloadapp.png'
 //import Logo from './sabhi-logo.svg';
 import Slideshow from './Slideshow';
@@ -50,12 +48,6 @@ import DonationForm from './DonationForm';
 import ApplicationForm from './ApplicationForm'
 import Disclaimer from './Disclaimer'
 
-import graphic1 from './graphic1.png'
-import graphic2 from './graphic2.png'
-import graphic3 from './graphic3.png'
-import graphic4 from './graphic4.png'
-
-import { styled } from '@mui/material/styles';
 
 import ReactGA4 from 'react-ga4';
 import SearchComponent from './SearchComponent';
@@ -152,14 +144,14 @@ const theme = createTheme({
   },
 });
 
-
+/* 
 const Img = styled('img')({
   margin: 'auto',
   display: 'block',
   maxWidth: '100%',
   maxHeight: '100%',
 });
-
+ */
 function App() {
   useEffect(() => {
     // Function to remove specific query parameters
@@ -185,13 +177,13 @@ function App() {
   useGA4PageTracking();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const images = [
+/*   const images = [
     graphic1,
     graphic2,
     graphic3,
     graphic4
     // Add more image paths as needed
-  ];
+  ]; */
   const handleDrawerToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };

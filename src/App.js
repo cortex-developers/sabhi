@@ -8,6 +8,9 @@ import applogo from './1024.png'
 //import Logo from './sabhi-logo.svg';
 import Slideshow from './Slideshow';
 import Community from './Community';
+import thecortex from "./thecortex.mp4";
+import thecortexmobile from "./thecortexmobile.mp4";
+
 //import Article from './Article';
 import LogoNoText from './sabhi-logo-no-text.svg';
 import LogoText from './sabhi-text.svg';
@@ -17,20 +20,9 @@ import Contact from './Contact';
 import CortexLearn from './learn.jpg';
 import CortexCommunity from './cortexcomm.png';
 import CortexWiki from './cortexwiki.png';
-import huddle from './huddle.jpeg'
 import Partners from './Partners'
 import BlogPosts from './BlogPosts';
 import './App.css'
-import athlete from './athlete.jpg'
-import athletef from './athletef.jpg'
-import scientist from './scientist.jpg'
-import scientistf from './scientistf.jpg'
-import creatives from './creatives.jpg'
-import creativesf from './creativesf.jpg'
-import doctor from './doctor.jpg'
-import doctorf from './doctorf.jpg'
-import business from './business.jpg'
-import businessf from './businessf.jpg'
 import nateathlete from './nateathleteshot.JPEG'
 import katyathlete from './katyathleteshot.jpg'
 import katyathletedesktop from './katyathleteshotdesktop.jpg'
@@ -57,7 +49,6 @@ import ResourcesPage from './ResourcesPage'
 import DonationForm from './DonationForm';
 import ApplicationForm from './ApplicationForm'
 import Disclaimer from './Disclaimer'
-import MailChimpForm from './MailChimpForm';
 
 import graphic1 from './graphic1.png'
 import graphic2 from './graphic2.png'
@@ -234,11 +225,11 @@ function App() {
           </ListItem>
           {/*           <ListItem button component={RouterLink} to="/contact">
             <ListItemText primary="Contact" />
-          </ListItem> */}
+          </ListItem> 
           <ListItem button component={RouterLink} to="/give">
             <ListItemText primary="Give" />
           </ListItem>
-          {/* Repeat for other links */}
+          Repeat for other links */}
         </List>
       </Box>
     </ThemeProvider>
@@ -324,10 +315,11 @@ function App() {
                     </Button>
                     {/*                     <Button color="inherit" component={RouterLink} to="/contact">
                       Contact
-                    </Button> */}
+                    </Button> 
                     <Button color="inherit" component={RouterLink} to="/give">
                       Give
                     </Button>
+                    */}
                   </Box>
                 </>
               )}
@@ -335,163 +327,105 @@ function App() {
             </Toolbar>
           </AppBar>
           <Routes>
-            <Route path="/" element={
-              <div>
-                <Slideshow slideDuration = {5000} fontSize='2rem' images={[huddle, athlete, scientistf, doctor, creativesf, business, athletef, scientist, doctorf, creatives, businessf]} texts={["  Educating teens worldwide about mental and physical health through the lens of athletic performance.", "  OUR TEAM IS: PRO/D1 ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE.", "  OUR TEAM IS: ATHLETES.", " OUR TEAM IS: SCIENTISTS.", " OUR TEAM IS: DOCTORS.", " OUR TEAM IS: CREATIVES.", " OUR TEAM IS: BUSINESSPEOPLE."]} showArrows={false}></Slideshow>
-                <Box style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
-                  <Box sx={{
-                    width: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    marginTop: '40px',
-                    marginBottom: '40px',
-                  }}>
-                    <MailChimpForm />
-
-                    <Grid container spacing={2}>
-                      {images.map((image, index) => (
-                        <Grid item xs={12} sm={12} md={12} key={index}>
-                          <Img alt={`Image ${index + 1}`} src={image} />
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Box>
-                  <Card
-                    sx={{
-                      width: '50%', // Sets the width of the Card to 50% of the screen
-                      marginTop: '50px',
-                      color: 'white',
-                      fontWeight: 'bold',
-                      marginBottom: '20px',
-                      backgroundColor: 'black',
-                      padding: '10px',
-                    }}
-                  >
-                    <Typography
-                      variant="h4"
-                      component="p"
-                    >
-                      Our Mission
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      component="p"
-                    >
-                      "Our mission is to build population self-sufficiency in mental and physical health by teaching teens about health science through the lens of athletic performance."
-                    </Typography>
-                  </Card>
-
-                  <Card
-                    sx={{
-                      width: '50%', // Ensures that this Card also has a width of 50% of the screen
-                      marginTop: '50px',
-                      color: 'white',
-                      fontWeight: 'bold',
-                      marginBottom: '20px',
-                      backgroundColor: 'black',
-                      padding: '10px',
-                    }}
-                  >
-                    <Typography
-                      variant="h4"
-                      component="p"
-                      sx={{
-                        fontWeight: 'bold',
-                        marginBottom: '20px'
-                      }}
-                    >
-                      Our Vision
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      component="p"
-                      sx={{
-                        fontStyle: 'italic',
-                        fontSize: '0.75rem',
-                        maxWidth: '85%'
-                      }}
-                    >
-                      "Our vision is to create a world where habits backed by health science are culturally-instilled and socially-rewarded among society. We aim to join empirically-supported guidance of healthcare professionals with the impactful platform of top-level athletes to influence widespread application of health-promoting behaviors. We envision a future where improved health outcomes are realized inside and outside of athletics and where health science is made interesting, actionable, and accessible for all."
-                    </Typography>
-
-                  </Card>
-
-                </Box>
-                <Button
-      variant="contained"
-      color="primary"
-      href={"https://apps.apple.com/us/app/cortex-chat/id6504697082"}
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-        backgroundColor: '#fff',
-        borderRadius: '15px',
-        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-        width: '50%',
-        height: '10%',
-        margin: '0 auto',
-        marginTop: '50px',
-        textTransform: 'none',
-        '&:hover': {
-          backgroundColor: '#f5f5f5'
-        }
-      }}
-    >
-      <img 
-        src={applogo} 
-        alt="App Store Icon" 
+            <Route path="/" element=
+{isMobile ? (
+  <Box sx={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         style={{
-          width: '60px',
-          height: '60px',
-          marginRight: '20px'
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transform: 'translate(-50%, -50%)',
+          zIndex: -1,
         }}
-      />
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-        <Typography variant="body1" sx={{ fontSize: '20px', fontWeight: 'bold', color: 'black' }}>
-          Cortex Chat
-        </Typography>
-        <Typography variant="body2" sx={{ fontSize: '16px', color: '#007aff' }}>
-          Download on the App Store
-        </Typography>
+      >
+        <source src={thecortexmobile} type="video/mp4" />
+        {/* Add more <source> tags for different video formats */}
+        Your browser does not support the video tag.
+      </video>
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: '10%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '90%',
+          textAlign: 'center',
+          zIndex: 1,
+        }}
+      >
+        <a href="https://subscribepage.io/Z3FZoF" style={{ textDecoration: 'none', width: '100%' }}>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              width: '100%',
+              padding: '10px',
+              fontSize: '16px',
+            }}
+          >
+            Join the Waiting List!
+          </Button>
+        </a>
       </Box>
-    </Button>
+  </Box>
+) : 
+( 
+  <Box sx={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      transform: 'translate(-50%, -50%)',
+      zIndex: -1,
+    }}
+  >
+    <source src={thecortex} type="video/mp4" />
+    {/* Add more <source> tags for different video formats */}
+    Your browser does not support the video tag.
+  </video>
+  <Box
+    sx={{
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      color: 'white',
+      textAlign: 'center',
+      zIndex: 1,
+    }}
+  >
+    <a href="https://subscribepage.io/Z3FZoF" style={{ textDecoration: 'none' }}>
+      <Button variant="contained" color="primary">
+        Join the Waiting List!
+      </Button>
+    </a>
+  </Box>
+</Box> 
+)
 
-                {/* Connect with Us Section */}
-                <Box component="section" sx={{ bgcolor: 'background.paper', color: 'text.primary', py: 3, textAlign: 'center' }}>
-                  <Typography variant="h6" gutterBottom>
-                    Connect with Us
-                  </Typography>
-                  <Box sx={{ '& > :not(style)': { m: 1 } }}>
-                    <Link href="https://www.linkedin.com/company/cortex-flex-athlete-alliance/about/" target="_blank" color="inherit">
-                      <IconButton>
-                        <LinkedIn fontSize="large" />
-                      </IconButton>
-                    </Link>
-                    <Link href="https://www.instagram.com/cortexflex" target="_blank" color="inherit">
-                      <IconButton>
-                        <Instagram fontSize="large" />
-                      </IconButton>
-                    </Link>
-                    <Link href="mailto:team@cortexflex.org" color="inherit">
-                      <IconButton>
-                        <Email fontSize="large" />
-                      </IconButton>
-                    </Link>
-                  </Box>
-                </Box>
-              </div>
-            } />
+}       
+          
+            />
             <Route path="/bios" element={<BioGallery />} />
             <Route path="/story" element={
               isMobile ?
                 (<Slideshow slideDuration={18000} textColor='white' textSize='0.5rem' images={shots} texts={texts} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={18000} textColor='white' textSize='1rem' images={shots2} texts={texts} enableTypingEffect={false}></Slideshow>)
-
-
             } />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/contact" element={<Contact />} />
@@ -506,7 +440,7 @@ function App() {
           <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>
             <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography variant="body1">
-                © {new Date().getFullYear()} CORTEX FLEX ATHLETE ALLIANCE INC., A 501(c)(3) Nonprofit, Incorporated in Massachusetts
+                © {new Date().getFullYear()} CORTEX FLEX ATHLETE ALLIANCE INC.
               </Typography>
               <Typography variant="body2">
                 SPORTS X SCIENCE

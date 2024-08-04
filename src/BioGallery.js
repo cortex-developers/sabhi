@@ -12,6 +12,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effec
 import ella from './ella.png'
 import mya from './mya.jpg'
 import hamza from './hamza.jpg'
+import ana from './ana.jpg'
 import sanjay from './sanjay.jpeg'
 import sophia from './sophia.jpg'
 import vivek from './vivek.jpg'
@@ -305,6 +306,15 @@ results, on and off the court.`,
     fullBio: `Hey everyone, my name is Ashlyn Kane. As a Division 1 soccer player at Mississippi State, it's not just about winning; it's about pushing myself to be the best player and teammate I can be. Off the field, I'm equally passionate about the science of sports performance. That's why I'm pursuing a Master's degree in Exercise Science here at Mississippi State. I'm diving deep into topics like human physiology, biomechanics, and sports nutrition, because understanding the science behind the game is key to maximizing performance. But I'm not just studying for myself—I'm also super excited to be involved with Cortex Flex, a nonprofit organization dedicated to advancing sports science research and education. Through Cortex Flex, I get to collaborate with top experts, conduct groundbreaking research, and develop innovative training techniques, and work with athletes to help them reach their fullest potential. Whether I'm on the field, in the lab, or out in the community with Cortex Flex, I'm always striving to push the boundaries of what's possible in sports science. I'm on a mission to make a real difference in the world of athletics, and can’t wait to help do that with Cortex Flex!`,
   },
   {
+    name: 'Ana Radanovic, MSc',
+    slug: slugify('Ana Radanovic'),
+    images: [ana],
+    description: 'Neuroscience PhD Student ',
+    fullBio: 'Ana Radanovic is a PhD candidate in Neuroscience at Weill Cornell Medical School. Her interests lie in researching biomarkers of recovery after brain injury and disorders of consciousness using MRI, EEG, and PET imaging. She is passionate about improving the state of TBI treatment and rehabilitation, as well as disseminating scientific knowledge to the public in an engaging and informative matter.',
+    position: "Researcher",
+    project: ["research"],
+  },
+  {
     name: 'Ella Stroehmann',
     slug: slugify('Ella Stroehmann'),
     images: [ella],
@@ -364,7 +374,9 @@ results, on and off the court.`,
     slug: slugify('DJ Hampton'),
     images: [dj],
     description: 'Performance Enhancement Trainer & U.S Army Section Chief',
-    fullBio: "DJ Hampton, an ISSA Certified Performance Enhancement Trainer, is the dynamic force behind BoyGuru Fitness. With a passion for cultivating excellence in student athletes, DJ's dual training methods in the physical and cognitive realms sets him apart. Currently Serving as a U.S. Army, combat arms Field Artillery Howitzer Section Chief, he effortlessly applies agile decision-making and creative problem-solving skills honed through tactical situations while also fostering a deliberate and process management mindset garnered through a certification in Program Management and a Green Belt in Six Sigma Methodology. Despite his recent foray into business, DJ's leadership, training, speaking, content creation, and marketing skills converge seamlessly. His mission extends beyond sports, aiming to transform individuals into forces of nature both in their sport and in the sport of life. DJ's diverse skill set positions him as a valuable asset to the Cortex Flex Athlete Alliance, making him a trusted ally for those seeking mastery of self and unparalleled performance enhancement."
+    fullBio: "DJ Hampton, an ISSA Certified Performance Enhancement Trainer, is the dynamic force behind BoyGuru Fitness. With a passion for cultivating excellence in student athletes, DJ's dual training methods in the physical and cognitive realms sets him apart. Currently Serving as a U.S. Army, combat arms Field Artillery Howitzer Section Chief, he effortlessly applies agile decision-making and creative problem-solving skills honed through tactical situations while also fostering a deliberate and process management mindset garnered through a certification in Program Management and a Green Belt in Six Sigma Methodology. Despite his recent foray into business, DJ's leadership, training, speaking, content creation, and marketing skills converge seamlessly. His mission extends beyond sports, aiming to transform individuals into forces of nature both in their sport and in the sport of life. DJ's diverse skill set positions him as a valuable asset to the Cortex Flex Athlete Alliance, making him a trusted ally for those seeking mastery of self and unparalleled performance enhancement.",
+    project: ["media"],
+    position: "Media Manager",  
   },
   {
     name: 'Katelyn Sylvester',
@@ -375,8 +387,6 @@ results, on and off the court.`,
     instagram: 'https://www.instagram.com/katelynmsylvester?igsh=ODloang0MXQzNzJs&utm_source=qr',
     fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
     `,
-    project: ["research"],
-    position: "Researcher",
     bod: true
   },
   {
@@ -442,6 +452,7 @@ results, on and off the court.`,
     project: ["research"],
     leader: true,
   },
+
   {
     name: 'Haneyya Siddiqui',
     slug: slugify('Haneyya Siddiqui'),

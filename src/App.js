@@ -5,7 +5,7 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 //import downloadapp from './downloadapp.png'
 //import Logo from './sabhi-logo.svg';
 import Slideshow from './Slideshow';
-import Community from './Community';
+//import Community from './Community';
 import thecortex from "./thecortex.mp4";
 import thecortexmobile from "./thecortexmobile.mp4";
 
@@ -16,7 +16,6 @@ import BioGallery from './BioGallery';
 import Contact from './Contact';
 //import UnderConstructionPage from './UnderConstructionPage';
 import CortexLearn from './learn.jpg';
-import CortexCommunity from './cortexcomm.png';
 import CortexWiki from './cortexwiki.png';
 import Partners from './Partners'
 import BlogPosts from './BlogPosts';
@@ -197,9 +196,6 @@ function App() {
           <ListItem button component={RouterLink} to="/blog" >
             <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
           </ListItem>
-          <ListItem button component={RouterLink} to="/community" >
-            <img src={CortexCommunity} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
-          </ListItem>
           <ListItem button component={RouterLink} to="/resources">
             <img src={CortexWiki} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
           </ListItem>
@@ -282,13 +278,7 @@ function App() {
                       <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
 
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/community" sx={{
-                      fontWeight: 'bold', // Increases font weight                //animation: 'undulateColor 2s infinite',
-                      // You can adjust the colors and duration as needed
-                    }}>
-                      <img src={CortexCommunity} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
 
-                    </Button>
                     <Button color="inherit" component={RouterLink} to="/resources">
                       <img src={CortexWiki} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
                     </Button>
@@ -424,7 +414,6 @@ function App() {
             <Route path="/blog" element={<BlogPosts />} />
             <Route path="/give" element={<DonationForm />} />
             <Route path="/join" element={<ApplicationForm />} />
-            <Route path="/community" element={<Community />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
           </Routes>

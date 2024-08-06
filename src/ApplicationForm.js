@@ -1,16 +1,27 @@
 import React from 'react';
-import FormfacadeEmbed from "@formfacade/embed-react";
-
+import { Typography, Link, Container, Box} from '@mui/material';
 const ApplicationForm = () => {
 
     return (
-        <FormfacadeEmbed
-
-            formFacadeURL="https://formfacade.com/include/107154563367781919342/form/1FAIpQLSdz8-50A5epsJQGv8jj9pCfjB9oUc5-uqoa4AOpuX8C5aOSWQ/classic.js/?div=ff-compose"
-
-            onSubmitForm={() => console.log('Form submitted')}
-
-        />
+        <Container maxWidth="sm">
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            minHeight: '100vh',
+          }}
+        >
+          <Typography variant="h6" gutterBottom>
+            If you are interested in joining our team, please email{' '}
+            <Link href="mailto:team@cortexflex.org" color="primary">
+              team@cortexflex.org
+            </Link>{' '}
+            with your CV.
+          </Typography>
+        </Box>
+      </Container>
     );
 };
 

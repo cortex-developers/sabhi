@@ -50,6 +50,7 @@ import Disclaimer from './Disclaimer'
 
 import ReactGA4 from 'react-ga4';
 import SearchComponent from './SearchComponent';
+import Pricing from './Pricing';
 
 
 const useGA4PageTracking = () => {
@@ -211,6 +212,9 @@ function App() {
           <ListItem button component={RouterLink} to="/partners">
             <ListItemText primary="Our Partners" />
           </ListItem>
+          <ListItem button component={RouterLink} to="/pricing">
+            <ListItemText primary="Pricing" />
+          </ListItem>
           {/*           <ListItem button component={RouterLink} to="/contact">
             <ListItemText primary="Contact" />
           </ListItem> 
@@ -294,6 +298,10 @@ function App() {
 
                     <Button color="inherit" component={RouterLink} to="/partners">
                       Our Partners
+                    </Button>
+                    
+                    <Button color="inherit" component={RouterLink} to="/pricing">
+                      Pricing
                     </Button>
                     {/*                     <Button color="inherit" component={RouterLink} to="/contact">
                       Contact
@@ -415,6 +423,7 @@ function App() {
             <Route path="/give" element={<DonationForm />} />
             <Route path="/join" element={<ApplicationForm />} />
             <Route path="/partners" element={<Partners />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
           </Routes>
           {/* Footer */}

@@ -12,6 +12,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effec
 import ella from './ella.png'
 import mya from './mya.jpg'
 import hamza from './hamza.jpg'
+import yael from './yael.jpg'
+import ramsey from './ramsey.jpg'
 import ana from './ana.jpg'
 import sanjay from './sanjay.jpeg'
 import sophia from './sophia.jpg'
@@ -154,6 +156,23 @@ const bios = [
     medicaladvisor: true
   },
   {
+    name: 'Yael Ihejirika, MD',
+    slug: slugify('Yael Ihejirika'),
+    images: [yael],
+    description: 'Medical Doctor & General Surgery Resident',
+    fullBio: 'My name is Yael, I am a PGY1 General Surgery resident at SUNY Downstate in Brooklyn. Interested in athlete rehab, all things musculoskeletal, prosthetics, and innovation in these fields.',
+    medicaladvisor: true
+  },
+  {
+    name: 'Ramsey Kubofcik',
+    slug: slugify('Ramsey Kubofcik'),
+    images: [ramsey],
+    description: 'D1 Football Player & EMT',
+    project: ["research"],
+    position: "Researcher",
+    fullBio: 'Ramsey Kubofcik is a sophomore at Cornell University, where he serves as an EMT on campus. Throughout high school, he played football for all four years, earning the Passaic County Chapter of the National Football Foundation Scholar-Athlete of the Year award at the end of his career. Inspired by his own sports injuries, Ramsey is passionate about linking medicine with athletics to support athletes in their journeys. Currently, he is conducting research at Mount Sinai, aiming to integrate his medical knowledge with his athletic experience to enhance the health and performance of athletes.',
+  },
+  {
     name: 'Tyler Thiele, DPT',
     slug: slugify('Tyler Thiele'),
     images: [tyler],
@@ -162,7 +181,7 @@ const bios = [
     fullBio: `Tyler has been practicing as a Doctor of Physical Therapy since 2018, mainly working in underserved, rural areas as a traveling therapist. He believes everyone working to be the healthiest version of themselves is an athlete, and has practiced with athletes of all ages from beginner to professional throughout his career. Prior to becoming a physical therapist, Tyler was a decathlete and pole vaulter for Ithaca College. Now, Tyler has a special interest in working with endurance athletes and golfers in his private practice and seeks to empower athletes across the spectrum on injury risk reduction, safe return to sport after injury and safe and effective training principles.`
   },
   {
-    name: 'Anusri Pakhare',
+    name: 'Anusri Pakhare, MD',
     slug: slugify('Anusri Pakhare'),
     images: [anusri],
     description: 'Medical Doctor',

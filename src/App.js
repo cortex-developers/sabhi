@@ -421,7 +421,7 @@ function App() {
           <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>
             <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography variant="body1">
-                © {new Date().getFullYear()} CORTEX FLEX ATHLETE ALLIANCE INC.
+                © {new Date().getFullYear()} CORTEX FLEX INC.
               </Typography>
               <Typography variant="body2">
                 SPORTS X SCIENCE

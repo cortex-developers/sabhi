@@ -12,13 +12,10 @@ import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effec
 import ella from './ella.png'
 import mya from './mya.jpg'
 import hamza from './hamza.jpg'
-<<<<<<< Updated upstream
 import yael from './yael.jpg'
 import ramsey from './ramsey.jpg'
-=======
-import danielle from './danielle.jpg'
-import danielle2 from './danielle2.jpg'
->>>>>>> Stashed changes
+import danielle from './danielle.png'
+import danielle2 from './danielle2.png'
 import ana from './ana.jpg'
 import sanjay from './sanjay.jpeg'
 import sophia from './sophia.jpg'

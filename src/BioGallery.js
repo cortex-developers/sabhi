@@ -12,8 +12,13 @@ import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional effec
 import ella from './ella.png'
 import mya from './mya.jpg'
 import hamza from './hamza.jpg'
+<<<<<<< Updated upstream
 import yael from './yael.jpg'
 import ramsey from './ramsey.jpg'
+=======
+import danielle from './danielle.jpg'
+import danielle2 from './danielle2.jpg'
+>>>>>>> Stashed changes
 import ana from './ana.jpg'
 import sanjay from './sanjay.jpeg'
 import sophia from './sophia.jpg'
@@ -200,6 +205,16 @@ medicaladvisor: true
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.',
     medicaladvisor: true
+  },
+  {
+    name: 'Danielle Vitale',
+    slug: slugify('Danielle Vitale'),
+    images: [danielle2, danielle],
+    description: 'Medical Student',
+    fullBio: 'Danielle Vitale is a fourth year medical student at SUNY Upstate Medical University who will be graduating and entering into Physical Medicine and Rehabilitation this upcoming year. Throughout her academic pursuits, she has been involved in numerous research projects, including studying circadian rhythms and aspiration pneumonia, and has worked on Phase 2/3 clinicals trials with Pfizer on multiple vaccines and therapeutics. In addition to her academic achievements, she has had a passion for soccer and track & field from a young age. She continued her athletics into her collegiate years at Providence College, where she earned a Bachelor of Science in Biochemistry. She is excited to bring her dedication to medicine and her scholarly background in research to advocate for student athletes and promote their well-being.',
+    medicaladvisor: true,
+    project: ["research"],
+    position: ["Researcher"]
   },
   {
     name: 'Vivek Khatri',

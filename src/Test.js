@@ -113,6 +113,7 @@ function MyComponent() {
                 marginBottom: "50vh",  // Add some space before the next section
               }}
             >
+              
               {images[index].map((imageSrc, imgIndex) => (
                 <img
                   key={imgIndex}

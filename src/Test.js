@@ -7,8 +7,8 @@ import { useGSAP } from "@gsap/react";
 import imageAAA from './Group 91.png';
 import imageBBB from './Group 93 (1).png';
 import imageCCC from './Group 93 (2).png';
-import imageDDD from './nate.jpg';
-import imageEEE from './cortexchatmobile.png';
+//import imageDDD from './nate.jpg';
+//import imageEEE from './cortexchatmobile.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,12 +113,12 @@ function MyComponent() {
                 marginBottom: "50vh",  // Add some space before the next section
               }}
             >
-              
+
               {images[index].map((imageSrc, imgIndex) => (
                 <img
                   key={imgIndex}
                   src={imageSrc}
-                  alt={`Image ${imgIndex + 1}`}
+                  alt={`Imag ${imgIndex + 1}`}
                   style={{ width: "50%", opacity: 0, position: "absolute", transition: "opacity 0.5s ease" }}
                 />
               ))}

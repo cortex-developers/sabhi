@@ -23,7 +23,7 @@ import BioGallery from './BioGallery';
 import CortexLearn from './CORTEXLEARN.png';
 import BlogPosts from './BlogPosts';
 import './App.css'
-import nateathlete from './nateathleteshot.JPEG'
+/* import nateathlete from './nateathleteshot.JPEG'
 import katyathlete from './katyathleteshot.jpg'
 import katyathletedesktop from './katyathleteshotdesktop.jpg'
 import ellaathlete from './ellaathlete.png'
@@ -43,7 +43,7 @@ import mayaathlete from './mayaathlete.jpg'
 //import UnderConstructionPage from './UnderConstructionPage';
 import natekathlete from './natekathlete.jpg'
 import onomeathlete from './onomeathlete.jpg'
-import addisonathlete from './addisonathlete.jpg'
+import addisonathlete from './addisonathlete.jpg' */
 //import OurStory from './OurStory';
 import Disclaimer from './Disclaimer'
 
@@ -77,7 +77,7 @@ const useGA4PageTracking = () => {
   }, []);
 };
 
-
+/* 
 const shots = [
   nateathlete,
   katyathlete,
@@ -108,7 +108,7 @@ const shots2 = [
   ellaathletedesktop,
   sophiasathlete
 ]
-/* const texts = [
+const texts = [
   "In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
   "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
   "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.",

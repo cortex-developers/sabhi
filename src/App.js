@@ -4,20 +4,23 @@ import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography,
 import { Menu as MenuIcon } from '@mui/icons-material';
 //import downloadapp from './downloadapp.png'
 //import Logo from './sabhi-logo.svg';
-import Slideshow from './Slideshow';
+//import Slideshow from './Slideshow';
+import Pricing from './Pricing'
 //import Community from './Community';
 import thecortex from "./thecortex.mp4";
 import thecortexmobile from "./thecortexmobile.mp4";
+import WHAT from './WHAT IS THECORTEX _.png'
+//import PRICING from './pricing.png'
+
+import CR from './CORTEXRESEARCH.png'
 
 //import Article from './Article';
-import LogoNoText from './sabhi-logo-no-text.svg';
-import LogoText from './sabhi-text.svg';
+import LogoNoText from './Group 82.png';
+//import LogoText from './Group 82.png';
 import BioGallery from './BioGallery';
-import Contact from './Contact';
+//import Contact from './Contact';
 //import UnderConstructionPage from './UnderConstructionPage';
-import CortexLearn from './learn.jpg';
-import CortexWiki from './cortexwiki.png';
-import Partners from './Partners'
+import CortexLearn from './CORTEXLEARN.png';
 import BlogPosts from './BlogPosts';
 import './App.css'
 import nateathlete from './nateathleteshot.JPEG'
@@ -37,19 +40,16 @@ import joeathletemobile from './joeathletemobile.jpg'
 import sophiaathlete from './sophiaathlete.jpg'
 import mayaathlete from './mayaathlete.jpg'
 //import cc2 from './cc2.jpg'
-
+//import UnderConstructionPage from './UnderConstructionPage';
 import natekathlete from './natekathlete.jpg'
 import onomeathlete from './onomeathlete.jpg'
 import addisonathlete from './addisonathlete.jpg'
 //import OurStory from './OurStory';
-import ResourcesPage from './ResourcesPage'
-import DonationForm from './DonationForm';
-import ApplicationForm from './ApplicationForm'
 import Disclaimer from './Disclaimer'
 
 
 import ReactGA4 from 'react-ga4';
-import SearchComponent from './SearchComponent';
+import MyComponent from './Test';
 
 
 const useGA4PageTracking = () => {
@@ -108,7 +108,7 @@ const shots2 = [
   ellaathletedesktop,
   sophiasathlete
 ]
-const texts = [
+/* const texts = [
   "In my route to Division 1 football, I went through many difficult experiences physically and mentally which I now see as completely avoidable if the proper intervention had been present. In the last few years, learning to apply my neuroscience background to training and daily life has prompted enhanced happiness, health, and success athletically, academically, and otherwise. I want to help others find the same.",
   "As a Division 1 student-athlete who has experienced many injuries, I have seen firsthand the lack of translation between science and athletics. Cortex Flex gives me a platform and an opportunity to bridge the ever-growing gap between science and athletics, bringing in evidence-based practices that would have helped me throughout my college career.",
   "Having competed at the NCAA Division I Level for 6 years, and playing competitively for over 10 years before that, my basketball journey consisted of many highs and lows on the court and off. By joining Cortex Flex and bridging the gap between athletes and medical research/science, I hope to promote holistically happy and healthy sports careers for all athletes to come.",
@@ -123,7 +123,7 @@ const texts = [
   `As a current Division l volleyball player majoring in health and wellness promotion, I know the importance of balance in all potential aspects of athlete life- ranging from nutrition, time management, recruiting, injury, and athlete’s mental health. My biggest passion is injury and the under-discussed aspect of mental recovery throughout and after the injury process- I am very excited to bring this to Cortex Flex and be a part of what I wish I had access to during my many injuries and their rehabilitation processes.`,
   `Growing up I was always super interested in the human body and medical field, and was also always in numerous sports year round. Once, I began competing at the Division 1 level for rowing, I truly realized how intertwined these two areas are, and the substantial room for growth in combining sports and medicine. As a result, I joined Cortex to help propel the development of these areas, and to hopefully help other athletes to become the happiest and healthiest they can be.`
 ]
-
+ */
 
 
 const theme = createTheme({
@@ -141,6 +141,7 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Kosugi Maru, sans-serif',
   },
+  flex: 1
 });
 
 /* 
@@ -190,34 +191,21 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
         <List>
-          <ListItem button component={RouterLink} to="/">
-            <ListItemText primary="Home" />
-          </ListItem>
           <ListItem button component={RouterLink} to="/blog" >
-            <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+            <img src={CortexLearn} alt="SABHI Logo" style={{ height: '8px', marginRight: '10px' }} />
           </ListItem>
-          <ListItem button component={RouterLink} to="/resources">
-            <img src={CortexWiki} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+          <ListItem button component={RouterLink} to="/info" >
+            <img src={WHAT} alt="SABHI Logo" style={{ height: '10px', marginTop: '10px' }} />
           </ListItem>
-          <ListItem button component={RouterLink} to="/bios">
-            <ListItemText primary="Meet Our Team" />
+          <ListItem button component={RouterLink} to="/research" >
+            <img src={CR} alt="SABHI Logo" style={{ height: '8px', marginTop: '10px'}} />
           </ListItem>
-          <ListItem button component={RouterLink} to="/join">
-            <ListItemText primary="Join Our Team!" />
-          </ListItem>
-          <ListItem button component={RouterLink} to="/story">
-            <ListItemText primary="Our Story" />
-          </ListItem>
-          <ListItem button component={RouterLink} to="/partners">
-            <ListItemText primary="Our Partners" />
-          </ListItem>
-          {/*           <ListItem button component={RouterLink} to="/contact">
-            <ListItemText primary="Contact" />
+          <ListItem button component={RouterLink} to="/pricing">
+            <ListItemText primary="Pricing" />
           </ListItem> 
-          <ListItem button component={RouterLink} to="/give">
-            <ListItemText primary="Give" />
+          <ListItem button component={RouterLink} to="/portal">
+            <ListItemText primary="Parent Portal" />
           </ListItem>
-          Repeat for other links */}
         </List>
       </Box>
     </ThemeProvider>
@@ -230,11 +218,10 @@ function App() {
           <AppBar position="static">
             <Toolbar style={{ justifyContent: 'center' }}> {/* Center the Toolbar items */}
               {/* Logo Items Box, adjust margin to slightly move it to the right */}
-              <Box display="flex" alignItems="center" style={{ marginRight: '20px' }}> {/* Adjust marginRight to control spacing */}
-                <img src={LogoNoText} alt="SABHI Logo" style={{ height: '25px', marginRight: '10px' }} />
+              <Box display="flex" alignItems="center" style={{ marginRight: '10px' }}> {/* Adjust marginRight to control spacing */}
                 <Typography variant="h6" component="div" >
-                  <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <img src={LogoText} alt="SABHI Logo" style={{ height: '15px' }} />
+                  <RouterLink to="/">
+                  <img src={LogoNoText} alt="SABHI Logo" style={{ height: '25px', marginTop: '10px'}} />
                   </RouterLink>
                 </Typography>
               </Box>
@@ -262,15 +249,10 @@ function App() {
                   >
                     {drawer}
                   </Drawer>
-                  <SearchComponent />
                 </>
               ) : (
                 <>
                   <Box display="flex" style={{ marginLeft: '20px' }}> {/* Adjust marginLeft to control spacing */}
-                    <SearchComponent />
-                    <Button color="inherit" component={RouterLink} to="/">
-                      Home
-                    </Button>
                     <Button color="inherit" component={RouterLink} to="/blog" sx={{
                       fontWeight: 'bold', // Increases font weight                //animation: 'undulateColor 2s infinite',
                       // You can adjust the colors and duration as needed
@@ -278,22 +260,17 @@ function App() {
                       <img src={CortexLearn} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
 
                     </Button>
-
-                    <Button color="inherit" component={RouterLink} to="/resources">
-                      <img src={CortexWiki} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
+                    <Button color="inherit" component={RouterLink} to="/info">
+                      <img src={WHAT} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/bios">
-                      Meet Our Team
+                    <Button color="inherit" component={RouterLink} to="/research">
+                      <img src={CR} alt="SABHI Logo" style={{ height: '10px', marginRight: '10px' }} />
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/join">
-                      Join Our Team!
+                    <Button color="inherit" component={RouterLink} to="/pricing" style={{ height: '25px', fontSize: '12.5px'}}>
+                      PRICING
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/story">
-                      Our Story
-                    </Button>
-
-                    <Button color="inherit" component={RouterLink} to="/partners">
-                      Our Partners
+                    <Button color="inherit" component={RouterLink} to="/portal" style={{ height: '25px', fontSize: '12.5px'}}>
+                      PARENT PORTAL
                     </Button>
                     {/*                     <Button color="inherit" component={RouterLink} to="/contact">
                       Contact
@@ -308,6 +285,8 @@ function App() {
 
             </Toolbar>
           </AppBar>
+
+          <div>
           <Routes>
             <Route path="/" element=
 {isMobile ? (
@@ -343,7 +322,7 @@ function App() {
           zIndex: 1,
         }}
       >
-        <a href="https://subscribepage.io/Z3FZoF" style={{ textDecoration: 'none', width: '100%' }}>
+        <a href="https://cortexflex.org/info" style={{ textDecoration: 'none', width: '100%' }}>
           <Button
             variant="contained"
             color="primary"
@@ -353,7 +332,7 @@ function App() {
               fontSize: '16px',
             }}
           >
-            Join the Waiting List!
+            Learn More!
           </Button>
         </a>
       </Box>
@@ -392,9 +371,9 @@ function App() {
       zIndex: 1,
     }}
   >
-    <a href="https://subscribepage.io/Z3FZoF" style={{ textDecoration: 'none' }}>
+    <a href="https://cortexflex.org/info" style={{ textDecoration: 'none' }}>
       <Button variant="contained" color="primary">
-        Join the Waiting List!
+        Learn More!
       </Button>
     </a>
   </Box>
@@ -404,19 +383,22 @@ function App() {
 }       
           
             />
-            <Route path="/bios" element={<BioGallery />} />
-            <Route path="/story" element={
-              isMobile ?
-                (<Slideshow slideDuration={18000} textColor='white' textSize='0.5rem' images={shots} texts={texts} enableTypingEffect={false}></Slideshow>) : (<Slideshow slideDuration={18000} textColor='white' textSize='1rem' images={shots2} texts={texts} enableTypingEffect={false}></Slideshow>)
-            } />
-            <Route path="/resources" element={<ResourcesPage />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/research" element={<BioGallery />} />
             <Route path="/blog" element={<BlogPosts />} />
-            <Route path="/give" element={<DonationForm />} />
-            <Route path="/join" element={<ApplicationForm />} />
-            <Route path="/partners" element={<Partners />} />
+            <Route path="/portal" element={    <div style={{ height: '100vh', overflow: 'hidden' }}>
+      <iframe
+        src="https://cortexflex.copilot.app"
+        title="Parent Portal"
+        style={{ width: '100%', height: '100%', border: 'none' }}
+        allowFullScreen
+      ></iframe>
+    </div>} />
+            <Route path="/pricing" element={<Pricing/>} />
+            <Route path="/info" element={<MyComponent/>} />
             <Route path="/disclaimer" element={<Disclaimer />} />
           </Routes>
+
+        </div>
           {/* Footer */}
           <Box component="footer" sx={{ bgcolor: 'primary.main', color: 'white', py: 3, mt: 'auto' }}>
             <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

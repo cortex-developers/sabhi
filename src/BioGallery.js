@@ -91,20 +91,24 @@ const bios = [
     email: "nate@cortexflex.org",
     linkedin: "http://www.linkedin.com/in/nate-roy-b27543201",
     instagram: "https://www.instagram.com/nate.roy29/",
-    position: "Chief Executive Officer",
+    position: "Researcher",
+    project: ["research"],
     leader: true,
     bod: true
   },
   {
-    name: 'Reza Ashrafi',
-    slug: slugify('Reza Ashrafi'),
-    images: [reza],
-    description: 'Football Player & Neurobiology Researcher',
-    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
-    linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
-    instagram: "https://www.instagram.com/reza_ashrafi26/",
-    position: "Project Lead & Researcher",
-    project: ["research", "media"],
+    name: 'Puneet Velidi',
+    slug: slugify('Puneet Velidi'),
+    images: [puneet, puneet2],
+    description: 'Software Engineer & Neuroscience Researcher',
+    fullBio: 'Puneet was a software engineer at Walmart Global Tech where he builds web applications and now is research intern @ MGH/Harvard Medical School. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
+    email: "puneet@cortexflex.org",
+    linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212",
+    instagram: 'https://www.instagram.com/puneetvelidi/',
+    position: "Researcher",
+    project: ["research"],
+    leader: true,
+    bod: true
   },
   {
     name: 'Matt Shumway',
@@ -169,7 +173,7 @@ const bios = [
     name: 'Ramsey Kubofcik',
     slug: slugify('Ramsey Kubofcik'),
     images: [ramsey],
-    description: 'D1 Football Player & EMT',
+    description: 'EMT',
     project: ["research"],
     position: "Researcher",
     fullBio: 'Ramsey Kubofcik is a sophomore at Cornell University, where he serves as an EMT on campus. Throughout high school, he played football for all four years, earning the Passaic County Chapter of the National Football Foundation Scholar-Athlete of the Year award at the end of his career. Inspired by his own sports injuries, Ramsey is passionate about linking medicine with athletics to support athletes in their journeys. Currently, he is conducting research at Mount Sinai, aiming to integrate his medical knowledge with his athletic experience to enhance the health and performance of athletes.',
@@ -201,7 +205,8 @@ medicaladvisor: true
     images: [kevin],
     description: 'Medical Student & Non-profit Leader',
     fullBio: 'Kevin is a medical student and rising leader within holistic medicine. His skill set sits uniquely at the interface of both scientific research and medical practice, as he has previously conducted research for Pfizer, Boston Scientific, and Verathon in addition to serving as the lead medical assistant to the President of Urology at a leading institution. Outside of medicine, his guidance as the president of USF’s Zeta Beta Tau transformed a struggling organization into an award-winning philanthropic giant over the course of 3 years. Kevin is equipped with the ultimate combination of technical knowledge, passion for service, and tactful leadership. He aims to apply this within CFAA as a trailblazer in disseminating scientific information to the athletic community in a manner that improves lives for years to come.',
-    medicaladvisor: true
+    project: ["research"],
+    position: ["Researcher"]
   },
   {
     name: 'Danielle Vitale',
@@ -209,7 +214,6 @@ medicaladvisor: true
     images: [danielle2, danielle],
     description: 'Medical Student',
     fullBio: 'Danielle Vitale is a fourth year medical student at SUNY Upstate Medical University who will be graduating and entering into Physical Medicine and Rehabilitation this upcoming year. Throughout her academic pursuits, she has been involved in numerous research projects, including studying circadian rhythms and aspiration pneumonia, and has worked on Phase 2/3 clinicals trials with Pfizer on multiple vaccines and therapeutics. In addition to her academic achievements, she has had a passion for soccer and track & field from a young age. She continued her athletics into her collegiate years at Providence College, where she earned a Bachelor of Science in Biochemistry. She is excited to bring her dedication to medicine and her scholarly background in research to advocate for student athletes and promote their well-being.',
-    medicaladvisor: true,
     project: ["research"],
     position: ["Researcher"]
   },
@@ -218,8 +222,8 @@ medicaladvisor: true
     slug: slugify('Vivek Khatri'),
     images: [vivek],
     description: 'Dental Student',
-    //project: ["research"],
-    medicaladvisor: true,
+    project: ["research"],
+    position: ["Researcher"],
     fullBio: 'Vivek is a D2 at Columbia University College of Dental Medicine. He is passionate about advocating for dental health in athletes which is an often underrated part of athlete health.',
   },
   {
@@ -289,8 +293,8 @@ degree in Health Administration. Outside of sports, Mya has volunteered at her h
 emergency department which solidified her decision to pursue a career in healthcare. As a lifelong athlete,
 she understands the importance of taking care of one’s body to achieve the best physical and mental
 results, on and off the court.`,
-    project: ["community"],
-    position: "Community Mentor"
+    project: ["research"],
+    position: "Researcher"
   },
   {
     name: 'Joe Curtis',
@@ -380,7 +384,7 @@ results, on and off the court.`,
     description: 'Photographer & Neuroscience Student',
     fullBio: `Sanjay Kumar is an undergraduate student at Rutgers University, New Brunswick, born and raised in New Jersey. For the past two years, he has been immersed in sports photography, working as a freelance photographer for teams such as Columbia Wrestling, PFL, MLS, UCLA Softball, and Team USA Wrestling. Sanjay enjoys meeting new people, connecting with athletes, and embracing life's full potential. He plans to study neuroscience with the aim of making significant contributions to the field. With a love for learning and creating, Sanjay hopes to help the media and research efforts of Cortex Flex to help push the core mission. `,
     project: ["media", "research"],
-    position: "Media Manager & Researcher",
+    position: "Researcher",
   },
   {
     name: 'Olivia Ramil',
@@ -419,7 +423,7 @@ results, on and off the court.`,
     fullBio: `Katelyn is a hardworking individual passionate about increasing accessibility and understanding within various populations. She received her Bachelor of Arts in Psychology and Math from Boston University in May 2023, with hopes of pursuing higher education in Healthcare Systems Engineering. Currently, she works as a clinical research coordinator within the division of neuropsychiatry and neuromodulation at Massachusetts General Hospital. As she embarked on her educational journey and various athletic pursuits, she realized they are symbiotic by nature: the physicality and team dynamacy in athletics improves mental health, and neurological processes impact performance. Through CFAA, Katelyn strives to make the intricacies of brain health digestible for athletes at all levels, in addition to educating scientists on the complexities of various sports. 
     `,
   },
-  {
+/*   {
     name: 'Lisa Liff',
     slug: slugify('Lisa Liff'),
     images: [lisa],
@@ -427,8 +431,8 @@ results, on and off the court.`,
     position: "Researcher",
     description: 'Medical Student',
     fullBio: 'Lisa is an EMT in Boston and a Clinical Care Tech at Tufts Medical Center. She graduated from Cornell University in May of 2023 where she majored in Biological Sciences with a concentration in Neurobiology and minors in Psychology and Global Health. A lifelong soccer player, Lisa picked up running during COVID and has continued this pursuit post-grad, running both the NYC and Philly Marathons in 2023. Passionate about athlete’s health and science, Lisa plans to compile and synthesize information on the two subjects in one place with CFAA',
-  },
-  {
+  }, */
+/*   {
     name: 'Kanella Basilion',
     slug: slugify('Kanella Basilion'),
     images: [kanella],
@@ -438,7 +442,7 @@ results, on and off the court.`,
     linkedin: "https://www.linkedin.com/in/kanella-basilion-bb67ab1b2/",
     project: ["research", "community"],
     position: "Researcher & Community Coordinator",
-  },
+  }, */
   {
     name: 'Hemant Velidi',
     slug: slugify('Hemant Velidi'),
@@ -469,21 +473,18 @@ results, on and off the court.`,
     linkedin: 'https://www.linkedin.com/in/elisabeth-mccarron-81580526a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagram: 'https://www.instagram.com/elliebelly17?igsh=NHZ6OTlrOGdweWZi&utm_source=qr'
   },
-  {
-    name: 'Puneet Velidi',
-    slug: slugify('Puneet Velidi'),
-    images: [puneet, puneet2],
-    description: 'Software Engineer & Neuroscience Researcher',
-    fullBio: 'Puneet was a software engineer at Walmart Global Tech where he builds web applications and now is research intern @ MGH/Harvard Medical School. He was a researcher in the Computational Connectomics Lab at Cornell and presented his work on the effect of heavy alcohol use on the brain at OHBM 2023.',
-    email: "puneet@cortexflex.org",
-    linkedin: "https://www.linkedin.com/in/puneet-velidi-555b21212",
-    instagram: 'https://www.instagram.com/puneetvelidi/',
-    position: "Chief Technology Officer",
-    project: ["research"],
-    leader: true,
-    bod: true
-  },
 
+  {
+    name: 'Reza Ashrafi',
+    slug: slugify('Reza Ashrafi'),
+    images: [reza],
+    description: 'Football Player & Neurobiology Researcher',
+    fullBio: 'Reza Ashrafi ‘26 is a current student at Cornell University majoring in neurobiology and behavior. On campus, Reza is part of a biomedical engineering project team where he is currently researching and designing medical assist devices for patients with neurodegenerative diseases. Additionally, he is a member of Cornell’s Varsity Sprint Football team where he plays right tackle. He has previously been involved in community service organizations that sought to provide science education to elementary and middle school children. Through these experiences, he has zeroed in on the importance of scientific communication and how delivery of knowledge and understanding a target audience is a true artform that is continually developed. Within the cortex flex team, Reza hopes to leverage his experiences as a student-athlete, researcher, and volunteer to help foster safer sports.',
+    linkedin: "https://www.linkedin.com/in/reza-ashrafi-b636801ab/",
+    instagram: "https://www.instagram.com/reza_ashrafi26/",
+    position: "Researcher",
+    project: ["research", "media"],
+  },
   {
     name: 'Haneyya Siddiqui',
     slug: slugify('Haneyya Siddiqui'),
@@ -615,6 +616,8 @@ function BioGallery() {
 
   return (
     <ThemeProvider theme={theme}>
+      {/*       
+
       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Leadership</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {leadership.map((bio, index) => (
@@ -652,8 +655,46 @@ function BioGallery() {
          </Card>
        </Grid>
         ))}
+      </Grid> */}
+            <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom> Research Team </Typography>
+      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
+        {researchmembers.map((bio, index) => (
+          <Grid item xs={12} sm={6} md={2} key={index}>
+            <Card>
+              <Slider {...sliderSettings}>
+                {bio.images.map((image, idx) => (
+                  <div key={idx}>
+                    <LazyLoadImage
+                      alt={bio.name}
+                      style={{ width: '100%', height: '100%' }}
+                      src={image}
+                      effect="blur"
+                    />
+                  </div>
+                ))}
+              </Slider>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {bio.name}
+                </Typography>
+                <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
+                {bio.position}
+              </Typography>
+                <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
+                  {bio.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
+                {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
+                {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
+                {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
-      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Medical Advisors</Typography>
+      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Co-PIs</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {mas.map((bio, index) => (
          <Grid item xs={12} sm={6} md={2} key={index}>
@@ -692,7 +733,7 @@ function BioGallery() {
         ))}
       </Grid>
 
-      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Community</Typography>
+{/*       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Community</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {communitymembers.map((bio, index) => (
          <Grid item xs={12} sm={6} md={2} key={index}>
@@ -730,46 +771,9 @@ function BioGallery() {
        </Grid>
         ))}
       </Grid>
+ */}
 
-      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Cortex Research</Typography>
-      <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
-        {researchmembers.map((bio, index) => (
-          <Grid item xs={12} sm={6} md={2} key={index}>
-            <Card>
-              <Slider {...sliderSettings}>
-                {bio.images.map((image, idx) => (
-                  <div key={idx}>
-                    <LazyLoadImage
-                      alt={bio.name}
-                      style={{ width: '100%', height: '100%' }}
-                      src={image}
-                      effect="blur"
-                    />
-                  </div>
-                ))}
-              </Slider>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {bio.name}
-                </Typography>
-                <Typography variant="body1" color="primary" style={{ fontWeight: 'bold', fontSize: '14px', marginTop: '8px' }}>
-                {bio.position}
-              </Typography>
-                <Typography variant="body2" color="text.secondary" style={{ fontSize: '10px' }}>
-                  {bio.description}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small" onClick={() => handleOpen(bio)}>Learn More</Button>
-                {bio.linkedin && <IconButton size="small" href={bio.linkedin}><LinkedIn /></IconButton>}
-                {bio.instagram && <IconButton size="small" href={bio.instagram}><Instagram /></IconButton>}
-                {bio.email && <IconButton size="small" href={`mailto:${bio.email}`}><Email /></IconButton>}
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif'}} gutterBottom>Cortex Media</Typography>
+{/*       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif'}} gutterBottom>Cortex Media</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {mediamembers.map((bio, index) => (
          <Grid item xs={12} sm={6} md={2} key={index}>
@@ -806,8 +810,8 @@ function BioGallery() {
          </Card>
        </Grid>
         ))}
-      </Grid>
-      <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Board of Directors</Typography>
+      </Grid> */}
+{/*       <Typography variant="h4" sx={{ padding: '20px', textAlign: 'center', fontFamily: 'Notable, sans-serif' }} gutterBottom>Board of Directors</Typography>
       <Grid container spacing={2} sx={{ padding: '20px', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', marginLeft: 'auto', marginRight: 'auto' }}>
         {boardMembers.map((bio, index) => (
           <Grid item xs={12} sm={6} md={2} key={index}>
@@ -844,7 +848,7 @@ function BioGallery() {
             </Card>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
       <Modal
         open={open}
         onClose={handleClose}

@@ -123,8 +123,8 @@ function MyComponent() {
               .elite-text-container {
                 position: fixed;
                 transform: none;
-                font-size: 1rem; /* Smaller font size for mobile */
-                transform: translate(-50%, -75%);
+                font-size: 0.7rem; /* Smaller font size for mobile */
+                transform: translate(-50%, -80%);
                 text-align: center;
                 margin-bottom: 20px;
               }

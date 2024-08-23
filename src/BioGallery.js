@@ -54,11 +54,11 @@ import kate1 from './kate1.jpg'
 import kate2 from './kate2.jpg'
 import katy from './katy.jpg'
 import katy2 from './katy2.jpg'
-import lisa from './lisa.jpeg'
+//import lisa from './lisa.jpeg'
 //import lisa2 from './lisa2.jpeg'
 import brooke from './brooke.jpg'
 import brooke2 from './brooke2.jpg'
-import kanella from './kanella.jpg'
+//import kanella from './kanella.jpg'
 
 import joe from './joe.jpg'
 import joe2 from './joe2.jpg'
@@ -606,12 +606,12 @@ function BioGallery() {
     overflowY: 'auto'
   };
 
-  const boardMembers = bios.filter(bio => bio.bod);
+  //const boardMembers = bios.filter(bio => bio.bod);
   const mas = bios.filter(bio => bio.medicaladvisor);
-  const leadership = bios.filter(bio => bio.leader);
-  const communitymembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("community"));
+  //const leadership = bios.filter(bio => bio.leader);
+  //const communitymembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("community"));
   const researchmembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("research"));
-  const mediamembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("media"));
+  //const mediamembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("media"));
   //const growmembers = bios.filter(bio => Array.isArray(bio.project) && bio.project.includes("grow"));
 
   return (

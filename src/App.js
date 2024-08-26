@@ -44,6 +44,7 @@ function App() {
             marginBottom: '20px',
           }}
         />
+        
         <Typography
           variant={isMobile ? 'h5' : 'h4'} // Adjust font size for mobile
           component="h1"

@@ -10,6 +10,7 @@ import Features from './Features';
 import Steps from './Steps'
 import Why from './Why'
 import fy from './fourtyyard.mp4';
+//import ella from './reel covers_20240903_202826_0000.png'
 import LogoNoText from './Group 82.png';
 import CortexMentors from './CortexMentors'
 import BlogPosts from './BlogPosts';
@@ -54,7 +55,9 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplaySpeed: 5000,
+  autoplay: true, // Enable autoplay
+  autoplaySpeed: 10000, // Time (in ms) between each slide
+  pauseOnHover: true, 
   fade: true, // This makes the transition fade
 }
 
@@ -86,6 +89,7 @@ const Img = styled('img')({
 });
  */
 function App() {
+  
   useEffect(() => {
     // Function to remove specific query parameters
     const cleanUpUrl = () => {
@@ -108,13 +112,14 @@ function App() {
     cleanUpUrl();
   }, []);
   useGA4PageTracking();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  
   const drawer = (
     <ThemeProvider theme={theme}>
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -323,7 +328,6 @@ function App() {
              src={fy}
              alt="Slide 1"
              autoPlay
-             loop
              muted
              playsInline
              style={{
@@ -333,10 +337,25 @@ function App() {
                borderRadius: '15px', // Rounded corners
                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow effect
                position: 'relative',
-               zIndex: -1,
+               zIndex: 1,
              }}
            />
          </div>
+{/*          <div>
+           <img
+             src={ella}
+             alt="Slide 1"
+             style={{
+               width: '70%',
+               filter: 'brightness(1)',
+               opacity: '1',
+               borderRadius: '15px', // Rounded corners
+               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow effect
+               position: 'relative',
+               zIndex: 1,
+             }}
+           />
+         </div> */}
        </Slider>
      </Box>
    )}

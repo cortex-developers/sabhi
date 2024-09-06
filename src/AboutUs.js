@@ -14,7 +14,7 @@ const AboutUs = () => {
             {/* Story Content */}
             <Grid item xs={12} sm={8}>
               <Typography variant="body1" paragraph>
-                Dear valued customers,
+                Dear Cortex Family,
               </Typography>
               <Typography variant="body1" paragraph>
                 Cortex Flex began in March 2024 as the Cortex Flex Athlete Alliance, born out of a vision to bridge a crucial gap between sports and science. By May 2024, we earned our 501(c)(3) nonprofit status and quickly began making an impact. In just three months, we were able to secure thousands of dollars in donations, host a clinic for over 20 athletes, and launch a successful podcast and media initiative. We proudly partnered with well-known corporate sponsors like Coca-Cola and Kodiak.

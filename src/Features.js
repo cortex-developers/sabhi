@@ -13,22 +13,24 @@ import Laptop from '@mui/icons-material/Laptop';
 import Person  from '@mui/icons-material/Person';
 import Book from '@mui/icons-material/Book';
 
+import community from './comm2.png'
+import courses from './courses.png'
 const items = [
   {
     icon: <Laptop />,
     title: 'theCORTEX App & Community',
     description:
-      'Download our app (now on iOS and web) and engage with a community of collegiate athletes, doctors, and other student athletes on topics ranging from nutrition to academics and training. Win prizes through our weekly challenges!',
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+      'Download our app (now on iOS and web) and engage with a community of collegiate athletes, doctors, and other student athletes on topics ranging from nutrition to academics and training. Win prizes through our daily challenges!',
+    imageLight: `url(${community})`,
+    imageDark: `url(${community})`,
   },
   {
     icon: <Book />,
     title: 'Cortex Courses',
     description:
       'Cortex Courses teaches your student-athlete how to apply intangibles specifically toward their current goal or endeavor. These courses are each offered weekly or bi-weekly and span broad curricula such that continual progress is found each week',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+    imageLight: `url(${courses})`,
+    imageDark:`url(${courses})`,
   },
   {
     icon: <Person />,
@@ -159,9 +161,7 @@ export default function Features() {
           variant="body1"
           sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
         >
-          Provide a brief overview of the key features of the product. For example,
-          you could list the number of features, their types or benefits, and
-          add-ons.
+
         </Typography>
       </Box>
       <Box
@@ -251,7 +251,8 @@ export default function Features() {
                 m: 'auto',
                 width: 420,
                 height: 500,
-                backgroundSize: 'contain',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
                 backgroundImage: 'var(--items-imageLight)',
                 ...theme.applyStyles('dark', {
                   backgroundImage: 'var(--items-imageDark)',

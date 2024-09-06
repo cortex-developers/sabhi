@@ -51,7 +51,7 @@ const Steps = () => {
                 Sign Up
               </Typography>
               <Typography variant="body2" sx={{ color: '#666' }}>
-                Sign up with the . It only takes a few minutes!
+                Sign up by pressing the button below. It only takes a few minutes!
               </Typography>
             </CardContent>
           </Card>
@@ -92,7 +92,7 @@ const Steps = () => {
                 Step 2
               </Typography>
               <Typography variant="h6" sx={{ marginBottom: '1rem', color: '#333' }}>
-                Choose Your Plan
+                Hold Tight!
               </Typography>
               <Typography variant="body2" sx={{ color: '#666' }}>
                 A member of our team will contact you using your preferred contact method.

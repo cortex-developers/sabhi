@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
-import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText} from '@mui/material';
+import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem} from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import Pricing from './Pricing'
 import sports from './sports.png'
@@ -404,6 +405,7 @@ function App() {
     <div style={{ height: '100vh', overflow: 'hidden' }}>
     <iframe 
       className="airtable-embed" 
+      title='airtable'
       src="https://airtable.com/embed/apphPc3F6NvvkOBNg/shr4NtUH9P6YyP4bW" 
       onMouseWheel="" 
       style={{ width: '100%', height: '100%', border: 'none' }}

@@ -18,7 +18,7 @@ const items = [
     icon: <Laptop />,
     title: 'theCORTEX App & Community',
     description:
-      'Engage with a community of collegiate athletes, doctors, and other student athletes on topics ranging from nutrition to academics and training! Win prizes through our weekly challenges!',
+      'Download our app (now on iOS and web) and engage with a community of collegiate athletes, doctors, and other student athletes on topics ranging from nutrition to academics and training. Win prizes through our weekly challenges!',
     imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
@@ -26,7 +26,7 @@ const items = [
     icon: <Book />,
     title: 'Cortex Courses',
     description:
-      'This item could provide information about the mobile app version of the product.',
+      'Cortex Courses teaches your student-athlete how to apply intangibles specifically toward their current goal or endeavor. These courses are each offered weekly or bi-weekly and span broad curricula such that continual progress is found each week',
     imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
@@ -37,15 +37,7 @@ const items = [
       'Get personalized advice through a 30 minute 1:1 call with one of our elite mentors.',
     imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
-  },
-  {
-    icon: <Book />,
-    title: 'Cortex Courses',
-    description:
-      'This item could provide information about the mobile app version of the product.',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
-  },
+  }
 ];
 
 const Chip = styled(MuiChip)(({ theme }) => ({

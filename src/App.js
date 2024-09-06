@@ -5,7 +5,7 @@ import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography,
 import { Menu as MenuIcon } from '@mui/icons-material';
 import Pricing from './Pricing'
 import sports from './sports.png'
-
+import AboutUs from './AboutUs';
 import Features from './Features';
 import Steps from './Steps'
 import Why from './Why'
@@ -388,6 +388,7 @@ function App() {
             />
             <Route path="/mentors" element={<CortexMentors/>} />
             <Route path="/blog" element={<BlogPosts/>} />
+            <Route path="/about" element={<AboutUs/>} />
             <Route path="/portal" element={    <div style={{ height: '100vh', overflow: 'hidden' }}>
       <iframe
         src="https://cortexflex.copilot.app"

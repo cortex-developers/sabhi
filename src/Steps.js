@@ -7,7 +7,7 @@ const Steps = () => {
   return (
     <Box sx={{ width: '100%', padding: '20px', textAlign: 'center' }}>
       {/* Title */}
-      <Typography variant="h4" sx={{ marginBottom: '4rem', fontWeight: 'bold', color: '#333', fontFamily: 'Notable, sans-serif' }}>
+      <Typography variant="h4" sx={{ marginBottom: '4rem', fontWeight: 'bold', color: 'black', fontFamily: 'Notable, sans-serif' }}>
         Getting Started
       </Typography>
 

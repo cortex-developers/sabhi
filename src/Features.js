@@ -148,7 +148,7 @@ export default function Features() {
 
   return (
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
-      <Box sx={{ width: { sm: '100%', md: '60%' } }}>
+      <Box sx={{ width: { sm: '100%', md: '100%' } }}>
         <Typography
           component="h2"
           variant="h4"
@@ -233,7 +233,7 @@ export default function Features() {
         <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
-            width: { xs: '100%', md: '70%' },
+            width: { xs: '100%', md: '100%' },
             height: 'var(--items-image-height)',
           }}
         >
@@ -249,8 +249,8 @@ export default function Features() {
             <Box
               sx={(theme) => ({
                 m: 'auto',
-                width: 420,
-                height: 500,
+                width: 800,
+                height: 800,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundImage: 'var(--items-imageLight)',

@@ -22,7 +22,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 import ReactGA4 from 'react-ga4';
-import MyComponent from './Test';
 
 
 const useGA4PageTracking = () => {
@@ -132,8 +131,8 @@ function App() {
         </ListItem>
         <ListItem button component={RouterLink} to="/mentors">
           <Button color="inherit" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
-            <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>CORTEX</Typography>
-            <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>MENTORS</Typography>
+            <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Elite</Typography>
+            <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Coaches</Typography>
           </Button>
         </ListItem>
         <ListItem button component={RouterLink} to="/portal">
@@ -205,13 +204,15 @@ function App() {
                   <Box display="flex" style={{ marginLeft: '20px' }}> {/* Adjust marginLeft to control spacing */}
                     <Button color="inherit" component={RouterLink} to="/blog"                           style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}
                     >
-                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>CORTEX</Typography>
-                        <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>LEARN</Typography>
+                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Elite</Typography>
+                        <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Performance</Typography>
+                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Science</Typography>
+
                     </Button>
 
                     <Button color="inherit" component={RouterLink} to="/mentors" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
-                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>CORTEX</Typography>
-                        <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>MENTORS</Typography>
+                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Elite</Typography>
+                        <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Coaches</Typography>
                     </Button>
                     <Button color="inherit" component={RouterLink} to="/portal"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}                    >
                       PARENT PORTAL
@@ -219,7 +220,7 @@ function App() {
                     <Button color="inherit" component={RouterLink} to="/about"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}                    >
                       ABOUT US
                     </Button>
-                    <Button variant="outlined" color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', marginLeft: '800px', fontFamily: 'Notable, sans-serif', 
+                    <Button color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
                      }}                    >
                       SIGNUP
                     </Button>
@@ -288,25 +289,38 @@ function App() {
      <List>
        <ListItem>
          <Typography variant="body1">
-           <span style={{ backgroundColor: 'yellow' }}>Optimize</span> athletic performance with personalized guidance from top-tier experts.
+           1. <span style={{ backgroundColor: 'yellow' }}>Optimize</span> athletic performance with personalized guidance from top-tier performance scientists.
          </Typography>
        </ListItem>
 
        <ListItem>
          <Typography variant="body1">
-           Learn the <span style={{ backgroundColor: 'yellow' }}>secrets</span> behind successful college recruiting with insider tips and strategies.
+           2. Improve <span style={{ backgroundColor: 'yellow' }}>academic</span> performance with the help of elite tutors and coaches, tailored to your needs.
          </Typography>
        </ListItem>
 
        <ListItem>
          <Typography variant="body1">
-           Improve <span style={{ backgroundColor: 'yellow' }}>academic</span> performance with the help of elite tutors and coaches, tailored to your needs.
+           3. Develop an elite <span style={{ backgroundColor: 'yellow' }}>mindset</span> performance with the help of athletes who were champions in their sports.
          </Typography>
        </ListItem>
 
        <ListItem>
          <Typography variant="body1">
-           All backed by a <span style={{ backgroundColor: 'yellow' }}>custom</span> curriculum built by doctors and athletic professionals, ensuring a holistic approach.
+           4. Evidence-based <span style={{ backgroundColor: 'yellow' }}>nutritional</span> advice from athletic professionals and professional athletes.
+         </Typography>
+       </ListItem>
+
+       <ListItem>
+         <Typography variant="body1">
+           5. Learn the <span style={{ backgroundColor: 'yellow' }}>secrets</span> behind a successful college recruitment process with insider tips and strategies.
+         </Typography>
+       </ListItem>
+
+
+       <ListItem>
+         <Typography variant="body1">
+           6. All backed by a <span style={{ backgroundColor: 'yellow' }}>custom</span> curriculum built by doctors and athletic professionals, ensuring a holistic approach.
          </Typography>
        </ListItem>
      </List>
@@ -417,7 +431,6 @@ function App() {
       ></iframe>
     </div>} />
             <Route path="/pricing" element={<Pricing/>} />
-            <Route path="/info" element={<MyComponent/>} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route 
   path="/signup" 

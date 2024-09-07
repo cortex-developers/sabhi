@@ -14,7 +14,9 @@ import Person  from '@mui/icons-material/Person';
 import Book from '@mui/icons-material/Book';
 
 import community from './comm2.png'
-import courses from './courses.png'
+import courses from './courses3.png'
+import mentorship from './mentorship.png'
+
 const items = [
   {
     icon: <Laptop />,
@@ -37,8 +39,8 @@ const items = [
     title: '1:1 Mentorship',
     description:
       'Get personalized advice through a 30 minute 1:1 call with one of our elite mentors.',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+      imageLight: `url(${mentorship})`,
+      imageDark:`url(${mentorship})`,
   }
 ];
 

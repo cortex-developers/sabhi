@@ -41,7 +41,7 @@ const tiers = [
       'theCORTEX App & Community',
       'Cortex Courses',
       'Dedicated Mentor',
-      'Weekly 1:1 Mentorship Calls',
+      'Weekly 30 min. 1:1 Mentorship Calls',
     ],
     buttonText: 'Sign Up',
     buttonVariant: 'outlined',

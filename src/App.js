@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'reac
 import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem} from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import Pricing from './Pricing'
-import sports from './sports.png'
+import sports from './sports.jpg'
 import AboutUs from './AboutUs';
 import Features from './Features';
 import Steps from './Steps'
 import Why from './Why'
-import fy from './fourtyyard.mp4';
+import train from './train2.mp4';
 //import ella from './reel covers_20240903_202826_0000.png'
 import LogoNoText from './Group 82.png';
 import CortexMentors from './CortexMentors'
@@ -146,9 +146,9 @@ function App() {
           </Button>
         </ListItem>
         <ListItem button component={RouterLink} to="/signup">
-                    <Button variant="outlined" color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
+                    <Button color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
                      }}                    >
-                      SIGNUP
+                      SIGN UP
                     </Button>
         </ListItem>
       </List>
@@ -222,7 +222,7 @@ function App() {
                     </Button>
                     <Button color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
                      }}                    >
-                      SIGNUP
+                      SIGN UP
                     </Button>
                   </Box>
                 </>
@@ -240,16 +240,17 @@ function App() {
  <Box
  sx={{
    fontFamily: 'Notable, sans-serif',
-   minHeight: '90vh',
+   minHeight: '90vh', // Ensure the box takes up at least 90% of the viewport height
    display: 'flex',
    flexDirection: 'column',
    alignItems: 'center',
    justifyContent: 'center',
    textAlign: 'center',
    position: 'relative',
-   padding: { xs: '20px', md: '20px' }, // Reduced padding for mobile
+   padding: { xs: '10px', md: '20px' }, // Reduce padding for smaller screens
    overflow: 'hidden',
    backgroundColor: '#ffffff',
+   backgroundSize: 'cover',
    '&::before': {
      content: '""',
      position: 'absolute',
@@ -260,9 +261,22 @@ function App() {
      backgroundImage: `url(${sports})`,
      backgroundRepeat: 'repeat',
      backgroundSize: 'cover',
-     filter: 'grayscale(100%) opacity(0.15)',
+     filter: 'grayscale(30%) opacity(0.2)',
      zIndex: 0,
      pointerEvents: 'none',
+   },
+   '@media (max-width: 320px)': { // For smaller screens like iPhone SE
+     padding: '10px',
+     minHeight: '100vh', // Ensure it fully fits the viewport
+     '& h3': {
+       fontSize: '1.5rem', // Adjust typography size for smaller screens
+     },
+     '& h6': {
+       fontSize: '1rem',
+     },
+     '& .MuiListItem-root': {
+       fontSize: '0.9rem', // Adjust font size in list items
+     },
    },
  }}
 >
@@ -278,7 +292,7 @@ function App() {
    }}
  >
    {/* Text Section */}
-   <Box sx={{ flexBasis: '50%', padding: '20px', textAlign: { xs: 'center', md: 'left' } }}>
+   <Box sx={{ flexBasis: '50%', padding: '10px', textAlign: { xs: 'center', md: 'left' } }}>
      <Typography variant="h3" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1 }}>
        theCORTEX: ELITE PERFORMANCE FACTORY
      </Typography>
@@ -289,7 +303,7 @@ function App() {
      <List>
        <ListItem>
          <Typography variant="body1">
-           1. <span style={{ backgroundColor: 'yellow' }}>Optimize</span> athletic performance with personalized guidance from top-tier performance scientists.
+           1. Optimize <span style={{ backgroundColor: 'yellow' }}>athletic </span>performance with personalized guidance from top-tier performance scientists.
          </Typography>
        </ListItem>
 
@@ -301,7 +315,7 @@ function App() {
 
        <ListItem>
          <Typography variant="body1">
-           3. Develop an elite <span style={{ backgroundColor: 'yellow' }}>mindset</span> performance with the help of athletes who were champions in their sports.
+           3. Develop an elite <span style={{ backgroundColor: 'yellow' }}>mindset</span> with the help of athletes who were champions in their sports.
          </Typography>
        </ListItem>
 
@@ -317,10 +331,9 @@ function App() {
          </Typography>
        </ListItem>
 
-
        <ListItem>
          <Typography variant="body1">
-           6. All backed by a <span style={{ backgroundColor: 'yellow' }}>custom</span> curriculum built by doctors and athletic professionals, ensuring a holistic approach.
+           6. All backed by a <span style={{ backgroundColor: 'yellow' }}>custom curriculum</span> built by doctors and athletic professionals, ensuring a holistic approach.
          </Typography>
        </ListItem>
      </List>
@@ -339,7 +352,7 @@ function App() {
        <Slider {...settings}>
          <div>
            <video
-             src={fy}
+             src={train}
              alt="Slide 1"
              autoPlay
              muted
@@ -355,21 +368,6 @@ function App() {
              }}
            />
          </div>
-{/*          <div>
-           <img
-             src={ella}
-             alt="Slide 1"
-             style={{
-               width: '70%',
-               filter: 'brightness(1)',
-               opacity: '1',
-               borderRadius: '15px', // Rounded corners
-               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow effect
-               position: 'relative',
-               zIndex: 1,
-             }}
-           />
-         </div> */}
        </Slider>
      </Box>
    )}
@@ -424,7 +422,7 @@ function App() {
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/portal" element={    <div style={{ height: '100vh', overflow: 'hidden' }}>
       <iframe
-        src="https://cortexflex.copilot.app"
+        src="https://cortex.copilot.app"
         title="Parent Portal"
         style={{ width: '100%', height: '100%', border: 'none' }}
         allowFullScreen

@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import {
-  Modal, Typography, Box, IconButton, useMediaQuery, useTheme, Link, Autocomplete, TextField, CircularProgress
+  Typography, Box, IconButton, useMediaQuery, useTheme, Autocomplete, TextField, CircularProgress, Card, CardMedia
 } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+//import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import InfoIcon from '@mui/icons-material/Info';
+//import InfoIcon from '@mui/icons-material/Info';
 import ShareIcon from '@mui/icons-material/Share';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import ReactGA4 from 'react-ga4';
 import commentBox from 'commentbox.io';
 import './BlogPosts.css';
-
+import ps from './ps4.png'
+import psmobile from './ps5.png'
 const PageWithComments = ({ uniqueId }) => {
   useEffect(() => {
     // This ensures each iframe gets a unique URL and thus a unique comment section
@@ -60,13 +61,14 @@ const LoadableImage = ({ src, alt, style, height = '300px' }) => {
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
+  const isMobile = useMediaQuery('(max-width:600px)');
   const [isLoading, setIsLoading] = useState(true); // State to track loading
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
   const [tags, setTags] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
-  const [open, setOpen] = useState(true);
+  //const [open, setOpen] = useState(true);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
 
@@ -145,28 +147,6 @@ const BlogPosts = () => {
     return () => window.removeEventListener('hashchange', handleHashChange, false);
   }, [posts, initialNavigationDone]);
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      // Automatically close the modal if there's a hash in the URL
-      if (window.location.hash) {
-        setOpen(false);
-      } else {
-        // Optionally open it if there's no hash, depending on your UX needs
-        setOpen(true);
-      }
-    };
-
-    // Call when the component mounts
-    handleHashChange();
-
-    // Listen for hash changes to adjust modal visibility accordingly
-    window.addEventListener('hashchange', handleHashChange);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
   const toggleExpand = (id) => {
 
     setPosts(posts.map(post => {
@@ -199,29 +179,13 @@ const BlogPosts = () => {
     setSelectedTags(values.map(v => v.id));
   };
 
-  const handleClose = () => setOpen(false); // Function to close/minimize the modal
   if (isLoading) {
     return <CircularProgress />;
   }
-  // Modal style
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '70%', // Adjusted width for better mobile view
-    maxWidth: 375, // Added maxWidth for responsiveness 
-    maxHeight: 500,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-    overflowY: 'auto'
-  };
 
   return (
     <div>
-      <Modal
+{/*       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -265,7 +229,7 @@ const BlogPosts = () => {
         <IconButton onClick={() => setOpen(true)} aria-label="show introduction" color="primary" size="small">
           <InfoIcon />
         </IconButton>
-        {/*<Typography
+        <Typography
           variant="caption"
           sx={{
             fontFamily: 'Kosugi Maru, sans-serif',
@@ -274,22 +238,74 @@ const BlogPosts = () => {
           }}
         >
           Show Introduction
-        </Typography> */}
-      </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center', p: 2, width: 'auto' }}>
-        <Autocomplete
-          multiple
-          id="tags-filter"
-          options={tags}  // Assuming tags is an array of objects like [{ id: 'tag1', name: 'Tag 1' }, ...]
-          getOptionLabel={(option) => option.name}  // Specifies how to get the string label for each option
-          onChange={handleTagChange}  // Handle changes
-          renderInput={(params) => <TextField {...params} label="Filter by tags" placeholder="Tags" sx={{minWidth: '250px' }}/>}
-          value={tags.filter(tag => selectedTags.includes(tag.id))}  // Controls the current value based on selected tags
-        />
-      </Box>
+        </Typography> 
+      </Box> */}
+      <Box
+      sx={{
+        width: '98vw',
+        height: '50vh',
+        padding: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'top',
+      }}
+    >
+
+        <Card
+          sx={{
+            marginBottom: '20px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: '24px', // More rounded corners
+            boxShadow: 'none', // Remove shadow
+            background: 'linear-gradient(135deg, rgba(101, 137, 198, 0.95), rgba(51, 87, 158, 0.9))',  // Darker, consistent gradient for first card
+            backgroundBlendMode: 'multiply', // Add a matte effect to the gradient
+          }}
+        >
+          <CardMedia
+            component="img"
+            image={isMobile ? psmobile : ps}
+            sx={{
+              width: '100%',
+              height: '100%', // Ensure the image takes up the full card space
+              objectFit: 'overflow', // Prevent cropping of images
+              borderRadius: 'inherit', // Ensure image corners match card corners
+            }}
+          />
+        </Card>
+    </Box>
+    <Box sx={{ display: 'flex', justifyContent: 'center', p: 2, width: 'auto' }}>
+  <Autocomplete
+    multiple
+    id="tags-filter"
+    sx={{justifyContent: 'top', width: '80%'}}
+    options={tags}  // Assuming tags is an array of objects like [{ id: 'tag1', name: 'Tag 1' }, ...]
+    getOptionLabel={(option) => option.name}  // Specifies how to get the string label for each option
+    onChange={handleTagChange}  // Handle changes
+    renderInput={(params) => (
+      <TextField
+        {...params}
+        label="I want to learn about"
+        placeholder="Start typing to filter"
+        sx={{ minWidth: '250px' }}
+      />
+    )}
+    value={tags.filter(tag => selectedTags.includes(tag.id))}  // Controls the current value based on selected tags
+  />
+</Box>
       <Box sx={{ width: '80%', maxWidth: 768, mx: 'auto', mt: 4, px: 2 }}>
         {filteredPosts.map((post) => (
           <Box key={post.sys.id} id={slugify(post.fields.title)} sx={{ mb: 5 }}>
+            <Typography
+              variant="h4"
+              component="h2"
+              sx={{ my: 2, fontWeight: 'bold', cursor: 'pointer' }}
+              onClick={() => toggleExpand(post.sys.id)} // Make title clickable to expand/collapse post body
+            >
+              {post.fields.title}
+            </Typography>
             {post.fields.titleImageUrl && (
               <LoadableImage
                 src={post.fields.titleImageUrl}
@@ -300,22 +316,12 @@ const BlogPosts = () => {
                 onClick={() => toggleExpand(post.sys.id)} // Make image clickable to expand/collapse post body
               />
             )}
-            <Typography
-              variant="h4"
-              component="h2"
-              sx={{ my: 2, fontWeight: 'bold', cursor: 'pointer' }}
-              onClick={() => toggleExpand(post.sys.id)} // Make title clickable to expand/collapse post body
-            >
-              {post.fields.title}
-            </Typography>
             <Typography variant="subtitle1" color="textSecondary" sx={{ mb: 2 }}>
               Published on: {new Date(post.fields.publishedOn).toLocaleDateString()} by
               {post.fields.authors.map((author, index) => (
                 <span key={slugify(author)}>
                   {index > 0 && ", "} {/* Add a comma before names except the first one */}
-                  <Link href={`/bios#${slugify(author)}`} style={{ textDecoration: 'none' }}>
                     {author}
-                  </Link>
                 </span>
               ))}
             </Typography>

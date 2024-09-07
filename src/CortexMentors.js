@@ -20,7 +20,7 @@ const CortexMentors = () => {
         name: 'Nate Roy',
         background: 'McGill Football Player & MD/PhD Student',
         team: 'Mental Health/Performance',
-        bio: 'Nate is passionate about helping athletes reach their fullest potential. His research and mission with the organization is to improve student-athlete outcomes in game and in the classroom. As one of the few PhD student-athletes in the world, he knows what it takes to reach the height of multiple domains.',
+        bio: 'Nate is passionate about helping athletes reach their fullest potential. His research and mission with the organization is to improve student-athlete outcomes in the game, in the clasroom, and in life. As one of the few PhD student-athletes in the world, he knows what it takes to reach the height of multiple domains.',
         image: natementor, // Replace with actual image URL
         teamColor: 'rgba(237, 27, 47)', // Customizable team text color (steel blue)
         shadowColor: 'rgba(237, 27, 47, 0.3)' // Customizable shadow color (steel blue with transparency)
@@ -83,7 +83,7 @@ const CortexMentors = () => {
         name: 'Ella Stroehmann',
         background: 'D1 Volleyball Player & Pre-med Student',
         team: 'Nutrition & Supplementation',
-        bio: 'As a pre-med student-athlete, Ella knows the importance of taking care of your health - to that end, she aims to share how she fuels her performances inside and outside the classroom with thCORTEX Community',
+        bio: 'As a pre-med student-athlete, Ella knows the importance of taking care of your health - to that end, she aims to share how she fuels her performances inside and outside the classroom with theCORTEX Community.',
         image: ellamentor, // Replace with actual image URL
         teamColor: 'rgba(0, 61, 165)', // Customizable team text color (lime green)
         shadowColor: 'rgba(0, 61, 165, 0.3)' // Customizable shadow color (lime green with transparency)

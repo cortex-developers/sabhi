@@ -13,9 +13,9 @@ import Laptop from '@mui/icons-material/Laptop';
 import Person  from '@mui/icons-material/Person';
 import Book from '@mui/icons-material/Book';
 
-import community from './comm2.png'
-import courses from './courses3.png'
-import mentorship from './mentorship.png'
+import community from './comm3.png'
+import courses from './courses5.png'
+import mentorship from './mentorship2.png'
 
 const items = [
   {
@@ -30,7 +30,7 @@ const items = [
     icon: <Book />,
     title: 'Cortex Courses',
     description:
-      'Cortex Courses teaches your student-athlete how to apply intangibles specifically toward their current goal or endeavor. These courses are each offered weekly or bi-weekly and span broad curricula such that continual progress is found each week',
+      'Cortex Courses teach your student-athlete how to apply intangibles specifically toward their current goal or endeavor. These courses are each offered weekly or bi-weekly and span broad curricula such that continual progress is found each week',
     imageLight: `url(${courses})`,
     imageDark:`url(${courses})`,
   },
@@ -92,9 +92,11 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
         <Box
           sx={(theme) => ({
             mb: 2,
-            backgroundSize: 'cover',
+            backgroundSize: 'contain', // Maintain full image within container
             backgroundPosition: 'center',
-            minHeight: 280,
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            aspectRatio: '1 / 1',  // Ensure 1:1 aspect ratio
             backgroundImage: 'var(--items-imageLight)',
             ...theme.applyStyles('dark', {
               backgroundImage: 'var(--items-imageDark)',
@@ -124,7 +126,6 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
     </Box>
   );
 }
-
 MobileLayout.propTypes = {
   handleItemClick: PropTypes.func.isRequired,
   selectedFeature: PropTypes.shape({

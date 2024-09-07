@@ -9,7 +9,7 @@ import AboutUs from './AboutUs';
 import Features from './Features';
 import Steps from './Steps'
 import Why from './Why'
-import train from './train2.mp4';
+import train from './train4.mp4';
 //import ella from './reel covers_20240903_202826_0000.png'
 import LogoNoText from './Group 82.png';
 import CortexMentors from './CortexMentors'
@@ -327,7 +327,7 @@ function App() {
 
        <ListItem>
          <Typography variant="body1">
-           5. Learn the <span style={{ backgroundColor: 'yellow' }}>secrets</span> behind a successful college recruitment process with insider tips and strategies.
+           5. Learn the secrets behind a successful <span style={{ backgroundColor: 'yellow' }}>college recruitment</span> process with insider tips and strategies.
          </Typography>
        </ListItem>
 
@@ -410,8 +410,9 @@ function App() {
 <div id="steps-section">
         <Steps />
       </div>
+      <Features></Features>
+
 <Why></Why>
-<Features></Features>
 <div id="pricing-section">
         <Pricing />
       </div>

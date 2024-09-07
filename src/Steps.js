@@ -159,7 +159,7 @@ const Steps = () => {
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
         }}
       >
-        Sign Up
+        Interested in joining theCORTEX? Book a free performance consult call here!
       </Button>
     </Box>
   );

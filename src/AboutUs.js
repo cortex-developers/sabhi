@@ -17,7 +17,7 @@ const AboutUs = () => {
                 Dear Cortex Family,
               </Typography>
               <Typography variant="body1" paragraph>
-                Cortex Flex began in March 2024 as the Cortex Flex Athlete Alliance, born out of a vision to bridge a crucial gap between sports and science. By May 2024, we earned our 501(c)(3) nonprofit status and quickly began making an impact. In just three months, we were able to secure thousands of dollars in donations, host a clinic for over 20 athletes, and launch a successful podcast and media initiative. We proudly partnered with well-known corporate sponsors like Coca-Cola and Kodiak.
+                Cortex Flex began in March 2024 as the Cortex Flex Athlete Alliance, born out of a vision to bridge a crucial gap between sports and science. By May 2024, we earned our 501(c)(3) nonprofit status and quickly began making an impact. In just three months, we were able to secure thousands of dollars in donations, host a clinic for 8 school districts, and launch a successful podcast and media initiative. We proudly partnered with well-known corporate sponsors like Coca-Cola and Kodiak.
               </Typography>
               <Typography variant="body1" paragraph>
                 By August 2024, it became evident that the demand for our mission had outgrown our nonprofit status. This realization led us to transition into Cortex Flex Inc., with our flagship product, theCORTEX. Our new platform is dedicated to education and mentorship, staying true to our founding principle: using science to achieve elite outcomes in the classroom, on the field, and beyond.
@@ -32,7 +32,7 @@ const AboutUs = () => {
                 <strong>Nate Roy</strong>
               </Typography>
               <Typography variant="body1" color="textSecondary">
-                Founder, Cortex Flex
+                CEO and Founder, Cortex Flex
               </Typography>
             </Grid>
 

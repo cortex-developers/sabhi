@@ -14,15 +14,6 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const tiers = [
   {
-    title: 'theCORTEX Community',
-    price: '20*',
-    description: [
-      'theCORTEX App & Community',
-    ],
-    buttonText: 'Sign up',
-    buttonVariant: 'outlined',
-  },
-  {
     title: 'theCORTEX Academy',
     subheader: 'Recommended',
     price: '120*',

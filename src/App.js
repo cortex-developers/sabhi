@@ -9,7 +9,7 @@ import AboutUs from './AboutUs';
 import Features from './Features';
 import Steps from './Steps'
 import Why from './Why'
-import train from './train4.mp4';
+import train from './train5.mp4';
 //import ella from './reel covers_20240903_202826_0000.png'
 import LogoNoText from './Group 82.png';
 import CortexMentors from './CortexMentors'
@@ -19,7 +19,7 @@ import Disclaimer from './Disclaimer'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import ArticlePage from './ArticlePage';
 
 import ReactGA4 from 'react-ga4';
 
@@ -162,9 +162,9 @@ function App() {
       </style>
     <ThemeProvider theme={theme}>
       <Router>
-        <Box display="flex" flexDirection="column" minHeight="100vh"> {/* Adjusted for flex layout */}
+        <Box display="flex" flexDirection="column" minHeight="100vh" > {/* Adjusted for flex layout */}
           {/* Enhanced Navigation Bar */}
-          <AppBar position="static">
+          <AppBar position="static" sx={{zIndex: 1}}>
             <Toolbar style={{ justifyContent: 'center' }}> {/* Center the Toolbar items */}
               {/* Logo Items Box, adjust margin to slightly move it to the right */}
               <Box display="flex" alignItems="center" style={{ marginRight: '10px' }}> {/* Adjust marginRight to control spacing */}
@@ -237,7 +237,114 @@ function App() {
 
  // Import your custom styles
  <div>
- <Box
+ {isMobile ? (
+  // Mobile Version
+  <Box
+    sx={{
+      height: '100vh', // Full viewport height for mobile
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center', // Center content vertically
+      padding: '3px',
+      backgroundColor: '#ffffff',
+      textAlign: 'center',
+      '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundImage: `url(${sports})`,
+      backgroundRepeat: 'repeat',
+      backgroundSize: 'cover',
+      filter: 'grayscale(30%) opacity(0.2)',
+      zIndex: 0,
+      pointerEvents: 'none',
+    }
+    }}
+  >
+    {/* Mobile-specific content */}
+    <Typography variant="h4" sx={{ marginBottom: '0.9rem', fontSize: '1.5rem', fontFamily: 'Notable, sans-serif' }}>
+      theCORTEX: ELITE PERFORMANCE FACTORY
+    </Typography>
+    <Typography variant="body1" sx={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
+      A comprehensive mentorship and educational platform for your student-athlete:
+    </Typography>
+
+    <List sx={{ padding: '0 5px' }}>
+      <ListItem>
+        <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
+          1. Optimize <span style={{ backgroundColor: 'yellow' }}>athletic</span> performance with personalized guidance from top-tier performance scientists.
+        </Typography>
+      </ListItem>
+      <ListItem>
+        <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
+          2. Improve <span style={{ backgroundColor: 'yellow' }}>academic</span> performance with the help of elite tutors and coaches, tailored to your needs.
+        </Typography>
+      </ListItem>
+      <ListItem>
+        <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
+          3. Develop an elite <span style={{ backgroundColor: 'yellow' }}>mindset</span> with the help of athletes who were champions in their sports.
+        </Typography>
+      </ListItem>
+      <ListItem>
+         <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
+           4. Evidence-based <span style={{ backgroundColor: 'yellow' }}>nutritional</span> advice from athletic professionals and professional athletes.
+         </Typography>
+       </ListItem>
+
+       <ListItem>
+         <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
+           5. Learn the secrets behind a successful <span style={{ backgroundColor: 'yellow' }}>college recruitment</span> process with insider tips and strategies.
+         </Typography>
+       </ListItem>
+
+       <ListItem>
+         <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
+           6. All backed by a <span style={{ backgroundColor: 'yellow' }}>custom curriculum</span> built by doctors and athletic professionals, ensuring a holistic approach.
+         </Typography>
+       </ListItem>
+    </List>
+
+    {/* Mobile-specific buttons */}
+    <Box sx={{ marginTop: '2rem' }}>
+      <Button
+        variant="contained"
+        onClick={() => document.getElementById('steps-section').scrollIntoView()}
+        sx={{
+          margin: '0 5px',
+          padding: '10px 15px',
+          fontSize: '0.9rem',
+          backgroundColor: '#E75225',
+          color: 'white',
+          borderRadius: '10px',
+          '&:hover': { backgroundColor: '#d6451c' },
+        }}
+      >
+        Get Started
+      </Button>
+      <Button
+        variant="contained"
+        onClick={() => document.getElementById('pricing-section').scrollIntoView()}
+        sx={{
+          margin: '0 5px',
+          padding: '10px 15px',
+          fontSize: '0.9rem',
+          backgroundColor: '#6589C6',
+          color: 'white',
+          borderRadius: '10px',
+          '&:hover': { backgroundColor: '#5B7FBC' },
+        }}
+      >
+        Pricing
+      </Button>
+    </Box>
+  </Box>
+) : (
+  // Desktop/Tablet Version
+<Box
  sx={{
    fontFamily: 'Notable, sans-serif',
    minHeight: '90vh', // Ensure the box takes up at least 90% of the viewport height
@@ -286,7 +393,7 @@ function App() {
      flexDirection: { xs: 'column', md: 'row' }, // Stacks on mobile, row on desktop
      alignItems: 'center',
      justifyContent: 'center',
-     width: '100%',
+     width: isMobile? '80%':'100%',
      maxWidth: '1200px',
      marginBottom: '2rem',
    }}
@@ -407,6 +514,9 @@ function App() {
    </Button>
  </Box>
 </Box>
+)}
+
+
 <div id="steps-section">
         <Steps />
       </div>
@@ -421,6 +531,7 @@ function App() {
             <Route path="/mentors" element={<CortexMentors/>} />
             <Route path="/blog" element={<BlogPosts/>} />
             <Route path="/about" element={<AboutUs/>} />
+            <Route path="/article/:id/:slug" element={<ArticlePage />} /> {/* Route with id and slug */}
             <Route path="/portal" element={    <div style={{ height: '100vh', overflow: 'hidden' }}>
       <iframe
         src="https://cortex.copilot.app"

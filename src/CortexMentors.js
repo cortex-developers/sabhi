@@ -14,6 +14,12 @@ import rachelmentor from './rachelmentor.jpg'
 import joementor from './joementor.jpeg'
 import jesusmentor from './jesusmentor.png'
 import brookementor from './brookementor.jpg'
+import mayamentor from './mayamentor.png'
+import onomementor from './onomementor.png'
+import kevinmentor from './kevinmentor.png'
+import mattmentor from './mattmentor.jpg'
+import daniellementor from './daniellementor.png'
+
 const CortexMentors = () => {
   const mentors = [
     {
@@ -42,6 +48,24 @@ const CortexMentors = () => {
         image: ashlynmentor, // Replace with actual image URL
         teamColor: 'rgba(102, 0, 0)', // Customizable team text color (steel blue)
         shadowColor: 'rgba(102, 0, 0, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
+      {
+        name: 'Matt Shumway',
+        background: '2nd Year Medical Student',
+        team: 'Nutrition & Supplementation',
+        bio: `Matt's mission in Cortex Flex is to combat the rampant misinformation in the nutrition & supplementation space through digestible, applicable nutrition lessons and programs tailored for student-athletes.`,
+        image: mattmentor, // Replace with actual image URL
+        teamColor: 'rgba(248, 76, 30)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(248, 76, 30, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
+      {
+        name: 'Kevin Wiz, OMS2',
+        background: '2nd Year Medical Student',
+        team: 'Physical Health/Performance',
+        bio: `Kevin's mission in Cortex Flex is to help student-athletes become more informed about their bodies and make informed decisions about how and when to push it to reach their goals.`,
+        image: kevinmentor, // Replace with actual image URL
+        teamColor: 'rgba(207, 196, 147)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(207, 196, 147, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
     {
       name: 'Mya Murray',
@@ -115,6 +139,33 @@ const CortexMentors = () => {
         image: brookementor, // Replace with actual image URL
         teamColor: 'rgba(30,22,86)', // Customizable team text color (lime green)
         shadowColor: 'rgba(30,22,86, 0.3)' // Customizable shadow color (lime green with transparency)
+      },
+      {
+        name: 'Maya Haykal, MD',
+        background: 'PM&R Resident & Former D1 Tennis Player',
+        team: 'Physical Health/Performance',
+        bio: 'As a PM&R Resident, Maya is passionate about helping athletes understand the importance of rest and how to optimize their recovery.',
+        image: mayamentor, // Replace with actual image URL
+        teamColor: 'rgba(0,67,51)', // Customizable team text color (lime green)
+        shadowColor: 'rgba(0,67,51, 0.3)' // Customizable shadow color (lime green with transparency)
+      },
+      {
+        name: 'Onome Kessington',
+        background: 'Former D1 Football Player',
+        team: 'Physical Health/Performance',
+        bio: 'As a former D1 Defensive Lineman, Onome knows what it takes to compete against the strongest and is passionate about helping athletes become stronger to reach their goals.',
+        image: onomementor, // Replace with actual image URL
+        teamColor: 'rgba(166, 25, 46)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(166, 25, 46, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
+      {
+        name: 'Danielle Vitale',
+        background: '4th Year Medical Student',
+        team: 'Physical Health/Performance',
+        bio: 'As a 4th year medical student going through clinical rotations, Danielle has seen many preventable injuries in student-athletes and so aims to inform and educate student athletes about the best ways to prevent injuries.',
+        image: daniellementor, // Replace with actual image URL
+        teamColor: 'rgba(138, 141, 143)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(138, 141, 143, 0.3)' // Customizable shadow color (steel blue with transparency)
       }
     // Add more mentors here as needed
   ];

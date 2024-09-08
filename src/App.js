@@ -9,7 +9,7 @@ import AboutUs from './AboutUs';
 import Features from './Features';
 import Steps from './Steps'
 import Why from './Why'
-import train from './train5.mp4';
+import train from './train6.mp4';
 //import ella from './reel covers_20240903_202826_0000.png'
 import LogoNoText from './Group 82.png';
 import CortexMentors from './CortexMentors'

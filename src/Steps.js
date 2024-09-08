@@ -1,11 +1,18 @@
 import React from 'react';
-import { Box, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import { Box, Typography, Button, Grid, Card, CardContent, useMediaQuery } from '@mui/material';
 import { useNavigate } from 'react-router';
+
 
 const Steps = () => {
   const navigate = useNavigate(); // Initialize the hook
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
-    <Box sx={{ width: '100%', padding: '20px', textAlign: 'center' }}>
+    <Box sx={{ 
+      width: isMobile ? '90%' : '97%', 
+      padding: '20px', 
+      textAlign: 'center', 
+      justifyItems: 'center'}}>
       {/* Title */}
       <Typography variant="h4" sx={{ marginBottom: '4rem', fontWeight: 'bold', color: 'black', fontFamily: 'Notable, sans-serif' }}>
         Getting Started
@@ -48,7 +55,7 @@ const Steps = () => {
                 Step 1
               </Typography>
               <Typography variant="h6" sx={{ marginBottom: '1rem', color: '#333' }}>
-                Sign Up
+                Schedule a free performance consult.
               </Typography>
               <Typography variant="body2" sx={{ color: '#666' }}>
                 Sign up by pressing the button below. It only takes a few minutes!
@@ -136,7 +143,7 @@ const Steps = () => {
                 Step 3
               </Typography>
               <Typography variant="h6" sx={{ marginBottom: '1rem', color: '#333' }}>
-                Start Using
+                Start the journey towards your athlete's goals!
               </Typography>
               <Typography variant="body2" sx={{ color: '#666' }}>
                 Create an account on our Parent Portal (where the scholarship application is also available )
@@ -159,7 +166,7 @@ const Steps = () => {
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
         }}
       >
-        Interested in joining theCORTEX? Book a free performance consult call here!
+        Book a free performance consult call here!
       </Button>
     </Box>
   );

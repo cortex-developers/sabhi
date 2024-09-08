@@ -32,15 +32,6 @@ const CortexMentors = () => {
         shadowColor: 'rgba(237, 27, 47, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
       {
-        name: 'Tyler Thiele, DPT',
-        background: 'Doctor of Physical Therapy',
-        team: 'Physical Health/Performance',
-        bio: `Tyler's mission in Cortex Flex is to reduce injuries and optimize physical health through the getting basics right and creating a solid foundation for your student-athlete.`,
-        image: tylermentor, // Replace with actual image URL
-        teamColor: 'rgba(1, 49, 89)', // Customizable team text color (steel blue)
-        shadowColor: 'rgba(1, 49, 89, 0.3)' // Customizable shadow color (steel blue with transparency)
-      },
-      {
         name: 'Ashlyn Kane',
         background: 'D1 Soccer Player & Graduate Student',
         team: 'College/Career Prep',
@@ -49,6 +40,16 @@ const CortexMentors = () => {
         teamColor: 'rgba(102, 0, 0)', // Customizable team text color (steel blue)
         shadowColor: 'rgba(102, 0, 0, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
+      {
+        name: 'Mya Murray',
+        background: 'D1 Basketball Player & MPH Student',
+        team: 'College/Career Prep',
+        bio: 'An Ivy League grad, Mya knows what it takes to be academically succesfully while being a dedicated athlete. She aims to help student-athletes find a balance in pursuing their multi-dimensional lives.',
+        image: myamentor, // Replace with actual image URL
+        teamColor: 'rgba(20, 35, 75)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(20, 35, 75, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
+
       {
         name: 'Matt Shumway',
         background: '2nd Year Medical Student',
@@ -59,6 +60,15 @@ const CortexMentors = () => {
         shadowColor: 'rgba(248, 76, 30, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
       {
+        name: 'Danielle Vitale',
+        background: '4th Year Medical Student',
+        team: 'Physical Health/Performance',
+        bio: 'As a 4th year medical student going through clinical rotations, Danielle has seen many preventable injuries in student-athletes and so aims to inform and educate student athletes about the best ways to prevent injuries.',
+        image: daniellementor, // Replace with actual image URL
+        teamColor: 'rgba(138, 141, 143)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(138, 141, 143, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
+      {
         name: 'Kevin Wiz, OMS2',
         background: '2nd Year Medical Student',
         team: 'Physical Health/Performance',
@@ -67,15 +77,33 @@ const CortexMentors = () => {
         teamColor: 'rgba(207, 196, 147)', // Customizable team text color (steel blue)
         shadowColor: 'rgba(207, 196, 147, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
-    {
-      name: 'Mya Murray',
-      background: 'D1 Basketball Player & MPH Student',
-      team: 'College/Career Prep',
-      bio: 'An Ivy League grad, Mya knows what it takes to be academically succesfully while being a dedicated athlete. She aims to help student-athletes find a balance in pursuing their multi-dimensional lives.',
-      image: myamentor, // Replace with actual image URL
-      teamColor: 'rgba(20, 35, 75)', // Customizable team text color (steel blue)
-      shadowColor: 'rgba(20, 35, 75, 0.3)' // Customizable shadow color (steel blue with transparency)
-    },
+      {
+        name: 'Tyler Thiele, DPT',
+        background: 'Doctor of Physical Therapy',
+        team: 'Physical Health/Performance',
+        bio: `Tyler's mission in Cortex Flex is to reduce injuries and optimize physical health through the getting basics right and creating a solid foundation for your student-athlete.`,
+        image: tylermentor, // Replace with actual image URL
+        teamColor: 'rgba(1, 49, 89)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(1, 49, 89, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
+      {
+        name: 'Maya Haykal, MD',
+        background: 'PM&R Resident & Former D1 Tennis Player',
+        team: 'Physical Health/Performance',
+        bio: 'As a PM&R Resident, Maya is passionate about helping athletes understand the importance of rest and how to optimize their recovery.',
+        image: mayamentor, // Replace with actual image URL
+        teamColor: 'rgba(0,67,51)', // Customizable team text color (lime green)
+        shadowColor: 'rgba(0,67,51, 0.3)' // Customizable shadow color (lime green with transparency)
+      },
+      {
+        name: 'Onome Kessington',
+        background: 'Former D1 Football Player',
+        team: 'Physical Health/Performance',
+        bio: 'As a former D1 Defensive Lineman, Onome knows what it takes to compete against the strongest and is passionate about helping athletes become stronger to reach their goals.',
+        image: onomementor, // Replace with actual image URL
+        teamColor: 'rgba(166, 25, 46)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(166, 25, 46, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
     {
         name: 'Sophie Calabrese',
         background: 'National-level Rower',
@@ -103,17 +131,7 @@ const CortexMentors = () => {
         teamColor: 'rgba(155,221,255)', // Customizable team text color (lime green)
         shadowColor: 'rgba(155,221,255, 0.3)' // Customizable shadow color (lime green with transparency)
       },
-    {
-        name: 'Ella Stroehmann',
-        background: 'D1 Volleyball Player & Pre-med Student',
-        team: 'Nutrition & Supplementation',
-        bio: 'As a pre-med student-athlete, Ella knows the importance of taking care of your health - to that end, she aims to share how she fuels her performances inside and outside the classroom with theCORTEX Community.',
-        image: ellamentor, // Replace with actual image URL
-        teamColor: 'rgba(0, 61, 165)', // Customizable team text color (lime green)
-        shadowColor: 'rgba(0, 61, 165, 0.3)' // Customizable shadow color (lime green with transparency)
-      },
-
-    {
+      {
         name: 'Sophia Simenz',
         background: 'D1 Rower & Neuroscience Student',
         team: 'Mental Health/Performance ',
@@ -122,14 +140,14 @@ const CortexMentors = () => {
         teamColor: 'rgba(155,221,255)', // Customizable team text color (lime green)
         shadowColor: 'rgba(155,221,255, 0.3)' // Customizable shadow color (lime green with transparency)
       },
-      {
-        name: 'Jesus Salazar',
-        background: 'Professional Soccer Player',
-        team: 'Physical Health/Performance',
-        bio: 'As a professional athlete, Jesus has suceeded where many others have failed and has learned a few tips and tricks along the way that can give your student athlete an edge.',
-        image: jesusmentor, // Replace with actual image URL
-        teamColor: 'rgba(30,22,86)', // Customizable team text color (lime green)
-        shadowColor: 'rgba(30,22,86, 0.3)' // Customizable shadow color (lime green with transparency)
+    {
+        name: 'Ella Stroehmann',
+        background: 'D1 Volleyball Player & Pre-med Student',
+        team: 'Nutrition & Supplementation',
+        bio: 'As a pre-med student-athlete, Ella knows the importance of taking care of your health - to that end, she aims to share how she fuels her performances inside and outside the classroom with theCORTEX Community.',
+        image: ellamentor, // Replace with actual image URL
+        teamColor: 'rgba(0, 61, 165)', // Customizable team text color (lime green)
+        shadowColor: 'rgba(0, 61, 165, 0.3)' // Customizable shadow color (lime green with transparency)
       },
       {
         name: 'Brooke Miller',
@@ -140,33 +158,20 @@ const CortexMentors = () => {
         teamColor: 'rgba(30,22,86)', // Customizable team text color (lime green)
         shadowColor: 'rgba(30,22,86, 0.3)' // Customizable shadow color (lime green with transparency)
       },
+
       {
-        name: 'Maya Haykal, MD',
-        background: 'PM&R Resident & Former D1 Tennis Player',
+        name: 'Jesus Salazar',
+        background: 'Professional Soccer Player',
         team: 'Physical Health/Performance',
-        bio: 'As a PM&R Resident, Maya is passionate about helping athletes understand the importance of rest and how to optimize their recovery.',
-        image: mayamentor, // Replace with actual image URL
-        teamColor: 'rgba(0,67,51)', // Customizable team text color (lime green)
-        shadowColor: 'rgba(0,67,51, 0.3)' // Customizable shadow color (lime green with transparency)
+        bio: 'As a professional athlete, Jesus has suceeded where many others have failed and has learned a few tips and tricks along the way that can give your student athlete an edge.',
+        image: jesusmentor, // Replace with actual image URL
+        teamColor: 'rgba(30,22,86)', // Customizable team text color (lime green)
+        shadowColor: 'rgba(30,22,86, 0.3)' // Customizable shadow color (lime green with transparency)
       },
-      {
-        name: 'Onome Kessington',
-        background: 'Former D1 Football Player',
-        team: 'Physical Health/Performance',
-        bio: 'As a former D1 Defensive Lineman, Onome knows what it takes to compete against the strongest and is passionate about helping athletes become stronger to reach their goals.',
-        image: onomementor, // Replace with actual image URL
-        teamColor: 'rgba(166, 25, 46)', // Customizable team text color (steel blue)
-        shadowColor: 'rgba(166, 25, 46, 0.3)' // Customizable shadow color (steel blue with transparency)
-      },
-      {
-        name: 'Danielle Vitale',
-        background: '4th Year Medical Student',
-        team: 'Physical Health/Performance',
-        bio: 'As a 4th year medical student going through clinical rotations, Danielle has seen many preventable injuries in student-athletes and so aims to inform and educate student athletes about the best ways to prevent injuries.',
-        image: daniellementor, // Replace with actual image URL
-        teamColor: 'rgba(138, 141, 143)', // Customizable team text color (steel blue)
-        shadowColor: 'rgba(138, 141, 143, 0.3)' // Customizable shadow color (steel blue with transparency)
-      }
+
+
+
+
     // Add more mentors here as needed
   ];
 

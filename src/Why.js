@@ -20,7 +20,6 @@ const Why = () => {
       sx={{
         width: '100vw',
         height: '150vh',
-        padding: '20px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -30,22 +29,38 @@ const Why = () => {
       <Typography
         variant="h4"
         sx={{
-          marginBottom: '4rem',
+          marginBottom: '1rem',
           fontWeight: 'bold',
-          color: '#333',
+          color: 'black',
           fontFamily: 'Notable, sans-serif',
           textAlign: 'center',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         Why Cortex?
       </Typography>
+      <Typography
+        variant="subtitle2"
+        sx={{
+          width: isMobile ? '70%' : '90%',
+          marginBottom: '2rem',
+          color: 'gray',
+          fontFamily: 'Monteserrat, sans-serif',
+          fontSize: isMobile ? '0.9rem' :'1.7rem',
+          textAlign: 'center',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+Our doctors and scientists provide elite performance guidance that replaces the misinformation of social media. Our athlete mentors motivate learning and application uniquely due utilizing their high understanding of the student-athlete experience.      </Typography>
 
       {/* Map through either images for desktop or text for mobile */}
       {(isMobile ? mobileTexts : desktopImages).map((content, index) => (
         <Card
           key={index}
           sx={{
-            width: isMobile ? '100%' : '80%', // Cards take up 80% of the width on desktop, 100% on mobile
+            width: isMobile ? '70%' : '90%', // Cards take up 80% of the width on desktop, 100% on mobile
             aspectRatio: isMobile ? '1 / 1' : '2 / 1', // 1:1 aspect ratio for mobile, 2:1 for desktop
             marginBottom: '20px',
             display: 'flex',

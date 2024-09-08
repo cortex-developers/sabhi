@@ -90,7 +90,7 @@ const BlogPosts = () => {
     >
       <Box sx={{
         width: isMobile? '90vw' : '98vw',
-        height: isMobile? '30vh' : '50vh',
+        height: isMobile? '30vh' : '65vh',
         padding: '20px',
         display: 'flex',
         flexDirection: 'column',
@@ -117,7 +117,7 @@ const BlogPosts = () => {
         color: 'white',
         fontWeight: 'bold',
         textAlign: 'center',
-        fontSize: '1.7rem', // Adjust the font size for mobile
+        fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.7rem' },
         fontFamily: 'Notable, sans-serif',
       }}
     >

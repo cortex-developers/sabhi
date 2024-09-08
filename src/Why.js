@@ -79,6 +79,7 @@ Our doctors and scientists provide elite performance guidance that replaces the 
             <Typography
               variant="h6"
               sx={{ color: 'white', textAlign: 'center',fontFamily: 'Notable, sans-serif',
+                fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' },
               }}
             >
               {content}

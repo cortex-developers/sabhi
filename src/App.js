@@ -287,7 +287,7 @@ function App() {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center', // Center content vertically
+      justifyContent: 'top', // Center content vertically
       padding: '3px',
       backgroundColor: '#ffffff',
       textAlign: 'center',

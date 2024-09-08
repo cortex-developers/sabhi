@@ -19,7 +19,7 @@ const Why = () => {
     <Box
       sx={{
         width: '100vw',
-        height: '150vh',
+        height: '170vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

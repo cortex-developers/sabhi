@@ -20,9 +20,51 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ArticlePage from './ArticlePage';
-
+import { styled } from '@mui/system';
 import ReactGA4 from 'react-ga4';
 
+// Brush background for the ListItem with color customization
+const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
+  position: 'relative',
+  padding: '20px',
+  marginBottom: '12px',
+  borderRadius: '8px',
+  overflow: 'hidden',
+  background: `url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=${brushColor}") no-repeat center`,
+  backgroundSize: 'cover',
+  transition: 'background-size 0.3s ease-in-out',
+
+  '&:hover': {
+    backgroundSize: '100%',
+  },
+}));
+
+// Modern underline effect for highlighted words
+const UnderlineHighlight = styled('span')(({ theme }) => ({
+  position: 'relative',
+  color: theme.palette.text.primary,
+  fontWeight: 'bold',
+  fontSize: '1.1rem',
+  transition: 'color 0.3s ease',
+
+  '&::after': {
+    content: "''",
+    position: 'absolute',
+    left: 0,
+    bottom: -2, // Adjust underline position
+    width: '100%',
+    height: '2px',
+    backgroundColor: '#FFD700', // Gold color for underline
+    transform: 'scaleX(0)',
+    transformOrigin: 'bottom right',
+    transition: 'transform 0.3s ease-in-out',
+  },
+
+  '&:hover::after': {
+    transform: 'scaleX(1)',
+    transformOrigin: 'bottom left',
+  },
+}));
 
 const useGA4PageTracking = () => {
   useEffect(() => {
@@ -266,57 +308,56 @@ function App() {
     }}
   >
     {/* Mobile-specific content */}
-    <Typography variant="h4" sx={{ marginBottom: '0.9rem', fontSize: '1.5rem', fontFamily: 'Notable, sans-serif' }}>
+    <Typography variant="h4" sx={{ marginBottom: '0.9rem', fontSize: '1rem', fontFamily: 'Notable, sans-serif' }}>
       theCORTEX: ELITE PERFORMANCE FACTORY
     </Typography>
-    <Typography variant="body1" sx={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
-      A comprehensive mentorship and educational platform for your student-athlete:
+    <Typography variant="body1" sx={{ fontSize: '0.8rem', marginBottom: '1rem' }}>
+      A student-athlete mentorship and educational platform:
     </Typography>
 
-    <List sx={{ padding: '0 5px' }}>
-      <ListItem>
-        <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
-          1. Optimize <span style={{ backgroundColor: 'yellow' }}>athletic</span> performance with personalized guidance from top-tier performance scientists.
+    <List sx={{ padding: '0 5px', fontSize: '0.2rem'}}>
+    <BrushListItem brushColor="E75225">
+        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
+          Optimize <UnderlineHighlight sx={{fontSize: '0.8rem'}}>athletic</UnderlineHighlight > performance with personalized guidance from top-tier performance scientists.
         </Typography>
-      </ListItem>
-      <ListItem>
-        <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
-          2. Improve <span style={{ backgroundColor: 'yellow' }}>academic</span> performance with the help of elite tutors and coaches, tailored to your needs.
-        </Typography>
-      </ListItem>
-      <ListItem>
-        <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
-          3. Develop an elite <span style={{ backgroundColor: 'yellow' }}>mindset</span> with the help of athletes who were champions in their sports.
-        </Typography>
-      </ListItem>
-      <ListItem>
-         <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
-           4. Evidence-based <span style={{ backgroundColor: 'yellow' }}>nutritional</span> advice from athletic professionals and professional athletes.
-         </Typography>
-       </ListItem>
+      </BrushListItem>
 
-       <ListItem>
-         <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
-           5. Learn the secrets behind a successful <span style={{ backgroundColor: 'yellow' }}>college recruitment</span> process with insider tips and strategies.
-         </Typography>
-       </ListItem>
+      <BrushListItem brushColor="6589C6">
+        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
+          Improve <UnderlineHighlight sx={{fontSize: '0.8rem'}}>academic</UnderlineHighlight> performance with the help of elite tutors and coaches, tailored to your needs.
+        </Typography>
+      </BrushListItem>
 
-       <ListItem>
-         <Typography variant="body1" sx={{ fontSize: '0.75rem' }}>
-           6. All backed by a <span style={{ backgroundColor: 'yellow' }}>custom curriculum</span> built by doctors and athletic professionals, ensuring a holistic approach.
-         </Typography>
-       </ListItem>
+      <BrushListItem brushColor="E75225">
+        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
+          Develop an elite <UnderlineHighlight sx={{fontSize: '0.8rem'}}>mindset</UnderlineHighlight> with the help of athletes who are the best of the best in their sports.
+        </Typography>
+      </BrushListItem>
+
+      <BrushListItem brushColor="6589C6">
+        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
+          Evidence-based <UnderlineHighlight sx={{fontSize: '0.8rem'}}>nutritional</UnderlineHighlight> advice from research and medical professionals.
+        </Typography>
+      </BrushListItem>
+
+      <BrushListItem brushColor="E75225">
+        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
+          Learn the secrets behind a successful <UnderlineHighlight sx={{fontSize: '0.8rem'}}>college recruitment</UnderlineHighlight> process with insider tips and strategies.
+        </Typography>
+      </BrushListItem>
     </List>
 
     {/* Mobile-specific buttons */}
-    <Box sx={{ marginTop: '2rem' }}>
+    <Box sx={{ 
+      marginTop: { xs: '0.3rem', s:'2rem', md: '2rem' } // 0.3rem on small screens, 2rem on medium and larger screens
+    }}>
       <Button
         variant="contained"
         onClick={() => document.getElementById('steps-section').scrollIntoView()}
         sx={{
           margin: '0 5px',
           padding: '10px 15px',
-          fontSize: '0.9rem',
+          fontSize: '0.8rem',
           backgroundColor: '#E75225',
           color: 'white',
           borderRadius: '10px',
@@ -331,7 +372,7 @@ function App() {
         sx={{
           margin: '0 5px',
           padding: '10px 15px',
-          fontSize: '0.9rem',
+          fontSize: '0.8rem',
           backgroundColor: '#6589C6',
           color: 'white',
           borderRadius: '10px',
@@ -400,7 +441,7 @@ function App() {
  >
    {/* Text Section */}
    <Box sx={{ flexBasis: '50%', padding: '10px', textAlign: { xs: 'center', md: 'left' } }}>
-     <Typography variant="h3" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1 }}>
+     <Typography variant="h4" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1}}>
        theCORTEX: ELITE PERFORMANCE FACTORY
      </Typography>
      <Typography variant="h6" gutterBottom>
@@ -408,42 +449,36 @@ function App() {
      </Typography>
 
      <List>
-       <ListItem>
-         <Typography variant="body1">
-           1. Optimize <span style={{ backgroundColor: 'yellow' }}>athletic </span>performance with personalized guidance from top-tier performance scientists.
-         </Typography>
-       </ListItem>
+      <BrushListItem brushColor="E75225">
+        <Typography variant="body1">
+          Optimize <UnderlineHighlight>athletic</UnderlineHighlight> performance with personalized guidance from top-tier performance scientists.
+        </Typography>
+      </BrushListItem>
 
-       <ListItem>
-         <Typography variant="body1">
-           2. Improve <span style={{ backgroundColor: 'yellow' }}>academic</span> performance with the help of elite tutors and coaches, tailored to your needs.
-         </Typography>
-       </ListItem>
+      <BrushListItem brushColor="6589C6">
+        <Typography variant="body1">
+          Improve <UnderlineHighlight>academic</UnderlineHighlight> performance with the help of elite tutors and coaches, tailored to your needs.
+        </Typography>
+      </BrushListItem>
 
-       <ListItem>
-         <Typography variant="body1">
-           3. Develop an elite <span style={{ backgroundColor: 'yellow' }}>mindset</span> with the help of athletes who were champions in their sports.
-         </Typography>
-       </ListItem>
+      <BrushListItem brushColor="E75225">
+        <Typography variant="body1">
+          Develop an elite <UnderlineHighlight>mindset</UnderlineHighlight> with the help of athletes who are the best of the best in their sports.
+        </Typography>
+      </BrushListItem>
 
-       <ListItem>
-         <Typography variant="body1">
-           4. Evidence-based <span style={{ backgroundColor: 'yellow' }}>nutritional</span> advice from athletic professionals and professional athletes.
-         </Typography>
-       </ListItem>
+      <BrushListItem brushColor="6589C6">
+        <Typography variant="body1">
+          Evidence-based <UnderlineHighlight>nutritional</UnderlineHighlight> advice from research and medical professionals.
+        </Typography>
+      </BrushListItem>
 
-       <ListItem>
-         <Typography variant="body1">
-           5. Learn the secrets behind a successful <span style={{ backgroundColor: 'yellow' }}>college recruitment</span> process with insider tips and strategies.
-         </Typography>
-       </ListItem>
-
-       <ListItem>
-         <Typography variant="body1">
-           6. All backed by a <span style={{ backgroundColor: 'yellow' }}>custom curriculum</span> built by doctors and athletic professionals, ensuring a holistic approach.
-         </Typography>
-       </ListItem>
-     </List>
+      <BrushListItem brushColor="E75225">
+        <Typography variant="body1">
+          Learn the secrets behind a successful <UnderlineHighlight>college recruitment</UnderlineHighlight> process with insider tips and strategies.
+        </Typography>
+      </BrushListItem>
+    </List>
    </Box>
 
    {/* Slideshow Section - Excluded on mobile */}

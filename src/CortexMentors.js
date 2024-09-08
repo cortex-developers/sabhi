@@ -69,7 +69,7 @@ const CortexMentors = () => {
         shadowColor: 'rgba(138, 141, 143, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
       {
-        name: 'Kevin Wiz, OMS2',
+        name: 'Kevin Wiz',
         background: '2nd Year Medical Student',
         team: 'Physical Health/Performance',
         bio: `Kevin's mission in Cortex Flex is to help student-athletes become more informed about their bodies and make informed decisions about how and when to push it to reach their goals.`,

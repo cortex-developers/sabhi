@@ -85,17 +85,15 @@ const BlogPosts = () => {
 
   return (
     <div
-    sx={{
-    }}
     >
       <Box sx={{
         width: isMobile? '90vw' : '98vw',
-        height: isMobile? '30vh' : '65vh',
+        height: isMobile? '30vh' : '40vh',
         padding: '20px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'top',
       }}>
         <Card
           sx={{

@@ -13,7 +13,7 @@ import Laptop from '@mui/icons-material/Laptop';
 import Person  from '@mui/icons-material/Person';
 import Book from '@mui/icons-material/Book';
 
-import community from './comm4.png'
+import community from './comm5.png'
 import courses from './courses5.png'
 import mentorship from './mentorship2.png'
 

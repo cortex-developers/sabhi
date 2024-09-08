@@ -53,7 +53,7 @@ const Why = () => {
           justifyContent: 'center',
         }}
       >
-Our doctors and scientists provide elite performance guidance that replaces the misinformation of social media. Our athlete mentors motivate learning and application uniquely due utilizing their high understanding of the student-athlete experience.      </Typography>
+Our doctors and scientists provide elite performance guidance that replaces the misinformation of social media. Our athlete mentors motivate learning and application uniquely as they utilize their utilizing their high understanding of the student-athlete experience.      </Typography>
 
       {/* Map through either images for desktop or text for mobile */}
       {(isMobile ? mobileTexts : desktopImages).map((content, index) => (

@@ -22,6 +22,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import ArticlePage from './ArticlePage';
 import { styled } from '@mui/system';
 import ReactGA4 from 'react-ga4';
+import HorizontalGallery from './HorizontalGallery';
 
 // Brush background for the ListItem with color customization
 const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
@@ -30,7 +31,7 @@ const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
   marginBottom: '12px',
   borderRadius: '8px',
   overflow: 'hidden',
-  background: `url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=${brushColor}") no-repeat center`,
+  background: `url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=${brushColor}") no-repeat center`,
   backgroundSize: 'cover',
   transition: 'background-size 0.3s ease-in-out',
 
@@ -287,7 +288,7 @@ function App() {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'top', // Center content vertically
+      justifyContent: 'center', // Center content vertically
       padding: '3px',
       backgroundColor: '#ffffff',
       textAlign: 'center',
@@ -297,7 +298,7 @@ function App() {
       top: 0,
       left: 0,
       width: '100%',
-      height: '100%',
+      height: '110%',
       backgroundImage: `url(${sports})`,
       backgroundRepeat: 'repeat',
       backgroundSize: 'cover',
@@ -308,13 +309,26 @@ function App() {
     }}
   >
     {/* Mobile-specific content */}
-    <Typography variant="h4" sx={{ marginBottom: '0.9rem', fontSize: '1rem', fontFamily: 'Notable, sans-serif' }}>
-      theCORTEX: ELITE PERFORMANCE FACTORY
-    </Typography>
-    <Typography variant="body1" sx={{ fontSize: '0.8rem', marginBottom: '1rem' }}>
-      A student-athlete mentorship and educational platform:
-    </Typography>
+    <Typography 
+  variant="h4" 
+  sx={{ 
+    marginBottom: '0.9rem', 
+    fontSize: '1rem', 
+    fontFamily: 'Notable, sans-serif' 
+  }}
+>
+  theCORTEX: ELITE PERFORMANCE FACTORY
+</Typography>
 
+<Typography 
+  variant="body1" 
+  sx={{ 
+    fontSize: '0.8rem', 
+    marginBottom: '1rem',
+  }}
+>
+  A student-athlete mentorship and educational platform:
+</Typography>
     <List sx={{ padding: '0 5px', fontSize: '0.2rem'}}>
     <BrushListItem brushColor="E75225">
         <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
@@ -349,7 +363,7 @@ function App() {
 
     {/* Mobile-specific buttons */}
     <Box sx={{ 
-      marginTop: { xs: '0.3rem', s:'2rem', md: '2rem' } // 0.3rem on small screens, 2rem on medium and larger screens
+      marginTop: { xs: '0.3rem', s:'1rem', md: '2rem' } // 0.3rem on small screens, 2rem on medium and larger screens
     }}>
       <Button
         variant="contained"
@@ -558,6 +572,7 @@ function App() {
       <Features></Features>
 
 <Why></Why>
+<HorizontalGallery></HorizontalGallery>
 <div id="pricing-section">
         <Pricing />
       </div>

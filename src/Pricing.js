@@ -11,6 +11,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import { Link } from 'react-router-dom';
 
 const tiers = [
   {
@@ -62,8 +63,9 @@ export default function Pricing() {
         <Typography component="h2" variant="h4" color="text.primary" sx={{fontFamily: 'Notable, sans-serif', marginBottom: '2rem'}}>
           Pricing
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-        * Full and partial scholarships available, apply via parent portal after sign up!
+        <Typography variant="body1" fontWeight="bold" fontSize="1rem" color="black">
+        * We aim to ensure that cost is never a barrier for learning! Apply for a scholarship on the basis of need and/or merit by creating an account in the parent portal <Link href="cortex.copilot.app">here</Link>
+        !
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">

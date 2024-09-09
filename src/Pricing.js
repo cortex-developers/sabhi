@@ -11,45 +11,31 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import { Link } from 'react-router-dom';
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
-    description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
-    ],
-    buttonText: 'Sign up for free',
-    buttonVariant: 'outlined',
-  },
-  {
-    title: 'Professional',
+    title: 'theCORTEX Academy',
     subheader: 'Recommended',
-    price: '15',
+    price: '120*',
     description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team',
-      'Best deals',
+      'theCORTEX App & Community',
+      'Cortex Courses',
+      'Dedicated Mentor',
     ],
-    buttonText: 'Start now',
+    buttonText: 'Sign up',
     buttonVariant: 'contained',
   },
   {
-    title: 'Enterprise',
-    price: '30',
+    title: 'theCORTEX Academy + 1:1 Mentorship',
+    price: '360*',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'theCORTEX App & Community',
+      'Cortex Courses',
+      'Dedicated Mentor',
+      'Weekly 30 min. 1:1 Mentorship Calls',
     ],
-    buttonText: 'Contact us',
+    buttonText: 'Sign Up',
     buttonVariant: 'outlined',
   },
 ];
@@ -74,14 +60,12 @@ export default function Pricing() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        <Typography component="h2" variant="h4" color="text.primary">
+        <Typography component="h2" variant="h4" color="text.primary" sx={{fontFamily: 'Notable, sans-serif', marginBottom: '2rem'}}>
           Pricing
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Quickly build an effective pricing table for your potential customers with
-          this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
+        <Typography variant="body1" fontWeight="bold" fontSize="1rem" color="black">
+        * We aim to ensure that cost is never a barrier for learning! Apply for a scholarship on the basis of need and/or merit by creating an account in the parent portal <Link href="cortex.copilot.app">here</Link>
+        !
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">

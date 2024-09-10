@@ -56,6 +56,7 @@ Our doctors and scientists provide elite performance guidance that replaces the 
 
       {/* Map through either images for desktop or text for mobile */}
       {(isMobile ? mobileTexts : desktopImages).map((content, index) => (
+        <>
         <Card
           key={index}
           sx={{
@@ -83,6 +84,7 @@ Our doctors and scientists provide elite performance guidance that replaces the 
             >
               {content}
             </Typography>
+            
           ) : (
             <CardMedia
               component="img"
@@ -97,6 +99,8 @@ Our doctors and scientists provide elite performance guidance that replaces the 
             />
           )}
         </Card>
+        
+        </>
       ))}
     </Box>
   );

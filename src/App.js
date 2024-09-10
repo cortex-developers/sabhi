@@ -335,25 +335,21 @@ function App() {
       {isSmallScreen ? (
         <>
           <BrushListItem brushColor="E75225">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Optimize <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>athletic</UnderlineHighlight> performance with personalized guidance from top-tier performance scientists.
-              Evidence-based <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>nutritional</UnderlineHighlight> advice from research and medical professionals.
+            <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+            Elite <UnderlineHighlight>athletic</UnderlineHighlight> performance training and <UnderlineHighlight>nutrition</UnderlineHighlight> coaching.
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="6589C6">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Develop an elite <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>mindset</UnderlineHighlight> with the help of top athletes. 
-              Improve <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>academic</UnderlineHighlight> performance with the help of elite tutors and coaches.
+            <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+            Elite <UnderlineHighlight>mindset</UnderlineHighlight> development and <UnderlineHighlight>academic</UnderlineHighlight> tutoring.
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="E75225">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Learn the secrets behind a successful <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>college recruitment</UnderlineHighlight> process with insider tips and strategies. 
-              
-              {/*Develop your student-athlete's career <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>off the field</UnderlineHighlight> with insights from mentors who've transitioned to successful careers after sports.*/}
-
+            <Typography variant="body1" sx={{ fontSize: '1rem' }}>
+            College <UnderlineHighlight>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight>career</UnderlineHighlight> planning.
+    
             </Typography>
           </BrushListItem>
         </>
@@ -361,31 +357,19 @@ function App() {
         <>
           <BrushListItem brushColor="E75225">
             <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Optimize <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>athletic</UnderlineHighlight> performance with personalized guidance from top-tier performance scientists.
+            Elite <UnderlineHighlight>athletic</UnderlineHighlight> performance training and <UnderlineHighlight>nutrition</UnderlineHighlight> coaching.
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="6589C6">
             <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Improve <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>academic</UnderlineHighlight> performance with the help of elite tutors and coaches.
+            Elite <UnderlineHighlight>mindset</UnderlineHighlight> development and <UnderlineHighlight>academic</UnderlineHighlight> tutoring.
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="E75225">
             <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Develop an elite <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>mindset</UnderlineHighlight> with top athletes.
-            </Typography>
-          </BrushListItem>
-
-          <BrushListItem brushColor="6589C6">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Evidence-based <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>nutritional</UnderlineHighlight> advice from research and medical professionals.
-            </Typography>
-          </BrushListItem>
-
-          <BrushListItem brushColor="E75225">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Learn the secrets behind a successful <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>college recruitment</UnderlineHighlight> process with insider tips and strategies.
+            College <UnderlineHighlight>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight>career</UnderlineHighlight> planning.
             </Typography>
           </BrushListItem>
         </>
@@ -525,33 +509,22 @@ function App() {
      <List>
       <BrushListItem brushColor="E75225">
         <Typography variant="body1">
-          Optimize <UnderlineHighlight>athletic</UnderlineHighlight> performance with personalized guidance from top-tier performance scientists.
+          Elite <UnderlineHighlight>athletic</UnderlineHighlight> performance training and <UnderlineHighlight>nutrition</UnderlineHighlight> coaching.
         </Typography>
       </BrushListItem>
 
       <BrushListItem brushColor="6589C6">
         <Typography variant="body1">
-          Improve <UnderlineHighlight>academic</UnderlineHighlight> performance with the help of elite tutors and coaches, tailored to your needs.
+          Elite <UnderlineHighlight>mindset</UnderlineHighlight> development and <UnderlineHighlight>academic</UnderlineHighlight> tutoring.
         </Typography>
       </BrushListItem>
 
       <BrushListItem brushColor="E75225">
         <Typography variant="body1">
-          Develop an elite <UnderlineHighlight>mindset</UnderlineHighlight> with the help of athletes who are the best of the best in their sports.
+        College <UnderlineHighlight>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight>career</UnderlineHighlight> planning.
         </Typography>
       </BrushListItem>
 
-      <BrushListItem brushColor="6589C6">
-        <Typography variant="body1">
-          Evidence-based <UnderlineHighlight>nutritional</UnderlineHighlight> advice from research and medical professionals.
-        </Typography>
-      </BrushListItem>
-
-      <BrushListItem brushColor="E75225">
-        <Typography variant="body1">
-          Learn the secrets behind a successful <UnderlineHighlight>college recruitment</UnderlineHighlight> process with insider tips and strategies.
-        </Typography>
-      </BrushListItem>
     </List>
    </Box>
 

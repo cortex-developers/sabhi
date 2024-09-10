@@ -146,7 +146,7 @@ const Steps = () => {
                 Start the journey towards your athlete's goals!
               </Typography>
               <Typography variant="body2" sx={{ color: '#666' }}>
-                Create an account on our Parent Portal (where the scholarship application is also available )
+                Create an account on our Parent Portal (where the scholarship application is also available).
               </Typography>
             </CardContent>
           </Card>

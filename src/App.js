@@ -131,7 +131,8 @@ const Img = styled('img')({
 });
  */
 function App() {
-  
+  const isSmallScreen = useMediaQuery('(max-width: 375px)');
+
   useEffect(() => {
     // Function to remove specific query parameters
     const cleanUpUrl = () => {
@@ -329,36 +330,62 @@ function App() {
 >
   A student-athlete mentorship and educational platform:
 </Typography>
-    <List sx={{ padding: '0 5px', fontSize: '0.2rem'}}>
-    <BrushListItem brushColor="E75225">
-        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
-          Optimize <UnderlineHighlight sx={{fontSize: '0.8rem'}}>athletic</UnderlineHighlight > performance with personalized guidance from top-tier performance scientists.
-        </Typography>
-      </BrushListItem>
+<List sx={{ padding: '0 5px', fontSize: '0.2rem' }}>
+      {isSmallScreen ? (
+        <>
+          <BrushListItem brushColor="E75225">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Optimize <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>athletic</UnderlineHighlight> performance with personalized guidance from top-tier performance scientists.
+              Evidence-based <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>nutritional</UnderlineHighlight> advice from research and medical professionals.
+            </Typography>
+          </BrushListItem>
 
-      <BrushListItem brushColor="6589C6">
-        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
-          Improve <UnderlineHighlight sx={{fontSize: '0.8rem'}}>academic</UnderlineHighlight> performance with the help of elite tutors and coaches, tailored to your needs.
-        </Typography>
-      </BrushListItem>
+          <BrushListItem brushColor="6589C6">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Develop an elite <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>mindset</UnderlineHighlight> with the help of top athletes. Evidence-based <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>nutritional</UnderlineHighlight> advice from research and medical professionals.
+              Improve <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>academic</UnderlineHighlight> performance with the help of elite tutors and coaches.
+            </Typography>
+          </BrushListItem>
 
-      <BrushListItem brushColor="E75225">
-        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
-          Develop an elite <UnderlineHighlight sx={{fontSize: '0.8rem'}}>mindset</UnderlineHighlight> with the help of athletes who are the best of the best in their sports.
-        </Typography>
-      </BrushListItem>
+          <BrushListItem brushColor="E75225">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Learn the secrets behind a successful <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>college recruitment</UnderlineHighlight> process with insider tips and strategies.
+            </Typography>
+          </BrushListItem>
+        </>
+      ) : (
+        <>
+          <BrushListItem brushColor="E75225">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Optimize <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>athletic</UnderlineHighlight> performance with personalized guidance from top-tier performance scientists.
+            </Typography>
+          </BrushListItem>
 
-      <BrushListItem brushColor="6589C6">
-        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
-          Evidence-based <UnderlineHighlight sx={{fontSize: '0.8rem'}}>nutritional</UnderlineHighlight> advice from research and medical professionals.
-        </Typography>
-      </BrushListItem>
+          <BrushListItem brushColor="6589C6">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Improve <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>academic</UnderlineHighlight> performance with the help of elite tutors and coaches.
+            </Typography>
+          </BrushListItem>
 
-      <BrushListItem brushColor="E75225">
-        <Typography variant="body1" sx={{fontSize: '0.6rem'}}>
-          Learn the secrets behind a successful <UnderlineHighlight sx={{fontSize: '0.8rem'}}>college recruitment</UnderlineHighlight> process with insider tips and strategies.
-        </Typography>
-      </BrushListItem>
+          <BrushListItem brushColor="E75225">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Develop an elite <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>mindset</UnderlineHighlight> with top athletes.
+            </Typography>
+          </BrushListItem>
+
+          <BrushListItem brushColor="6589C6">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Evidence-based <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>nutritional</UnderlineHighlight> advice from research and medical professionals.
+            </Typography>
+          </BrushListItem>
+
+          <BrushListItem brushColor="E75225">
+            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+              Learn the secrets behind a successful <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>college recruitment</UnderlineHighlight> process with insider tips and strategies.
+            </Typography>
+          </BrushListItem>
+        </>
+      )}
     </List>
 
     {/* Mobile-specific buttons */}

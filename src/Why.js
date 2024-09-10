@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Card, CardMedia, Typography, useMediaQuery, useTheme } from '@mui/material';
 import pc2 from './pc2.png';
 import ps from './ps.png';
-
 const desktopImages = [ps, pc2];
 
 const Why = () => {

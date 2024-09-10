@@ -283,6 +283,7 @@ function App() {
  <div>
  {isMobile ? (
   // Mobile Version
+  <div>
   <Box
     sx={{
       height: '100vh', // Full viewport height for mobile
@@ -342,14 +343,17 @@ function App() {
 
           <BrushListItem brushColor="6589C6">
             <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Develop an elite <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>mindset</UnderlineHighlight> with the help of top athletes. Evidence-based <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>nutritional</UnderlineHighlight> advice from research and medical professionals.
+              Develop an elite <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>mindset</UnderlineHighlight> with the help of top athletes. 
               Improve <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>academic</UnderlineHighlight> performance with the help of elite tutors and coaches.
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="E75225">
             <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
-              Learn the secrets behind a successful <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>college recruitment</UnderlineHighlight> process with insider tips and strategies.
+              Learn the secrets behind a successful <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>college recruitment</UnderlineHighlight> process with insider tips and strategies. 
+              
+              {/*Develop your student-athlete's career <UnderlineHighlight sx={{ fontSize: '0.8rem' }}>off the field</UnderlineHighlight> with insights from mentors who've transitioned to successful careers after sports.*/}
+
             </Typography>
           </BrushListItem>
         </>
@@ -424,6 +428,35 @@ function App() {
       </Button>
     </Box>
   </Box>
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '100px', marginBottom: '100px' }}>
+  <Typography
+    variant="h4"
+    sx={{
+      marginBottom: '1rem',
+      fontWeight: 'bold',
+      color: 'black',
+      fontFamily: 'Notable, sans-serif',
+      textAlign: 'center',
+    }}
+  >
+    A SNEAK PEEK
+  </Typography>
+  <video
+    src={train}
+    autoPlay
+    muted
+    playsInline
+    controls
+    style={{
+      width: '90%',
+      filter: 'brightness(1)',
+      opacity: '1',
+      borderRadius: '15px', // Rounded corners
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow effect
+    }}
+  />
+</Box>
+</div>
 ) : (
   // Desktop/Tablet Version
 <Box

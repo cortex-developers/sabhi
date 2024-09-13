@@ -23,7 +23,7 @@ import ArticlePage from './ArticlePage';
 import { styled } from '@mui/system';
 import ReactGA4 from 'react-ga4';
 import HorizontalGallery from './HorizontalGallery';
-
+import AutoOpenModal from './AutoOpenModal';
 
 // Brush background for the ListItem with color customization
 const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
@@ -292,6 +292,8 @@ function App() {
 
  // Import your custom styles
  <div>
+ <AutoOpenModal />
+
  {isMobile ? (
   // Mobile Version
   <div>

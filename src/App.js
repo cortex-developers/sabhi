@@ -158,13 +158,13 @@ function App() {
 
   useEffect(() => {
     // Check the current window location
-    if (window.location.pathname === "/wisw") {
+    if (window.location.pathname === "/wissw") {
       // Redirect to the external Eventbrite page
       window.location.href = "https://www.eventbrite.com/e/women-in-sports-stem-webinar-tickets-1015673967177?aff=oddtdtcreator";
     }
   }, []);
 
-  
+
   useGA4PageTracking();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

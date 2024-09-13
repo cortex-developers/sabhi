@@ -512,7 +512,7 @@ function App() {
  >
    {/* Text Section */}
    <Box sx={{ flexBasis: '50%', padding: '10px', textAlign: { xs: 'center', md: 'left' } }}>
-     <Typography variant="h4" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1}}>
+     <Typography variant="h4" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1, fontSize: '4rem' }}>
        theCORTEX: ELITE PERFORMANCE FACTORY
      </Typography>
      <Typography variant="h6" gutterBottom>
@@ -521,20 +521,20 @@ function App() {
 
      <List>
       <BrushListItem brushColor="E75225">
-        <Typography variant="body1">
-          Elite <UnderlineHighlight>athletic</UnderlineHighlight> performance training and <UnderlineHighlight>nutrition</UnderlineHighlight> coaching.
+        <Typography variant="body1" sx={{ fontSize: '1.5rem' }}>
+          Elite <UnderlineHighlight sx={{ fontSize: '1.8rem' }}>athletic</UnderlineHighlight> performance training and <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>nutrition</UnderlineHighlight> coaching.
         </Typography>
       </BrushListItem>
 
       <BrushListItem brushColor="6589C6">
-        <Typography variant="body1">
-          Elite <UnderlineHighlight>mindset</UnderlineHighlight> development and <UnderlineHighlight>academic</UnderlineHighlight> tutoring.
+        <Typography variant="body1" sx={{ fontSize: '1.5rem' }}>
+          Elite <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>mindset</UnderlineHighlight> development and <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>academic</UnderlineHighlight> tutoring.
         </Typography>
       </BrushListItem>
 
       <BrushListItem brushColor="E75225">
-        <Typography variant="body1">
-        College <UnderlineHighlight>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight>career</UnderlineHighlight> planning.
+        <Typography variant="body1" sx={{ fontSize: '1.5rem' }}>
+        College <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>career</UnderlineHighlight> planning.
         </Typography>
       </BrushListItem>
 

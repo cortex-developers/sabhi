@@ -67,6 +67,12 @@ export default function Pricing() {
         * We aim to ensure that cost is never a barrier for learning! Apply for a scholarship on the basis of need and/or merit by creating an account in the parent portal <Link href="cortex.copilot.app">here</Link>
         !
         </Typography>
+        <Typography variant="body1" fontWeight="bold" fontStyle="italic" fontSize="1rem" color="black">
+        Your money goes 100% toward enhancing your athlete's experience.
+        <Typography variant="body1" fontWeight="bold" fontSize="1rem" color="black">
+
+        </Typography>
+        </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
         {tiers.map((tier) => (

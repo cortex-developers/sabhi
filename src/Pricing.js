@@ -28,11 +28,20 @@ const tiers = [
   },
   {
     title: 'theCORTEX Academy + 1:1 Mentorship',
-    price: '360*',
+    price: '240*',
     description: [
       'theCORTEX App & Community',
       'Cortex Courses',
       'Dedicated Mentor',
+      'Weekly 30 min. 1:1 Mentorship Calls',
+    ],
+    buttonText: 'Sign Up',
+    buttonVariant: 'outlined',
+  },
+  {
+    title: '1:1 Mentorship',
+    price: '140*',
+    description: [
       'Weekly 30 min. 1:1 Mentorship Calls',
     ],
     buttonText: 'Sign Up',

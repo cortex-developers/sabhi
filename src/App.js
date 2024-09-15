@@ -369,19 +369,19 @@ function App() {
       ) : (
         <>
           <BrushListItem brushColor="E75225">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+            <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
             Elite <UnderlineHighlight>athletic</UnderlineHighlight> performance training and <UnderlineHighlight>nutrition</UnderlineHighlight> coaching.
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="6589C6">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+            <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
             Elite <UnderlineHighlight>mindset</UnderlineHighlight> development and <UnderlineHighlight>academic</UnderlineHighlight> tutoring.
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="E75225">
-            <Typography variant="body1" sx={{ fontSize: '0.6rem' }}>
+            <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
             College <UnderlineHighlight>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight>career</UnderlineHighlight> planning.
             </Typography>
           </BrushListItem>

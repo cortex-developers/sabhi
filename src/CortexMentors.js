@@ -159,18 +159,6 @@ const CortexMentors = () => {
         shadowColor: 'rgba(30,22,86, 0.3)' // Customizable shadow color (lime green with transparency)
       },
 
-      {
-        name: 'Jesus Salazar',
-        background: 'Professional Soccer Player',
-        team: 'Physical Health/Performance',
-        bio: 'As a professional athlete, Jesus has suceeded where many others have failed and has learned a few tips and tricks along the way that can give your student athlete an edge.',
-        image: jesusmentor, // Replace with actual image URL
-        teamColor: 'rgba(30,22,86)', // Customizable team text color (lime green)
-        shadowColor: 'rgba(30,22,86, 0.3)' // Customizable shadow color (lime green with transparency)
-      },
-
-
-
 
     // Add more mentors here as needed
   ];

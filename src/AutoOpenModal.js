@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Box, Typography, Link, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import wissw from './wissw.png';  // Your letter-sized image
+import wissw from './flyer.png';  // Your letter-sized image
 
 const AutoOpenModal = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Box, Typography, Link, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import wissw from './flyer.png';  // Your letter-sized image
+import wissw from './fear.png';  // Your letter-sized image
 
 const AutoOpenModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +71,7 @@ const AutoOpenModal = () => {
         {/* Underlined Text */}
         <Typography variant="h6" gutterBottom>
           <Link 
-            href="https://www.eventbrite.com/e/women-in-sports-stem-webinar-tickets-1015673967177?aff=oddtdtcreator" 
+            href="https://www.eventbrite.com/e/1032572039767?aff=oddtdtcreator" 
             target="_blank" 
             underline="always"
             rel="noopener noreferrer"

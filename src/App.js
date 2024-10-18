@@ -203,7 +203,7 @@ function App() {
         <ListItem button component={RouterLink} to="/signup">
                     <Button color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
                      }}                    >
-                      SIGN UP
+                      APPLY
                     </Button>
         </ListItem>
       </List>
@@ -277,8 +277,7 @@ function App() {
                     </Button>
                     <Button color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
                      }}                    >
-                      SIGN UP
-                    </Button>
+APPLY                    </Button>
                   </Box>
                 </>
               )}

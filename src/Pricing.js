@@ -72,7 +72,7 @@ export default function Pricing() {
           Pricing
         </Typography>
         <Typography variant="body1" fontWeight="bold" fontSize="1rem" color="black">
-        * We aim to ensure that cost is never a barrier for learning! Apply for a scholarship on the basis of need and/or merit by creating an account in the parent portal <a href="https://forms.gle/tFMXN8MPAv1H7K4a7">here</a>
+        * We aim to ensure that cost is never a barrier for learning! Apply for a scholarship on the basis of need and/or merit by clicking on the link <a href="https://forms.gle/tFMXN8MPAv1H7K4a7">here</a>
         !
         </Typography>
         <Typography variant="body1" fontWeight="bold" fontStyle="italic" fontSize="1rem" color="black">

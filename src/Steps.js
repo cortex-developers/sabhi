@@ -1,10 +1,8 @@
 import React from 'react';
 import { Box, Typography, Button, Grid, Card, CardContent, useMediaQuery } from '@mui/material';
-import { useNavigate } from 'react-router';
 
 
 const Steps = () => {
-  const navigate = useNavigate(); // Initialize the hook
   const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
@@ -157,7 +155,7 @@ const Steps = () => {
       <Button
         variant="contained"
         color="primary"
-        onClick={() => navigate('/signup')}
+        onClick={() => window.open("https://calendly.com/puneet-cortexflex")}
         sx={{
           marginTop: '2rem',
           padding: '10px 20px',

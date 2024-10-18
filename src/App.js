@@ -649,6 +649,25 @@ function App() {
       onMouseWheel="" 
       style={{ width: '100%', height: '100%', border: 'none' }}
     />
+    
+    
+    </div>
+  } 
+/>
+
+<Route 
+  path="/apply" 
+  element={
+    <div style={{ height: '100vh', overflow: 'hidden' }}>
+    <iframe 
+      className="airtable-embed" 
+      title='airtable'
+      src="https://airtable.com/embed/apphPc3F6NvvkOBNg/shr4NtUH9P6YyP4bW" 
+      onMouseWheel="" 
+      style={{ width: '100%', height: '100%', border: 'none' }}
+    />
+    
+    
     </div>
   } 
 />

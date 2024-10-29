@@ -19,6 +19,7 @@ import onomementor from './onomementor.png'
 import kevinmentor from './kevinmentor.png'
 import mattmentor from './mattmentor.jpg'
 import daniellementor from './daniellementor.png'
+import puneetmentor from './puneet.jpeg'
 
 const CortexMentors = () => {
   const mentors = [
@@ -112,6 +113,15 @@ const CortexMentors = () => {
         image: sophiementor, // Replace with actual image URL
         teamColor: 'rgba(191, 87, 0)', // Customizable team text color (steel blue)
         shadowColor: 'rgba(191, 87, 0, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
+      {
+        name: 'Puneet Velidi',
+        background: 'MSc Student',
+        team: 'College/Career Prep',
+        bio: 'As an Ivy League graduate - now pursuing graduate studies in Statistics - Puneet knows what it takes to make it through rigorous academic environments and aims to help your student-athlete reach their academic goals.',
+        image: puneetmentor, // Replace with actual image URL
+        teamColor: 'rgba(166, 25, 46)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(166, 25, 46, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
       {
         name: 'Rachel Zun',

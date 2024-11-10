@@ -46,7 +46,9 @@ const BlogPosts = () => {
         const fetchedPosts = postsData.items.map(post => ({
           ...post,
           fields: { ...post.fields, titleImageUrl: postsData.includes.Asset.find(asset => asset.sys.id === post.fields.titleImage.sys.id)?.fields.file.url }
-        }));
+        }))
+        .sort((a, b) => new Date(b.fields.publishedOn) - new Date(a.fields.publishedOn)); // Sort by publishedDate descending
+
         setPosts(fetchedPosts);
         setFilteredPosts(fetchedPosts);
         setIsLoading(false);

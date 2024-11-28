@@ -23,6 +23,9 @@ import ArticlePage from './ArticlePage';
 import { styled } from '@mui/system';
 import ReactGA4 from 'react-ga4';
 import HorizontalGallery from './HorizontalGallery';
+import prev1 from './iPhone 14 & 15 Pro Max - 11.png'
+import prev2 from './iPhone 14 & 15 Pro Max - 4 2.png'
+
 //import AutoOpenModal from './AutoOpenModal';
 
 // Brush background for the ListItem with color customization
@@ -42,9 +45,8 @@ const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
 }));
 
 const images = [
-  "https://via.placeholder.com/300x600?text=Screen+1",
-  "https://via.placeholder.com/300x600?text=Screen+2",
-  "https://via.placeholder.com/300x600?text=Screen+3",
+prev1,
+prev2
 ];
 
 const sliderSettings = {
@@ -55,7 +57,7 @@ const sliderSettings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
-  arrows: false,
+  arrows: true,
 };
 
 
@@ -459,18 +461,22 @@ APPLY                    </Button>
     marginBottom: '100px' 
   }}
 >
-  <Typography
-    variant="h4"
-    sx={{
-      marginBottom: '1rem',
-      fontWeight: 'bold',
-      color: 'black',
-      fontFamily: 'Notable, sans-serif',
-      textAlign: 'center',
-    }}
-  >
-    A SNEAK PEEK
-  </Typography>
+<Button
+     variant="contained"
+     onClick={() => document.getElementById('pricing-section').scrollIntoView()}
+     sx={{
+       margin: '10px 10px',
+       padding: '10px 20px',
+       fontSize: '1rem',
+       backgroundColor: '#E75225',
+       color: 'white',
+       borderRadius: '15px',
+       width: '90%',
+       '&:hover': { backgroundColor: '#d6451c' },
+     }}
+   >
+     Join Cortex
+   </Button>
   <video
     src={train}
     autoPlay
@@ -485,21 +491,6 @@ APPLY                    </Button>
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow effect
     }}
   />
-   <Button
-     variant="contained"
-     onClick={() => document.getElementById('pricing-section').scrollIntoView()}
-     sx={{
-       margin: '10px 10px',
-       padding: '10px 20px',
-       fontSize: '1rem',
-       backgroundColor: '#E75225',
-       color: 'white',
-       borderRadius: '15px',
-       '&:hover': { backgroundColor: '#d6451c' },
-     }}
-   >
-     Join Cortex
-   </Button>
 </Box>
 </div>
 ) : (
@@ -560,10 +551,10 @@ APPLY                    </Button>
  >
    {/* Text Section */}
    <Box sx={{ flexBasis: '50%', padding: '10px', textAlign: { xs: 'center', md: 'left' } }}>
-     <Typography variant="h4" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1, fontSize: '4rem' }}>
+     <Typography variant="h4" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1, fontSize: '3rem' }}>
        theCORTEX: ELITE PERFORMANCE FACTORY
      </Typography>
-     <Typography variant="h6" gutterBottom>
+     <Typography variant="h6" sx={{ fontSize: '2rem' }}gutterBottom>
   A <a 
       href="https://capslab.org" 
       target="_blank" 
@@ -636,6 +627,7 @@ APPLY                    </Button>
        backgroundColor: '#E75225',
        color: 'white',
        borderRadius: '15px',
+       width: '70%',
        '&:hover': { backgroundColor: '#d6451c' },
      }}
    >
@@ -644,7 +636,7 @@ APPLY                    </Button>
      </Box>
    )}
  </Box>
- <Typography variant="h6" gutterBottom>
+ <Typography variant="h6" sx={{ fontSize: '2rem' }} gutterBottom>
   Our coaches utilize performance science research that comes straight from <a 
       href="https://capslab.org" 
       target="_blank" 

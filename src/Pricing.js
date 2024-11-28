@@ -16,36 +16,35 @@ const tiers = [
   {
     title: 'theCORTEX Academy',
     subheader: 'Recommended',
-    price: '120*',
+    price: '130*',
     description: [
-      'theCORTEX App & Community',
-      'Cortex Courses',
-      'Dedicated Mentor',
+      'Access to all resources and mentors on theCORTEX App',
+      'Unlimited Cortex Performance Workshops (25+ offered each month)',
+      'Dedicated 1:1 Mentor of Choice',
     ],
     buttonText: 'Sign up',
     buttonVariant: 'contained',
   },
   {
-    title: 'theCORTEX Academy + 1:1 Mentorship',
-    price: '240*',
+    title: 'theCORTEX Community + 4 Cortex Performance Workshops',
+    price: '50*',
     description: [
-      'theCORTEX App & Community',
-      'Cortex Courses',
-      'Dedicated Mentor',
-      'Weekly 30 min. 1:1 Mentorship Calls',
+      'Access to all resources and mentors on theCORTEX App',
+      'Choose ANY 4 Cortex Performance Workshops per Month',
     ],
     buttonText: 'Sign Up',
     buttonVariant: 'outlined',
   },
   {
-    title: '1:1 Mentorship',
-    price: '140*',
+    title: 'theCORTEX Community',
+    price: '10',
     description: [
-      'Weekly 30 min. 1:1 Mentorship Calls',
+      'Access to all resources and mentors on theCORTEX App',
     ],
     buttonText: 'Sign Up',
     buttonVariant: 'outlined',
   },
+
 ];
 
 export default function Pricing() {

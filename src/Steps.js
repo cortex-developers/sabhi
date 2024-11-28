@@ -100,7 +100,7 @@ const Steps = () => {
                 Hold Tight!
               </Typography>
               <Typography variant="body2" sx={{ color: '#666' }}>
-                A member of our team will contact you using your preferred contact method.
+                After the performance consult, a member of our team will follow up with you using your preferred contact method about onboarding details.
               </Typography>
             </CardContent>
           </Card>
@@ -144,7 +144,7 @@ const Steps = () => {
                 Start the journey towards your athlete's goals!
               </Typography>
               <Typography variant="body2" sx={{ color: '#666' }}>
-                Create an account on our Parent Portal (where the scholarship application is also available).
+                You will be onboarded onto our mobile application and recieve an account to login with.
               </Typography>
             </CardContent>
           </Card>

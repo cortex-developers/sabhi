@@ -28,9 +28,9 @@ const items = [
   },
   {
     icon: <Book />,
-    title: 'Cortex Courses',
+    title: 'Cortex Performance Workshops',
     description:
-      'Cortex Courses teach your student-athlete how to apply intangibles specifically toward their current goal or endeavor. These courses are each offered weekly or bi-weekly and span broad curricula such that continual progress is found each week.',
+      'Cortex Performance Workshops teach your student-athlete how to apply intangibles specifically toward their current goal or endeavor. These courses are each offered weekly or bi-weekly and span broad curricula such that continual progress is found each week.',
     imageLight: `url(${courses})`,
     imageDark:`url(${courses})`,
   },

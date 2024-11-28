@@ -41,6 +41,24 @@ const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
   },
 }));
 
+const images = [
+  "https://via.placeholder.com/300x600?text=Screen+1",
+  "https://via.placeholder.com/300x600?text=Screen+2",
+  "https://via.placeholder.com/300x600?text=Screen+3",
+];
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+};
+
+
 // Modern underline effect for highlighted words
 const UnderlineHighlight = styled('span')(({ theme }) => ({
   position: 'relative',
@@ -192,7 +210,7 @@ function App() {
         </ListItem>
         <ListItem button component={RouterLink} to="/portal">
           <Button color="inherit" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
-            PARENT PORTAL
+            Cortex Parents
           </Button>
         </ListItem>
         <ListItem button component={RouterLink} to="/about">
@@ -270,7 +288,7 @@ function App() {
                         <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Coaches</Typography>
                     </Button>
                     <Button color="inherit" component={RouterLink} to="/portal"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}                    >
-                      PARENT PORTAL
+                      Cortex Parents
                     </Button>
                     <Button color="inherit" component={RouterLink} to="/about"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}                    >
                       ABOUT US
@@ -386,7 +404,16 @@ APPLY                    </Button>
         </>
       )}
     </List>
-
+    <Typography variant="h6" gutterBottom>
+  Our coaches utilize performance science research that comes straight from <a 
+      href="https://capslab.org" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      style={{ fontWeight: "bold", color: "#E75225", textDecoration: "none" }}
+    >
+      our affiliated laboratory. 
+    </a>
+</Typography>
     {/* Mobile-specific buttons */}
     <Box sx={{ 
       marginTop: { xs: '0.3rem', s:'1rem', md: '2rem' } // 0.3rem on small screens, 2rem on medium and larger screens
@@ -423,7 +450,15 @@ APPLY                    </Button>
       </Button>
     </Box>
   </Box>
-  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '100px', marginBottom: '100px' }}>
+  <Box 
+  sx={{ 
+    display: 'flex', 
+    flexDirection: 'column', 
+    alignItems: 'center', 
+    marginTop: '100px', 
+    marginBottom: '100px' 
+  }}
+>
   <Typography
     variant="h4"
     sx={{
@@ -450,6 +485,21 @@ APPLY                    </Button>
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow effect
     }}
   />
+   <Button
+     variant="contained"
+     onClick={() => document.getElementById('pricing-section').scrollIntoView()}
+     sx={{
+       margin: '10px 10px',
+       padding: '10px 20px',
+       fontSize: '1rem',
+       backgroundColor: '#E75225',
+       color: 'white',
+       borderRadius: '15px',
+       '&:hover': { backgroundColor: '#d6451c' },
+     }}
+   >
+     Join Cortex
+   </Button>
 </Box>
 </div>
 ) : (
@@ -514,8 +564,15 @@ APPLY                    </Button>
        theCORTEX: ELITE PERFORMANCE FACTORY
      </Typography>
      <Typography variant="h6" gutterBottom>
-       A comprehensive mentorship and educational platform for your student-athlete:
-     </Typography>
+  A <a 
+      href="https://capslab.org" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      style={{ fontWeight: "bold", color: "#E75225", textDecoration: "none" }}
+    >
+      science-based
+    </a> mentorship and educational platform for your student-athlete:
+</Typography>
 
      <List>
       <BrushListItem brushColor="E75225">
@@ -569,10 +626,34 @@ APPLY                    </Button>
            />
          </div>
        </Slider>
+       <Button
+     variant="contained"
+     onClick={() => document.getElementById('pricing-section').scrollIntoView()}
+     sx={{
+       margin: '10px 10px',
+       padding: '10px 20px',
+       fontSize: '1rem',
+       backgroundColor: '#E75225',
+       color: 'white',
+       borderRadius: '15px',
+       '&:hover': { backgroundColor: '#d6451c' },
+     }}
+   >
+     Join Cortex
+   </Button>
      </Box>
    )}
  </Box>
-
+ <Typography variant="h6" gutterBottom>
+  Our coaches utilize performance science research that comes straight from <a 
+      href="https://capslab.org" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      style={{ fontWeight: "bold", color: "#E75225", textDecoration: "none" }}
+    >
+      our affiliated laboratory 
+    </a>
+</Typography>
  {/* Call to Action Buttons */}
  <Box sx={{ marginTop: '2rem' }}>
    <Button
@@ -626,14 +707,74 @@ APPLY                    </Button>
             <Route path="/blog" element={<BlogPosts/>} />
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/article/:id/:slug" element={<ArticlePage />} /> {/* Route with id and slug */}
-            <Route path="/portal" element={    <div style={{ height: '100vh', overflow: 'hidden' }}>
-      <iframe
-        src="https://cortex.copilot.app"
-        title="Parent Portal"
-        style={{ width: '100%', height: '100%', border: 'none' }}
-        allowFullScreen
-      ></iframe>
-    </div>} />
+            <Route path="/portal" element={     <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+        p: 2,
+        bgcolor: "#f5f5f5",
+      }}
+    >
+      {/* Header */}
+      <Typography variant="h4" component="h1" gutterBottom>
+        For Cortex Parents:
+      </Typography>
+
+      {/* Download iOS App Button */}
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{
+          mb: 4,
+          width: "80%",
+          maxWidth: "300px",
+        }}
+        onClick={() => window.open("https://apps.apple.com", "_blank")}
+      >
+        Download on the App Store
+      </Button>
+
+      {/* Mobile Phone-Sized Slideshow */}
+      <Box
+        sx={{
+          width: "90%",
+          maxWidth: "320px",
+          aspectRatio: "9/19.5", // Simulates mobile phone size
+          border: "1px solid #ccc",
+          borderRadius: "16px",
+          overflow: "hidden",
+          bgcolor: "#000",
+        }}
+      >
+        <Slider {...sliderSettings}>
+          {images.map((src, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </Box>
+          ))}
+        </Slider>
+      </Box>
+    </Box>} />
             <Route path="/pricing" element={<Pricing/>} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route 

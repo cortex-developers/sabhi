@@ -12,8 +12,9 @@ import tylermentor from './tylermentor.png'
 import sophiementor from './sophiementor.jpg'
 import rachelmentor from './rachelmentor.jpg'
 import joementor from './joementor.jpeg'
+import succesmentor from './success.jpg'
 //import jesusmentor from './jesusmentor.png'
-import brookementor from './brookementor.jpg'
+//import brookementor from './brookementor.jpg'
 import mayamentor from './mayamentor.png'
 import onomementor from './onomementor.png'
 import kevinmentor from './kevinmentor.png'
@@ -105,6 +106,15 @@ const CortexMentors = () => {
         teamColor: 'rgba(166, 25, 46)', // Customizable team text color (steel blue)
         shadowColor: 'rgba(166, 25, 46, 0.3)' // Customizable shadow color (steel blue with transparency)
       },
+      {
+        name: 'Succes Duruzor',
+        background: 'D1 Track & Field Athlete',
+        team: 'Physical Health/Performance',
+        bio: `Am a dedicated 400m athlete at Rutgers University, studying public health. Balancing sports and academics, i believe in the power of hard work and determination. Beyond personal achievements, Am passionate about mentoring younger athletes, helping them grow and succeed in their own journeys. By sharing training tips and life lessons, I aim to inspire the next generation to chase their dreams. With a strong commitment to both athletics and education I embodied the true spirit of a student-athlete and a mentor.`,
+        image: succesmentor, // Replace with actual image URL
+        teamColor: 'rgba(204,0,51)', // Customizable team text color (steel blue)
+        shadowColor: 'rgba(204,0,51, 0.3)' // Customizable shadow color (steel blue with transparency)
+      },
     {
         name: 'Sophie Calabrese',
         background: 'National-level Rower',
@@ -150,7 +160,7 @@ const CortexMentors = () => {
         teamColor: 'rgba(0, 61, 165)', // Customizable team text color (lime green)
         shadowColor: 'rgba(0, 61, 165, 0.3)' // Customizable shadow color (lime green with transparency)
       },
-      {
+/*       {
         name: 'Brooke Miller',
         background: 'D1 Soccer Player',
         team: 'Nutrition & Supplementation',
@@ -158,7 +168,7 @@ const CortexMentors = () => {
         image: brookementor, // Replace with actual image URL
         teamColor: 'rgba(30,22,86)', // Customizable team text color (lime green)
         shadowColor: 'rgba(30,22,86, 0.3)' // Customizable shadow color (lime green with transparency)
-      },
+      }, */
 
 
     // Add more mentors here as needed

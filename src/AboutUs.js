@@ -31,13 +31,20 @@ const AboutUs = () => {
                   Dear Cortex Family,
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  Cortex Flex began in March 2024 as the Cortex Flex Athlete Alliance, born out of a vision to bridge a crucial gap between sports and science. By May 2024, we earned our 501(c)(3) nonprofit status and quickly began making an impact. In just three months, we were able to secure thousands of dollars in donations, host a clinic for 8 school districts, and launch a successful podcast and media initiative in addition to piloting our worldwide program for mentorship and education.
+                  Cortex Flex began in March 2024 as the Cortex Flex Athlete Alliance, driven by a vision to bridge the crucial gap between sports and science. 
+                  By May, we secured our 501(c)(3) nonprofit status and hit the ground running. In just three months, we raised thousands in donations, hosted 
+                  a clinic serving eight school districts, launched a successful podcast and media initiative, and piloted our global mentorship and education program.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  By August 2024, it became evident that the demand for our mission had outgrown our nonprofit status. This realization led us to transition into Cortex Flex Inc., with our flagship product, theCORTEX. Our new platform is dedicated to education and mentorship, staying true to our founding principle: using science to achieve elite outcomes in the classroom, on the field, and beyond.
+                  As scientists and researchers with athletic backgrounds, we saw firsthand where support is most needed in the student-athlete world. 
+                  <strong>Psychological and neurological performance are the missing links</strong> to achieving elite success in sports and life. 
+                  Our mission is to provide brain-centered training modalities and mentorship that unlock the X-factor in athletes while 
+                  fostering positive life outcomes beyond sports. Through <strong>our flagship program, HeadStrong</strong>, 
+                  we invite you to join us on the path to realizing your full potential.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  I want to personally thank you for supporting us on this journey. We are excited about the future and remain committed to delivering value through science, mentorship, and innovation. Together, we will continue to empower athletes and students to reach their highest potential.
+                  With this, I want to express my utmost gratitude for your support. We’re excited about the future and remain committed to delivering 
+                  science-driven, mentorship-focused innovation. Together, we will continue to empower athletes and students to realize their full abilities and break boundaries.
                 </Typography>
                 <Typography variant="body1" paragraph>
                   Sincerely,

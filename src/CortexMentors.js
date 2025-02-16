@@ -2,10 +2,11 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material'
 import myamentor from './myamentor.jpg'
 import sophiamentor from './sophiamentor.jpg'
-import natementor from './natementor.jpeg'
+// import natementor from './natementor.jpeg'
+import mentorImgs from './Mentors_Imgs'
 import ashlynmentor from './ashlynmentor.jpg'
 import ellamentor from './ellamentor.jpg'
 import tylermentor from './tylermentor.png'
@@ -29,7 +30,7 @@ const CortexMentors = () => {
         background: 'McGill Football Player & MD/PhD Student',
         team: 'Mental Health/Performance',
         bio: 'Nate is passionate about helping athletes reach their fullest potential. His research and mission with the organization is to improve student-athlete outcomes in the game, in the clasroom, and in life. As one of the few PhD student-athletes in the world, he knows what it takes to reach the height of multiple domains.',
-        image: natementor, // Replace with actual image URL
+        image: mentorImgs.natementor, // Replace with actual image URL
         teamColor: 'rgba(237, 27, 47)', // Customizable team text color (steel blue)
         shadowColor: 'rgba(237, 27, 47, 0.3)' // Customizable shadow color (steel blue with transparency)
       },

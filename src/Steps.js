@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Grid, Card, CardContent, useMediaQuery } from '@mui/material';
-
+import { Link as RouterLink } from 'react-router-dom';
 
 const Steps = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -53,10 +53,7 @@ const Steps = () => {
                 Step 1
               </Typography>
               <Typography variant="h6" sx={{ marginBottom: '1rem', color: '#333' }}>
-                Schedule a free performance consult.
-              </Typography>
-              <Typography variant="body2" sx={{ color: '#666' }}>
-                Sign up by pressing the button below. It only takes a few minutes!
+                Schedule a free performance consult for your school, team, or individual athlete.
               </Typography>
             </CardContent>
           </Card>
@@ -97,10 +94,7 @@ const Steps = () => {
                 Step 2
               </Typography>
               <Typography variant="h6" sx={{ marginBottom: '1rem', color: '#333' }}>
-                Hold Tight!
-              </Typography>
-              <Typography variant="body2" sx={{ color: '#666' }}>
-                After the performance consult, a member of our team will follow up with you using your preferred contact method about onboarding details.
+                Hold Tight! A member of our team will reach out to you within 24 hours.
               </Typography>
             </CardContent>
           </Card>
@@ -141,10 +135,7 @@ const Steps = () => {
                 Step 3
               </Typography>
               <Typography variant="h6" sx={{ marginBottom: '1rem', color: '#333' }}>
-                Start the journey towards your athlete's goals!
-              </Typography>
-              <Typography variant="body2" sx={{ color: '#666' }}>
-                You will be onboarded onto our mobile application and recieve an account to login with.
+                Start the journey towards your goals! You will be onboarded onto our mobile application and receive an account to login with.
               </Typography>
             </CardContent>
           </Card>
@@ -155,7 +146,7 @@ const Steps = () => {
       <Button
         variant="contained"
         color="primary"
-        onClick={() => window.open("https://calendly.com/puneet-cortexflex")}
+        onClick={() => window.open("https://calendar.app.google/DiC7jqDvh8C1xHh18")}
         sx={{
           marginTop: '2rem',
           padding: '10px 20px',
@@ -164,7 +155,36 @@ const Steps = () => {
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
         }}
       >
-        Book a free performance consult call here!
+        Book a free performance chat
+      </Button>
+      <Box
+        variant="contained"
+        color="primary"
+        // redirect to EliteCoaches tab
+        sx={{
+          marginTop: '2rem',
+          padding: '10px 20px',
+          fontSize: '1rem',
+          borderRadius: '15px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
+        }}
+      >
+        <i>Developed by Doctors, Amplified by D1 Athlete Mentors</i>
+      </Box>
+      <Button
+        variant="contained"
+        color="primary"
+        component={RouterLink}
+        to="/mentors"
+        sx={{
+          marginTop: '2rem',
+          padding: '10px 20px',
+          fontSize: '1rem',
+          borderRadius: '15px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
+        }}
+      >
+        Meet our team of coaches here
       </Button>
     </Box>
   );

@@ -3,17 +3,16 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
 import { useMediaQuery, createTheme, ThemeProvider, AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem} from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
-import Pricing from './Pricing'
 import sports from './sports.jpg'
 import AboutUs from './AboutUs';
 import Features from './Features';
 import Steps from './Steps'
-import Why from './Why'
 import train from './train6.mp4';
 //import ella from './reel covers_20240903_202826_0000.png'
 import LogoNoText from './Group 82.png';
 import CortexMentors from './CortexMentors'
 import BlogPosts from './BlogPosts';
+import News from './News'
 import './App.css'
 import Disclaimer from './Disclaimer'
 import Slider from 'react-slick';
@@ -22,9 +21,10 @@ import 'slick-carousel/slick/slick-theme.css';
 import ArticlePage from './ArticlePage';
 import { styled } from '@mui/system';
 import ReactGA4 from 'react-ga4';
-import HorizontalGallery from './HorizontalGallery';
-import prev1 from './iPhone 14 & 15 Pro Max - 11.png'
-import prev2 from './iPhone 14 & 15 Pro Max - 4 2.png'
+// import prev1 from './iPhone 14 & 15 Pro Max - 11.png'
+// import prev2 from './iPhone 14 & 15 Pro Max - 4 2.png'
+import corPar from './Cortex_Parents_Imgs'
+import capsule from './CAPSule logo.png'
 
 //import AutoOpenModal from './AutoOpenModal';
 
@@ -45,8 +45,8 @@ const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
 }));
 
 const images = [
-prev1,
-prev2
+corPar.iPhone11,
+corPar.iPhone42
 ];
 
 const sliderSettings = {
@@ -66,7 +66,7 @@ const UnderlineHighlight = styled('span')(({ theme }) => ({
   position: 'relative',
   color: theme.palette.text.primary,
   fontWeight: 'bold',
-  fontSize: '1.1rem',
+  fontSize: '2rem',
   transition: 'color 0.3s ease',
 
   '&::after': {
@@ -220,11 +220,10 @@ function App() {
             ABOUT US
           </Button>
         </ListItem>
-        <ListItem button component={RouterLink} to="/signup">
-                    <Button color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
-                     }}                    >
-                      APPLY
-                    </Button>
+        <ListItem button component={RouterLink} to="/news">
+          <Button color="inherit" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
+            <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Cortex in the News</Typography>
+          </Button>
         </ListItem>
       </List>
     </Box>
@@ -277,27 +276,24 @@ function App() {
               ) : (
                 <>
                   <Box display="flex" style={{ marginLeft: '20px' }}> {/* Adjust marginLeft to control spacing */}
-                    <Button color="inherit" component={RouterLink} to="/blog"                           style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}
-                    >
-                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Elite</Typography>
-                        <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Performance</Typography>
-                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Science</Typography>
-
+                  <Button color="inherit" component={RouterLink} to="/news"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif'}}>
+                      Cortex in the News
                     </Button>
-
+                    <Button color="inherit" component={RouterLink} to="/blog" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
+                      <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Elite</Typography>
+                      <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Performance</Typography>
+                      <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Science</Typography>
+                    </Button>
                     <Button color="inherit" component={RouterLink} to="/mentors" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
-                        <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Elite</Typography>
-                        <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Coaches</Typography>
+                      <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Elite</Typography>
+                      <Typography component="span" style={{ color: '#E75225', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Coaches</Typography>
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/portal"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}                    >
+                    <Button color="inherit" component={RouterLink} to="/portal"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
                       Cortex Parents
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/about"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}                    >
+                    <Button color="inherit" component={RouterLink} to="/about"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
                       ABOUT US
                     </Button>
-                    <Button color="inherit" component={RouterLink} to="/signup"   style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif', 
-                     }}                    >
-APPLY                    </Button>
                   </Box>
                 </>
               )}
@@ -350,7 +346,14 @@ APPLY                    </Button>
     fontFamily: 'Notable, sans-serif' 
   }}
 >
-  theCORTEX: ELITE PERFORMANCE FACTORY
+<font color="#FF5F1F">HEADSTRONG</font> BY CORTEX FLEX: <a 
+      href="https://capslab.org" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      style={{ fontWeight: "normal", color: "#2565AE", textDecoration: "none" }}
+    >
+      A <font color="#FF5F1F">NEUROSCIENCE</font>-BASED ELITE PERFORMANCE INCUBATOR
+    </a>
 </Typography>
 
 <Typography 
@@ -366,41 +369,40 @@ APPLY                    </Button>
       {isSmallScreen ? (
         <>
           <BrushListItem brushColor="E75225">
-            <Typography variant="body1" sx={{ fontSize: '1rem' }}>
-            Elite <UnderlineHighlight>athletic</UnderlineHighlight> performance training and <UnderlineHighlight>nutrition</UnderlineHighlight> coaching.
+            <Typography variant="body1" sx={{ fontSize: '1rem'}}>
+              <UnderlineHighlight>Bulletproof mindset</UnderlineHighlight>
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="6589C6">
             <Typography variant="body1" sx={{ fontSize: '1rem' }}>
-            Elite <UnderlineHighlight>mindset</UnderlineHighlight> development and <UnderlineHighlight>academic</UnderlineHighlight> tutoring.
+              <UnderlineHighlight>Elite brain performance</UnderlineHighlight>
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="E75225">
             <Typography variant="body1" sx={{ fontSize: '1rem' }}>
-            College <UnderlineHighlight>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight>career</UnderlineHighlight> planning.
-    
+              <UnderlineHighlight>Fast-twitch nervous system</UnderlineHighlight>
             </Typography>
           </BrushListItem>
         </>
       ) : (
         <>
           <BrushListItem brushColor="E75225">
-            <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
-            Elite <UnderlineHighlight>athletic</UnderlineHighlight> performance training and <UnderlineHighlight>nutrition</UnderlineHighlight> coaching.
+            <Typography variant="body1" sx={{ fontSize: '0.9rem'}}>
+              <UnderlineHighlight>Bulletproof mindset</UnderlineHighlight>
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="6589C6">
             <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
-            Elite <UnderlineHighlight>mindset</UnderlineHighlight> development and <UnderlineHighlight>academic</UnderlineHighlight> tutoring.
+              <UnderlineHighlight>Elite brain performance</UnderlineHighlight>
             </Typography>
           </BrushListItem>
 
           <BrushListItem brushColor="E75225">
             <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
-            College <UnderlineHighlight>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight>career</UnderlineHighlight> planning.
+                <UnderlineHighlight>Fast-twitch nervous system</UnderlineHighlight>
             </Typography>
           </BrushListItem>
         </>
@@ -416,41 +418,18 @@ APPLY                    </Button>
       our affiliated laboratory. 
     </a>
 </Typography>
-    {/* Mobile-specific buttons */}
-    <Box sx={{ 
-      marginTop: { xs: '0.3rem', s:'1rem', md: '2rem' } // 0.3rem on small screens, 2rem on medium and larger screens
-    }}>
-      <Button
-        variant="contained"
-        onClick={() => document.getElementById('steps-section').scrollIntoView()}
-        sx={{
-          margin: '0 5px',
-          padding: '10px 15px',
-          fontSize: '0.8rem',
-          backgroundColor: '#E75225',
-          color: 'white',
-          borderRadius: '10px',
-          '&:hover': { backgroundColor: '#d6451c' },
-        }}
+<div class='capsule'>
+  <Typography variant="h6" gutterBottom>
+      <a 
+        href="https://capslab.org" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        style={{ fontWeight: "bold", color: "#E75225", textDecoration: "none" }}
       >
-        Get Started
-      </Button>
-      <Button
-        variant="contained"
-        onClick={() => document.getElementById('pricing-section').scrollIntoView()}
-        sx={{
-          margin: '0 5px',
-          padding: '10px 15px',
-          fontSize: '0.8rem',
-          backgroundColor: '#6589C6',
-          color: 'white',
-          borderRadius: '10px',
-          '&:hover': { backgroundColor: '#5B7FBC' },
-        }}
-      >
-        Pricing
-      </Button>
-    </Box>
+        <img src={capsule} alt={`CAPSuLe logo`} style={{ width: "5%", height: "5%" }} /> Read about CAPSule here. <img src={capsule} alt={`CAPSuLe logo`} style={{ width: "5%", height: "5%" }} />
+      </a> 
+    </Typography>
+  </div>
   </Box>
   <Box 
   sx={{ 
@@ -463,7 +442,7 @@ APPLY                    </Button>
 >
 <Button
      variant="contained"
-     onClick={() => document.getElementById('pricing-section').scrollIntoView()}
+     component={RouterLink} to="/news"
      sx={{
        margin: '10px 10px',
        padding: '10px 20px',
@@ -475,7 +454,23 @@ APPLY                    </Button>
        '&:hover': { backgroundColor: '#d6451c' },
      }}
    >
-     Join Cortex
+     Read about Cortex
+   </Button>
+   <Button
+     variant="contained"
+     onClick={() => window.open("https://calendar.app.google/DiC7jqDvh8C1xHh18")}
+     sx={{
+       margin: '10px 10px',
+       padding: '10px 20px',
+       fontSize: '1rem',
+       backgroundColor: '#E75225',
+       color: 'white',
+       borderRadius: '15px',
+       width: '70%',
+       '&:hover': { backgroundColor: '#d6451c' },
+     }}
+   >
+     Want to chat about performance?
    </Button>
   <video
     src={train}
@@ -552,35 +547,42 @@ APPLY                    </Button>
    {/* Text Section */}
    <Box sx={{ flexBasis: '50%', padding: '10px', textAlign: { xs: 'center', md: 'left' } }}>
      <Typography variant="h4" sx={{ marginBottom: '1rem', fontFamily: 'Notable, sans-serif', opacity: 1, fontSize: '3rem' }}>
-       theCORTEX: ELITE PERFORMANCE FACTORY
+        <font color="#FF5F1F">HEADSTRONG</font> BY CORTEX FLEX: <a 
+      href="https://capslab.org" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      style={{ fontWeight: "normal", color: "#2565AE", textDecoration: "none" }}
+    >
+      A <font color="#FF5F1F">NEUROSCIENCE</font>-BASED ELITE PERFORMANCE INCUBATOR
+    </a>
      </Typography>
      <Typography variant="h6" sx={{ fontSize: '2rem' }}gutterBottom>
-  A <a 
+  The premier <a 
       href="https://capslab.org" 
       target="_blank" 
       rel="noopener noreferrer" 
       style={{ fontWeight: "bold", color: "#E75225", textDecoration: "none" }}
     >
-      science-based
-    </a> mentorship and educational platform for your student-athlete:
+      brain-centered
+    </a> approach to building elite athletes:
 </Typography>
 
      <List>
       <BrushListItem brushColor="E75225">
-        <Typography variant="body1" sx={{ fontSize: '1.5rem' }}>
-          Elite <UnderlineHighlight sx={{ fontSize: '1.8rem' }}>athletic</UnderlineHighlight> performance training and <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>nutrition</UnderlineHighlight> coaching.
+        <Typography variant="body1" sx={{ fontSize: '1.5rem'}}>
+          <UnderlineHighlight>Bulletproof mindset</UnderlineHighlight>
         </Typography>
       </BrushListItem>
 
       <BrushListItem brushColor="6589C6">
         <Typography variant="body1" sx={{ fontSize: '1.5rem' }}>
-          Elite <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>mindset</UnderlineHighlight> development and <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>academic</UnderlineHighlight> tutoring.
+          <UnderlineHighlight>Elite brain performance</UnderlineHighlight>
         </Typography>
       </BrushListItem>
 
       <BrushListItem brushColor="E75225">
         <Typography variant="body1" sx={{ fontSize: '1.5rem' }}>
-        College <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>recruitment</UnderlineHighlight> guidance and <UnderlineHighlight  sx={{ fontSize: '1.8rem' }}>career</UnderlineHighlight> planning.
+          <UnderlineHighlight>Fast-twitch nervous system</UnderlineHighlight>
         </Typography>
       </BrushListItem>
 
@@ -619,7 +621,7 @@ APPLY                    </Button>
        </Slider>
        <Button
      variant="contained"
-     onClick={() => document.getElementById('pricing-section').scrollIntoView()}
+     component={RouterLink} to="/news"
      sx={{
        margin: '10px 10px',
        padding: '10px 20px',
@@ -631,12 +633,28 @@ APPLY                    </Button>
        '&:hover': { backgroundColor: '#d6451c' },
      }}
    >
-     Join Cortex
+     Read about Cortex
+   </Button>
+   <Button
+     variant="contained"
+     onClick={() => window.open("https://calendar.app.google/DiC7jqDvh8C1xHh18")}
+     sx={{
+       margin: '10px 10px',
+       padding: '10px 20px',
+       fontSize: '1rem',
+       backgroundColor: '#E75225',
+       color: 'white',
+       borderRadius: '15px',
+       width: '70%',
+       '&:hover': { backgroundColor: '#d6451c' },
+     }}
+   >
+     Want to chat about performance?
    </Button>
      </Box>
    )}
  </Box>
- <Typography variant="h6" sx={{ fontSize: '2rem' }} gutterBottom>
+ <Typography variant="h6" sx={{ fontSize: '2rem' }} gutterBottom> 
   Our coaches utilize performance science research that comes straight from <a 
       href="https://capslab.org" 
       target="_blank" 
@@ -646,39 +664,18 @@ APPLY                    </Button>
       our affiliated laboratory 
     </a>
 </Typography>
- {/* Call to Action Buttons */}
- <Box sx={{ marginTop: '2rem' }}>
-   <Button
-     variant="contained"
-     onClick={() => document.getElementById('steps-section').scrollIntoView()}
-     sx={{
-       margin: '0 10px',
-       padding: '10px 20px',
-       fontSize: '1rem',
-       backgroundColor: '#E75225',
-       color: 'white',
-       borderRadius: '15px',
-       '&:hover': { backgroundColor: '#d6451c' },
-     }}
-   >
-     Get Started
-   </Button>
-   <Button
-     variant="contained"
-     onClick={() => document.getElementById('pricing-section').scrollIntoView()}
-     sx={{
-       margin: '0 10px',
-       padding: '10px 20px',
-       fontSize: '1rem',
-       backgroundColor: '#6589C6',
-       color: 'white',
-       borderRadius: '15px',
-       '&:hover': { backgroundColor: '#5B7FBC' },
-     }}
-   >
-     Pricing
-   </Button>
- </Box>
+<div class='capsule'>
+  <Typography variant="h6" sx={{ fontSize: '2rem' }} gutterBottom>
+      <a 
+        href="https://capslab.org" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        style={{ fontWeight: "bold", color: "#E75225", textDecoration: "none" }}
+      >
+        <img src={capsule} alt={`CAPSuLe logo`} style={{ width: "5%", height: "5%" }} /> Read about CAPSule here. <img src={capsule} alt={`CAPSuLe logo`} style={{ width: "5%", height: "5%" }} />
+      </a>
+  </Typography>
+</div>
 </Box>
 )}
 
@@ -688,15 +685,11 @@ APPLY                    </Button>
       </div>
       <Features></Features>
 
-<Why></Why>
-<HorizontalGallery></HorizontalGallery>
-<div id="pricing-section">
-        <Pricing />
-      </div>
       </div> 
             />
             <Route path="/mentors" element={<CortexMentors/>} />
             <Route path="/blog" element={<BlogPosts/>} />
+            <Route path="/news" element={<News/>} />
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/article/:id/:slug" element={<ArticlePage />} /> {/* Route with id and slug */}
             <Route path="/portal" element={     <Box
@@ -715,8 +708,8 @@ APPLY                    </Button>
         For Cortex Parents:
       </Typography>
 
-      {/* Download iOS App Button */}
-      <Button
+      {/* New Parents Info */}
+      <Box
         variant="contained"
         color="primary"
         sx={{
@@ -724,10 +717,9 @@ APPLY                    </Button>
           width: "80%",
           maxWidth: "300px",
         }}
-        onClick={() => window.open("https://apps.apple.com", "_blank")}
       >
-        Download on the App Store
-      </Button>
+        Parents and coaches stay connected every step of the way through Cortex's integrated parent channels. Our app allows you to track your athlete's performance progress, follow the program calendar, communicate directly with Cortex coaches, and manage all payments seamlessly in one place.
+      </Box>
 
       {/* Mobile Phone-Sized Slideshow */}
       <Box
@@ -767,41 +759,8 @@ APPLY                    </Button>
         </Slider>
       </Box>
     </Box>} />
-            <Route path="/pricing" element={<Pricing/>} />
             <Route path="/disclaimer" element={<Disclaimer />} />
-            <Route 
-  path="/signup" 
-  element={
-    <div style={{ height: '100vh', overflow: 'hidden' }}>
-    <iframe 
-      className="airtable-embed" 
-      title='airtable'
-      src="https://airtable.com/embed/apphPc3F6NvvkOBNg/shr4NtUH9P6YyP4bW" 
-      onMouseWheel="" 
-      style={{ width: '100%', height: '100%', border: 'none' }}
-    />
-    
-    
-    </div>
-  } 
-/>
-
-<Route 
-  path="/apply" 
-  element={
-    <div style={{ height: '100vh', overflow: 'hidden' }}>
-    <iframe 
-      className="airtable-embed" 
-      title='airtable'
-      src="https://airtable.com/embed/apphPc3F6NvvkOBNg/shr4NtUH9P6YyP4bW" 
-      onMouseWheel="" 
-      style={{ width: '100%', height: '100%', border: 'none' }}
-    />
-    
-    
-    </div>
-  } 
-/>
+            
           </Routes>
 
         </div>

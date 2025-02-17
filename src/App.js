@@ -21,8 +21,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import ArticlePage from './ArticlePage';
 import { styled } from '@mui/system';
 import ReactGA4 from 'react-ga4';
-// import prev1 from './iPhone 14 & 15 Pro Max - 11.png'
-// import prev2 from './iPhone 14 & 15 Pro Max - 4 2.png'
+// import prev1 from './iPhone 14 & 15 Pro Max - 11.png' // moved
+// import prev2 from './iPhone 14 & 15 Pro Max - 4 2.png' // moved
 import corPar from './Cortex_Parents_Imgs'
 import capsule from './CAPSule logo.png'
 

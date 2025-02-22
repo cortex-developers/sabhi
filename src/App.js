@@ -31,9 +31,9 @@ import capsule from './CAPSule logo.png'
 // Brush background for the ListItem with color customization
 const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
   position: 'relative',
-  padding: '20px',
-  marginBottom: '12px',
-  borderRadius: '8px',
+  padding: '0.6rem',
+  marginBottom: '0.36rem',
+  borderRadius: '0.24rem',
   overflow: 'hidden',
   background: `url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=${brushColor}") no-repeat center`,
   backgroundSize: 'cover',
@@ -198,6 +198,11 @@ function App() {
     <ThemeProvider theme={theme}>
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <List>
+        <ListItem button component={RouterLink} to="/news">
+          <Button color="inherit" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
+            <Typography component="span" style={{ fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Cortex in the News</Typography>
+          </Button>
+        </ListItem>
         <ListItem button component={RouterLink} to="/blog">
           <Button color="inherit" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
             <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>CORTEX</Typography>
@@ -218,11 +223,6 @@ function App() {
         <ListItem button component={RouterLink} to="/about">
           <Button color="inherit" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
             ABOUT US
-          </Button>
-        </ListItem>
-        <ListItem button component={RouterLink} to="/news">
-          <Button color="inherit" style={{ height: '25px', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>
-            <Typography component="span" style={{ color: '#6589C6', fontSize: '12.5px', fontFamily: 'Notable, sans-serif' }}>Cortex in the News</Typography>
           </Button>
         </ListItem>
       </List>

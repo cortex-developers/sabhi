@@ -23,7 +23,7 @@ import { styled } from '@mui/system';
 import ReactGA4 from 'react-ga4';
 // import prev1 from './iPhone 14 & 15 Pro Max - 11.png' // moved
 // import prev2 from './iPhone 14 & 15 Pro Max - 4 2.png' // moved
-import corPar from './Cortex_Parents_Imgs'
+import parent_imgs from './Cortex_Parents_Imgs/index.js'
 import capsule from './CAPSule logo.png'
 
 //import AutoOpenModal from './AutoOpenModal';
@@ -45,8 +45,8 @@ const BrushListItem = styled(ListItem)(({ theme, brushColor }) => ({
 }));
 
 const images = [
-corPar.iPhone11,
-corPar.iPhone42
+parent_imgs.iPhone11,
+parent_imgs.iPhone42
 ];
 
 const sliderSettings = {

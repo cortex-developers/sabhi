@@ -40,7 +40,7 @@ const News = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const postsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&content_type=blogPost&include=2&limit=1`);
+        const postsResponse = await fetch(`https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&content_type=news&include=2`);
         const postsData = await postsResponse.json();
         const fetchedPosts = postsData.items.map(post => ({
           ...post,

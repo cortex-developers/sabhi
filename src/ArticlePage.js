@@ -28,7 +28,7 @@ const ArticlePage = () => {
     const fetchArticle = async () => {
       try {
         const response = await fetch(
-          `https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&content_type=blogPost&include=2&sys.id=${id}`
+          `https://cdn.contentful.com/spaces/y10zqmp53ure/environments/master/entries?access_token=nS-_ikquqQv4RldFYL1pwAN3sgryTJExwxOokbmBYF4&include=2&sys.id=${id}`
         );
         const data = await response.json();
 
